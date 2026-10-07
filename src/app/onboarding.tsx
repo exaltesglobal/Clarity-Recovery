@@ -31,7 +31,7 @@ export default function Onboarding() {
     <SafeAreaView style={{ flex: 1, backgroundColor: t.bg }}>
       <Screen>
         <View style={{ gap: 8, marginTop: 12 }}>
-          <H1>Welcome to Renew</H1>
+          <H1>Welcome to Clarity Recovery</H1>
           <Body>
             A private companion for quitting porn and building a life you’re proud of. Everything you enter
             stays on this device.

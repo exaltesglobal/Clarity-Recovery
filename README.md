@@ -1,4 +1,4 @@
-# Renew
+# Clarity Recovery
 
 A private, judgement-free companion app for people quitting porn. Built with React Native and [Expo](https://expo.dev) (SDK 57, Expo Router).
 

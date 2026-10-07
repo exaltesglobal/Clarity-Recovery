@@ -135,7 +135,7 @@ export default function Settings() {
       <Card>
         <H2>Privacy</H2>
         <Muted>
-          Renew has no account and no servers. Everything is stored only on this device. Uninstalling the app
+          Clarity Recovery has no account and no servers. Everything is stored only on this device. Uninstalling the app
           deletes your data.
         </Muted>
         <Button title="Erase all data" variant="danger" icon="trash-outline" onPress={reset} />

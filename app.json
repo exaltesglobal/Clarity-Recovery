@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Renew",
-    "slug": "renew",
+    "name": "Clarity Recovery",
+    "slug": "clarity-recovery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.renew.recovery"
+      "bundleIdentifier": "com.exaltesglobal.clarityrecovery"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +18,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.renew.recovery"
+      "package": "com.exaltesglobal.clarityrecovery"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -30,6 +30,12 @@
       "expo-notifications",
       "expo-font"
     ],
-    "scheme": "renew"
+    "scheme": "clarity",
+    "owner": "exaltes-global-private-limited",
+    "extra": {
+      "eas": {
+        "projectId": "c880a66c-7c71-4d63-9802-616bd56a31d7"
+      }
+    }
   }
 }

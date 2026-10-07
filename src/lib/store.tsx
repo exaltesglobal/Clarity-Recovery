@@ -12,7 +12,7 @@ import {
 import { DAY, dayKey } from './date';
 import type { AppData, CheckIn, Partner, Profile, Reminder } from './types';
 
-const STORAGE_KEY = 'renew:data:v1';
+const STORAGE_KEY = 'clarity:data:v1';
 
 export function createDefaultData(): AppData {
   return {
