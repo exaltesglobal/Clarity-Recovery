@@ -1,42 +1,34 @@
-import Constants from 'expo-constants';
 import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { Platform } from 'react-native';
-import Purchases, {
-  type CustomerInfo,
-  LOG_LEVEL,
-  PACKAGE_TYPE,
-  type PurchasesPackage,
-} from 'react-native-purchases';
+import { Linking, Platform } from 'react-native';
+import Purchases, { type CustomerInfo, LOG_LEVEL } from 'react-native-purchases';
+import RevenueCatUI from 'react-native-purchases-ui';
 
 /**
  * Subscriptions through RevenueCat, which wraps Google Play Billing and StoreKit.
+ * react-native-purchases bundles the native Android SDK (com.revenuecat.purchases:purchases),
+ * so no Gradle changes are needed; react-native-purchases-ui adds Paywalls and Customer Center.
  *
- * Store setup (done once in Play Console / App Store Connect and RevenueCat):
- * - Three auto-renewing subscriptions: monthly, 6-month and yearly.
- * - Each has a 1-month free trial offer for new subscribers.
- * - Prices are set per country in the store consoles (Play Console has
- *   "Set prices by country"; App Store Connect has price schedules per storefront).
- *   The app never hard-codes prices: it shows the localized priceString the
- *   store returns for the user's account country.
- * - RevenueCat: entitlement "premium", default offering with the packages
- *   $rc_monthly, $rc_six_month and $rc_annual.
+ * RevenueCat setup (see docs/revenuecat.md):
+ * - Products: monthly, six_month, yearly, each with a 1-month free trial.
+ * - Entitlement "clarity_recovery_pro" attached to all three products.
+ * - A current offering with the packages $rc_monthly, $rc_six_month and $rc_annual,
+ *   plus a Paywall designed in the dashboard.
+ * - Prices are set per country in Play Console / App Store Connect; the Paywall shows
+ *   the localized price the store returns for the user's account country.
  */
 
-export const ENTITLEMENT_ID = 'premium';
-export const PLAN_TYPES = [PACKAGE_TYPE.MONTHLY, PACKAGE_TYPE.SIX_MONTH, PACKAGE_TYPE.ANNUAL] as const;
-export type PlanType = (typeof PLAN_TYPES)[number];
+export const ENTITLEMENT_ID = 'clarity_recovery_pro';
 
-const keys = (Constants.expoConfig?.extra?.revenueCat ?? {}) as { android?: string; ios?: string };
-const API_KEY = Platform.select({ android: keys.android, ios: keys.ios }) || '';
+// Public SDK keys, inlined at build time. Set them per EAS build profile (eas.json `env`
+// or `eas env:create`). Keys starting with "test_" use RevenueCat's Test Store.
+const API_KEY =
+  Platform.select({
+    android: process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_KEY,
+    ios: process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY,
+  }) ?? '';
 
-export interface Plan {
-  type: PlanType;
-  pkg: PurchasesPackage;
-  price: string;
-  pricePerMonth: string | null;
-  /** e.g. "1 month free" when the store offers a free trial to this user */
-  trialPeriod: { unit: string; count: number } | null;
-}
+const STORE_SUBSCRIPTIONS_URL =
+  Platform.OS === 'ios' ? 'https://apps.apple.com/account/subscriptions' : 'https://play.google.com/store/account/subscriptions';
 
 interface BillingState {
   /** Billing is configured for this platform (API key present, not web) */
@@ -46,30 +38,16 @@ interface BillingState {
   inTrial: boolean;
   expiresAt: string | null;
   willRenew: boolean;
-  plans: Plan[];
-  purchase: (plan: Plan) => Promise<'purchased' | 'cancelled' | 'error'>;
-  restore: () => Promise<boolean>;
+  /** The current offering loaded with at least one package, so a paywall can be shown */
+  hasOffering: boolean;
+  customerInfo: CustomerInfo | null;
+  /** Apply customer info returned by a purchase or restore in the RevenueCat Paywall. */
+  update: (info: CustomerInfo) => void;
+  /** Opens RevenueCat's Customer Center, falling back to the store's subscription page. */
+  manage: () => Promise<void>;
 }
 
 const BillingContext = createContext<BillingState | null>(null);
-
-function planFromPackage(pkg: PurchasesPackage): Plan {
-  const product = pkg.product;
-  const free = product.defaultOption?.freePhase?.billingPeriod;
-  const intro = product.introPrice;
-  const trialPeriod = free
-    ? { unit: free.unit, count: free.value }
-    : intro && intro.price === 0
-      ? { unit: intro.periodUnit, count: intro.periodNumberOfUnits }
-      : null;
-  return {
-    type: pkg.packageType as PlanType,
-    pkg,
-    price: product.priceString,
-    pricePerMonth: product.pricePerMonthString,
-    trialPeriod,
-  };
-}
 
 let configured: boolean | null = null;
 
@@ -77,11 +55,18 @@ let configured: boolean | null = null;
 function configureOnce(): boolean {
   if (configured !== null) return configured;
   if (Platform.OS === 'web' || !API_KEY) return (configured = false);
+  // The SDK deliberately crashes release builds that use a Test Store key, so only
+  // development builds may use one. Preview/production builds need the platform key.
+  if (API_KEY.startsWith('test_') && !__DEV__) {
+    console.warn('RevenueCat: Test Store key ignored in a release build; set the platform API key.');
+    return (configured = false);
+  }
   try {
     Purchases.setLogLevel(__DEV__ ? LOG_LEVEL.DEBUG : LOG_LEVEL.ERROR);
     Purchases.configure({ apiKey: API_KEY });
     configured = true;
-  } catch {
+  } catch (e) {
+    console.warn('RevenueCat: configure failed', e);
     configured = false;
   }
   return configured;
@@ -91,46 +76,36 @@ export function BillingProvider({ children }: { children: ReactNode }) {
   const [available] = useState(configureOnce);
   const [ready, setReady] = useState(!available);
   const [info, setInfo] = useState<CustomerInfo | null>(null);
-  const [plans, setPlans] = useState<Plan[]>([]);
+  const [hasOffering, setHasOffering] = useState(false);
 
   useEffect(() => {
     if (!available) return;
+    // Fires on purchases, restores, renewals and expirations, including ones made in the
+    // RevenueCat Paywall or Customer Center, so premium state never goes stale.
     const listener = (next: CustomerInfo) => setInfo(next);
     Purchases.addCustomerInfoUpdateListener(listener);
-    Promise.all([Purchases.getCustomerInfo(), Purchases.getOfferings()])
+    Promise.allSettled([Purchases.getCustomerInfo(), Purchases.getOfferings()])
       .then(([customer, offerings]) => {
-        setInfo(customer);
-        const pkgs = offerings.current?.availablePackages ?? [];
-        setPlans(
-          PLAN_TYPES.map((type) => pkgs.find((p) => p.packageType === type))
-            .filter((p): p is PurchasesPackage => !!p)
-            .map(planFromPackage),
-        );
+        if (customer.status === 'fulfilled') setInfo(customer.value);
+        else if (__DEV__) console.warn('RevenueCat: getCustomerInfo failed', customer.reason);
+        if (offerings.status === 'fulfilled') {
+          setHasOffering((offerings.value.current?.availablePackages.length ?? 0) > 0);
+        } else if (__DEV__) console.warn('RevenueCat: getOfferings failed', offerings.reason);
       })
-      .catch(() => {})
       .finally(() => setReady(true));
     return () => {
       Purchases.removeCustomerInfoUpdateListener(listener);
     };
   }, [available]);
 
-  const purchase = useCallback(async (plan: Plan) => {
+  const manage = useCallback(async () => {
     try {
-      const result = await Purchases.purchasePackage(plan.pkg);
-      setInfo(result.customerInfo);
-      return 'purchased' as const;
+      await RevenueCatUI.presentCustomerCenter({
+        callbacks: { onRestoreCompleted: ({ customerInfo }) => setInfo(customerInfo) },
+      });
     } catch (e) {
-      return (e as { userCancelled?: boolean }).userCancelled ? ('cancelled' as const) : ('error' as const);
-    }
-  }, []);
-
-  const restore = useCallback(async () => {
-    try {
-      const customer = await Purchases.restorePurchases();
-      setInfo(customer);
-      return !!customer.entitlements.active[ENTITLEMENT_ID];
-    } catch {
-      return false;
+      if (__DEV__) console.warn('RevenueCat: Customer Center unavailable', e);
+      await Linking.openURL(STORE_SUBSCRIPTIONS_URL).catch(() => {});
     }
   }, []);
 
@@ -139,17 +114,18 @@ export function BillingProvider({ children }: { children: ReactNode }) {
     return {
       available,
       ready,
-      // Without billing configured (web preview, development builds without keys)
+      // Without billing configured (web preview, builds without keys)
       // everything stays unlocked so the app can be tested end to end.
       premium: available ? !!entitlement : true,
       inTrial: entitlement?.periodType === 'TRIAL',
       expiresAt: entitlement?.expirationDate ?? null,
       willRenew: entitlement?.willRenew ?? false,
-      plans,
-      purchase,
-      restore,
+      hasOffering,
+      customerInfo: info,
+      update: setInfo,
+      manage,
     };
-  }, [available, ready, info, plans, purchase, restore]);
+  }, [available, ready, info, hasOffering, manage]);
 
   return <BillingContext.Provider value={value}>{children}</BillingContext.Provider>;
 }

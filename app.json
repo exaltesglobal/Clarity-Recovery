@@ -95,11 +95,7 @@
         "projectId": "c880a66c-7c71-4d63-9802-616bd56a31d7"
       },
       "contentFeedUrl": "https://raw.githubusercontent.com/exaltesglobal/Clarity-Recovery/main/content/feed.json",
-      "storiesEmail": "",
-      "revenueCat": {
-        "android": "",
-        "ios": ""
-      }
+      "storiesEmail": ""
     }
   }
 }

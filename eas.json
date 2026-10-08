@@ -13,12 +13,14 @@
     "preview": {
       "distribution": "internal",
       "android": { "buildType": "apk", "image": "latest" },
-      "ios": { "image": "latest" }
+      "ios": { "image": "latest" },
+      "env": { "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "", "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "" }
     },
     "production": {
       "autoIncrement": true,
       "android": { "image": "latest" },
-      "ios": { "image": "latest" }
+      "ios": { "image": "latest" },
+      "env": { "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "", "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "" }
     }
   },
   "submit": {

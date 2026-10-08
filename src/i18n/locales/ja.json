@@ -565,33 +565,10 @@
       "insights": "公開され次第届く新しい研究と回復の物語"
     },
     "alwaysFree": "緊急ボタン、相談窓口、連続記録、チェックイン、ウェブサイトブロッカーはずっと無料です。",
-    "plans": {
-      "monthly": "月額",
-      "sixMonth": "6か月",
-      "annual": "年額"
-    },
-    "periods": {
-      "monthly": "月",
-      "sixMonth": "6か月",
-      "annual": "年"
-    },
-    "trial": {
-      "day_other": "{{count}}日間無料",
-      "week_other": "{{count}}週間無料",
-      "month_other": "{{count}}か月無料",
-      "year_other": "{{count}}年間無料"
-    },
-    "perMonth": "{{price}}/月",
-    "bestValue": "いちばんお得",
     "startTrial": "無料トライアルを始める",
-    "subscribe": "登録する",
-    "trialTerms": "{{trial}}、その後は{{period}}あたり{{price}}。自動更新されます。ストアのアカウントでいつでも解約できます。",
-    "terms": "{{period}}あたり{{price}}。自動更新されます。ストアのアカウントでいつでも解約できます。",
-    "restore": "購入を復元",
     "manage": "サブスクリプションを管理",
-    "restored": "サブスクリプションを復元しました。",
     "nothingToRestore": "このアカウントで有効なサブスクリプションが見つかりませんでした。",
-    "error": "購入が完了しませんでした。もう一度お試しください。",
+    "pending": "お支払いを処理しています。確認が完了すると、プレミアムが自動的に有効になります。",
     "subscribed": "サブスクリプションは有効です。Clarity Recoveryを支えてくださりありがとうございます。",
     "inTrial": "無料トライアルは{{date}}まで有効です。",
     "noPlans": "現在サブスクリプションをご利用いただけません。しばらくしてからもう一度お試しください。",

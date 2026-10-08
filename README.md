@@ -20,7 +20,7 @@ Recovery data (streaks, journal, check-ins) is stored **only on the device**. Th
 | **Health (optional)** | Steps, sleep and heart rate from Health Connect (Android) or HealthKit (iOS). |
 | **Region & language** | Crisis helplines and resources for the user's country. 14 languages: English, Hindi, Marathi, Spanish, Arabic, Portuguese, Chinese, French, Bengali, Russian, Urdu, Indonesian, German and Japanese. Arabic and Urdu use a right-to-left layout. |
 | **Branding & themes** | Logo, five calm theme presets, light/dark/system mode and a custom accent colour. |
-| **Subscriptions** | A one-month free trial, then Monthly, 6-month or Yearly plans through RevenueCat, with prices set per country in the store. SOS, helplines, streaks, check-ins and site blocking are always free. |
+| **Subscriptions** | A one-month free trial, then Monthly, 6-month or Yearly plans through RevenueCat, shown in a RevenueCat Paywall, with Customer Center for subscribers. Prices are set per country in the store. SOS, helplines, streaks, check-ins and site blocking are always free. |
 
 ## Getting started
 
@@ -45,9 +45,15 @@ node scripts/check-i18n.mjs    # translation keys / placeholders
 npx expo-doctor
 ```
 
-## Configuration (`app.json` → `expo.extra`)
+## Configuration
 
-- `revenueCat.android` / `revenueCat.ios`: RevenueCat public SDK keys. If these are empty, every feature is unlocked.
+RevenueCat keys come from `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY` / `EXPO_PUBLIC_REVENUECAT_IOS_KEY`:
+`.env` (Test Store key, development builds) and `eas.json` → `build.<profile>.env` (store keys).
+Without a key, every feature is unlocked. Dashboard setup (entitlement `clarity_recovery_pro`, products,
+offering, Paywall, Customer Center) is in [docs/revenuecat.md](docs/revenuecat.md).
+
+In `app.json` → `expo.extra`:
+
 - `contentFeedUrl`: a JSON feed of facts and testimonials (see `content/README.md`).
 - `storiesEmail`: the address where users can submit their own stories.
 

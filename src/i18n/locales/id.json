@@ -565,33 +565,10 @@
       "insights": "Riset baru dan kisah pemulihan begitu diterbitkan"
     },
     "alwaysFree": "Tombol darurat, layanan bantuan, pelacak rekor, check-in, dan pemblokir situs selalu gratis.",
-    "plans": {
-      "monthly": "Bulanan",
-      "sixMonth": "6 bulan",
-      "annual": "Tahunan"
-    },
-    "periods": {
-      "monthly": "bulan",
-      "sixMonth": "6 bulan",
-      "annual": "tahun"
-    },
-    "trial": {
-      "day_other": "Gratis {{count}} hari",
-      "week_other": "Gratis {{count}} minggu",
-      "month_other": "Gratis {{count}} bulan",
-      "year_other": "Gratis {{count}} tahun"
-    },
-    "perMonth": "{{price}}/bulan",
-    "bestValue": "Paling hemat",
     "startTrial": "Mulai uji coba gratis",
-    "subscribe": "Berlangganan",
-    "trialTerms": "{{trial}}, lalu {{price}} per {{period}}. Diperpanjang otomatis. Batalkan kapan saja di akun toko aplikasimu.",
-    "terms": "{{price}} per {{period}}. Diperpanjang otomatis. Batalkan kapan saja di akun toko aplikasimu.",
-    "restore": "Pulihkan pembelian",
     "manage": "Kelola langganan",
-    "restored": "Langgananmu sudah dipulihkan.",
     "nothingToRestore": "Kami tidak menemukan langganan aktif untuk akun ini.",
-    "error": "Pembelian tidak berhasil. Silakan coba lagi.",
+    "pending": "Pembayaranmu sedang diproses. Premium akan terbuka otomatis setelah dikonfirmasi.",
     "subscribed": "Langgananmu aktif. Terima kasih sudah mendukung Clarity Recovery.",
     "inTrial": "Uji coba gratismu aktif hingga {{date}}.",
     "noPlans": "Langganan tidak tersedia saat ini. Silakan coba lagi nanti.",

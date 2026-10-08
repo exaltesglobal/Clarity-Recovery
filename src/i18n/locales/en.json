@@ -571,37 +571,10 @@
       "insights": "New research and recovery stories as they're published"
     },
     "alwaysFree": "The panic button, helplines, streak tracker, check-ins and website blocker are always free.",
-    "plans": {
-      "monthly": "Monthly",
-      "sixMonth": "6 months",
-      "annual": "Yearly"
-    },
-    "periods": {
-      "monthly": "month",
-      "sixMonth": "6 months",
-      "annual": "year"
-    },
-    "trial": {
-      "day_one": "{{count}} day free",
-      "day_other": "{{count}} days free",
-      "week_one": "{{count}} week free",
-      "week_other": "{{count}} weeks free",
-      "month_one": "{{count}} month free",
-      "month_other": "{{count}} months free",
-      "year_one": "{{count}} year free",
-      "year_other": "{{count}} years free"
-    },
-    "perMonth": "{{price}}/month",
-    "bestValue": "Best value",
     "startTrial": "Start free trial",
-    "subscribe": "Subscribe",
-    "trialTerms": "{{trial}}, then {{price}} per {{period}}. Renews automatically. Cancel any time in your store account.",
-    "terms": "{{price}} per {{period}}. Renews automatically. Cancel any time in your store account.",
-    "restore": "Restore purchases",
     "manage": "Manage subscription",
-    "restored": "Your subscription has been restored.",
     "nothingToRestore": "We couldn't find an active subscription for this account.",
-    "error": "The purchase didn't go through. Please try again.",
+    "pending": "Your payment is processing. Premium unlocks automatically once it's confirmed.",
     "subscribed": "Your subscription is active. Thank you for supporting Clarity Recovery.",
     "inTrial": "Your free trial is active until {{date}}.",
     "noPlans": "Subscriptions are unavailable right now. Please try again later.",

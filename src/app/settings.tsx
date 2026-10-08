@@ -61,7 +61,8 @@ export default function Settings() {
                   : t('settings.subscriptionActive')
                 : t('settings.subscriptionFree')
           }
-          onPress={() => router.push('/paywall')}
+          // Subscribers manage their plan in RevenueCat's Customer Center.
+          onPress={() => (billing.available && billing.premium ? billing.manage() : router.push('/paywall'))}
         />
       </Card>
 

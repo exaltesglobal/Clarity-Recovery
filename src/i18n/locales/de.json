@@ -571,37 +571,10 @@
       "insights": "Neue Forschung und Recovery-Geschichten, sobald sie erscheinen"
     },
     "alwaysFree": "Notfallknopf, Hilfetelefone, Serien-Tracker, Check-ins und Website-Blocker sind immer kostenlos.",
-    "plans": {
-      "monthly": "Monatlich",
-      "sixMonth": "6 Monate",
-      "annual": "Jährlich"
-    },
-    "periods": {
-      "monthly": "Monat",
-      "sixMonth": "6 Monate",
-      "annual": "Jahr"
-    },
-    "trial": {
-      "day_one": "{{count}} Tag gratis",
-      "day_other": "{{count}} Tage gratis",
-      "week_one": "{{count}} Woche gratis",
-      "week_other": "{{count}} Wochen gratis",
-      "month_one": "{{count}} Monat gratis",
-      "month_other": "{{count}} Monate gratis",
-      "year_one": "{{count}} Jahr gratis",
-      "year_other": "{{count}} Jahre gratis"
-    },
-    "perMonth": "{{price}}/Monat",
-    "bestValue": "Bestes Angebot",
     "startTrial": "Gratis testen",
-    "subscribe": "Abonnieren",
-    "trialTerms": "{{trial}}, danach {{price}} pro {{period}}. Verlängert sich automatisch. Jederzeit in deinem Store-Konto kündbar.",
-    "terms": "{{price}} pro {{period}}. Verlängert sich automatisch. Jederzeit in deinem Store-Konto kündbar.",
-    "restore": "Käufe wiederherstellen",
     "manage": "Abo verwalten",
-    "restored": "Dein Abo wurde wiederhergestellt.",
     "nothingToRestore": "Wir konnten für dieses Konto kein aktives Abo finden.",
-    "error": "Der Kauf hat nicht geklappt. Bitte versuch es noch einmal.",
+    "pending": "Deine Zahlung wird bearbeitet. Premium wird automatisch freigeschaltet, sobald sie bestätigt ist.",
     "subscribed": "Dein Abo ist aktiv. Danke, dass du Clarity Recovery unterstützt.",
     "inTrial": "Dein kostenloser Testzeitraum läuft bis {{date}}.",
     "noPlans": "Abos sind gerade nicht verfügbar. Bitte versuch es später noch einmal.",
