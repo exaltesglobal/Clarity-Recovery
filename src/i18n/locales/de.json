@@ -1,0 +1,1443 @@
+{
+  "appName": "Clarity Recovery",
+  "common": {
+    "add": "Hinzufügen",
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "continue": "Weiter",
+    "days_one": "{{count}} Tag",
+    "days_other": "{{count}} Tage",
+    "minutes_one": "{{count}} Min.",
+    "minutes_other": "{{count}} Min.",
+    "delete": "Löschen",
+    "done": "Fertig",
+    "edit": "Bearbeiten",
+    "no": "Nein",
+    "yes": "Ja",
+    "optional": "Optional",
+    "remove": "Entfernen"
+  },
+  "tabs": {
+    "today": "Heute",
+    "journal": "Tagebuch",
+    "wellness": "Wellness",
+    "support": "Hilfe"
+  },
+  "gender": {
+    "male": "Männlich",
+    "female": "Weiblich",
+    "nonbinary": "Nicht-binär",
+    "unspecified": "Keine Angabe"
+  },
+  "moods": {
+    "1": "Furchtbar",
+    "2": "Schlecht",
+    "3": "Okay",
+    "4": "Gut",
+    "5": "Super"
+  },
+  "triggers": {
+    "boredom": "Langeweile",
+    "stress": "Stress",
+    "loneliness": "Einsamkeit",
+    "tired": "Müdigkeit",
+    "lateNightPhone": "Handy spät nachts",
+    "socialMedia": "Social Media",
+    "anxiety": "Angst",
+    "anger": "Wut",
+    "sadness": "Traurigkeit",
+    "rejection": "Zurückweisung",
+    "aloneAtHome": "Allein zu Hause",
+    "alcohol": "Alkohol",
+    "reward": "Belohnung / Feiern",
+    "other": "Sonstiges"
+  },
+  "reasons": {
+    "placeholder": "In deinen eigenen Worten …",
+    "suggestions": "Oder tippe auf einen Vorschlag:"
+  },
+  "inspiration": {
+    "verse": "Vers für heute",
+    "thought": "Gedanke für heute"
+  },
+  "onboarding": {
+    "tagline": "Dein privater Begleiter, um mit Pornos aufzuhören und ein Leben aufzubauen, auf das du stolz bist.",
+    "promise": {
+      "private": "Privat von Grund auf. Kein Konto, und deine Antworten bleiben auf diesem Handy.",
+      "personal": "Ein Plan, der zu dir passt – auf Basis eines kurzen Selbsttests.",
+      "support": "Hilfe im Moment: ein Notfallknopf, dein Partner und Hilfetelefone in deiner Nähe."
+    },
+    "changeLanguage": "Sprache ändern",
+    "getStarted": "Los geht's",
+    "languageTitle": "Wähle deine Sprache",
+    "rtlRestart": "Die Leserichtung ändert sich nach einem Neustart der App.",
+    "aboutTitle": "Ein bisschen über dich",
+    "aboutBody": "So können wir Tipps und Unterstützung an dich anpassen. Die Angaben verlassen nie dein Handy.",
+    "nameLabel": "Wie sollen wir dich nennen?",
+    "namePlaceholder": "Vorname oder Spitzname (optional)",
+    "genderLabel": "Geschlecht",
+    "ageLabel": "Alter",
+    "teenNote": "Du bist nicht allein, und es ist nie zu früh, dir Hilfe zu holen. Sprich doch mit deinen Eltern, einer Vertrauenslehrkraft oder einem anderen Erwachsenen, dem du vertraust.",
+    "countryTitle": "Wo lebst du?",
+    "countryBody": "Damit zeigen wir dir Hilfetelefone, Notrufnummern und Unterstützung in deinem Land.",
+    "countrySearch": "Länder suchen",
+    "languageSuggestion": "Möchtest du die App auf {{language}} nutzen?",
+    "reasonsTitle": "Warum willst du aufhören?",
+    "reasonsBody": "Wir zeigen dir diese Gründe, wenn ein Drang kommt. Füge mindestens einen hinzu.",
+    "faithTitle": "Tägliche Bibelverse & Glaube",
+    "faithBody": "Optionale Bibelverse und Gebete, auch wenn du den Notfallknopf drückst.",
+    "usePlan": "Diesen Plan nutzen",
+    "startTitle": "Lass uns deinen Startpunkt festlegen",
+    "daysCleanLabel": "Wie viele Tage bist du schon clean?",
+    "daysCleanHint": "Du fängst heute neu an? Lass es bei 0.",
+    "goalLabel": "Dein erstes Ziel",
+    "partnerLater": "Tipp: Füge später im Tab „Hilfe“ einen Accountability-Partner hinzu. Er bekommt eine fertige Nachricht, sobald du den Notfallknopf drückst.",
+    "finish": "Meinen Weg starten"
+  },
+  "assessment": {
+    "title": "Selbsttest",
+    "intro": "Antworte ehrlich. Es gibt kein Richtig oder Falsch, und deine Antworten bleiben auf diesem Handy.",
+    "progress": "Frage {{current}} von {{total}}",
+    "questions": {
+      "moreThanIntended": "Ich schaue öfter oder länger Pornos, als ich eigentlich wollte.",
+      "failedToStop": "Ich habe versucht, weniger zu schauen oder aufzuhören, und es nicht geschafft.",
+      "preoccupied": "Ich denke an Pornos oder habe Drang danach, selbst wenn ich mit anderem beschäftigt bin.",
+      "escalation": "Ich brauchte extremere oder neuere Inhalte, um die gleiche Wirkung zu spüren.",
+      "harmedLife": "Mein Pornokonsum hat meinen Beziehungen, meiner Arbeit, meinem Studium oder meinem Schlaf geschadet.",
+      "coping": "Ich greife zu Pornos, um mit Stress, Langeweile, Einsamkeit oder Traurigkeit klarzukommen.",
+      "shame": "Nach dem Schauen fühle ich Schuld, Scham oder Verzweiflung.",
+      "despiteProblems": "Ich schaue weiter, obwohl ich weiß, dass es Probleme verursacht."
+    },
+    "answers": {
+      "never": "Nie",
+      "sometimes": "Manchmal",
+      "often": "Oft",
+      "almostAlways": "Fast immer"
+    },
+    "frequencyQuestion": "Wie oft schaust du zurzeit Pornos?",
+    "frequency": {
+      "lessThanMonthly": "Seltener als einmal im Monat",
+      "monthly": "Ein paar Mal im Monat",
+      "weekly": "Etwa einmal pro Woche",
+      "severalWeekly": "Mehrmals pro Woche",
+      "daily": "Täglich",
+      "severalDaily": "Mehrmals am Tag"
+    },
+    "safetyQuestion": "Hattest du in den letzten zwei Wochen Gedanken, dass du lieber tot wärst, oder Gedanken, dir selbst wehzutun?",
+    "safetyNote": "Das fragen wir alle. Wenn du mit Ja antwortest, zeigen wir dir Menschen, die dir sofort helfen können.",
+    "crisisTitle": "Danke, dass du es uns sagst",
+    "crisisBody": "Du verdienst jetzt Unterstützung. Bitte wende dich an einen dieser Dienste. Sie sind kostenlos, vertraulich und hören dir zu. Du kannst die App natürlich weiter nutzen.",
+    "resultTitle": "Dein persönlicher Plan",
+    "resultLabel": "Dein Ergebnis",
+    "severity": {
+      "low": "Frühes Stadium",
+      "moderate": "Mittel",
+      "high": "Deutlich"
+    },
+    "severityText": {
+      "low": "Pornos haben einen gewissen Sog auf dich, aber du hast gute Voraussetzungen, etwas zu ändern. Wenn du jetzt gesunde Routinen aufbaust, wird es leichter.",
+      "moderate": "Pornos beeinflussen dein Leben und sind schwer zu kontrollieren. Das ist sehr häufig, und mit den richtigen Werkzeugen und Unterstützung wird es viel leichter.",
+      "high": "Pornos haben dich gerade fest im Griff. Mit dir ist nichts falsch. Das ist ein Muster, das viele Menschen überwinden, und du verdienst dabei extra Unterstützung."
+    },
+    "disclaimer": "Das ist ein Werkzeug zur Selbstreflexion, keine medizinische Diagnose. Wenn du dir Sorgen machst, sprich mit einer Ärztin, einem Arzt oder einer Therapeutin bzw. einem Therapeuten.",
+    "planTitle": "Wir haben die App für dich eingerichtet",
+    "plan": {
+      "goal": "Ein erstes Ziel von {{days}} Tagen",
+      "nudges": "Ermutigende Erinnerungen alle {{hours}} Stunden, {{start}}–{{end}}",
+      "checkIn": "Eine tägliche Check-in-Erinnerung um {{time}}",
+      "dns": "Schalte den Blocker für Erwachsenenseiten ein (unter Schutz)",
+      "pause": "Eine achtsame Pause, wenn du Social-Media-Apps öffnest",
+      "partner": "Füge einen Accountability-Partner hinzu",
+      "professional": "Denk über eine Therapie oder Selbsthilfegruppe nach. Hilfetelefone findest du unter Hilfe"
+    },
+    "planNote": "Du kannst all das später in den Einstellungen ändern.",
+    "takenOn": "Gemacht am {{date}}",
+    "applyPlan": "Plan in meine Einstellungen übernehmen",
+    "retakeBody": "Deine Antworten verändern sich, während du dich erholst. Mach den Selbsttest etwa einmal im Monat, um deine Fortschritte zu sehen.",
+    "retake": "Selbsttest wiederholen"
+  },
+  "today": {
+    "greeting": {
+      "morning": "Guten Morgen",
+      "afternoon": "Guten Tag",
+      "evening": "Guten Abend",
+      "morningName": "Guten Morgen, {{name}}",
+      "afternoonName": "Guten Tag, {{name}}",
+      "eveningName": "Guten Abend, {{name}}"
+    },
+    "daysFree_one": "Tag frei",
+    "daysFree_other": "Tage frei",
+    "intoDay": "{{hours}} Std. {{minutes}} Min. in Tag {{day}}",
+    "toMilestone_one": "Noch {{count}} Tag bis zu deinem {{milestone}}-Tage-Meilenstein",
+    "toMilestone_other": "Noch {{count}} Tage bis zu deinem {{milestone}}-Tage-Meilenstein",
+    "best": "Beste Serie",
+    "urgesBeaten": "Impulse besiegt",
+    "goal": "Ziel",
+    "goalReached": "Erreicht!",
+    "protectionOn": "Schutz ist aktiv",
+    "protectionOnBody": "Erwachsenenseiten sind auf diesem Handy blockiert.",
+    "protectionOff": "Schutz einschalten",
+    "protectionOffBody": "Blockiere Erwachsenenseiten mit einem Tipp. Empfohlen.",
+    "checkInTitle": "Täglicher Check-in",
+    "checkInDone": "Für heute erledigt. Du fühlst dich {{mood}}, Drang-Stufe {{urge}}/10. Schön, dass du dran bleibst.",
+    "checkInPrompt": "Zwei Minuten, um deine Stimmung, deinen Drang und deine Auslöser wahrzunehmen.",
+    "checkInButton": "Einchecken",
+    "factOfDay": "Fakt des Tages",
+    "moreFacts": "Tippe für mehr Forschung",
+    "habitsTitle": "Gesunde Gewohnheiten",
+    "slipped": "Ich hatte einen Ausrutscher. Eintragen"
+  },
+  "panic": {
+    "button": "Ich habe gerade einen Drang",
+    "subtitle": "Hol dir jetzt Hilfe, um ihn auszuhalten",
+    "shortcutTitle": "Notfallknopf",
+    "shortcutSubtitle": "Hilfe bei einem Drang",
+    "partnerMessage": "Hi, hier ist {{name}}. Ich kämpfe gerade mit einem Drang und habe meinen Notfallknopf gedrückt. Kannst du mich anrufen oder mir schreiben?",
+    "someone": "ich"
+  },
+  "sos": {
+    "title": "Drang-SOS",
+    "heading": "Du schaffst das.",
+    "body": "Ein Drang steigt an und klingt wieder ab, meist innerhalb von 10–20 Minuten. Du musst nicht dagegen ankämpfen. Gib ihm nur keine Nahrung. Atme mit dem Kreis.",
+    "rideOut": "Noch {{time}} durchhalten",
+    "madeIt": "Du hast 10 Minuten geschafft!",
+    "textPartner": "{{name}} schreiben",
+    "textPartnerBody": "Öffne eine fertige Nachricht mit der Bitte um Unterstützung",
+    "partnerOpened": "Nachricht an {{name}} ist bereit",
+    "partnerOpenedBody": "Tippe in deiner Nachrichten-App auf Senden. Tippe hier, um sie erneut zu öffnen.",
+    "callPartner": "{{name}} anrufen",
+    "rememberWhy": "Denk an dein Warum",
+    "scriptureTitle": "Bibelwort für diesen Moment",
+    "prayerTitle": "Ein kurzes Gebet",
+    "prayer": "Herr, du siehst diesen Moment und kennst meine Schwäche. Gib mir die Kraft, mich abzuwenden, das Gute zu wählen und in deiner Gnade zu ruhen. Danke, dass deine Barmherzigkeit jeden Morgen neu ist. Amen.",
+    "breathPrayer": "Geführtes Atemgebet",
+    "doNow": "Mach jetzt eins davon",
+    "burnerBody": "Bau die Energie mit einem kurzen Workout ab",
+    "surfingBody": "Geführt: Beobachte das Verlangen, bis es nachlässt",
+    "quickMoves": [
+      "Verlass den Raum, in dem du bist. Geh dorthin, wo andere Menschen sind.",
+      "Leg dein Handy in ein anderes Zimmer oder gib es jemandem.",
+      "Spritz dir kaltes Wasser ins Gesicht oder dusch kalt.",
+      "Mach jetzt sofort 20 Liegestütze oder Kniebeugen.",
+      "Trink langsam ein ganzes Glas Wasser."
+    ],
+    "urgePassed": "Der Drang ist vorbei. Ich habe gewonnen",
+    "slipped": "Ich hatte einen Ausrutscher",
+    "crisisNote": "Wenn du in einer Krise bist oder daran denkst, dir etwas anzutun, melde dich bitte jetzt."
+  },
+  "relapse": {
+    "title": "Ausrutscher eintragen",
+    "heading": "Es ist okay. Lass uns daraus lernen.",
+    "body": "Ein Eintrag setzt deine Serie zurück, aber dein Verlauf und deine beste Serie bleiben erhalten. Hier wird nicht verurteilt. Ehrlichkeit ist der Weg, Muster zu durchbrechen.",
+    "triggerQuestion": "Was hat es ausgelöst?",
+    "whatHappened": "Was ist passiert? (Zeit, Ort, wie du dich gefühlt hast)",
+    "whatHappenedPlaceholder": "z. B. Konnte nicht schlafen, habe nach Mitternacht im Bett gescrollt …",
+    "nextTime": "Was machst du nächstes Mal anders?",
+    "nextTimePlaceholder": "z. B. Handy außerhalb des Schlafzimmers laden",
+    "save": "Eintragen und neu starten",
+    "thanks": "Danke für deine Ehrlichkeit.",
+    "message": "Ein Ausrutscher löscht deinen Fortschritt nicht aus. Die Tage, an denen du stark geblieben bist, haben dein Gehirn trotzdem umgeprägt. Sei ehrlich mit dir, lerne daraus und fang jetzt gleich neu an.",
+    "stayedStrong_one": "Du bist {{count}} Tag stark geblieben. Das zählt. Deine neue Serie beginnt jetzt.",
+    "stayedStrong_other": "Du bist {{count}} Tage stark geblieben. Das zählt. Deine neue Serie beginnt jetzt.",
+    "yourPlan": "Dein Plan für das nächste Mal",
+    "beginAgain": "Neu anfangen"
+  },
+  "checkin": {
+    "title": "Täglicher Check-in",
+    "moodQuestion": "Wie fühlst du dich?",
+    "urgeQuestion": "Wie stark war der Drang heute?",
+    "urgeScale": "0 = gar nicht, 10 = überwältigend",
+    "triggersQuestion": "Irgendwelche Auslöser?",
+    "journal": "Tagebuch",
+    "journalPlaceholder": "Was ist heute passiert? Was hat geholfen? Was war schwer?",
+    "gratitude": "Eine Sache, für die ich dankbar bin",
+    "save": "Check-in speichern"
+  },
+  "journal": {
+    "newCheckIn": "Neuer Check-in",
+    "last7": "Letzte 7 Tage",
+    "avgMood": "Ø Stimmung",
+    "avgUrge": "Ø Drang",
+    "checkIns": "Check-ins",
+    "topTriggers": "Deine häufigsten Auslöser",
+    "planAhead": "Plane für diese Momente vor. Dann bist du am verletzlichsten.",
+    "empty": "Deine Check-ins und Gedanken erscheinen hier.",
+    "longPressHint": "Halte einen Eintrag gedrückt, um ihn zu löschen.",
+    "deleteConfirm": "Diesen Eintrag löschen?",
+    "urge": "Drang {{level}}/10",
+    "triggers": "Auslöser: {{list}}",
+    "gratefulFor": "Dankbar für: {{text}}",
+    "slipAfter_one": "Ausrutscher nach {{count}} Tag",
+    "slipAfter_other": "Ausrutscher nach {{count}} Tagen",
+    "nextTime": "Nächstes Mal: {{text}}"
+  },
+  "wellness": {
+    "tabs": {
+      "meditation": "Meditation",
+      "yoga": "Yoga",
+      "exercise": "Sport",
+      "diet": "Ernährung",
+      "sleep": "Schlaf",
+      "facts": "Fakten"
+    },
+    "intro": {
+      "meditation": "Trainiere deine Aufmerksamkeit, damit der Drang seinen Griff verliert.",
+      "yoga": "Löse Anspannung und spüre deinen Körper wieder.",
+      "exercise": "Bau unruhige Energie ab und heb ganz natürlich deine Stimmung.",
+      "diet": "Gleichmäßige Energie macht den Drang leichter zu bewältigen.",
+      "sleep": "Ein müdes Gehirn hat weniger Selbstkontrolle. Schütze deinen Schlaf.",
+      "facts": "Was die Forschung über Erholung, Gewohnheiten und das Gehirn sagt."
+    },
+    "faith": "Glaube",
+    "allFacts": "Alle Fakten und Quellen ansehen",
+    "disclaimer": "Allgemeine Tipps fürs Wohlbefinden, keine medizinische Beratung. Sprich mit einer Ärztin oder einem Arzt, bevor du ein neues Trainings- oder Ernährungsprogramm beginnst, und lass alles weg, was Schmerzen verursacht."
+  },
+  "session": {
+    "notFound": "Einheit nicht gefunden.",
+    "step": "Schritt {{current}} von {{total}}",
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Fortsetzen",
+    "skip": "Überspringen",
+    "upNext": "Als Nächstes: {{title}}",
+    "doneTitle": "Gut gemacht",
+    "doneBody": "Du hast heute Zeit in dich investiert. So entstehen neue Gewohnheiten."
+  },
+  "facts": {
+    "title": "Forschung & Fakten",
+    "intro": "Echte Ergebnisse aus veröffentlichter Forschung. Neue Fakten erscheinen hier automatisch.",
+    "source": "Quelle: {{source}}",
+    "categories": {
+      "science": "Wissenschaft",
+      "habits": "Gewohnheiten",
+      "body": "Körper",
+      "mind": "Psyche",
+      "connection": "Verbindung"
+    },
+    "items": {
+      "prevalence": {
+        "title": "Du bist bei Weitem nicht allein",
+        "body": "In einer landesweit repräsentativen Umfrage in den USA berichteten 10,3 % der Männer und 7,0 % der Frauen von klinisch bedeutsamem Leidensdruck oder Problemen, weil sie sexuelle Impulse und Verhalten schwer kontrollieren konnten."
+      },
+      "icd11": {
+        "title": "Es ist ein anerkanntes Krankheitsbild",
+        "body": "Die ICD-11 der Weltgesundheitsorganisation enthält die zwanghafte sexuelle Verhaltensstörung (6C72): ein anhaltendes Unvermögen, intensive sexuelle Impulse zu kontrollieren, das trotz Schaden zu wiederholtem Verhalten führt."
+      },
+      "cueReactivity": {
+        "title": "Reize aktivieren das Belohnungssystem",
+        "body": "In einer fMRT-Studie zeigten Männer, die wegen problematischen Pornokonsums Hilfe suchten, stärkere Reaktionen im Belohnungszentrum (ventrales Striatum) auf Reize, die erotische Bilder ankündigten. Reize zu meiden hilft wirklich."
+      },
+      "moralIncongruence": {
+        "title": "Scham macht es schlimmer",
+        "body": "Studien zeigen: Wer das Gefühl hat, dass Pornokonsum den eigenen Werten widerspricht, leidet deutlich stärker. Mit dauerhafter Veränderung hängt Selbstmitgefühl zusammen, nicht Selbsthass."
+      },
+      "habits66": {
+        "title": "Neue Gewohnheiten brauchen etwa zwei Monate",
+        "body": "In einer Studie zum Aufbau täglicher Gewohnheiten dauerte es im Median 66 Tage, bis ein Verhalten automatisch wurde (Spanne 18–254). Ein verpasster Tag hat den Fortschritt nicht zunichtegemacht."
+      },
+      "exerciseCravings": {
+        "title": "Bewegung verringert Verlangen",
+        "body": "Eine Metaanalyse ergab, dass schon kurze körperliche Aktivität Verlangen schnell senkt. Sport ist einer der schnellsten Drang-Brecher, die du hast."
+      },
+      "urgeSurfing": {
+        "title": "Ein Drang vergeht, wenn du ihn aussurfst",
+        "body": "In einer Studie half eine kurze Achtsamkeitstechnik namens Urge Surfing, seltener einem Verlangen nachzugeben. Einen Drang zu bemerken, ohne ihm zu folgen, schwächt ihn mit der Zeit."
+      },
+      "mbrp": {
+        "title": "Achtsamkeit beugt Rückfällen vor",
+        "body": "Achtsamkeitsbasierte Rückfallprävention führte bei der Nachuntersuchung nach 12 Monaten zu weniger Tagen mit Substanzkonsum und starkem Trinken als die Standardbehandlung."
+      },
+      "sleepEmotion": {
+        "title": "Schlafmangel schwächt die Selbstkontrolle",
+        "body": "Nach einer Nacht ohne Schlaf reagierte das emotionale Zentrum des Gehirns (Amygdala) etwa 60 % stärker, bei schwächerer Kontrolle durch den präfrontalen Kortex."
+      },
+      "slowBreathing": {
+        "title": "Langsames Atmen beruhigt den Körper",
+        "body": "Eine systematische Übersichtsarbeit ergab, dass langsames Atmen (etwa 6 Atemzüge pro Minute) die Herzfrequenzvariabilität und Ruhe erhöht und Angst und Erregung senkt."
+      },
+      "ifThenPlans": {
+        "title": "Wenn-dann-Pläne wirken",
+        "body": "In 94 Studien hatten konkrete Wenn-dann-Pläne („Wenn ich mit dem Handy im Bett liege, dann lege ich es in die Küche“) einen mittleren bis großen Effekt darauf, Ziele zu erreichen."
+      },
+      "lapseNotRelapse": {
+        "title": "Ein Ausrutscher ist kein Rückfall",
+        "body": "Wer einen einzelnen Ausrutscher als völliges Versagen sieht (Abstinenzverletzungseffekt), erleidet eher einen echten Rückfall. Sieh einen Ausrutscher als Information, nicht als Urteil."
+      },
+      "socialConnection": {
+        "title": "Verbindung schützt",
+        "body": "Eine Metaanalyse von 148 Studien ergab, dass Menschen mit stärkeren sozialen Beziehungen eine um 50 % höhere Überlebenswahrscheinlichkeit hatten. Isolation ist ein Risiko, Verbindung ist Medizin."
+      },
+      "peerSupport": {
+        "title": "Selbsthilfegruppen helfen",
+        "body": "Ein Cochrane-Review ergab, dass 12-Schritte-Selbsthilfeprogramme genauso wirksam waren wie andere Behandlungen und Abstinenz oft besser aufrechterhielten."
+      },
+      "gratitude": {
+        "title": "Dankbarkeit hebt die Stimmung",
+        "body": "Menschen, die jede Woche aufschrieben, wofür sie dankbar waren, waren zufriedener mit ihrem Leben und optimistischer als jene, die Ärgernisse notierten."
+      },
+      "act": {
+        "title": "Therapie bei Pornokonsum wirkt",
+        "body": "In einer randomisierten Studie führte die Akzeptanz- und Commitment-Therapie im Vergleich zu einer Warteliste zu einem starken Rückgang des Pornokonsums, und die Erfolge hielten bei der Nachuntersuchung größtenteils an."
+      }
+    }
+  },
+  "health": {
+    "title": "Fitness & Smartwatch",
+    "heading": "Verbinde deinen Fitnesstracker",
+    "body": "Verknüpfe {{provider}}, um Schritte, Schlaf und Herzfrequenz neben deiner Erholung zu sehen.",
+    "why": "Bewegung und guter Schlaf machen es leichter, einem Drang zu widerstehen. Wenn du beides trackst, erkennst du Muster.",
+    "connect": "{{provider}} verbinden",
+    "connected": "Mit {{provider}} verbunden. Die Daten deiner Uhr oder deines Trackers erscheinen unter Wohlbefinden.",
+    "isConnected": "Verbunden",
+    "disconnect": "Trennen",
+    "failed": "Die Berechtigung wurde nicht erteilt. Du kannst es noch einmal versuchen oder den Zugriff in den Gesundheitseinstellungen deines Handys erlauben.",
+    "installHealthConnect": "Installiere oder aktualisiere Googles App Health Connect aus dem Play Store und komm dann zurück. Fitbit, Samsung Health, Garmin und Wear OS können alle damit synchronisieren.",
+    "unavailableIos": "Apple Health ist auf diesem Gerät nicht verfügbar.",
+    "unavailableWeb": "Fitness-Tracking funktioniert in den Apps für Android und iPhone.",
+    "connectTitle": "Fitnesstracker verbinden",
+    "connectTeaser": "Optional: Schritte, Schlaf und Herzfrequenz hier sehen",
+    "steps": "Schritte heute",
+    "sleep": "Schlaf",
+    "heart": "Herzfrequenz",
+    "privacy": "Gesundheitsdaten werden nur auf deinem Handy gelesen und nie hochgeladen."
+  },
+  "protection": {
+    "title": "Schutz",
+    "intro": "Mach es in schwachen Momenten schwerer, an Erwachseneninhalte zu kommen. Alles lässt sich mit einem Tipp einrichten und jederzeit wieder ausschalten.",
+    "dnsSection": "Blocker für Erwachsenenseiten",
+    "dnsTitle": "Erwachsenenseiten blockieren",
+    "dnsWhat": "Nutzt einen familienfreundlichen DNS-Dienst",
+    "dnsOn": "Aktiv auf diesem Handy",
+    "dnsOff": "Aus",
+    "dnsExplain": "Tippe auf den Button und erlaube die Verbindungsanfrage. Das war's. Erwachsenenseiten laden dann in keinem Browser und keiner App auf diesem Handy mehr.",
+    "dnsDisclosureTitle": "Über den Blocker",
+    "dnsDisclosure": "Android fragt, ob du eine VPN-Verbindung erlauben willst. Clarity Recovery nutzt sie nur, um Abfragen von Website-Namen (DNS) an den Family Filter von CleanBrowsing zu senden, der Erwachsenenseiten blockiert. Dein Surf-Verkehr läuft nicht über das VPN, und die App protokolliert nichts.",
+    "turnOnDns": "Blocker einschalten",
+    "dnsOnBody": "Erwachsenenseiten sind jetzt blockiert. In deiner Statusleiste siehst du ein kleines Schlüsselsymbol. Das ist der laufende Blocker.",
+    "alwaysOn": "Nach Neustarts aktiv lassen",
+    "alwaysOnBody": "Öffne die VPN-Einstellungen, tippe auf das Zahnrad neben Clarity Recovery und schalte „Durchgehend aktives VPN“ ein.",
+    "turnOff": "Ausschalten",
+    "androidManualIntro": "Diese Version kann den Blocker nicht selbst einschalten, aber Android hat eine eingebaute Einstellung, die dasselbe macht:",
+    "androidManualSteps": [
+      "Tippe unten auf „Adresse kopieren“.",
+      "Öffne Einstellungen → Netzwerk & Internet → Privates DNS.",
+      "Wähle „Hostname des privaten DNS-Anbieters“.",
+      "Füge {{host}} ein und tippe auf Speichern."
+    ],
+    "copyHost": "Adresse kopieren",
+    "copied": "Kopiert!",
+    "openSettings": "Einstellungen öffnen",
+    "iosIntro": "Auf dem iPhone ist der Blocker ein kostenloses Profil von CleanBrowsing:",
+    "iosSteps": [
+      "Tippe auf „Blocker-Profil installieren“ und erlaube den Download.",
+      "Öffne die Einstellungen-App und tippe oben auf „Profil geladen“.",
+      "Tippe auf Installieren und gib deinen Code ein.",
+      "Fertig. Erwachsenenseiten sind jetzt in Safari und anderen Apps blockiert."
+    ],
+    "iosInstall": "Blocker-Profil installieren",
+    "webNote": "Der Blocker funktioniert in den Apps für Android und iPhone.",
+    "dnsProvider": "Filterung durch CleanBrowsing Family Filter (cleanbrowsing.org).",
+    "pauseSection": "Achtsame Pause",
+    "pauseTitle": "Pause vor dem Scrollen",
+    "pauseWhat": "Wenn du Apps wie Instagram oder TikTok öffnest, siehst du zuerst eine ruhige Pause von 10 Sekunden.",
+    "pauseApps": "Diese Apps pausieren:",
+    "turnOnPause": "Achtsame Pause einschalten",
+    "pauseDisclosureTitle": "Bedienungshilfen-Zugriff erlauben",
+    "pauseDisclosure": "Um zu erkennen, wann du eine ausgewählte App öffnest, braucht Clarity Recovery die Android-Berechtigung für Bedienungshilfen. Die App prüft nur, welche App gerade auf dem Bildschirm ist. Sie liest nie deine Nachrichten, deine Eingaben oder Bildschirminhalte, und nichts verlässt dein Handy.",
+    "pauseNeedsService": "Noch ein Schritt: Schalte Clarity Recovery in den Einstellungen für Bedienungshilfen ein.",
+    "pauseRestricted": "Schalter ausgegraut oder „Eingeschränkte Einstellung“? Android sperrt ihn für Apps, die nicht aus dem Play Store installiert wurden. Öffne App-Info, tippe auf ⋮ (oben rechts) → Eingeschränkte Einstellungen zulassen und schalte ihn dann erneut ein.",
+    "openAppInfo": "App-Info öffnen",
+    "oemBody": "{{maker}}-Handys schließen Apps im Hintergrund, um Akku zu sparen. Dadurch kann die achtsame Pause ausfallen. So bleibt sie aktiv:",
+    "oemSteps": ["Aktiviere „Autostart“ für Clarity Recovery.","Erlaube unter „Weitere Berechtigungen“: „Pop-up-Fenster anzeigen, während im Hintergrund ausgeführt“.","Wähle unter App-Info → Energiesparmodus „Keine Einschränkungen“.","Sperre Clarity Recovery in den letzten Apps (Karte nach unten ziehen oder lange drücken)."],
+    "oemAutostart": "Autostart öffnen",
+    "oemPopups": "Weitere Berechtigungen öffnen",
+    "pauseSteps": [
+      "Tippe auf „Einstellungen öffnen“.",
+      "Tippe auf „Installierte Apps“ (oder „Heruntergeladene Apps“).",
+      "Tippe auf „Clarity Recovery – Mindful pause“ und schalte es ein."
+    ],
+    "pauseNeedsBuild": "Die achtsame Pause funktioniert in der Android-App.",
+    "iosScreenTime": "Auf dem iPhone können Apps keine anderen Apps pausieren, aber mit Bildschirmzeit kannst du ein Limit setzen:",
+    "iosScreenTimeSteps": [
+      "Öffne Einstellungen → Bildschirmzeit → App-Limits.",
+      "Tippe auf „Limit hinzufügen“ und wähle „Soziale Netzwerke“.",
+      "Lege ein kurzes Tageslimit fest, zum Beispiel 15 Minuten."
+    ],
+    "moreSection": "Weitere Werkzeuge",
+    "partnerTitle": "Accountability-Partner",
+    "partnerBody": "Jemand, der eine Nachricht bekommt, wenn du den Notfallknopf drückst",
+    "privacy": "Der Schutz läuft auf deinem Handy. Clarity Recovery sieht und speichert die Websites, die du besuchst, nicht."
+  },
+  "pause": {
+    "title": "Halte kurz inne",
+    "body": "Du öffnest gerade {{app}}. Willst du das jetzt wirklich?",
+    "breathe": "Atme dreimal langsam mit dem Kreis.",
+    "leave": "{{app}} verlassen",
+    "notNow": "Ich will es trotzdem öffnen",
+    "continue": "{{app}} für 10 Minuten öffnen"
+  },
+  "instagram": {
+    "title": "Instagram-Follow-Check",
+    "teaser": "Finde Accounts mit Erwachseneninhalten, denen du folgst",
+    "heading": "Räum auf, wem du folgst",
+    "body": "Dein Feed wird davon geprägt, wem du folgst. Dieses Werkzeug liest deinen eigenen Instagram-Datenexport und markiert Accounts, die nach Erwachseneninhalten aussehen, damit du ihnen entfolgen kannst.",
+    "howTitle": "So bekommst du deine Instagram-Daten",
+    "steps": [
+      "Öffne in Instagram dein Profil → Menü ☰ → Kontenübersicht.",
+      "Tippe auf „Deine Informationen und Berechtigungen“ → „Deine Informationen herunterladen“.",
+      "Wähle „Einige deiner Informationen“ und dann „Follower und gefolgte Personen“.",
+      "Wähle „Auf Gerät herunterladen“, Format JSON, und tippe auf „Dateien erstellen“.",
+      "Wenn Instagram dir eine E-Mail schickt (meist innerhalb weniger Minuten), lade die .zip-Datei herunter.",
+      "Komm hierher zurück und tippe auf „Datei wählen“."
+    ],
+    "openAccountsCenter": "Kontenübersicht öffnen",
+    "choose": "Datei wählen",
+    "chooseAnother": "Andere Datei prüfen",
+    "error": "Wir konnten in dieser Datei keine Liste der gefolgten Accounts finden. Achte darauf, die .zip-Datei von Instagram (oder die following.json darin) zu wählen.",
+    "summary": "Du folgst {{total}} Accounts. {{count}} davon teilen möglicherweise Erwachseneninhalte.",
+    "summaryAdvice": "Tippe auf einen Account, um ihn in Instagram zu öffnen und zu entfolgen. Weniger Auslöser im Feed bedeuten weniger Drang.",
+    "summaryClean": "Nichts Auffälliges gefunden. Super, dass du deinen Feed sauber hältst.",
+    "heuristicNote": "Treffer basieren nur auf Account-Namen, also prüf sie, bevor du entfolgst.",
+    "filter": {
+      "all": "Alle",
+      "likely": "Wahrscheinlich",
+      "possible": "Möglich"
+    },
+    "confidence": {
+      "likely": "Wahrscheinlich Erwachseneninhalte („{{keyword}}“)",
+      "possible": "Möglicherweise anzüglich („{{keyword}}“)"
+    },
+    "privacy": "Deine Datei wird auf diesem Handy analysiert und nie hochgeladen."
+  },
+  "support": {
+    "partnerSection": "Verantwortung",
+    "partnerTitle": "Accountability-Partner",
+    "partnerBody": "Erholung fällt leichter, wenn jemand hinter dir steht, zum Beispiel ein guter Freund, Mentor, Pastor oder Berater. Es wird nichts geteilt, außer du schickst es selbst.",
+    "name": "Name",
+    "namePlaceholder": "z. B. Sam",
+    "phone": "Telefonnummer",
+    "savePartner": "Partner speichern",
+    "alertOnPanic": "Nachricht schicken, wenn ich den Notfallknopf drücke",
+    "alertOnPanicBody": "Öffnet eine fertige Nachricht. Du tippst nur auf Senden.",
+    "struggling": "Mir geht's nicht gut",
+    "strugglingBody": "Per Nachricht um Unterstützung bitten",
+    "strugglingMessage": "Hey, ich habe es gerade echt schwer. Kannst du dich bei mir melden?",
+    "call": "{{name}} anrufen",
+    "weekly": "Wochenupdate senden",
+    "weeklyBody": "Schick deinen Fortschritt der letzten 7 Tage",
+    "removePartner": "Partner entfernen",
+    "shareTitle": "Teile deinen Fortschritt",
+    "shareBody": "Schick deine Wochenübersicht über eine beliebige App, zum Beispiel E-Mail, WhatsApp oder Signal.",
+    "share": "Wochenupdate teilen",
+    "report": "Mein wöchentliches Recovery-Update:\n• Aktuelle Serie: {{streak}}\n• Beste Serie: {{best}}\n• Diese Woche einem Drang widerstanden: {{urges}}-mal\n• Ausrutscher diese Woche: {{slips}}\n• Check-ins diese Woche: {{checkins}} (Ø Drang {{avgUrge}}/10)\n\nDanke, dass du mich begleitest.",
+    "toolsSection": "Werkzeuge",
+    "protectionBody": "Website-Blocker, achtsame Pause, Instagram-Check",
+    "storiesBody": "Echte Geschichten von Menschen, die frei geworden sind",
+    "factsBody": "Was die Forschung über Erholung sagt",
+    "helpSection": "Hilfe holen",
+    "professional": "Zwanghafter Pornokonsum ist häufig und behandelbar. Eine Therapeutin oder ein Therapeut mit Erfahrung bei zwanghaftem Sexualverhalten, eine Selbsthilfegruppe oder deine Glaubensgemeinschaft können viel bewirken."
+  },
+  "helplines": {
+    "title": "Hilfetelefone",
+    "intro": "Kostenlose, vertrauliche Angebote in deiner Nähe. Du kannst dein Land jederzeit ändern.",
+    "changeCountry": "Tippe, um das Land zu ändern",
+    "crisisTitle": "In einer Krise? Melde dich jetzt",
+    "crisisBody": "Kostenlose, vertrauliche Hilfe in {{country}}:",
+    "emergency": "Notruf: {{number}}",
+    "findAHelpline": "Hilfetelefon in jedem Land finden",
+    "website": "Website",
+    "allHelplines": "Alle Hilfetelefone & Selbsthilfegruppen",
+    "recoveryTitle": "Selbsthilfegruppen",
+    "recoveryBody": "Kostenlose Selbsthilfegemeinschaften mit Treffen online und auf der ganzen Welt.",
+    "verifyNote": "Die Nummern werden regelmäßig geprüft, aber Angebote können sich ändern. Wenn eine Nummer nicht funktioniert, nutze findahelpline.com."
+  },
+  "stories": {
+    "title": "Geschichten der Freiheit",
+    "heading": "Menschen, die frei geworden sind",
+    "body": "Echte Geschichten, mit Erlaubnis geteilt, von Menschen, die ihre Pornosucht überwunden haben.",
+    "empty": "Neue Geschichten sind unterwegs. Schau bald wieder vorbei.",
+    "shareTitle": "Teile deine Geschichte",
+    "shareBody": "Hat dir Clarity Recovery geholfen? Deine Geschichte könnte jemand anderem Hoffnung geben. Wir veröffentlichen nur mit deiner schriftlichen Erlaubnis und nur mit deinem Vornamen oder deinen Initialen.",
+    "share": "Meine Geschichte teilen",
+    "emailSubject": "Meine Recovery-Geschichte",
+    "emailBody": "Vorname oder Initialen zur Anzeige:\nLand:\nWie lange du schon frei bist:\n\nMeine Geschichte:\n\n\nIch erlaube Clarity Recovery, diese Geschichte in der App zu veröffentlichen (ja/nein):",
+    "consentNote": "Jede Geschichte ist echt und wird mit Einverständnis veröffentlicht. Wir erfinden niemals Erfahrungsberichte."
+  },
+  "paywall": {
+    "title": "Starte deinen Gratismonat",
+    "activeTitle": "Du bist Clarity-Mitglied",
+    "subtitle": "Teste alle Funktionen 1 Monat kostenlos. Kündige jederzeit vor Ablauf und dir wird nichts berechnet.",
+    "features": {
+      "sessions": "Alle geführten Meditations-, Yoga- und Sporteinheiten",
+      "protection": "Achtsame Pause für Social-Media-Apps",
+      "instagram": "Instagram-Follow-Check",
+      "health": "Einblicke von Fitnesstracker & Smartwatch",
+      "themes": "Designs und eigene Farben",
+      "insights": "Neue Forschung und Recovery-Geschichten, sobald sie erscheinen"
+    },
+    "alwaysFree": "Notfallknopf, Hilfetelefone, Serien-Tracker, Check-ins und Website-Blocker sind immer kostenlos.",
+    "startTrial": "Gratis testen",
+    "manage": "Abo verwalten",
+    "nothingToRestore": "Wir konnten für dieses Konto kein aktives Abo finden.",
+    "pending": "Deine Zahlung wird bearbeitet. Premium wird automatisch freigeschaltet, sobald sie bestätigt ist.",
+    "subscribed": "Dein Abo ist aktiv. Danke, dass du Clarity Recovery unterstützt.",
+    "inTrial": "Dein kostenloser Testzeitraum läuft bis {{date}}.",
+    "noPlans": "Abos sind gerade nicht verfügbar. Bitte versuch es später noch einmal.",
+    "notConfigured": "Abos sind in diesem Build noch nicht eingerichtet, daher sind alle Funktionen freigeschaltet.",
+    "webNote": "Abos gibt es in den Apps für Android und iPhone.",
+    "notNow": "Nicht jetzt",
+    "localPricing": "Preise werden in deiner Landeswährung angezeigt und von Google Play oder dem App Store für dein Land festgelegt.",
+    "bannerTitle": "1 Monat gratis",
+    "bannerBody": "Schalte alle Werkzeuge für deine Erholung frei.",
+    "lockedTitle": "{{feature}} ist eine Mitgliederfunktion",
+    "lockedBody": "Starte deinen Gratismonat, um sie freizuschalten. Notfallknopf und Hilfetelefone sind immer kostenlos."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "account": "Mitgliedschaft",
+    "subscription": "Abo",
+    "subscriptionActive": "Aktiv",
+    "subscriptionTrial": "Gratis-Testphase",
+    "subscriptionTrialEnds": "Gratis-Testphase, endet am {{date}}",
+    "subscriptionFree": "Kostenloser Plan. Tippe, um deinen Gratismonat zu starten",
+    "subscriptionDev": "Alle Funktionen freigeschaltet (Abrechnung nicht eingerichtet)",
+    "aboutYou": "Über dich",
+    "profile": "Geschlecht, Alter & Land",
+    "language": "Sprache",
+    "restart": "Jetzt neu starten",
+    "assessment": "Selbsttest & persönlicher Plan",
+    "assessmentNone": "Noch nicht gemacht",
+    "recovery": "Erholung",
+    "goal": "Ziel",
+    "reasons": "Deine Gründe",
+    "faith": "Tägliche Bibelverse & Glaube",
+    "faithBody": "Bibelverse und Gebete, auch auf dem Notfallbildschirm.",
+    "appSection": "App",
+    "nudgesOn": "Alle {{hours}} Std., {{start}}–{{end}}",
+    "nudgesOff": "Aus",
+    "privacy": "Datenschutz",
+    "privacyBody": "Clarity Recovery hat kein Konto und keine Server für deine Daten. Alles, was du eingibst, wird nur auf diesem Handy gespeichert. Wenn du die App deinstallierst, wird es gelöscht.",
+    "erase": "Alle Daten löschen",
+    "eraseTitle": "Alle Daten löschen?",
+    "eraseBody": "Damit werden deine Serie, dein Tagebuch und deine Einstellungen von diesem Handy gelöscht.",
+    "version": "Version {{version}}"
+  },
+  "profileEdit": {
+    "title": "Über dich"
+  },
+  "appearance": {
+    "title": "Design & Farben",
+    "preview": "Vorschau",
+    "mode": "Hell oder dunkel",
+    "modes": {
+      "system": "Automatisch",
+      "light": "Hell",
+      "dark": "Dunkel"
+    },
+    "theme": "Design",
+    "themes": {
+      "serene": "Gelassen",
+      "dawn": "Morgenrot",
+      "ocean": "Ozean",
+      "forest": "Wald",
+      "sand": "Sand"
+    },
+    "accent": "Akzentfarbe",
+    "accentBody": "Wähle deine eigene Akzentfarbe. Tippe noch einmal, um zur Farbe des Designs zurückzukehren."
+  },
+  "reminders": {
+    "title": "Erinnerungen",
+    "nudges": "Ermutigende Erinnerungen",
+    "nudgesBody": "Kurze, diskrete Nachrichten über den Tag verteilt",
+    "every": "Wie oft",
+    "everyHours_one": "Jede Stunde",
+    "everyHours_other": "Alle {{count}} Stunden",
+    "from": "Ab",
+    "until": "Letzte um",
+    "schedule": "Du bekommst Erinnerungen um {{times}}.",
+    "checkIn": "Tägliche Check-in-Erinnerung",
+    "checkInBody": "Ein Anstoß, über deinen Tag nachzudenken",
+    "discreet": "Erinnerungen erwähnen nie Pornos, sind also auf deinem Sperrbildschirm unbedenklich.",
+    "denied": "Mitteilungen sind für Clarity Recovery ausgeschaltet. Bitte erlaube sie in den Einstellungen deines Handys.",
+    "webNote": "Erinnerungen funktionieren in den Apps für Android und iPhone."
+  },
+  "sound": {
+    "title": "Ton & Stimme",
+    "off": "Aus",
+    "voiceGuide": "Sprachführung",
+    "voiceGuideBody": "Liest während der Übungen jeden Schritt vor",
+    "bells": "Klangschale & Atemsignale",
+    "bellsBody": "Ein Gong zwischen den Schritten und sanfte Töne zum Ein- und Ausatmen",
+    "more": "Toneinstellungen",
+    "voice": "Stimme",
+    "genders": {
+      "female": "Weiblich",
+      "male": "Männlich"
+    },
+    "genderMissing": "Auf deinem Telefon wurde keine Stimme dieser Art erkannt. Wähle unten eine aus der Liste.",
+    "speed": "Tempo",
+    "rates": {
+      "slow": "Langsam",
+      "calm": "Ruhig",
+      "normal": "Normal"
+    },
+    "preview": "Stimme anhören",
+    "stop": "Stopp",
+    "listen": "Anhören",
+    "sample": "Atme langsam ein … und lass los. Du machst das gut.",
+    "deviceVoices": "Stimmen auf diesem Telefon",
+    "noVoices": "Für diese Sprache wurden keine Stimmen gefunden. Füge eine in den Sprachausgabe-Einstellungen deines Telefons hinzu.",
+    "voiceNumber": "Stimme {{n}}",
+    "enhanced": "Erweitert",
+    "needsInternet": "Braucht Internet",
+    "moreVoicesIos": "Für eine natürlichere Stimme lade unter Einstellungen › Bedienungshilfen › Gesprochene Inhalte › Stimmen eine erweiterte oder Premium-Stimme.",
+    "moreVoicesAndroid": "Für eine natürlichere Stimme installiere Sprachdaten unter Einstellungen › Bedienungshilfen › Sprachausgabe.",
+    "silentSwitch": "Töne und Stimme folgen dem Stummschalter deines iPhones.",
+    "music": "Hintergrundmusik",
+    "musicBody": "Spielt leise während der Übungen und wird leiser, wenn die Stimme spricht. Jeder Titel wird einmal geladen, wenn du ihn auswählst, und funktioniert dann offline.",
+    "musicBodyWeb": "Spielt leise während der Übungen und wird leiser, wenn die Stimme spricht.",
+    "none": "Keine",
+    "downloaded": "Geladen",
+    "downloading": "Wird geladen … {{percent}} %",
+    "downloadFailed": "Download fehlgeschlagen. Tippe, um es erneut zu versuchen.",
+    "size": "{{size}} MB",
+    "volume": "Musiklautstärke",
+    "previewMusic": "Musik anhören",
+    "removeDownloads": "Geladene Musik entfernen ({{size}} MB)",
+    "musicChip": "Musik",
+    "minutes": "{{minutes}} Min.",
+    "volumes": {
+      "soft": "Leise",
+      "medium": "Mittel",
+      "loud": "Laut"
+    }
+  },
+  "notifications": {
+    "checkInTitle": "Zeit für deinen täglichen Check-in",
+    "checkInBody": "Nimm dir zwei Minuten, um über deinen Tag nachzudenken.",
+    "trialEndingTitle": "Dein Gratismonat endet in 2 Tagen",
+    "trialEndingBody": "Dein Abo beginnt am {{date}}. Zum Ändern oder Kündigen öffne Einstellungen → Abo.",
+    "nudges": [
+      "Du machst das besser, als du denkst. Bleib dran.",
+      "Atme dreimal langsam durch. Du schaffst das.",
+      "Denk daran, warum du angefangen hast.",
+      "Jede Stunde, in der du dich anders entscheidest, verändert dein Gehirn ein bisschen mehr.",
+      "Unruhig? Ein kurzer Spaziergang wirkt Wunder.",
+      "Hast du heute schon genug Wasser getrunken?",
+      "Melde dich heute bei jemandem, dem du vertraust.",
+      "Stolz auf dich, dass du heute dranbleibst."
+    ]
+  },
+  "affirmations": [
+    "Ein Drang ist wie eine Welle. Er steigt, erreicht seinen Höhepunkt und vergeht, und du musst ihm nicht nachgeben.",
+    "Jeden Tag, an dem du dich anders entscheidest, verändert sich dein Gehirn ein bisschen mehr.",
+    "Du bist nicht dein Drang. Du bist derjenige, der ihn bemerkt.",
+    "Fortschritt, nicht Perfektion. Ein ehrlicher Tag nach dem anderen.",
+    "Das Unbehagen, das du gerade spürst, ist dein Gehirn, das heilt.",
+    "Du baust dir ein Leben auf, aus dem du nicht fliehen willst.",
+    "Echte Verbindung schlägt einen Bildschirm jedes Mal.",
+    "Langeweile, Stress und Einsamkeit sind Signale, keine Befehle.",
+    "Du hast bisher jeden schweren Moment überstanden. Diesen auch.",
+    "Kleine Entscheidungen, jeden Tag wiederholt, machen dich zu dem, der du bist.",
+    "Ruh dich aus, beweg dich, iss gut, melde dich bei anderen. Kümmere dich um den Körper, in dem dein Geist lebt.",
+    "Scham hält dich fest. Mitgefühl hilft dir weiter."
+  ],
+  "reasonSuggestions": [
+    "Ganz für die Menschen da sein, die ich liebe",
+    "Eine echte, gesunde Beziehung aufbauen",
+    "Meine Konzentration und Energie zurückgewinnen",
+    "Stolz auf mich sein",
+    "Nach meinen Werten und meinem Glauben leben",
+    "Keine Scham und Heimlichkeit mehr"
+  ],
+  "habits": {
+    "meditate": "Meditieren oder atmen",
+    "move": "Sport",
+    "stretch": "Yoga / Dehnen",
+    "eat": "Ausgewogen essen",
+    "water": "Genug Wasser trinken",
+    "pray": "Beten oder Bibel lesen",
+    "connect": "Mit jemandem reden",
+    "sleep": "Handy raus aus dem Schlafzimmer"
+  },
+  "sessions": {
+    "box-breathing": {
+      "title": "Ruhiges Atmen",
+      "summary": "Senke deinen Puls und beruhige den Drang in 4 Minuten.",
+      "steps": [
+        {
+          "title": "Ankommen",
+          "text": "Setz dich bequem hin. Lass die Schultern sinken und lockere deinen Kiefer."
+        },
+        {
+          "title": "Atme mit dem Kreis",
+          "text": "Atme ein, während er wächst, halte die Luft an und atme langsam aus, während er schrumpft."
+        },
+        {
+          "title": "Wahrnehmen",
+          "text": "Lass deinen Atem wieder normal werden. Spür nach, wie sich dein Körper jetzt im Vergleich zum Anfang anfühlt."
+        }
+      ]
+    },
+    "urge-surfing": {
+      "title": "Urge Surfing",
+      "summary": "Beobachte ein Verlangen, ohne ihm nachzugeben, bis es vorbeigeht.",
+      "steps": [
+        {
+          "title": "Innehalten",
+          "text": "Setz dich an einen sicheren Ort. Leg dein Handy mit dem Display nach unten, nachdem du den Timer gestartet hast."
+        },
+        {
+          "title": "Den Drang finden",
+          "text": "Wo spürst du ihn im Körper? Brust, Bauch, Gesicht, Hände? Nimm es einfach wahr – ohne zu urteilen."
+        },
+        {
+          "title": "Beschreib ihn",
+          "text": "Ist er heiß oder kalt, eng oder kribbelnd? Wie stark ist er von 1 bis 10? Benenne ihn: „Das ist ein Drang.“"
+        },
+        {
+          "title": "Reite die Welle",
+          "text": "Atme in diese Stelle hinein. Stell dir den Drang als Welle vor, die sich aufbaut – und du surfst oben auf ihr, statt darin unterzugehen."
+        },
+        {
+          "title": "Sieh zu, wie er sich verändert",
+          "text": "Bemerke, wie der Drang sich verschiebt oder nachlässt. Ein Drang erreicht immer seinen Höhepunkt und vergeht, wenn du ihn nicht fütterst."
+        },
+        {
+          "title": "Wähle deinen nächsten Schritt",
+          "text": "Bewerte den Drang noch einmal. Entscheide dich jetzt für etwas Gutes: spazieren gehen, jemanden anrufen, Wasser trinken."
+        }
+      ]
+    },
+    "body-scan": {
+      "title": "Bodyscan zum Einschlafen",
+      "summary": "Löse Anspannung vor dem Schlafen, wenn der Drang oft am stärksten ist.",
+      "steps": [
+        {
+          "title": "Hinlegen",
+          "text": "Leg dich auf den Rücken, die Arme neben dem Körper. Schließ die Augen."
+        },
+        {
+          "title": "Füße und Beine",
+          "text": "Lenk deine Aufmerksamkeit auf Füße, Waden und Oberschenkel. Lass sie schwer werden."
+        },
+        {
+          "title": "Hüfte und Bauch",
+          "text": "Spür, wie sich dein Bauch hebt und senkt. Lass den Bauch weich werden."
+        },
+        {
+          "title": "Brust und Rücken",
+          "text": "Spür, wie dein Rücken ins Bett sinkt. Lass deine Brust offen und leicht sein."
+        },
+        {
+          "title": "Arme und Hände",
+          "text": "Entspanne Schultern, Arme und Finger."
+        },
+        {
+          "title": "Gesicht",
+          "text": "Lass Stirn, Augen, Kiefer und Zunge weich werden."
+        },
+        {
+          "title": "Ganzer Körper",
+          "text": "Spür, wie dein ganzer Körper ruht, sicher und still. Schlaf ein, wann immer du bereit bist."
+        }
+      ]
+    },
+    "self-compassion": {
+      "title": "Selbstmitgefühl",
+      "summary": "Ersetze Scham durch Freundlichkeit – besonders nach einem harten Tag.",
+      "steps": [
+        {
+          "title": "Anerkennen",
+          "text": "Leg eine Hand auf deine Brust. Sag innerlich: „Das ist ein schwerer Moment.“"
+        },
+        {
+          "title": "Du bist nicht allein",
+          "text": "Erinnere dich: „Viele Menschen kämpfen denselben Kampf. Ich bin nicht allein.“"
+        },
+        {
+          "title": "Sei freundlich",
+          "text": "Sag: „Möge ich geduldig mit mir sein. Möge ich mir die Freundlichkeit schenken, die ich brauche.“"
+        },
+        {
+          "title": "Ruhen",
+          "text": "Atme langsam und lass die Worte wirken."
+        }
+      ]
+    },
+    "breath-prayer": {
+      "title": "Atemgebet",
+      "summary": "Eine einfache christliche Gebetsübung im Rhythmus deines Atems.",
+      "steps": [
+        {
+          "title": "Sei still",
+          "text": "„Seid stille und erkennet, dass ich Gott bin.“ (Psalm 46,11) Sitz ruhig und verlangsame deinen Atem."
+        },
+        {
+          "title": "Bete mit deinem Atem",
+          "text": "Einatmen: „Schaffe in mir, Gott, ein reines Herz.“ Ausatmen: „Und gib mir einen neuen, beständigen Geist.“"
+        },
+        {
+          "title": "Hören",
+          "text": "Ruhe in der Stille. Gib deinen Drang, deine Sorgen und deine Scham an Gott ab."
+        },
+        {
+          "title": "Amen",
+          "text": "Schließ mit Dank für den heutigen Tag und bitte um Kraft für die nächste Stunde."
+        }
+      ]
+    },
+    "morning-flow": {
+      "title": "Morgen-Flow zum Wachwerden",
+      "summary": "8 Minuten, um energiegeladen in den Tag zu starten – nicht am Handy.",
+      "steps": [
+        {
+          "title": "Kindhaltung",
+          "text": "Knie weit, große Zehen zusammen, Arme lang nach vorn. Atme in deinen Rücken."
+        },
+        {
+          "title": "Katze-Kuh",
+          "text": "Im Vierfüßlerstand: Beim Einatmen ins Hohlkreuz, beim Ausatmen den Rücken rund machen."
+        },
+        {
+          "title": "Herabschauender Hund",
+          "text": "Schieb die Hüfte nach oben und hinten. Tritt sanft abwechselnd mit den Fersen."
+        },
+        {
+          "title": "Tiefer Ausfallschritt (rechts)",
+          "text": "Rechten Fuß nach vorn, hinteres Knie absetzen, Arme heben."
+        },
+        {
+          "title": "Tiefer Ausfallschritt (links)",
+          "text": "Seite wechseln: linker Fuß vorn, Arme hoch, Brust öffnen."
+        },
+        {
+          "title": "Vorbeuge im Stehen",
+          "text": "Geh nach vorn, beug dich mit weichen Knien vor. Lass den Kopf hängen."
+        },
+        {
+          "title": "Berghaltung",
+          "text": "Roll dich langsam auf. Steh aufrecht, Füße fest am Boden, Handflächen nach vorn. Setz dir eine Absicht für den Tag."
+        },
+        {
+          "title": "Sonnengruß",
+          "text": "Einatmend die Arme über den Kopf, ausatmend die Hände zum Herzen. Langsam wiederholen."
+        }
+      ]
+    },
+    "evening-wind-down": {
+      "title": "Abendlicher Ausklang",
+      "summary": "Sanfte Haltungen, die dein Nervensystem vor dem Schlafen beruhigen.",
+      "steps": [
+        {
+          "title": "Vorbeuge im Sitzen",
+          "text": "Beine gestreckt, aus der Hüfte nach vorn beugen. Langsam atmen."
+        },
+        {
+          "title": "Drehung im Liegen (rechts)",
+          "text": "Leg dich hin, lass beide Knie nach rechts sinken, schau nach links."
+        },
+        {
+          "title": "Drehung im Liegen (links)",
+          "text": "Lass beide Knie nach links sinken, schau nach rechts."
+        },
+        {
+          "title": "Glückliches Baby",
+          "text": "Halte die Außenkanten deiner Füße, Knie weit, schaukle sanft."
+        },
+        {
+          "title": "Beine an die Wand",
+          "text": "Leg deine Beine an eine Wand oder ans Kopfteil. Lass die Arme locker zur Seite fallen."
+        },
+        {
+          "title": "Totenhaltung",
+          "text": "Lieg flach und ganz still. Lass den Tag los."
+        }
+      ]
+    },
+    "urge-reset-yoga": {
+      "title": "5-Minuten-Drang-Reset",
+      "summary": "Bring die unruhige Energie aus deinem Körper.",
+      "steps": [
+        {
+          "title": "Ausschütteln",
+          "text": "Steh auf und schüttle Hände, Arme und Beine locker aus."
+        },
+        {
+          "title": "Stuhlhaltung",
+          "text": "Setz dich nach hinten wie auf einen Stuhl, Arme hoch. Halten und atmen."
+        },
+        {
+          "title": "Krieger II (rechts)",
+          "text": "Breiter Stand, rechtes Knie gebeugt, Arme lang, Blick über die rechte Hand."
+        },
+        {
+          "title": "Krieger II (links)",
+          "text": "Seite wechseln. Starke Beine, ruhiger Atem."
+        },
+        {
+          "title": "Baumhaltung",
+          "text": "Balanciere auf einem Fuß, den anderen an Wade oder Oberschenkel. Nach der Hälfte wechseln."
+        },
+        {
+          "title": "Kindhaltung",
+          "text": "Leg die Stirn auf den Boden. Spür, dass der Drang jetzt weniger Macht hat."
+        }
+      ]
+    },
+    "urge-burner": {
+      "title": "6-Minuten-Drang-Killer",
+      "summary": "Intensives Zirkeltraining mit Körpergewicht. Keine Geräte nötig.",
+      "steps": [
+        {
+          "title": "Hampelmänner",
+          "text": "Schnell und gleichmäßig."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Liegestütze",
+          "text": "Auf Zehen oder Knien. Halte deinen Körper gerade."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Kniebeugen",
+          "text": "Hüfte nach hinten, Brust hoch, über die Fersen hochdrücken."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Unterarmstütz",
+          "text": "Unterarme auf den Boden, Bauch und Po anspannen."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Ausfallschritte",
+          "text": "Beine abwechseln, Knie knapp über dem Boden."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Bergsteiger",
+          "text": "Knie schnell zur Brust ziehen."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Kniehebelauf",
+          "text": "Auf der Stelle laufen, Knie hoch."
+        },
+        {
+          "title": "Pause",
+          "text": "Atmen."
+        },
+        {
+          "title": "Burpees",
+          "text": "Hocke, nach hinten springen, nach vorn springen, hochspringen. In deinem eigenen Tempo."
+        },
+        {
+          "title": "Abkühlen",
+          "text": "Geh langsam herum und schüttle Arme und Beine aus."
+        }
+      ]
+    },
+    "beginner-strength": {
+      "title": "Kraft für Einsteiger",
+      "summary": "15 Minuten, 3 Runden. Stärkt Selbstvertrauen und Disziplin.",
+      "steps": [
+        {
+          "title": "Runde 1: Kniebeugen",
+          "text": "12–15 langsame, kontrollierte Wiederholungen."
+        },
+        {
+          "title": "Runde 1: Liegestütze",
+          "text": "8–12 Wiederholungen (auf Knien ist okay)."
+        },
+        {
+          "title": "Runde 1: Beckenheben",
+          "text": "15 Wiederholungen, oben anspannen."
+        },
+        {
+          "title": "Runde 1: Unterarmstütz",
+          "text": "Stabil halten."
+        },
+        {
+          "title": "Pause",
+          "text": "Trink etwas Wasser."
+        },
+        {
+          "title": "Runde 2: Kniebeugen",
+          "text": "12–15 langsame, kontrollierte Wiederholungen."
+        },
+        {
+          "title": "Runde 2: Liegestütze",
+          "text": "8–12 Wiederholungen (auf Knien ist okay)."
+        },
+        {
+          "title": "Runde 2: Beckenheben",
+          "text": "15 Wiederholungen, oben anspannen."
+        },
+        {
+          "title": "Runde 2: Unterarmstütz",
+          "text": "Stabil halten."
+        },
+        {
+          "title": "Pause",
+          "text": "Trink etwas Wasser."
+        },
+        {
+          "title": "Runde 3: Kniebeugen",
+          "text": "12–15 langsame, kontrollierte Wiederholungen."
+        },
+        {
+          "title": "Runde 3: Liegestütze",
+          "text": "8–12 Wiederholungen (auf Knien ist okay)."
+        },
+        {
+          "title": "Runde 3: Beckenheben",
+          "text": "15 Wiederholungen, oben anspannen."
+        },
+        {
+          "title": "Runde 3: Unterarmstütz",
+          "text": "Stabil halten."
+        },
+        {
+          "title": "Pause",
+          "text": "Trink etwas Wasser."
+        },
+        {
+          "title": "Dehnen",
+          "text": "Dehne Beine, Brust und Schultern."
+        }
+      ]
+    },
+    "walk-it-off": {
+      "title": "Raus und gehen",
+      "summary": "20 Minuten zügig draußen gehen – der einfachste Drang-Brecher.",
+      "steps": [
+        {
+          "title": "Raus nach draußen",
+          "text": "Zieh Schuhe an und verlass den Raum. Unter Menschen zu sein ist eine starke Barriere."
+        },
+        {
+          "title": "Gemütliches Tempo",
+          "text": "Geh in angenehmem Tempo und wärm dich auf."
+        },
+        {
+          "title": "Zügiges Tempo",
+          "text": "Werde schneller, bis du stärker atmest, aber noch sprechen kannst."
+        },
+        {
+          "title": "Schau dich um",
+          "text": "Nenne 5 Dinge, die du siehst, 4, die du hörst, 3, die du spürst."
+        },
+        {
+          "title": "Abkühlen",
+          "text": "Werde langsamer und geh nach Hause. Spür, wie viel ruhiger du bist."
+        }
+      ]
+    },
+    "grounding": {
+      "title": "5-4-3-2-1-Erdung",
+      "summary": "Hol deinen Kopf in 4 Minuten aus dem Drang zurück in den Raum.",
+      "steps": [
+        {
+          "title": "Innehalten",
+          "text": "Hör auf mit dem, was du gerade tust. Stell beide Füße fest auf den Boden und atme einmal langsam."
+        },
+        {
+          "title": "5 Dinge, die du siehst",
+          "text": "Schau dich um und benenne fünf Dinge, die du sehen kannst. Achte auf Farben und Formen."
+        },
+        {
+          "title": "4 Dinge, die du spürst",
+          "text": "Nimm vier Dinge wahr, die du spüren kannst: deine Kleidung, den Stuhl, die Luft, deine Füße."
+        },
+        {
+          "title": "3 Dinge, die du hörst",
+          "text": "Lausche auf drei Geräusche, nah und fern."
+        },
+        {
+          "title": "2 Dinge, die du riechst",
+          "text": "Finde zwei Dinge, die du riechen kannst, oder erinnere dich an zwei Gerüche, die du magst."
+        },
+        {
+          "title": "1 Ding, das du schmeckst",
+          "text": "Nimm eine Sache wahr, die du schmecken kannst, oder trink einen Schluck Wasser."
+        },
+        {
+          "title": "Atmen",
+          "text": "Atme dreimal langsam. Spür, wie sich der Drang verändert hat."
+        }
+      ]
+    },
+    "gratitude": {
+      "title": "Dankbarkeit",
+      "summary": "Richte deinen Blick auf das Gute in deinem Leben.",
+      "steps": [
+        {
+          "title": "Ankommen",
+          "text": "Setz dich bequem hin, schließ die Augen und atme langsam."
+        },
+        {
+          "title": "Ein Mensch, für den du dankbar bist",
+          "text": "Denk an jemanden, der dir geholfen hat. Stell dir sein Gesicht vor und danke ihm im Stillen."
+        },
+        {
+          "title": "Etwas an deinem Körper",
+          "text": "Denk an etwas, das dein Körper jeden Tag für dich tut, wie atmen, gehen oder sehen."
+        },
+        {
+          "title": "Etwas Kleines, Gutes von heute",
+          "text": "Erinnere dich an einen kleinen guten Moment von heute, egal wie winzig."
+        },
+        {
+          "title": "Nimm es mit",
+          "text": "Spür die Wärme der Dankbarkeit in deiner Brust. Nimm sie mit in den Rest deines Tages."
+        }
+      ]
+    },
+    "desk-stretch": {
+      "title": "Dehnen für Schreibtisch & Handynacken",
+      "summary": "Gleiche Stunden vor dem Bildschirm in 4 Minuten aus.",
+      "steps": [
+        {
+          "title": "Kopfkreisen",
+          "text": "Roll deinen Kopf langsam im Halbkreis von Seite zu Seite. Niemals erzwingen."
+        },
+        {
+          "title": "Schulterkreisen",
+          "text": "Roll die Schultern hoch, nach hinten und nach unten. Dann andersherum."
+        },
+        {
+          "title": "Drehung im Sitzen (rechts)",
+          "text": "Sitz aufrecht und dreh dich sanft nach rechts, Hand an der Stuhllehne."
+        },
+        {
+          "title": "Drehung im Sitzen (links)",
+          "text": "Dreh dich sanft nach links. Atme weiter."
+        },
+        {
+          "title": "Brustöffner",
+          "text": "Verschränke die Hände hinter dem Rücken und heb die Brust."
+        },
+        {
+          "title": "Vorbeuge",
+          "text": "Steh auf, beug die Knie leicht und lass dich nach vorn fallen. Lass den Kopf schwer hängen."
+        }
+      ]
+    },
+    "cardio-10": {
+      "title": "10-Minuten-Cardio",
+      "summary": "Ohne Geräte, gelenkschonend. Hebt Stimmung und Energie.",
+      "steps": [
+        {
+          "title": "Marschieren auf der Stelle",
+          "text": "Heb die Knie und schwing die Arme zum Aufwärmen."
+        },
+        {
+          "title": "Step Jacks",
+          "text": "Stell einen Fuß zur Seite und heb dabei die Arme, dann Seite wechseln."
+        },
+        {
+          "title": "Kniebeugen",
+          "text": "Setz dich nach hinten in die Hocke und richte dich ganz auf."
+        },
+        {
+          "title": "Schnelle Füße",
+          "text": "Lauf locker auf der Stelle und bleib auf den Fußballen."
+        },
+        {
+          "title": "Ausfallschritte rückwärts",
+          "text": "Mach einen Schritt zurück in den Ausfallschritt, Beine abwechseln."
+        },
+        {
+          "title": "Boxschläge",
+          "text": "Schlag schnell nach vorn und halte die Körpermitte fest."
+        },
+        {
+          "title": "Eisschnellläufer",
+          "text": "Spring von Seite zu Seite wie beim Eisschnelllauf."
+        },
+        {
+          "title": "Knieheben",
+          "text": "Zieh ein Knie hoch zu den Händen, dann wechseln."
+        },
+        {
+          "title": "Kniebeugen-Pulse",
+          "text": "Halte eine tiefe Hocke und wippe sanft."
+        },
+        {
+          "title": "Abkühlen",
+          "text": "Geh langsam und dehne Beine und Arme."
+        }
+      ]
+    }
+  },
+  "dietTips": [
+    {
+      "title": "Denk an HALT",
+      "body": "Hungrig, verärgert (Angry), einsam (Lonely), müde (Tired) – in diesen Zuständen ist der Drang viel stärker. Regelmäßige Mahlzeiten sind eine der einfachsten Möglichkeiten, dein Risiko zu senken."
+    },
+    {
+      "title": "Eiweißreiches Frühstück",
+      "body": "Eier, griechischer Joghurt, Haferflocken mit Nüssen oder Bohnen halten den Blutzucker stabil und verringern Heißhunger und Gereiztheit am Vormittag."
+    },
+    {
+      "title": "Vorsicht bei Zuckerspitzen",
+      "body": "Süße Snacks und Energydrinks geben ein schnelles Hoch und dann einen Absturz – und mit dem Absturz kommt oft der Drang. Kombiniere Kohlenhydrate mit Eiweiß oder Ballaststoffen."
+    },
+    {
+      "title": "Kein Koffein nach 14 Uhr",
+      "body": "Schlechter Schlaf ist ein großer Auslöser. Wenn du früh am Nachmittag mit Koffein aufhörst, schläfst du leichter ein, statt zu scrollen."
+    },
+    {
+      "title": "Achte auf Alkohol",
+      "body": "Alkohol senkt die Hemmschwelle und ist ein häufiger Auslöser für Rückfälle. Wenn du trinkst, hab einen Plan, wie du nach Hause kommst und dein Handy weglegst."
+    },
+    {
+      "title": "Trink genug",
+      "body": "Schon leichter Flüssigkeitsmangel macht müde und drückt die Stimmung. Trink zu jeder Mahlzeit ein Glas Wasser und hab eine Flasche griffbereit."
+    },
+    {
+      "title": "Omega-3 und naturbelassene Lebensmittel",
+      "body": "Fetter Fisch, Walnüsse, Chia- und Leinsamen, Blattgemüse und buntes Gemüse unterstützen Gehirn und Stimmung."
+    },
+    {
+      "title": "Einfache Essensideen",
+      "body": "Frühstück: Eier + Vollkorntoast + Obst. Mittagessen: Reis, Bohnen oder Hähnchen und Gemüse. Abendessen: Fisch oder Linsen mit Ofengemüse. Snack: Nüsse, Obst, Joghurt."
+    }
+  ],
+  "sleepTips": [
+    {
+      "title": "Handy raus aus dem Schlafzimmer",
+      "body": "Scrollen spät in der Nacht ist einer der häufigsten Auslöser. Lade dein Handy in einem anderen Zimmer und nutz einen günstigen Wecker."
+    },
+    {
+      "title": "Jeden Tag zur gleichen Zeit aufstehen",
+      "body": "Eine feste Aufstehzeit, auch am Wochenende, stellt deine innere Uhr und macht das Einschlafen abends leichter."
+    },
+    {
+      "title": "30 Minuten runterfahren",
+      "body": "Dimm das Licht, lies ein Buch aus Papier, dehn dich oder bete. Gib deinem Gehirn das Signal, dass der Tag zu Ende geht."
+    },
+    {
+      "title": "Du kannst nicht schlafen? Steh auf",
+      "body": "Wenn du länger als etwa 20 Minuten wach liegst, steh auf und mach bei gedimmtem Licht etwas Ruhiges, bis du müde wirst. Lieg nicht mit dem Handy im Bett."
+    },
+    {
+      "title": "Kühl, dunkel, ruhig",
+      "body": "Ein leicht kühles, dunkles und ruhiges Zimmer hilft dir beim Ein- und Durchschlafen."
+    },
+    {
+      "title": "Tageslicht am Morgen",
+      "body": "Wenn du innerhalb einer Stunde nach dem Aufwachen nach draußen gehst, stellst du deine innere Uhr für besseren Schlaf in der nächsten Nacht."
+    }
+  ],
+  "setup": {
+    "title": "Einrichtungs-Checkliste",
+    "open": "Checkliste öffnen",
+    "intro": "Ein paar einmalige Schritte helfen Clarity, dich zuverlässig zu schützen. Geh von oben nach unten vor – das dauert etwa 5 Minuten. Häkchen erscheinen von selbst, wenn Clarity einen Schritt prüfen kann.",
+    "progress": "{{done}} von {{total}} Schritten erledigt",
+    "allDone": "Alles bereit. Clarity kann dich jetzt schützen.",
+    "todayTitle": "Clarity fertig einrichten",
+    "hide": "Ausblenden",
+    "optional": "Optional",
+    "markDone": "Hab ich gemacht",
+    "undo": "Noch nicht erledigt",
+    "done": "Erledigt",
+    "fullGuide": "Ganze Anleitung lesen",
+    "groups": {
+      "essentials": "Das Wichtigste",
+      "protection": "Schutz",
+      "running": "Clarity aktiv halten",
+      "extras": "Optionale Extras"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Mitteilungen erlauben",
+        "body": "Nötig für deine Check-in-Erinnerungen, Ermutigungen und den Hinweis, bevor dein Gratis-Testzeitraum endet.",
+        "button": "Mitteilungen erlauben"
+      },
+      "partner": {
+        "title": "Accountability-Partner hinzufügen",
+        "body": "Jemand, dem du vertraust. Wenn du auf SOS tippst, öffnet sich mit einem Tipp eine fertige Nachricht an ihn.",
+        "button": "Partner hinzufügen"
+      },
+      "sosShortcut": {
+        "title": "SOS immer griffbereit",
+        "body": "Halte das Clarity-Symbol gedrückt und tippe auf „Notfallknopf“, um SOS sofort zu öffnen, oder füge ein SOS-Symbol zu deinem Startbildschirm hinzu.",
+        "button": "SOS auf Startbildschirm"
+      },
+      "dns": {
+        "title": "Website-Blocker einschalten",
+        "body": "Blockiert Erwachsenenseiten in jedem Browser und jeder App auf diesem Handy.",
+        "button": "Blocker einrichten"
+      },
+      "alwaysOnVpn": {
+        "title": "Blocker nach Neustart aktiv halten",
+        "body": "Tippe in den VPN-Einstellungen auf das Zahnrad neben Clarity Recovery und schalte „Durchgehend aktives VPN“ ein.",
+        "button": "VPN-Einstellungen"
+      },
+      "pause": {
+        "title": "Achtsame Pause einschalten",
+        "body": "Zeigt eine ruhige Pause, wenn du Apps wie Instagram oder TikTok öffnest, damit du bewusst entscheiden kannst.",
+        "button": "Pause einrichten"
+      },
+      "iosDns": {
+        "title": "Website-Blocker installieren",
+        "body": "Folge den Schritten auf dem Bildschirm „Schutz“, um Erwachsenenseiten auf deinem iPhone zu blockieren.",
+        "button": "Schutz öffnen"
+      },
+      "iosScreenTime": {
+        "title": "Bildschirmzeit-Limits setzen",
+        "body": "Nutze Bildschirmzeit, um Erwachsenenseiten einzuschränken und App-Limits zu setzen.",
+        "button": "Schutz öffnen"
+      },
+      "battery": {
+        "title": "Energiesparmodus soll Clarity nicht beenden",
+        "body": "Stell Clarity Recovery auf „Nicht optimieren“ oder „Nicht eingeschränkt“, damit Blocker und Pause weiterlaufen.",
+        "button": "Akku-Einstellungen"
+      },
+      "autostart": {
+        "title": "Autostart erlauben",
+        "body": "Auf {{maker}}-Handys muss Autostart für Clarity Recovery an sein, sonst stoppt der Schutz nach einer Weile.",
+        "button": "Autostart öffnen"
+      },
+      "popups": {
+        "title": "Pop-ups im Hintergrund erlauben",
+        "body": "Erlaube unter „Weitere Berechtigungen“ für Clarity Recovery: „Pop-up-Fenster anzeigen, während im Hintergrund ausgeführt“.",
+        "button": "Berechtigungen"
+      },
+      "lockRecents": {
+        "title": "Clarity in den letzten Apps sperren",
+        "body": "Öffne die letzten Apps, zieh die Karte von Clarity nach unten (oder halte sie gedrückt) und tippe auf das Schloss, damit {{maker}} sie nicht schließt."
+      },
+      "health": {
+        "title": "Fitnesstracker verbinden",
+        "body": "Sieh Schritte, Schlaf und Herzfrequenz neben deinem Fortschritt.",
+        "button": "Verbinden"
+      },
+      "reminders": {
+        "title": "Erinnerungen einrichten",
+        "body": "Wähle, wann du deinen täglichen Check-in und Ermutigungen bekommst.",
+        "button": "Einrichten"
+      }
+    }
+  }
+}

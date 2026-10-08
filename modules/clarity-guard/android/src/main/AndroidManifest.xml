@@ -1,0 +1,46 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!-- Lets the mindful pause check which of these apps are installed and open them (Android 11+ package visibility). -->
+  <queries>
+    <package android:name="com.instagram.android" />
+    <package android:name="com.zhiliaoapp.musically" />
+    <package android:name="com.ss.android.ugc.trill" />
+    <package android:name="com.twitter.android" />
+    <package android:name="com.reddit.frontpage" />
+    <package android:name="com.snapchat.android" />
+    <package android:name="com.facebook.katana" />
+    <package android:name="org.telegram.messenger" />
+    <package android:name="com.tumblr" />
+    <package android:name="com.google.android.youtube" />
+    <package android:name="com.discord" />
+  </queries>
+
+  <application>
+    <!-- DNS-only local VPN: routes nothing but DNS lookups, which go to a family-safe resolver. -->
+    <service
+      android:name="expo.modules.clarityguard.DnsFilterVpnService"
+      android:exported="false"
+      android:permission="android.permission.BIND_VPN_SERVICE">
+      <intent-filter>
+        <action android:name="android.net.VpnService" />
+      </intent-filter>
+      <meta-data
+        android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+        android:value="true" />
+    </service>
+
+    <!-- Detects when a chosen social app comes to the foreground and shows the mindful pause screen. -->
+    <service
+      android:name="expo.modules.clarityguard.MindfulPauseService"
+      android:exported="false"
+      android:label="@string/clarity_pause_label"
+      android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+      <intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService" />
+      </intent-filter>
+      <meta-data
+        android:name="android.accessibilityservice"
+        android:resource="@xml/clarity_pause_service" />
+    </service>
+  </application>
+</manifest>

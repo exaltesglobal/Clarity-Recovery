@@ -1,0 +1,973 @@
+{
+  "appName": "Clarity Recovery",
+  "common": {
+    "add": "Añadir",
+    "back": "Atrás",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "continue": "Continuar",
+    "days_one": "{{count}} día",
+    "days_many": "{{count}} días",
+    "days_other": "{{count}} días",
+    "minutes_one": "{{count}} min",
+    "minutes_many": "{{count}} min",
+    "minutes_other": "{{count}} min",
+    "delete": "Eliminar",
+    "done": "Listo",
+    "edit": "Editar",
+    "no": "No",
+    "yes": "Sí",
+    "optional": "Opcional",
+    "remove": "Quitar"
+  },
+  "tabs": { "today": "Hoy", "journal": "Diario", "wellness": "Bienestar", "support": "Apoyo" },
+  "gender": { "male": "Hombre", "female": "Mujer", "nonbinary": "No binario", "unspecified": "Prefiero no decirlo" },
+  "moods": { "1": "Fatal", "2": "Bajo", "3": "Regular", "4": "Bien", "5": "Genial" },
+  "triggers": {
+    "boredom": "Aburrimiento",
+    "stress": "Estrés",
+    "loneliness": "Soledad",
+    "tired": "Cansancio",
+    "lateNightPhone": "Móvil de madrugada",
+    "socialMedia": "Redes sociales",
+    "anxiety": "Ansiedad",
+    "anger": "Enfado",
+    "sadness": "Tristeza",
+    "rejection": "Rechazo",
+    "aloneAtHome": "Solo en casa",
+    "alcohol": "Alcohol",
+    "reward": "Recompensa / celebración",
+    "other": "Otro"
+  },
+  "reasons": { "placeholder": "Con tus propias palabras…", "suggestions": "O toca una sugerencia:" },
+  "inspiration": { "verse": "Versículo del día", "thought": "Pensamiento del día" },
+  "onboarding": {
+    "tagline": "Tu compañero privado para dejar la pornografía y construir una vida de la que te sientas orgulloso.",
+    "promise": {
+      "private": "Privado por diseño. Sin cuenta, y tus respuestas se quedan en este teléfono.",
+      "personal": "Un plan a tu medida, basado en una breve autoevaluación.",
+      "support": "Ayuda en el momento: botón de pánico, tu compañero y líneas de ayuda locales."
+    },
+    "changeLanguage": "Cambiar idioma",
+    "getStarted": "Empezar",
+    "languageTitle": "Elige tu idioma",
+    "rtlRestart": "La dirección del texto cambiará cuando se reinicie la app.",
+    "aboutTitle": "Un poco sobre ti",
+    "aboutBody": "Esto nos ayuda a adaptar los consejos y el apoyo. Nunca sale de tu teléfono.",
+    "nameLabel": "¿Cómo te llamamos?",
+    "namePlaceholder": "Nombre o apodo (opcional)",
+    "genderLabel": "Género",
+    "ageLabel": "Edad",
+    "teenNote": "No estás solo, y nunca es demasiado pronto para pedir ayuda. Piensa en hablar con tus padres, un orientador escolar u otro adulto de confianza.",
+    "countryTitle": "¿Dónde vives?",
+    "countryBody": "Lo usamos para mostrarte líneas de ayuda, números de emergencia y apoyo en tu país.",
+    "countrySearch": "Buscar países",
+    "languageSuggestion": "¿Quieres usar la app en {{language}}?",
+    "reasonsTitle": "¿Por qué quieres dejarlo?",
+    "reasonsBody": "Te las mostraremos cuando llegue un impulso. Añade al menos una.",
+    "faithTitle": "Escrituras y versículos de fe diarios",
+    "faithBody": "Versículos bíblicos y oración opcionales, también al pulsar el botón de pánico.",
+    "usePlan": "Usar este plan",
+    "startTitle": "Fijemos tu punto de partida",
+    "daysCleanLabel": "¿Cuántos días limpio llevas ya?",
+    "daysCleanHint": "¿Empiezas hoy? Déjalo en 0.",
+    "goalLabel": "Tu primera meta",
+    "partnerLater": "Consejo: añade más tarde un compañero de responsabilidad en la pestaña Apoyo. Recibirá un mensaje listo para enviar cada vez que pulses el botón de pánico.",
+    "finish": "Empezar mi camino"
+  },
+  "assessment": {
+    "title": "Autoevaluación",
+    "intro": "Responde con sinceridad. No hay respuestas correctas ni incorrectas, y tus respuestas se quedan en este teléfono.",
+    "progress": "Pregunta {{current}} de {{total}}",
+    "questions": {
+      "moreThanIntended": "Veo pornografía más a menudo, o durante más tiempo, de lo que pretendía.",
+      "failedToStop": "He intentado reducirla o dejarla y no lo he conseguido.",
+      "preoccupied": "Pienso en pornografía o en impulsos incluso cuando estoy ocupado con otras cosas.",
+      "escalation": "He necesitado contenido más extremo o novedoso para conseguir el mismo efecto.",
+      "harmedLife": "Mi consumo de pornografía ha perjudicado mis relaciones, trabajo, estudios o sueño.",
+      "coping": "Recurro a la pornografía para sobrellevar el estrés, el aburrimiento, la soledad o la tristeza.",
+      "shame": "Siento culpa, vergüenza o malestar después de verla.",
+      "despiteProblems": "Sigo viéndola aunque sé que me está causando problemas."
+    },
+    "answers": { "never": "Nunca", "sometimes": "A veces", "often": "A menudo", "almostAlways": "Casi siempre" },
+    "frequencyQuestion": "¿Con qué frecuencia ves pornografía actualmente?",
+    "frequency": {
+      "lessThanMonthly": "Menos de una vez al mes",
+      "monthly": "Algunas veces al mes",
+      "weekly": "Una vez a la semana aprox.",
+      "severalWeekly": "Varias veces a la semana",
+      "daily": "A diario",
+      "severalDaily": "Varias veces al día"
+    },
+    "safetyQuestion": "En las últimas dos semanas, ¿has pensado que estarías mejor muerto o en hacerte daño?",
+    "safetyNote": "Se lo preguntamos a todo el mundo. Si la respuesta es sí, te mostraremos personas que pueden ayudarte ahora mismo.",
+    "crisisTitle": "Gracias por contárnoslo",
+    "crisisBody": "Mereces apoyo ahora mismo. Por favor, contacta con uno de estos servicios. Son gratuitos, confidenciales y están ahí para escucharte. También puedes seguir usando la app.",
+    "resultTitle": "Tu plan personal",
+    "resultLabel": "Tu resultado",
+    "severity": { "low": "Etapa inicial", "moderate": "Moderado", "high": "Significativo" },
+    "severityText": {
+      "low": "La pornografía tiene cierta atracción sobre ti, pero estás en una buena posición para cambiar. Crear rutinas sanas ahora lo hará más fácil.",
+      "moderate": "La pornografía está afectando a tu vida y cuesta controlarla. Es muy común, y con las herramientas y el apoyo adecuados resulta mucho más fácil.",
+      "high": "Ahora mismo la pornografía te tiene muy atrapado. No estás roto. Es un patrón que mucha gente supera, y mereces apoyo extra mientras lo haces."
+    },
+    "disclaimer": "Es una herramienta de reflexión, no un diagnóstico médico. Si te preocupa, habla con un médico o terapeuta.",
+    "planTitle": "Hemos configurado la app para ti",
+    "plan": {
+      "goal": "Una primera meta de {{days}} días",
+      "nudges": "Recordatorios de ánimo cada {{hours}} horas, {{start}}–{{end}}",
+      "checkIn": "Un recordatorio diario a las {{time}}",
+      "dns": "Activa el bloqueador de webs para adultos (en Protección)",
+      "pause": "Una pausa consciente al abrir apps de redes sociales",
+      "partner": "Añade un compañero de responsabilidad",
+      "professional": "Considera un terapeuta o un grupo de apoyo. Consulta Apoyo para ver líneas de ayuda"
+    },
+    "planNote": "Puedes cambiar todo esto después en Ajustes.",
+    "takenOn": "Realizada el {{date}}",
+    "applyPlan": "Aplicar este plan a mis ajustes",
+    "retakeBody": "Tus respuestas cambian a medida que te recuperas. Repite la autoevaluación cada mes más o menos para ver tu progreso.",
+    "retake": "Repetir la autoevaluación"
+  },
+  "today": {
+    "greeting": {
+      "morning": "Buenos días",
+      "afternoon": "Buenas tardes",
+      "evening": "Buenas noches",
+      "morningName": "Buenos días, {{name}}",
+      "afternoonName": "Buenas tardes, {{name}}",
+      "eveningName": "Buenas noches, {{name}}"
+    },
+    "daysFree_one": "día libre",
+    "daysFree_many": "días libre",
+    "daysFree_other": "días libre",
+    "intoDay": "{{hours}} h {{minutes}} min del día {{day}}",
+    "toMilestone_one": "{{count}} día para tu hito de {{milestone}} días",
+    "toMilestone_many": "{{count}} días para tu hito de {{milestone}} días",
+    "toMilestone_other": "{{count}} días para tu hito de {{milestone}} días",
+    "best": "Mejor racha",
+    "urgesBeaten": "Impulsos vencidos",
+    "goal": "Meta",
+    "goalReached": "¡Lograda!",
+    "protectionOn": "La protección está activa",
+    "protectionOnBody": "Las webs para adultos están bloqueadas en este teléfono.",
+    "protectionOff": "Activa la protección",
+    "protectionOffBody": "Bloquea webs para adultos con un toque. Recomendado.",
+    "checkInTitle": "Registro diario",
+    "checkInDone": "Hecho por hoy. Te sientes {{mood}}, nivel de impulso {{urge}}/10. Bien hecho por estar aquí.",
+    "checkInPrompt": "Dos minutos para notar tu ánimo, tus impulsos y tus detonantes.",
+    "checkInButton": "Registrarme",
+    "factOfDay": "Dato del día",
+    "moreFacts": "Toca para leer más investigación",
+    "habitsTitle": "Hábitos saludables",
+    "slipped": "He tenido un desliz. Registrar recaída"
+  },
+  "panic": {
+    "button": "Tengo un impulso",
+    "subtitle": "Recibe ayuda para superarlo ahora mismo",
+    "shortcutTitle": "Botón de pánico",
+    "shortcutSubtitle": "Ayuda ante un impulso",
+    "partnerMessage": "Hola, soy {{name}}. Estoy luchando con un impulso ahora mismo y he pulsado mi botón de pánico. ¿Puedes llamarme o escribirme?",
+    "someone": "yo"
+  },
+  "sos": {
+    "title": "SOS impulso",
+    "heading": "Puedes superar esto.",
+    "body": "Los impulsos suben y bajan, normalmente en 10–20 minutos. No tienes que luchar contra él. Solo no lo alimentes. Respira con el círculo.",
+    "rideOut": "{{time}} para superarlo",
+    "madeIt": "¡Has aguantado 10 minutos!",
+    "textPartner": "Escribir a {{name}}",
+    "textPartnerBody": "Abre un mensaje listo pidiendo apoyo",
+    "partnerOpened": "El mensaje para {{name}} está listo",
+    "partnerOpenedBody": "Pulsa Enviar en tu app de mensajes. Toca aquí para abrirlo de nuevo.",
+    "callPartner": "Llamar a {{name}}",
+    "rememberWhy": "Recuerda por qué",
+    "scriptureTitle": "Escritura para este momento",
+    "prayerTitle": "Una breve oración",
+    "prayer": "Señor, tú ves este momento y conoces mi debilidad. Dame fuerza para apartarme, para elegir lo bueno y para descansar en tu gracia. Gracias porque tus misericordias son nuevas cada mañana. Amén.",
+    "breathPrayer": "Oración guiada con la respiración",
+    "doNow": "Haz una de estas cosas ahora",
+    "burnerBody": "Quema la energía con un entrenamiento rápido",
+    "surfingBody": "Guiado: observa el deseo hasta que se apague",
+    "quickMoves": [
+      "Sal de la habitación en la que estás. Ve donde haya otras personas.",
+      "Deja el móvil en otra habitación o dáselo a alguien.",
+      "Échate agua fría en la cara o date una ducha fría.",
+      "Haz 20 flexiones o sentadillas ahora mismo.",
+      "Bebe un vaso de agua entero despacio."
+    ],
+    "urgePassed": "El impulso pasó. He ganado",
+    "slipped": "He tenido un desliz",
+    "crisisNote": "Si estás en crisis o piensas en hacerte daño, por favor, pide ayuda ahora."
+  },
+  "relapse": {
+    "title": "Registrar un desliz",
+    "heading": "Está bien. Aprendamos de ello.",
+    "body": "Registrar un desliz reinicia tu racha, pero se guardan tu historial y tu mejor racha. Aquí no se juzga. La sinceridad es lo que rompe los patrones.",
+    "triggerQuestion": "¿Qué lo provocó?",
+    "whatHappened": "¿Qué pasó? (hora, lugar, cómo te sentías)",
+    "whatHappenedPlaceholder": "p. ej. No podía dormir, estaba con el móvil en la cama pasada la medianoche…",
+    "nextTime": "¿Qué harás diferente la próxima vez?",
+    "nextTimePlaceholder": "p. ej. Cargar el móvil fuera del dormitorio",
+    "save": "Registrar y empezar de nuevo",
+    "thanks": "Gracias por ser sincero.",
+    "message": "Un desliz no borra tu progreso. Los días en que te mantuviste firme siguen recableando tu cerebro. Sé sincero sobre lo que pasó, aprende de ello y vuelve a empezar ahora mismo.",
+    "stayedStrong_one": "Te mantuviste firme {{count}} día. Eso cuenta. Tu nueva racha empieza ahora.",
+    "stayedStrong_many": "Te mantuviste firme {{count}} días. Eso cuenta. Tu nueva racha empieza ahora.",
+    "stayedStrong_other": "Te mantuviste firme {{count}} días. Eso cuenta. Tu nueva racha empieza ahora.",
+    "yourPlan": "Tu plan para la próxima vez",
+    "beginAgain": "Empezar de nuevo"
+  },
+  "checkin": {
+    "title": "Registro diario",
+    "moodQuestion": "¿Cómo te sientes?",
+    "urgeQuestion": "¿Qué intensidad tuvieron los impulsos hoy?",
+    "urgeScale": "0 = ninguno, 10 = abrumador",
+    "triggersQuestion": "¿Algún detonante?",
+    "journal": "Diario",
+    "journalPlaceholder": "¿Qué pasó hoy? ¿Qué te ayudó? ¿Qué fue difícil?",
+    "gratitude": "Algo por lo que estoy agradecido",
+    "save": "Guardar registro"
+  },
+  "journal": {
+    "newCheckIn": "Nuevo registro",
+    "last7": "Últimos 7 días",
+    "avgMood": "Ánimo medio",
+    "avgUrge": "Impulso medio",
+    "checkIns": "Registros",
+    "topTriggers": "Tus detonantes más comunes",
+    "planAhead": "Planifica estos momentos con antelación. Es cuando eres más vulnerable.",
+    "empty": "Tus registros y reflexiones aparecerán aquí.",
+    "longPressHint": "Mantén pulsada una entrada para eliminarla.",
+    "deleteConfirm": "¿Eliminar esta entrada?",
+    "urge": "impulso {{level}}/10",
+    "triggers": "Detonantes: {{list}}",
+    "gratefulFor": "Agradecido por: {{text}}",
+    "slipAfter_one": "Desliz tras {{count}} día",
+    "slipAfter_many": "Desliz tras {{count}} días",
+    "slipAfter_other": "Desliz tras {{count}} días",
+    "nextTime": "La próxima vez: {{text}}"
+  },
+  "wellness": {
+    "tabs": { "meditation": "Meditar", "yoga": "Yoga", "exercise": "Ejercicio", "diet": "Dieta", "sleep": "Sueño", "facts": "Datos" },
+    "intro": {
+      "meditation": "Entrena tu atención para que los impulsos pierdan fuerza.",
+      "yoga": "Libera tensión y reconecta con tu cuerpo.",
+      "exercise": "Quema la energía inquieta y mejora tu ánimo de forma natural.",
+      "diet": "Una energía estable hace los impulsos más fáciles de manejar.",
+      "sleep": "Un cerebro cansado tiene menos autocontrol. Protege tu sueño.",
+      "facts": "Lo que dice la investigación sobre la recuperación, los hábitos y el cerebro."
+    },
+    "faith": "Fe",
+    "allFacts": "Ver todos los datos y fuentes",
+    "disclaimer": "Consejos generales de bienestar, no consejo médico. Consulta a un médico antes de empezar un nuevo plan de ejercicio o dieta, y omite cualquier cosa que cause dolor."
+  },
+  "session": {
+    "notFound": "Sesión no encontrada.",
+    "step": "Paso {{current}} de {{total}}",
+    "start": "Empezar",
+    "pause": "Pausar",
+    "resume": "Reanudar",
+    "skip": "Saltar",
+    "upNext": "A continuación: {{title}}",
+    "doneTitle": "Bien hecho",
+    "doneBody": "Hoy has invertido tiempo en ti. Así se construyen los nuevos hábitos."
+  },
+  "facts": {
+    "title": "Investigación y datos",
+    "intro": "Hallazgos reales de investigaciones publicadas. Los nuevos datos aparecen aquí automáticamente.",
+    "source": "Fuente: {{source}}",
+    "categories": { "science": "Ciencia", "habits": "Hábitos", "body": "Cuerpo", "mind": "Mente", "connection": "Conexión" },
+    "items": {
+      "prevalence": { "title": "No estás solo, ni mucho menos", "body": "En una encuesta representativa de EE. UU., el 10,3 % de los hombres y el 7,0 % de las mujeres refirieron malestar o problemas clínicamente significativos por la dificultad para controlar sus impulsos y conductas sexuales." },
+      "icd11": { "title": "Es una condición reconocida", "body": "La CIE-11 de la Organización Mundial de la Salud incluye el trastorno por comportamiento sexual compulsivo (6C72): una incapacidad persistente para controlar impulsos sexuales intensos, que lleva a conductas repetitivas pese al daño." },
+      "cueReactivity": { "title": "Las señales activan el sistema de recompensa", "body": "En un estudio de resonancia funcional, los hombres que buscaban tratamiento por un uso problemático de pornografía mostraron más reacción del centro de recompensa (estriado ventral) ante señales que anticipaban imágenes eróticas. Evitar las señales ayuda de verdad." },
+      "moralIncongruence": { "title": "La vergüenza lo empeora", "body": "La investigación muestra que sentir que la pornografía choca con tus valores predice mucho malestar. La autocompasión, no el odio a uno mismo, se asocia con el cambio duradero." },
+      "habits66": { "title": "Un hábito nuevo tarda unos dos meses", "body": "En un estudio sobre hábitos diarios, una conducta tardó una mediana de 66 días en volverse automática (entre 18 y 254). Saltarse un día no frenó el progreso." },
+      "exerciseCravings": { "title": "Moverse reduce los deseos", "body": "Un metaanálisis halló que incluso breves sesiones de actividad física reducen rápidamente los deseos intensos. El ejercicio es uno de los cortaimpulsos más rápidos que tienes." },
+      "urgeSurfing": { "title": "Los impulsos pasan si los surfeas", "body": "En un ensayo, una breve técnica de mindfulness llamada «surfear el impulso» ayudó a las personas a actuar menos según sus deseos. Notar un impulso sin obedecerlo lo debilita con el tiempo." },
+      "mbrp": { "title": "El mindfulness previene recaídas", "body": "La prevención de recaídas basada en mindfulness logró menos días de consumo y de consumo intenso de alcohol a los 12 meses en comparación con el tratamiento habitual." },
+      "sleepEmotion": { "title": "Dormir poco debilita el autocontrol", "body": "Tras una noche sin dormir, el centro emocional del cerebro (amígdala) reaccionó un 60 % más, con menos control de la corteza prefrontal." },
+      "slowBreathing": { "title": "Respirar despacio calma el cuerpo", "body": "Una revisión sistemática halló que respirar despacio (unas 6 respiraciones por minuto) aumenta la variabilidad cardíaca y la calma, y reduce la ansiedad y la activación." },
+      "ifThenPlans": { "title": "Los planes «si… entonces» funcionan", "body": "En 94 estudios, hacer planes concretos del tipo «si… entonces» («Si estoy en la cama con el móvil, lo dejaré en la cocina») tuvo un efecto de medio a grande en alcanzar metas." },
+      "lapseNotRelapse": { "title": "Un desliz no es una recaída", "body": "Ver un solo desliz como un fracaso total (el efecto de violación de la abstinencia) hace más probable una recaída completa. Trata un desliz como información, no como un veredicto." },
+      "socialConnection": { "title": "La conexión protege", "body": "Un metaanálisis de 148 estudios halló que las personas con relaciones sociales más fuertes tenían un 50 % más de probabilidad de supervivencia. El aislamiento es un riesgo; la conexión es medicina." },
+      "peerSupport": { "title": "Los grupos de apoyo ayudan", "body": "Una revisión Cochrane halló que los programas de ayuda mutua de 12 pasos eran tan eficaces como otros tratamientos y, a menudo, mejores para mantener la abstinencia." },
+      "gratitude": { "title": "La gratitud mejora el ánimo", "body": "Las personas que escribían cada semana cosas por las que estaban agradecidas se sentían mejor con su vida y más optimistas que quienes anotaban contratiempos." },
+      "act": { "title": "La terapia funciona", "body": "En un ensayo aleatorizado, la Terapia de Aceptación y Compromiso redujo mucho el consumo de pornografía frente a una lista de espera, y la mejoría se mantuvo en gran parte en el seguimiento." }
+    }
+  },
+  "health": {
+    "title": "Actividad y reloj inteligente",
+    "heading": "Conecta tu pulsera de actividad",
+    "body": "Vincula {{provider}} para ver tus pasos, sueño y frecuencia cardíaca junto a tu recuperación.",
+    "why": "El ejercicio y dormir bien hacen más fácil resistir los impulsos, así que registrarlos te ayuda a ver patrones.",
+    "connect": "Conectar {{provider}}",
+    "connected": "Conectado a {{provider}}. Los datos de tu reloj o pulsera aparecen en Bienestar.",
+    "isConnected": "Conectado",
+    "disconnect": "Desconectar",
+    "failed": "No se concedió el permiso. Puedes intentarlo de nuevo o permitir el acceso en los ajustes de salud del teléfono.",
+    "installHealthConnect": "Instala o actualiza la app Health Connect de Google desde Play Store y vuelve. Fitbit, Samsung Health, Garmin y Wear OS pueden sincronizarse con ella.",
+    "unavailableIos": "Apple Health no está disponible en este dispositivo.",
+    "unavailableWeb": "El registro de actividad funciona en las apps de Android y iPhone.",
+    "connectTitle": "Conecta una pulsera de actividad",
+    "connectTeaser": "Opcional: ve aquí tus pasos, sueño y frecuencia cardíaca",
+    "steps": "Pasos hoy",
+    "sleep": "Sueño",
+    "heart": "Pulso",
+    "privacy": "Los datos de salud se leen solo en tu teléfono y nunca se suben."
+  },
+  "protection": {
+    "title": "Protección",
+    "intro": "Haz más difícil acceder a contenido para adultos en momentos de debilidad. Todo se activa con un toque y se puede desactivar cuando quieras.",
+    "dnsSection": "Bloqueador de webs para adultos",
+    "dnsTitle": "Bloquear webs para adultos",
+    "dnsWhat": "Usa un servicio DNS seguro para familias",
+    "dnsOn": "Activo en este teléfono",
+    "dnsOff": "Desactivado",
+    "dnsExplain": "Toca el botón y acepta la solicitud de conexión. Eso es todo. Las webs para adultos dejarán de cargar en todos los navegadores y apps de este teléfono.",
+    "dnsDisclosureTitle": "Sobre el bloqueador",
+    "dnsDisclosure": "Android te pedirá permitir una conexión VPN. Clarity Recovery la usa solo para enviar las consultas de nombres de webs (DNS) al Filtro Familiar de CleanBrowsing, que bloquea los sitios para adultos. Tu tráfico de navegación no pasa por la VPN y la app no registra nada.",
+    "turnOnDns": "Activar bloqueador",
+    "dnsOnBody": "Las webs para adultos ya están bloqueadas. Verás un pequeño icono de llave en la barra de estado. Es el bloqueador funcionando.",
+    "alwaysOn": "Mantenerlo tras reiniciar",
+    "alwaysOnBody": "Abre los ajustes de VPN, toca el engranaje junto a Clarity Recovery y activa «VPN siempre activa».",
+    "turnOff": "Desactivar",
+    "androidManualIntro": "Esta versión no puede activar el bloqueador por sí sola, pero Android tiene un ajuste integrado que hace lo mismo:",
+    "androidManualSteps": [
+      "Toca «Copiar dirección» abajo.",
+      "Abre Ajustes → Redes e Internet → DNS privado.",
+      "Elige «Nombre de host del proveedor de DNS privado».",
+      "Pega {{host}} y toca Guardar."
+    ],
+    "copyHost": "Copiar dirección",
+    "copied": "¡Copiado!",
+    "openSettings": "Abrir ajustes",
+    "iosIntro": "En iPhone, el bloqueador es un perfil gratuito de CleanBrowsing:",
+    "iosSteps": [
+      "Toca «Instalar perfil del bloqueador» y permite la descarga.",
+      "Abre la app Ajustes y toca «Perfil descargado» arriba.",
+      "Toca Instalar e introduce tu código.",
+      "Listo. Las webs para adultos están bloqueadas en Safari y otras apps."
+    ],
+    "iosInstall": "Instalar perfil del bloqueador",
+    "webNote": "El bloqueador funciona en las apps de Android y iPhone.",
+    "dnsProvider": "Filtrado por el Filtro Familiar de CleanBrowsing (cleanbrowsing.org).",
+    "pauseSection": "Pausa consciente",
+    "pauseTitle": "Pausa antes de hacer scroll",
+    "pauseWhat": "Al abrir apps como Instagram o TikTok, verás primero una pausa tranquila de 10 segundos.",
+    "pauseApps": "Pausar estas apps:",
+    "turnOnPause": "Activar pausa consciente",
+    "pauseDisclosureTitle": "Permitir acceso de accesibilidad",
+    "pauseDisclosure": "Para detectar cuándo abres una app elegida, Clarity Recovery necesita el permiso de accesibilidad de Android. Solo comprueba qué app está en pantalla. Nunca lee tus mensajes, lo que escribes ni el contenido de la pantalla, y nada sale de tu teléfono.",
+    "pauseNeedsService": "Un paso más: activa Clarity Recovery en los ajustes de accesibilidad.",
+    "pauseRestricted": "¿El interruptor está gris o dice \"Ajuste restringido\"? Android lo bloquea en apps instaladas fuera de Play Store. Abre Información de la app, toca ⋮ (arriba a la derecha) → Permitir ajustes restringidos y vuelve a activarlo.",
+    "openAppInfo": "Abrir información de la app",
+    "oemBody": "Los teléfonos {{maker}} cierran apps en segundo plano para ahorrar batería, y eso puede detener la pausa consciente. Para que siga funcionando:",
+    "oemSteps": ["Activa el Inicio automático de Clarity Recovery.","En Otros permisos, permite \"Mostrar ventanas emergentes mientras se ejecuta en segundo plano\".","En Información de la app → Ahorro de batería, elige \"Sin restricciones\".","En apps recientes, bloquea Clarity Recovery (desliza su tarjeta hacia abajo o mantenla pulsada)."],
+    "oemAutostart": "Abrir inicio automático",
+    "oemPopups": "Abrir otros permisos",
+    "pauseSteps": [
+      "Toca «Abrir ajustes».",
+      "Toca «Aplicaciones instaladas» (o «Aplicaciones descargadas»).",
+      "Toca «Clarity Recovery – Mindful pause» y actívalo."
+    ],
+    "pauseNeedsBuild": "La pausa consciente funciona en la app de Android.",
+    "iosScreenTime": "iPhone no permite que una app pause otras, pero Tiempo de uso puede poner un límite:",
+    "iosScreenTimeSteps": [
+      "Abre Ajustes → Tiempo de uso → Límites de apps.",
+      "Toca Añadir límite y elige Redes sociales.",
+      "Pon un límite diario corto, por ejemplo 15 minutos."
+    ],
+    "moreSection": "Más herramientas",
+    "partnerTitle": "Compañero de responsabilidad",
+    "partnerBody": "Alguien que recibe un mensaje cuando pulsas el botón de pánico",
+    "privacy": "La protección funciona en tu teléfono. Clarity Recovery no ve ni guarda las webs que visitas."
+  },
+  "pause": {
+    "title": "Haz una pausa",
+    "body": "Estás abriendo {{app}}. ¿Es esto lo que de verdad quieres ahora?",
+    "breathe": "Respira tres veces despacio con el círculo.",
+    "leave": "Salir de {{app}}",
+    "notNow": "Aun así quiero abrirla",
+    "continue": "Abrir {{app}} 10 minutos"
+  },
+  "instagram": {
+    "title": "Revisión de seguidos en Instagram",
+    "teaser": "Encuentra cuentas de contenido adulto que sigues",
+    "heading": "Limpia a quién sigues",
+    "body": "Tu feed depende de a quién sigues. Esta herramienta lee tu propia exportación de datos de Instagram y destaca las cuentas que parecen de creadores de contenido para adultos, para que puedas dejar de seguirlas.",
+    "howTitle": "Cómo obtener tus datos de Instagram",
+    "steps": [
+      "En Instagram, abre tu perfil → menú ☰ → Centro de cuentas.",
+      "Toca «Tu información y permisos» → «Descargar tu información».",
+      "Elige «Parte de tu información» y selecciona «Seguidores y seguidos».",
+      "Elige «Descargar en el dispositivo», formato JSON, y toca «Crear archivos».",
+      "Cuando Instagram te envíe un correo (normalmente en minutos), descarga el archivo .zip.",
+      "Vuelve aquí y toca «Elegir archivo»."
+    ],
+    "openAccountsCenter": "Abrir Centro de cuentas",
+    "choose": "Elegir archivo",
+    "chooseAnother": "Revisar otro archivo",
+    "error": "No encontramos tu lista de seguidos en ese archivo. Asegúrate de elegir el .zip de Instagram (o el following.json que contiene).",
+    "summary": "Sigues {{total}} cuentas. {{count}} podrían compartir contenido para adultos.",
+    "summaryAdvice": "Toca una cuenta para abrirla en Instagram y dejar de seguirla. Menos detonantes en tu feed significa menos impulsos.",
+    "summaryClean": "No hay nada evidente. Buen trabajo manteniendo limpio tu feed.",
+    "heuristicNote": "Las coincidencias se basan solo en los nombres de las cuentas, así que revisa antes de dejar de seguir.",
+    "filter": { "all": "Todas", "likely": "Probables", "possible": "Posibles" },
+    "confidence": {
+      "likely": "Probable contenido adulto («{{keyword}}»)",
+      "possible": "Posiblemente sugerente («{{keyword}}»)"
+    },
+    "privacy": "Tu archivo se analiza en este teléfono y nunca se sube."
+  },
+  "support": {
+    "partnerSection": "Responsabilidad",
+    "partnerTitle": "Compañero de responsabilidad",
+    "partnerBody": "La recuperación es más fácil con alguien de tu parte: un amigo de confianza, un mentor, un pastor o un consejero. No se comparte nada a menos que tú lo envíes.",
+    "name": "Nombre",
+    "namePlaceholder": "p. ej. Sam",
+    "phone": "Número de teléfono",
+    "savePartner": "Guardar compañero",
+    "alertOnPanic": "Escribirle cuando pulse pánico",
+    "alertOnPanicBody": "Abre un mensaje listo para enviar. Solo tienes que pulsar Enviar.",
+    "struggling": "Lo estoy pasando mal",
+    "strugglingBody": "Envía una petición de apoyo",
+    "strugglingMessage": "Hola, lo estoy pasando mal ahora mismo. ¿Puedes preguntarme cómo estoy?",
+    "call": "Llamar a {{name}}",
+    "weekly": "Enviar resumen semanal",
+    "weeklyBody": "Envía tu progreso de los últimos 7 días",
+    "removePartner": "Quitar compañero",
+    "shareTitle": "Comparte tu progreso",
+    "shareBody": "Envía tu resumen semanal por cualquier app, como correo, WhatsApp o Signal.",
+    "share": "Compartir resumen semanal",
+    "report": "Mi resumen semanal de recuperación:\n• Racha actual: {{streak}}\n• Mejor racha: {{best}}\n• Impulsos resistidos esta semana: {{urges}}\n• Deslices esta semana: {{slips}}\n• Registros esta semana: {{checkins}} (impulso medio {{avgUrge}}/10)\n\nGracias por ayudarme a ser responsable.",
+    "toolsSection": "Herramientas",
+    "protectionBody": "Bloqueador de webs, pausa consciente, revisión de Instagram",
+    "storiesBody": "Historias reales de personas que se liberaron",
+    "factsBody": "Lo que dice la investigación sobre la recuperación",
+    "helpSection": "Pide ayuda",
+    "professional": "El consumo compulsivo de pornografía es común y tiene tratamiento. Un terapeuta con experiencia en conducta sexual compulsiva, un grupo de apoyo o tu comunidad de fe pueden marcar una diferencia real."
+  },
+  "helplines": {
+    "title": "Líneas de ayuda",
+    "intro": "Servicios gratuitos y confidenciales cerca de ti. Puedes cambiar tu país cuando quieras.",
+    "changeCountry": "Toca para cambiar de país",
+    "crisisTitle": "¿En crisis? Pide ayuda ahora",
+    "crisisBody": "Apoyo gratuito y confidencial en {{country}}:",
+    "emergency": "Servicios de emergencia: {{number}}",
+    "findAHelpline": "Encuentra una línea de ayuda en cualquier país",
+    "website": "Sitio web",
+    "allHelplines": "Todas las líneas y grupos de apoyo",
+    "recoveryTitle": "Grupos de recuperación",
+    "recoveryBody": "Comunidades gratuitas de apoyo entre iguales con reuniones en línea y en todo el mundo.",
+    "verifyNote": "Los números se revisan con regularidad, pero los servicios pueden cambiar. Si un número no funciona, usa findahelpline.com."
+  },
+  "stories": {
+    "title": "Historias de libertad",
+    "heading": "Personas que se liberaron",
+    "body": "Historias reales, compartidas con permiso, de personas que han superado la adicción a la pornografía.",
+    "empty": "Pronto habrá nuevas historias. Vuelve más tarde.",
+    "shareTitle": "Comparte tu historia",
+    "shareBody": "¿Te ha ayudado Clarity Recovery? Tu historia podría dar esperanza a otra persona. Solo publicamos con tu permiso por escrito, usando tu nombre o tus iniciales.",
+    "share": "Compartir mi historia",
+    "emailSubject": "Mi historia de recuperación",
+    "emailBody": "Nombre o iniciales para mostrar:\nPaís:\nCuánto tiempo llevas libre:\n\nMi historia:\n\n\nDoy permiso a Clarity Recovery para publicar esta historia en la app (sí/no):",
+    "consentNote": "Cada historia es real y se publica con consentimiento. Nunca inventamos testimonios."
+  },
+  "paywall": {
+    "title": "Empieza tu mes gratis",
+    "activeTitle": "Eres miembro de Clarity",
+    "subtitle": "Prueba todas las funciones gratis durante 1 mes. Cancela cuando quieras antes de que termine y no se te cobrará.",
+    "features": {
+      "sessions": "Todas las sesiones guiadas de meditación, yoga y ejercicio",
+      "protection": "Pausa consciente para apps de redes sociales",
+      "instagram": "Revisión de seguidos en Instagram",
+      "health": "Datos de pulsera de actividad y reloj inteligente",
+      "themes": "Temas y personalización de colores",
+      "insights": "Nueva investigación e historias de recuperación a medida que se publican"
+    },
+    "alwaysFree": "El botón de pánico, las líneas de ayuda, el contador de racha, los registros y el bloqueador de webs son siempre gratuitos.",
+    "startTrial": "Empezar prueba gratis",
+    "manage": "Gestionar suscripción",
+    "nothingToRestore": "No encontramos una suscripción activa para esta cuenta.",
+    "pending": "Tu pago se está procesando. Premium se activará automáticamente en cuanto se confirme.",
+    "subscribed": "Tu suscripción está activa. Gracias por apoyar Clarity Recovery.",
+    "inTrial": "Tu prueba gratuita está activa hasta el {{date}}.",
+    "noPlans": "Las suscripciones no están disponibles ahora. Inténtalo más tarde.",
+    "notConfigured": "Las suscripciones aún no están configuradas en esta versión, así que todas las funciones están desbloqueadas.",
+    "webNote": "Las suscripciones están disponibles en las apps de Android y iPhone.",
+    "notNow": "Ahora no",
+    "localPricing": "Los precios se muestran en tu moneda local y los fija para tu país Google Play o la App Store.",
+    "bannerTitle": "Consigue 1 mes gratis",
+    "bannerBody": "Desbloquea todas las herramientas para tu recuperación.",
+    "lockedTitle": "{{feature}} es una función para miembros",
+    "lockedBody": "Empieza tu mes gratis para desbloquearla. El botón de pánico y las líneas de ayuda son siempre gratuitos."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "account": "Membresía",
+    "subscription": "Suscripción",
+    "subscriptionActive": "Activa",
+    "subscriptionTrial": "Prueba gratuita",
+    "subscriptionTrialEnds": "Prueba gratis, termina el {{date}}",
+    "subscriptionFree": "Plan gratuito. Toca para empezar tu mes gratis",
+    "subscriptionDev": "Todo desbloqueado (pagos no configurados)",
+    "aboutYou": "Sobre ti",
+    "profile": "Género, edad y país",
+    "language": "Idioma",
+    "restart": "Reiniciar ahora",
+    "assessment": "Autoevaluación y plan personal",
+    "assessmentNone": "Aún no realizada",
+    "recovery": "Recuperación",
+    "goal": "Meta",
+    "reasons": "Tus motivos",
+    "faith": "Escrituras y versículos de fe diarios",
+    "faithBody": "Versículos bíblicos y oración, también en la pantalla de pánico.",
+    "appSection": "App",
+    "nudgesOn": "Cada {{hours}} h, {{start}}–{{end}}",
+    "nudgesOff": "Desactivados",
+    "privacy": "Privacidad",
+    "privacyBody": "Clarity Recovery no tiene cuentas ni servidores para tus datos. Todo lo que introduces se guarda solo en este teléfono. Al desinstalar la app, se borra.",
+    "erase": "Borrar todos los datos",
+    "eraseTitle": "¿Borrar todos los datos?",
+    "eraseBody": "Esto elimina de este teléfono tu racha, tu diario y tus ajustes.",
+    "version": "Versión {{version}}"
+  },
+  "profileEdit": { "title": "Sobre ti" },
+  "appearance": {
+    "title": "Tema y colores",
+    "preview": "Vista previa",
+    "mode": "Claro u oscuro",
+    "modes": { "system": "Automático", "light": "Claro", "dark": "Oscuro" },
+    "theme": "Tema",
+    "themes": { "serene": "Sereno", "dawn": "Amanecer", "ocean": "Océano", "forest": "Bosque", "sand": "Arena" },
+    "accent": "Color de acento",
+    "accentBody": "Elige tu propio color destacado. Tócalo de nuevo para volver al color del tema."
+  },
+  "reminders": {
+    "title": "Recordatorios",
+    "nudges": "Recordatorios de ánimo",
+    "nudgesBody": "Mensajes cortos y discretos durante el día",
+    "every": "Con qué frecuencia",
+    "everyHours_one": "Cada hora",
+    "everyHours_many": "Cada {{count}} horas",
+    "everyHours_other": "Cada {{count}} horas",
+    "from": "Empezando a las",
+    "until": "Último a las",
+    "schedule": "Recibirás recordatorios a las {{times}}.",
+    "checkIn": "Recordatorio de registro diario",
+    "checkInBody": "Un aviso para reflexionar sobre tu día",
+    "discreet": "Los recordatorios nunca mencionan la pornografía, así que son seguros en la pantalla de bloqueo.",
+    "denied": "Las notificaciones de Clarity Recovery están desactivadas. Permítelas en los ajustes del teléfono.",
+    "webNote": "Los recordatorios funcionan en las apps de Android y iPhone."
+  },
+  "sound": {
+    "title": "Sonido y voz",
+    "off": "Desactivado",
+    "voiceGuide": "Guía de voz",
+    "voiceGuideBody": "Lee cada paso en voz alta durante las sesiones",
+    "bells": "Campanas y señales de respiración",
+    "bellsBody": "Una campana entre pasos y tonos suaves para inhalar y exhalar",
+    "more": "Ajustes de sonido",
+    "voice": "Voz",
+    "genders": {
+      "female": "Femenina",
+      "male": "Masculina"
+    },
+    "genderMissing": "No se reconoció una voz de este tipo en tu teléfono. Elige una de la lista de abajo.",
+    "speed": "Velocidad",
+    "rates": {
+      "slow": "Lenta",
+      "calm": "Calma",
+      "normal": "Normal"
+    },
+    "preview": "Escuchar voz",
+    "stop": "Detener",
+    "listen": "Escuchar",
+    "sample": "Inhala despacio… y suéltalo. Lo estás haciendo bien.",
+    "deviceVoices": "Voces de este teléfono",
+    "noVoices": "No se encontraron voces para este idioma. Añade una en los ajustes de texto a voz de tu teléfono.",
+    "voiceNumber": "Voz {{n}}",
+    "enhanced": "Mejorada",
+    "needsInternet": "Requiere internet",
+    "moreVoicesIos": "Para una voz más natural, descarga una voz Mejorada o Premium en Ajustes › Accesibilidad › Contenido leído › Voces.",
+    "moreVoicesAndroid": "Para una voz más natural, instala datos de voz en Ajustes › Accesibilidad › Texto a voz.",
+    "silentSwitch": "Los sonidos y la voz respetan el interruptor de silencio de tu iPhone.",
+    "music": "Música de fondo",
+    "musicBody": "Suena bajito durante las sesiones y baja aún más cuando habla la voz. Cada pista se descarga una vez al elegirla y luego funciona sin conexión.",
+    "musicBodyWeb": "Suena bajito durante las sesiones y baja aún más cuando habla la voz.",
+    "none": "Ninguna",
+    "downloaded": "Descargada",
+    "downloading": "Descargando… {{percent}} %",
+    "downloadFailed": "La descarga falló. Toca para intentarlo de nuevo.",
+    "size": "{{size}} MB",
+    "volume": "Volumen de la música",
+    "previewMusic": "Escuchar música",
+    "removeDownloads": "Eliminar música descargada ({{size}} MB)",
+    "musicChip": "Música",
+    "minutes": "{{minutes}} min",
+    "volumes": {
+      "soft": "Bajo",
+      "medium": "Medio",
+      "loud": "Alto"
+    }
+  },
+  "notifications": {
+    "checkInTitle": "Hora de tu registro diario",
+    "checkInBody": "Tómate dos minutos para reflexionar sobre tu día.",
+    "trialEndingTitle": "Tu mes gratis termina en 2 días",
+    "trialEndingBody": "Tu plan empieza el {{date}}. Para cambiarlo o cancelarlo, abre Ajustes → Suscripción.",
+    "nudges": [
+      "Lo estás haciendo mejor de lo que crees. Sigue adelante.",
+      "Respira despacio tres veces. Tú puedes.",
+      "Recuerda por qué empezaste.",
+      "Cada hora que eliges diferente, tu cerebro se recablea un poco más.",
+      "¿Inquieto? Un paseo corto hace maravillas.",
+      "¿Has bebido agua hoy?",
+      "Habla hoy con alguien de confianza.",
+      "Orgulloso de ti por seguir aquí hoy."
+    ]
+  },
+  "affirmations": [
+    "Un impulso es una ola. Sube, llega a su punto máximo y pasa, y no tienes que actuar según él.",
+    "Cada día que eliges diferente, tu cerebro se recablea un poco más.",
+    "No eres tus impulsos. Eres quien los nota.",
+    "Progreso, no perfección. Un día sincero cada vez.",
+    "La incomodidad que sientes ahora es tu cerebro sanando.",
+    "Estás construyendo una vida de la que no querrás escapar.",
+    "La conexión real siempre gana a una pantalla.",
+    "El aburrimiento, el estrés y la soledad son señales, no órdenes.",
+    "Has superado todos los momentos difíciles hasta ahora. Este también.",
+    "Las pequeñas decisiones, repetidas cada día, se convierten en quien eres.",
+    "Descansa, muévete, come bien, busca a otros. Cuida el cuerpo en el que vive tu mente.",
+    "La vergüenza te mantiene atascado. La compasión te ayuda a avanzar."
+  ],
+  "reasonSuggestions": [
+    "Estar plenamente presente con las personas que quiero",
+    "Construir una relación real y sana",
+    "Recuperar mi concentración y mi energía",
+    "Sentirme orgulloso de quien soy",
+    "Vivir según mis valores y mi fe",
+    "Dejar de sentir vergüenza y secretismo"
+  ],
+  "habits": {
+    "meditate": "Meditar o respirar",
+    "move": "Hacer ejercicio",
+    "stretch": "Yoga / estiramientos",
+    "eat": "Comidas equilibradas",
+    "water": "Beber suficiente agua",
+    "pray": "Orar o leer las Escrituras",
+    "connect": "Hablar con alguien",
+    "sleep": "Móvil fuera del dormitorio"
+  },
+  "sessions": {
+    "box-breathing": {
+      "title": "Respiración tranquila",
+      "summary": "Baja tu ritmo cardíaco y calma el impulso en 4 minutos.",
+      "steps": [
+        { "title": "Acomódate", "text": "Siéntate cómodo. Relaja los hombros y suelta la mandíbula." },
+        { "title": "Respira con el círculo", "text": "Inspira mientras crece, mantén, y espira despacio mientras se encoge." },
+        { "title": "Observa", "text": "Deja que la respiración vuelva a la normalidad. Nota cómo se siente tu cuerpo ahora comparado con el principio." }
+      ]
+    },
+    "urge-surfing": {
+      "title": "Surfear el impulso",
+      "summary": "Observa un deseo sin actuar según él hasta que pase.",
+      "steps": [
+        { "title": "Para", "text": "Siéntate en un lugar seguro. Pon el móvil boca abajo después de iniciar el temporizador." },
+        { "title": "Localiza el impulso", "text": "¿Dónde lo sientes en el cuerpo? ¿Pecho, estómago, cara, manos? Solo obsérvalo, sin juzgar." },
+        { "title": "Descríbelo", "text": "¿Es caliente o frío, tenso o como un zumbido? ¿Qué intensidad tiene del 1 al 10? Nómbralo: «Esto es un impulso»." },
+        { "title": "Surfea la ola", "text": "Respira hacia esa zona. Imagina el impulso como una ola que sube y tú surfeando encima, sin hundirte." },
+        { "title": "Mira cómo cambia", "text": "Nota cómo el impulso cambia o se desvanece. Los impulsos siempre suben y pasan si no los alimentas." },
+        { "title": "Elige tu siguiente paso", "text": "Vuelve a puntuar el impulso. Ahora elige algo bueno que hacer: caminar, llamar a alguien, beber agua." }
+      ]
+    },
+    "body-scan": {
+      "title": "Escáner corporal para dormir",
+      "summary": "Libera tensión antes de dormir, cuando los impulsos suelen ser más fuertes.",
+      "steps": [
+        { "title": "Túmbate", "text": "Túmbate boca arriba, con los brazos a los lados. Cierra los ojos." },
+        { "title": "Pies y piernas", "text": "Lleva la atención a los pies, pantorrillas y muslos. Deja que pesen." },
+        { "title": "Caderas y vientre", "text": "Nota cómo sube y baja tu vientre. Suaviza el estómago." },
+        { "title": "Pecho y espalda", "text": "Siente cómo tu espalda se hunde en la cama. Deja el pecho abierto y relajado." },
+        { "title": "Brazos y manos", "text": "Relaja hombros, brazos y dedos." },
+        { "title": "Cara", "text": "Suaviza la frente, los ojos, la mandíbula y la lengua." },
+        { "title": "Todo el cuerpo", "text": "Siente todo tu cuerpo descansando, seguro y quieto. Duérmete cuando estés listo." }
+      ]
+    },
+    "self-compassion": {
+      "title": "Autocompasión",
+      "summary": "Cambia la vergüenza por amabilidad, sobre todo tras un día difícil.",
+      "steps": [
+        { "title": "Reconoce", "text": "Pon una mano en el pecho. Di en silencio: «Este es un momento de lucha»." },
+        { "title": "No estás solo", "text": "Recuérdate: «Mucha gente libra esta misma batalla. No estoy solo»." },
+        { "title": "Sé amable", "text": "Di: «Que sea paciente conmigo. Que me dé la amabilidad que necesito»." },
+        { "title": "Descansa", "text": "Respira despacio y deja que las palabras calen." }
+      ]
+    },
+    "breath-prayer": {
+      "title": "Oración con la respiración",
+      "summary": "Una sencilla práctica contemplativa cristiana unida a tu respiración.",
+      "steps": [
+        { "title": "Quédate quieto", "text": "«Estad quietos, y conoced que yo soy Dios» (Salmo 46:10). Siéntate en silencio y ralentiza la respiración." },
+        { "title": "Ora con tu respiración", "text": "Inspira: «Crea en mí, oh Dios, un corazón limpio». Espira: «Y renueva un espíritu recto dentro de mí»." },
+        { "title": "Escucha", "text": "Descansa en silencio. Entrega a Dios tus impulsos, preocupaciones y vergüenza." },
+        { "title": "Amén", "text": "Termina dando gracias por hoy y pide fuerza para la próxima hora." }
+      ]
+    },
+    "morning-flow": {
+      "title": "Secuencia para despertar",
+      "summary": "8 minutos para empezar el día con energía, no con el móvil.",
+      "steps": [
+        { "title": "Postura del niño", "text": "Rodillas separadas, dedos gordos juntos, brazos estirados al frente. Respira hacia la espalda." },
+        { "title": "Gato-vaca", "text": "A cuatro patas, arquea la espalda al inspirar y redondéala al espirar." },
+        { "title": "Perro boca abajo", "text": "Eleva las caderas hacia arriba y atrás. Pedalea suavemente con los talones." },
+        { "title": "Zancada baja (derecha)", "text": "Adelanta el pie derecho, baja la rodilla de atrás y eleva los brazos." },
+        { "title": "Zancada baja (izquierda)", "text": "Cambia de lado: pie izquierdo delante, brazos arriba, pecho abierto." },
+        { "title": "Flexión de pie hacia delante", "text": "Camina hacia delante y flexiona el tronco con las rodillas suaves. Deja colgar la cabeza." },
+        { "title": "Postura de la montaña", "text": "Sube despacio. Ponte erguido, pies firmes, palmas al frente. Fija una intención para el día." },
+        { "title": "Saludo al sol", "text": "Inspira con los brazos arriba, espira con las manos al corazón. Repite despacio." }
+      ]
+    },
+    "evening-wind-down": {
+      "title": "Relajación nocturna",
+      "summary": "Posturas suaves para calmar el sistema nervioso antes de dormir.",
+      "steps": [
+        { "title": "Flexión sentado", "text": "Piernas estiradas, inclínate desde las caderas. Respira despacio." },
+        { "title": "Torsión tumbado (derecha)", "text": "Túmbate, deja caer ambas rodillas a la derecha y mira a la izquierda." },
+        { "title": "Torsión tumbado (izquierda)", "text": "Deja caer ambas rodillas a la izquierda y mira a la derecha." },
+        { "title": "Bebé feliz", "text": "Sujeta el borde exterior de los pies, rodillas abiertas, y balancéate suavemente." },
+        { "title": "Piernas en la pared", "text": "Apoya las piernas en una pared o el cabecero. Deja caer los brazos abiertos." },
+        { "title": "Postura del cadáver", "text": "Túmbate totalmente quieto. Deja ir el día." }
+      ]
+    },
+    "urge-reset-yoga": {
+      "title": "Reinicio de 5 minutos",
+      "summary": "Saca la energía inquieta de tu cuerpo.",
+      "steps": [
+        { "title": "Sacúdete", "text": "De pie, sacude con soltura las manos, los brazos y las piernas." },
+        { "title": "Postura de la silla", "text": "Siéntate hacia atrás como en una silla, brazos arriba. Mantén y respira." },
+        { "title": "Guerrero II (derecha)", "text": "Piernas abiertas, rodilla derecha flexionada, brazos largos, mirada sobre la mano derecha." },
+        { "title": "Guerrero II (izquierda)", "text": "Cambia de lado. Piernas fuertes, respiración estable." },
+        { "title": "Postura del árbol", "text": "Equilíbrate sobre un pie, el otro en la pantorrilla o el muslo. Cambia a mitad." },
+        { "title": "Postura del niño", "text": "Apoya la frente en el suelo. Nota que el impulso ya tiene menos poder." }
+      ]
+    },
+    "urge-burner": {
+      "title": "Quemaimpulsos de 6 minutos",
+      "summary": "Circuito intenso con tu propio peso. Sin material.",
+      "steps": [
+        { "title": "Saltos de tijera", "text": "Rápido y constante." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Flexiones", "text": "Con pies o rodillas. Mantén el cuerpo recto." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Sentadillas", "text": "Caderas atrás, pecho arriba, empuja con los talones." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Plancha", "text": "Antebrazos en el suelo, aprieta el abdomen y los glúteos." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Zancadas", "text": "Alterna las piernas, la rodilla justo por encima del suelo." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Escaladores", "text": "Lleva las rodillas al pecho rápidamente." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Rodillas arriba", "text": "Corre en el sitio subiendo las rodillas." },
+        { "title": "Descanso", "text": "Respira." },
+        { "title": "Burpees", "text": "Sentadilla, salta atrás, salta adelante, salta arriba. A tu ritmo." },
+        { "title": "Vuelta a la calma", "text": "Camina despacio y sacude brazos y piernas." }
+      ]
+    },
+    "beginner-strength": {
+      "title": "Fuerza para principiantes",
+      "summary": "15 minutos, 3 rondas. Construye confianza y disciplina.",
+      "steps": [
+        { "title": "Ronda 1: Sentadillas", "text": "12–15 repeticiones lentas y controladas." },
+        { "title": "Ronda 1: Flexiones", "text": "8–12 repeticiones (con rodillas vale)." },
+        { "title": "Ronda 1: Puente de glúteos", "text": "15 repeticiones, aprieta arriba." },
+        { "title": "Ronda 1: Plancha", "text": "Aguanta firme." },
+        { "title": "Descanso", "text": "Bebe un poco de agua." },
+        { "title": "Ronda 2: Sentadillas", "text": "12–15 repeticiones lentas y controladas." },
+        { "title": "Ronda 2: Flexiones", "text": "8–12 repeticiones (con rodillas vale)." },
+        { "title": "Ronda 2: Puente de glúteos", "text": "15 repeticiones, aprieta arriba." },
+        { "title": "Ronda 2: Plancha", "text": "Aguanta firme." },
+        { "title": "Descanso", "text": "Bebe un poco de agua." },
+        { "title": "Ronda 3: Sentadillas", "text": "12–15 repeticiones lentas y controladas." },
+        { "title": "Ronda 3: Flexiones", "text": "8–12 repeticiones (con rodillas vale)." },
+        { "title": "Ronda 3: Puente de glúteos", "text": "15 repeticiones, aprieta arriba." },
+        { "title": "Ronda 3: Plancha", "text": "Aguanta firme." },
+        { "title": "Descanso", "text": "Bebe un poco de agua." },
+        { "title": "Estiramiento", "text": "Estira piernas, pecho y hombros." }
+      ]
+    },
+    "walk-it-off": {
+      "title": "Sal a caminar",
+      "summary": "Un paseo rápido de 20 minutos al aire libre: el cortaimpulsos más sencillo.",
+      "steps": [
+        { "title": "Sal fuera", "text": "Ponte los zapatos y sal de la habitación. Estar en público es una barrera poderosa." },
+        { "title": "Ritmo suave", "text": "Camina a un ritmo cómodo y entra en calor." },
+        { "title": "Ritmo rápido", "text": "Acelera hasta respirar más fuerte, pero que aún puedas hablar." },
+        { "title": "Mira a tu alrededor", "text": "Nombra 5 cosas que ves, 4 que oyes y 3 que sientes." },
+        { "title": "Vuelta a la calma", "text": "Baja el ritmo y vuelve a casa. Nota lo tranquilo que te sientes." }
+      ]
+    },
+    "grounding": {
+      "title": "Anclaje 5-4-3-2-1",
+      "summary": "Saca tu mente del impulso y tráela de vuelta a la habitación en 4 minutos.",
+      "steps": [
+        { "title": "Para", "text": "Deja lo que estás haciendo. Apoya ambos pies en el suelo y respira despacio una vez." },
+        { "title": "5 cosas que ves", "text": "Mira a tu alrededor y nombra cinco cosas que ves. Fíjate en colores y formas." },
+        { "title": "4 cosas que sientes", "text": "Nota cuatro cosas que puedes sentir: la ropa, la silla, el aire, tus pies." },
+        { "title": "3 cosas que oyes", "text": "Escucha tres sonidos, cercanos y lejanos." },
+        { "title": "2 cosas que hueles", "text": "Encuentra dos olores, o recuerda dos olores que te gusten." },
+        { "title": "1 cosa que saboreas", "text": "Nota un sabor, o bebe un sorbo de agua." },
+        { "title": "Respira", "text": "Respira despacio tres veces. Nota cómo ha cambiado el impulso." }
+      ]
+    },
+    "gratitude": {
+      "title": "Reflexión de gratitud",
+      "summary": "Lleva tu atención a lo bueno de tu vida.",
+      "steps": [
+        { "title": "Acomódate", "text": "Siéntate cómodo, cierra los ojos y respira despacio." },
+        { "title": "Alguien a quien agradeces", "text": "Piensa en una persona que te ha ayudado. Imagina su cara y dale las gracias en silencio." },
+        { "title": "Algo de tu cuerpo", "text": "Piensa en algo que tu cuerpo hace por ti cada día, como respirar, caminar o ver." },
+        { "title": "Algo bueno de hoy", "text": "Recuerda un pequeño momento bueno de hoy, por pequeño que sea." },
+        { "title": "Llévalo contigo", "text": "Nota el calor de la gratitud en el pecho. Llévalo contigo el resto del día." }
+      ]
+    },
+    "desk-stretch": {
+      "title": "Estiramiento de escritorio y cuello",
+      "summary": "Deshaz horas de postura frente a la pantalla en 4 minutos.",
+      "steps": [
+        { "title": "Giros de cuello", "text": "Gira la cabeza despacio en medio círculo, de lado a lado. Nunca fuerces." },
+        { "title": "Giros de hombros", "text": "Gira los hombros arriba, atrás y abajo. Luego al revés." },
+        { "title": "Torsión sentado (derecha)", "text": "Siéntate erguido y gira suavemente a la derecha, con la mano en el respaldo." },
+        { "title": "Torsión sentado (izquierda)", "text": "Gira suavemente a la izquierda. Sigue respirando." },
+        { "title": "Apertura de pecho", "text": "Entrelaza las manos detrás de la espalda y eleva el pecho." },
+        { "title": "Flexión hacia delante", "text": "De pie, suaviza las rodillas y flexiona el tronco. Deja la cabeza pesada." }
+      ]
+    },
+    "cardio-10": {
+      "title": "Cardio de 10 minutos",
+      "summary": "Sin material y de bajo impacto. Mejora el ánimo y la energía.",
+      "steps": [
+        { "title": "Marcha en el sitio", "text": "Sube las rodillas y balancea los brazos para calentar." },
+        { "title": "Pasos laterales", "text": "Saca un pie al lado mientras subes los brazos, luego cambia." },
+        { "title": "Sentadillas", "text": "Siéntate hacia atrás en una sentadilla y levántate erguido." },
+        { "title": "Pies rápidos", "text": "Corre ligero en el sitio, sobre la punta de los pies." },
+        { "title": "Zancadas atrás", "text": "Da un paso atrás a una zancada, alternando piernas." },
+        { "title": "Golpes de boxeo", "text": "Golpea al frente rápido, con el abdomen firme." },
+        { "title": "Pasos de patinador", "text": "Da pasos de lado a lado como un patinador de velocidad." },
+        { "title": "Rodilla arriba", "text": "Sube una rodilla hasta las manos y cambia." },
+        { "title": "Pulsos de sentadilla", "text": "Mantén una sentadilla baja y rebota suavemente." },
+        { "title": "Vuelta a la calma", "text": "Camina despacio y estira piernas y brazos." }
+      ]
+    }
+  },
+  "dietTips": [
+    { "title": "Recuerda HALT", "body": "Hambriento, enfadado, solo, cansado (Hungry, Angry, Lonely, Tired): los impulsos son mucho más fuertes en estos estados. Comer con regularidad es una de las formas más fáciles de reducir el riesgo." },
+    { "title": "Desayuno rico en proteína", "body": "Huevos, yogur griego, avena con frutos secos o legumbres mantienen estable el azúcar en sangre y reducen el antojo y la irritabilidad a media mañana." },
+    { "title": "Cuidado con los picos de azúcar", "body": "Los dulces y las bebidas energéticas dan un subidón rápido seguido de un bajón, y los bajones suelen traer impulsos. Combina los hidratos con proteína o fibra." },
+    { "title": "Nada de cafeína después de las 14 h", "body": "Dormir mal es un gran detonante. Dejar la cafeína a primera hora de la tarde te ayuda a dormirte en vez de quedarte con el móvil." },
+    { "title": "Ojo con el alcohol", "body": "El alcohol reduce la inhibición y es un detonante habitual de recaída. Si bebes, planifica cómo volver a casa y dejar el móvil." },
+    { "title": "Hidrátate", "body": "Una ligera deshidratación causa cansancio y bajo ánimo. Bebe un vaso de agua en cada comida y ten una botella cerca." },
+    { "title": "Omega-3 y alimentos naturales", "body": "El pescado azul, las nueces, la chía y la linaza, las verduras de hoja y las hortalizas de colores apoyan la salud del cerebro y el ánimo." },
+    { "title": "Ideas sencillas de comidas", "body": "Desayuno: huevos + pan integral + fruta. Comida: arroz, legumbres o pollo, y verduras. Cena: pescado o lentejas con verduras asadas. Tentempié: frutos secos, fruta, yogur." }
+  ],
+  "sleepTips": [
+    { "title": "Móvil fuera del dormitorio", "body": "Hacer scroll por la noche es uno de los detonantes más comunes. Carga el móvil en otra habitación y usa un despertador barato." },
+    { "title": "Misma hora de despertar cada día", "body": "Despertarte a la misma hora, también los fines de semana, ajusta tu reloj interno y facilita dormirte por la noche." },
+    { "title": "Desconecta 30 minutos antes", "body": "Baja las luces, lee un libro en papel, estírate u ora. Dale a tu cerebro la señal de que el día termina." },
+    { "title": "¿No puedes dormir? Levántate", "body": "Si llevas despierto más de unos 20 minutos, levántate y haz algo tranquilo con poca luz hasta que tengas sueño. No te quedes en la cama con el móvil." },
+    { "title": "Fresco, oscuro y silencioso", "body": "Una habitación algo fresca, oscura y silenciosa te ayuda a dormirte y a seguir dormido." },
+    { "title": "Luz natural por la mañana", "body": "Salir al exterior en la primera hora tras despertar ayuda a ajustar tu reloj interno para dormir mejor esa noche." }
+  ],
+  "setup": {
+    "title": "Lista de configuración",
+    "open": "Abrir lista de configuración",
+    "intro": "Unos pasos únicos ayudan a Clarity a protegerte de forma fiable. Ve de arriba abajo; tarda unos 5 minutos. Las marcas se actualizan solas cuando Clarity puede comprobar un paso.",
+    "progress": "{{done}} de {{total}} pasos hechos",
+    "allDone": "Todo listo. Clarity ya puede protegerte.",
+    "todayTitle": "Termina de configurar Clarity",
+    "hide": "Ocultar",
+    "optional": "Opcional",
+    "markDone": "Ya lo he hecho",
+    "undo": "Aún no lo he hecho",
+    "done": "Hecho",
+    "fullGuide": "Leer la guía completa",
+    "groups": {
+      "essentials": "Lo esencial",
+      "protection": "Protección",
+      "running": "Mantén Clarity activo",
+      "extras": "Extras opcionales"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Permite las notificaciones",
+        "body": "Necesarias para tus recordatorios de registro diario, los mensajes de ánimo y el aviso antes de que termine tu prueba gratuita.",
+        "button": "Permitir notificaciones"
+      },
+      "partner": {
+        "title": "Añade un compañero de responsabilidad",
+        "body": "Alguien de confianza. Cuando toques SOS, se abrirá con un toque un mensaje listo para enviarle.",
+        "button": "Añadir compañero"
+      },
+      "sosShortcut": {
+        "title": "Ten el SOS a un toque",
+        "body": "Mantén pulsado el icono de Clarity y toca «Botón de pánico» para abrir el SOS al instante, o añade un icono de SOS a tu pantalla de inicio.",
+        "button": "Añadir SOS a la pantalla de inicio"
+      },
+      "dns": {
+        "title": "Activa el bloqueador de webs",
+        "body": "Bloquea las webs para adultos en todos los navegadores y apps de este teléfono.",
+        "button": "Configurar bloqueador"
+      },
+      "alwaysOnVpn": {
+        "title": "Mantén el bloqueador tras reiniciar",
+        "body": "En los ajustes de VPN, toca el engranaje junto a Clarity Recovery y activa «VPN siempre activa».",
+        "button": "Abrir ajustes de VPN"
+      },
+      "pause": {
+        "title": "Activa la pausa consciente",
+        "body": "Muestra una pausa tranquila al abrir apps como Instagram o TikTok, para que elijas con intención.",
+        "button": "Configurar pausa"
+      },
+      "iosDns": {
+        "title": "Instala el bloqueador de webs",
+        "body": "Sigue los pasos de la pantalla Protección para bloquear las webs para adultos en tu iPhone.",
+        "button": "Abrir Protección"
+      },
+      "iosScreenTime": {
+        "title": "Añade límites de Tiempo de uso",
+        "body": "Usa Tiempo de uso para limitar las webs para adultos y poner límites a las apps.",
+        "button": "Abrir Protección"
+      },
+      "battery": {
+        "title": "Evita que el ahorro de batería cierre Clarity",
+        "body": "Pon Clarity Recovery en «No optimizar» o «Sin restricciones» para que el bloqueador y la pausa sigan funcionando.",
+        "button": "Abrir ajustes de batería"
+      },
+      "autostart": {
+        "title": "Permite el Inicio automático",
+        "body": "Los teléfonos {{maker}} necesitan el Inicio automático activado para Clarity Recovery; si no, la protección se detiene al cabo de un rato.",
+        "button": "Abrir Inicio automático"
+      },
+      "popups": {
+        "title": "Permite ventanas emergentes en segundo plano",
+        "body": "En Otros permisos, permite «Mostrar ventanas emergentes mientras se ejecuta en segundo plano» para Clarity Recovery.",
+        "button": "Abrir permisos"
+      },
+      "lockRecents": {
+        "title": "Bloquea Clarity en apps recientes",
+        "body": "Abre las apps recientes, desliza la tarjeta de Clarity hacia abajo (o mantenla pulsada) y toca el candado para que {{maker}} no la cierre."
+      },
+      "health": {
+        "title": "Conecta tu pulsera de actividad",
+        "body": "Ve tus pasos, sueño y frecuencia cardíaca junto a tu progreso.",
+        "button": "Conectar"
+      },
+      "reminders": {
+        "title": "Configura los recordatorios",
+        "body": "Elige cuándo recibir tu registro diario y los mensajes de ánimo.",
+        "button": "Configurar recordatorios"
+      }
+    }
+  }
+}
