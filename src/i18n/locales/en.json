@@ -662,6 +662,39 @@
     "denied": "Notifications are turned off for Clarity Recovery. Please allow them in your phone's settings.",
     "webNote": "Reminders work in the Android and iPhone apps."
   },
+  "sound": {
+    "title": "Sound & voice",
+    "off": "Off",
+    "voiceGuide": "Voice guide",
+    "voiceGuideBody": "Reads each step aloud during sessions",
+    "bells": "Bells & breath cues",
+    "bellsBody": "A bell between steps and soft tones to breathe in and out",
+    "more": "Sound settings",
+    "voice": "Voice",
+    "genders": {
+      "female": "Female",
+      "male": "Male"
+    },
+    "genderMissing": "No voice of this kind was recognised on your phone. Pick one from the list below.",
+    "speed": "Speed",
+    "rates": {
+      "slow": "Slow",
+      "calm": "Calm",
+      "normal": "Normal"
+    },
+    "preview": "Preview voice",
+    "stop": "Stop",
+    "listen": "Listen",
+    "sample": "Take a slow breath in… and let it go. You are doing well.",
+    "deviceVoices": "Voices on this phone",
+    "noVoices": "No voices found for this language. Add one in your phone's text-to-speech settings.",
+    "voiceNumber": "Voice {{n}}",
+    "enhanced": "Enhanced",
+    "needsInternet": "Needs internet",
+    "moreVoicesIos": "For a more natural voice, download an Enhanced or Premium voice in Settings › Accessibility › Spoken Content › Voices.",
+    "moreVoicesAndroid": "For a more natural voice, install voice data in Settings › Accessibility › Text-to-speech.",
+    "silentSwitch": "Sounds and the voice follow your iPhone's silent switch."
+  },
   "notifications": {
     "checkInTitle": "Time for your daily check-in",
     "checkInBody": "Take two minutes to reflect on your day.",

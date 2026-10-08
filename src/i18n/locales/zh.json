@@ -547,6 +547,39 @@
     "denied": "Clarity Recovery 的通知已关闭。请在手机设置中允许通知。",
     "webNote": "提醒功能在 Android 和 iPhone 应用中可用。"
   },
+  "sound": {
+    "title": "声音与语音",
+    "off": "关闭",
+    "voiceGuide": "语音引导",
+    "voiceGuideBody": "练习时朗读每一个步骤",
+    "bells": "铃声与呼吸提示",
+    "bellsBody": "步骤之间响起铃声，并以柔和的音调提示吸气和呼气",
+    "more": "声音设置",
+    "voice": "语音",
+    "genders": {
+      "female": "女声",
+      "male": "男声"
+    },
+    "genderMissing": "你的手机上没有识别到这类声音。请从下方列表中选择一个。",
+    "speed": "语速",
+    "rates": {
+      "slow": "慢",
+      "calm": "舒缓",
+      "normal": "正常"
+    },
+    "preview": "试听语音",
+    "stop": "停止",
+    "listen": "收听",
+    "sample": "慢慢吸一口气……然后放下。你做得很好。",
+    "deviceVoices": "本机语音",
+    "noVoices": "没有找到这种语言的语音。请在手机的文字转语音设置中添加。",
+    "voiceNumber": "语音 {{n}}",
+    "enhanced": "增强",
+    "needsInternet": "需要联网",
+    "moreVoicesIos": "如需更自然的声音，请在“设置 › 辅助功能 › 朗读内容 › 声音”中下载增强或高级语音。",
+    "moreVoicesAndroid": "如需更自然的声音，请在“设置 › 无障碍 › 文字转语音”中安装语音数据。",
+    "silentSwitch": "声音和语音会遵循 iPhone 的静音开关。"
+  },
   "notifications": {
     "checkInTitle": "该做每日打卡了",
     "checkInBody": "花两分钟回顾你的一天。",

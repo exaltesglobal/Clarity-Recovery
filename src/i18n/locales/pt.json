@@ -561,6 +561,39 @@
     "denied": "As notificações do Clarity Recovery estão desativadas. Permita-as nos ajustes do celular.",
     "webNote": "Os lembretes funcionam nos apps para Android e iPhone."
   },
+  "sound": {
+    "title": "Som e voz",
+    "off": "Desligado",
+    "voiceGuide": "Guia de voz",
+    "voiceGuideBody": "Lê cada passo em voz alta durante as sessões",
+    "bells": "Sinos e sinais de respiração",
+    "bellsBody": "Um sino entre os passos e tons suaves para inspirar e expirar",
+    "more": "Ajustes de som",
+    "voice": "Voz",
+    "genders": {
+      "female": "Feminina",
+      "male": "Masculina"
+    },
+    "genderMissing": "Nenhuma voz desse tipo foi reconhecida no seu telefone. Escolha uma na lista abaixo.",
+    "speed": "Velocidade",
+    "rates": {
+      "slow": "Lenta",
+      "calm": "Calma",
+      "normal": "Normal"
+    },
+    "preview": "Ouvir voz",
+    "stop": "Parar",
+    "listen": "Ouvir",
+    "sample": "Inspire devagar… e solte. Você está indo bem.",
+    "deviceVoices": "Vozes deste telefone",
+    "noVoices": "Nenhuma voz encontrada para este idioma. Adicione uma nas configurações de texto para fala do telefone.",
+    "voiceNumber": "Voz {{n}}",
+    "enhanced": "Aprimorada",
+    "needsInternet": "Precisa de internet",
+    "moreVoicesIos": "Para uma voz mais natural, baixe uma voz Aprimorada ou Premium em Ajustes › Acessibilidade › Conteúdo Falado › Vozes.",
+    "moreVoicesAndroid": "Para uma voz mais natural, instale dados de voz em Configurações › Acessibilidade › Conversão de texto em voz.",
+    "silentSwitch": "Os sons e a voz seguem a chave de silêncio do seu iPhone."
+  },
   "notifications": {
     "checkInTitle": "Hora do seu check-in diário",
     "checkInBody": "Tire dois minutos para refletir sobre o seu dia.",

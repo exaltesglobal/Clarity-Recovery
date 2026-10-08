@@ -90,6 +90,20 @@ export interface Setup {
   hidden: boolean;
 }
 
+export type VoiceGender = 'female' | 'male';
+
+export interface Sound {
+  /** Bells, chimes and breath cues during guided sessions */
+  effects: boolean;
+  /** Read session steps aloud with the device's text-to-speech */
+  voice: boolean;
+  voiceGender: VoiceGender;
+  /** Device voice the user picked; null chooses one automatically from voiceGender */
+  voiceId: string | null;
+  /** Speaking rate, 1 is the device's normal speed */
+  rate: number;
+}
+
 export interface AppData {
   version: 2;
   onboarded: boolean;
@@ -108,6 +122,7 @@ export interface AppData {
   protection: Protection;
   health: Health;
   setup: Setup;
+  sound: Sound;
   /** First launch, used for trial messaging */
   installedAt: string;
 }

@@ -59,3 +59,8 @@ export const GRACE_VERSES: Verse[] = [
 export function verseOfTheDay(date = new Date()): Verse {
   return VERSES[dayOfYear(date) % VERSES.length];
 }
+
+/** A verse as it should be read aloud: reference first, then the text. */
+export function verseSpeech(verse: Verse) {
+  return `${verse.ref}. ${verse.text}`;
+}

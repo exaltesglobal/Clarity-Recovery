@@ -212,6 +212,7 @@ Choose someone you trust, and tell them beforehand what the message means and ho
 ## 9. Wellness, research and stories
 
 - **Guided sessions:** meditation (calm breathing, urge surfing, body scan, self-compassion, grounding, gratitude), yoga flows, desk stretches, bodyweight workouts and a brisk-walk plan, all timed step by step.
+- **Sound and voice:** a calm voice reads each step aloud, a bell marks each new step, and soft tones pace the breathing circle. Turn them on or off from the session screen, or choose a female or male voice and the speed in Settings → Sound & voice. The voice comes from your phone, so it speaks your app language and works offline. Bible verses and daily thoughts have a **Listen** button. On iPhone, sound follows the silent switch.
 - **Diet tips** and a **daily habits** checklist (meditation, exercise, yoga, eating well, water, connection, phone-free bedroom).
 - **Research & facts:** short summaries of published studies, each with a link to the original paper. New ones appear automatically.
 - **Stories of freedom:** real stories from people who got free, shared with their written permission. We never invent testimonials. You can share yours from the same screen.

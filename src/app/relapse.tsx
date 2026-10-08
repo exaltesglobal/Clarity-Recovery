@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
+import { ListenButton } from '../components/ListenButton';
 import { Body, Button, Card, Chip, ChipRow, Field, H1, H2, Muted, Screen } from '../components/ui';
-import { GRACE_VERSES } from '../content/verses';
+import { GRACE_VERSES, verseSpeech } from '../content/verses';
 import { TRIGGER_IDS } from '../content/wellness';
 import { daysIn } from '../lib/date';
 import { currentStreakMs, useStore } from '../lib/store';
@@ -39,6 +40,7 @@ export default function RelapseScreen() {
           <Card>
             <Body style={{ fontStyle: 'italic' }}>“{verse.text}”</Body>
             <Muted>— {verse.ref} (KJV)</Muted>
+            <ListenButton text={verseSpeech(verse)} language="en" />
           </Card>
         )}
         {plan.trim() !== '' && (

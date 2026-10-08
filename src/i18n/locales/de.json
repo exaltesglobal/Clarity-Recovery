@@ -662,6 +662,39 @@
     "denied": "Mitteilungen sind für Clarity Recovery ausgeschaltet. Bitte erlaube sie in den Einstellungen deines Handys.",
     "webNote": "Erinnerungen funktionieren in den Apps für Android und iPhone."
   },
+  "sound": {
+    "title": "Ton & Stimme",
+    "off": "Aus",
+    "voiceGuide": "Sprachführung",
+    "voiceGuideBody": "Liest während der Übungen jeden Schritt vor",
+    "bells": "Klangschale & Atemsignale",
+    "bellsBody": "Ein Gong zwischen den Schritten und sanfte Töne zum Ein- und Ausatmen",
+    "more": "Toneinstellungen",
+    "voice": "Stimme",
+    "genders": {
+      "female": "Weiblich",
+      "male": "Männlich"
+    },
+    "genderMissing": "Auf deinem Telefon wurde keine Stimme dieser Art erkannt. Wähle unten eine aus der Liste.",
+    "speed": "Tempo",
+    "rates": {
+      "slow": "Langsam",
+      "calm": "Ruhig",
+      "normal": "Normal"
+    },
+    "preview": "Stimme anhören",
+    "stop": "Stopp",
+    "listen": "Anhören",
+    "sample": "Atme langsam ein … und lass los. Du machst das gut.",
+    "deviceVoices": "Stimmen auf diesem Telefon",
+    "noVoices": "Für diese Sprache wurden keine Stimmen gefunden. Füge eine in den Sprachausgabe-Einstellungen deines Telefons hinzu.",
+    "voiceNumber": "Stimme {{n}}",
+    "enhanced": "Erweitert",
+    "needsInternet": "Braucht Internet",
+    "moreVoicesIos": "Für eine natürlichere Stimme lade unter Einstellungen › Bedienungshilfen › Gesprochene Inhalte › Stimmen eine erweiterte oder Premium-Stimme.",
+    "moreVoicesAndroid": "Für eine natürlichere Stimme installiere Sprachdaten unter Einstellungen › Bedienungshilfen › Sprachausgabe.",
+    "silentSwitch": "Töne und Stimme folgen dem Stummschalter deines iPhones."
+  },
   "notifications": {
     "checkInTitle": "Zeit für deinen täglichen Check-in",
     "checkInBody": "Nimm dir zwei Minuten, um über deinen Tag nachzudenken.",

@@ -561,6 +561,39 @@
     "denied": "Les notifications de Clarity Recovery sont désactivées. Autorisez-les dans les réglages du téléphone.",
     "webNote": "Les rappels fonctionnent dans les apps Android et iPhone."
   },
+  "sound": {
+    "title": "Son et voix",
+    "off": "Désactivé",
+    "voiceGuide": "Guide vocal",
+    "voiceGuideBody": "Lit chaque étape à voix haute pendant les séances",
+    "bells": "Cloches et repères de respiration",
+    "bellsBody": "Une cloche entre les étapes et des tons doux pour inspirer et expirer",
+    "more": "Réglages du son",
+    "voice": "Voix",
+    "genders": {
+      "female": "Féminine",
+      "male": "Masculine"
+    },
+    "genderMissing": "Aucune voix de ce type n'a été reconnue sur votre téléphone. Choisissez-en une dans la liste ci-dessous.",
+    "speed": "Vitesse",
+    "rates": {
+      "slow": "Lente",
+      "calm": "Calme",
+      "normal": "Normale"
+    },
+    "preview": "Écouter la voix",
+    "stop": "Arrêter",
+    "listen": "Écouter",
+    "sample": "Inspirez lentement… et relâchez. Vous vous en sortez bien.",
+    "deviceVoices": "Voix de ce téléphone",
+    "noVoices": "Aucune voix trouvée pour cette langue. Ajoutez-en une dans les réglages de synthèse vocale de votre téléphone.",
+    "voiceNumber": "Voix {{n}}",
+    "enhanced": "Améliorée",
+    "needsInternet": "Internet requis",
+    "moreVoicesIos": "Pour une voix plus naturelle, téléchargez une voix Améliorée ou Premium dans Réglages › Accessibilité › Contenu énoncé › Voix.",
+    "moreVoicesAndroid": "Pour une voix plus naturelle, installez des données vocales dans Paramètres › Accessibilité › Synthèse vocale.",
+    "silentSwitch": "Les sons et la voix suivent le bouton silencieux de votre iPhone."
+  },
   "notifications": {
     "checkInTitle": "C'est l'heure de votre bilan",
     "checkInBody": "Prenez deux minutes pour faire le point sur votre journée.",

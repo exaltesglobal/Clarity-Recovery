@@ -1,23 +1,39 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Platform, StyleSheet, Text, View } from 'react-native';
 
 import { useTheme } from '../theme';
 
+export type BreathPhase = 'in' | 'hold' | 'out';
+
 const PHASES = [
-  { label: 'Breathe in', seconds: 4, to: 1 },
-  { label: 'Hold', seconds: 4, to: 1 },
-  { label: 'Breathe out', seconds: 6, to: 0.55 },
+  { id: 'in', label: 'Breathe in', seconds: 4, to: 1 },
+  { id: 'hold', label: 'Hold', seconds: 4, to: 1 },
+  { id: 'out', label: 'Breathe out', seconds: 6, to: 0.55 },
 ] as const;
 
 /** Paced breathing guide: 4s in, 4s hold, 6s out. A longer exhale calms the body. */
-export function BreathingCircle({ size = 200, paused = false }: { size?: number; paused?: boolean }) {
+export function BreathingCircle({
+  size = 200,
+  paused = false,
+  onPhase,
+}: {
+  size?: number;
+  paused?: boolean;
+  /** Called as each phase begins, e.g. to play a breath cue */
+  onPhase?: (phase: BreathPhase) => void;
+}) {
   const t = useTheme();
   const [scale] = useState(() => new Animated.Value(0.55));
   const [phase, setPhase] = useState(0);
+  const onPhaseRef = useRef(onPhase);
+  useEffect(() => {
+    onPhaseRef.current = onPhase;
+  });
 
   useEffect(() => {
     if (paused) return;
     const current = PHASES[phase];
+    onPhaseRef.current?.(current.id);
     const animation = Animated.timing(scale, {
       toValue: current.to,
       duration: current.seconds * 1000,

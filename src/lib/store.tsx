@@ -20,6 +20,7 @@ import type {
   Profile,
   Protection,
   Setup,
+  Sound,
   Reminders,
 } from './types';
 
@@ -74,6 +75,7 @@ export function createDefaultData(): AppData {
     protection: { dnsFilter: false, mindfulPause: false, pauseApps: DEFAULT_PAUSE_APPS },
     health: { connected: false },
     setup: { done: [], hidden: false },
+    sound: { effects: true, voice: true, voiceGender: 'female', voiceId: null, rate: 0.9 },
     installedAt: new Date().toISOString(),
   };
 }
@@ -87,6 +89,7 @@ function migrate(saved: Record<string, unknown>): AppData {
   merged.reminders = { ...defaults.reminders, ...(saved.reminders as Partial<Reminders>) };
   merged.protection = { ...defaults.protection, ...(saved.protection as Partial<Protection>) };
   merged.setup = { ...defaults.setup, ...(saved.setup as Partial<Setup>) };
+  merged.sound = { ...defaults.sound, ...(saved.sound as Partial<Sound>) };
   if (merged.reminder) {
     merged.reminders.checkIn = merged.reminder;
     delete merged.reminder;
@@ -191,6 +194,9 @@ function createActions(update: Updater) {
     },
     setProtection(patch: Partial<Protection>) {
       update((d) => ({ ...d, protection: { ...d.protection, ...patch } }));
+    },
+    setSound(patch: Partial<Sound>) {
+      update((d) => ({ ...d, sound: { ...d.sound, ...patch } }));
     },
     toggleSetupStep(id: string) {
       update((d) => ({

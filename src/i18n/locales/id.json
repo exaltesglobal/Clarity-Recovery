@@ -655,6 +655,39 @@
     "denied": "Notifikasi untuk Clarity Recovery dimatikan. Silakan izinkan di pengaturan HP-mu.",
     "webNote": "Pengingat berfungsi di aplikasi Android dan iPhone."
   },
+  "sound": {
+    "title": "Suara & narasi",
+    "off": "Mati",
+    "voiceGuide": "Panduan suara",
+    "voiceGuideBody": "Membacakan setiap langkah selama sesi",
+    "bells": "Lonceng & isyarat napas",
+    "bellsBody": "Lonceng di antara langkah dan nada lembut untuk menarik dan membuang napas",
+    "more": "Pengaturan suara",
+    "voice": "Suara",
+    "genders": {
+      "female": "Perempuan",
+      "male": "Laki-laki"
+    },
+    "genderMissing": "Tidak ada suara jenis ini yang dikenali di ponsel Anda. Pilih salah satu dari daftar di bawah.",
+    "speed": "Kecepatan",
+    "rates": {
+      "slow": "Lambat",
+      "calm": "Tenang",
+      "normal": "Normal"
+    },
+    "preview": "Dengarkan suara",
+    "stop": "Berhenti",
+    "listen": "Dengarkan",
+    "sample": "Tarik napas perlahan… lalu lepaskan. Anda melakukannya dengan baik.",
+    "deviceVoices": "Suara di ponsel ini",
+    "noVoices": "Tidak ada suara untuk bahasa ini. Tambahkan di pengaturan teks ke ucapan ponsel Anda.",
+    "voiceNumber": "Suara {{n}}",
+    "enhanced": "Ditingkatkan",
+    "needsInternet": "Perlu internet",
+    "moreVoicesIos": "Untuk suara yang lebih alami, unduh suara Ditingkatkan atau Premium di Pengaturan › Aksesibilitas › Konten Lisan › Suara.",
+    "moreVoicesAndroid": "Untuk suara yang lebih alami, pasang data suara di Setelan › Aksesibilitas › Text-to-speech.",
+    "silentSwitch": "Suara dan narasi mengikuti sakelar senyap iPhone Anda."
+  },
   "notifications": {
     "checkInTitle": "Saatnya check-in harian",
     "checkInBody": "Luangkan dua menit untuk merenungkan harimu.",

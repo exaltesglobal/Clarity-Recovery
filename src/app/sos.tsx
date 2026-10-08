@@ -6,9 +6,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { BreathingCircle } from '../components/BreathingCircle';
 import { affirmationOfTheDay } from '../components/Inspiration';
+import { ListenButton } from '../components/ListenButton';
 import { Body, Button, Card, H1, H2, ListRow, Muted, ProgressBar, Screen, useFont } from '../components/ui';
 import { regionFor } from '../content/regions';
-import { VERSES } from '../content/verses';
+import { VERSES, verseSpeech } from '../content/verses';
 import { callNumber, textPartner } from '../lib/contact';
 import { formatClock, useNow } from '../lib/date';
 import { success } from '../lib/haptics';
@@ -23,7 +24,7 @@ const SOS_VERSE_REFS = ['1 Corinthians 10:13', 'James 4:7', 'Psalm 51:10', 'Gala
 export default function Sos() {
   const t = useTheme();
   const font = useFont();
-  const { t: tr } = useTranslation();
+  const { t: tr, i18n } = useTranslation();
   const { data, actions } = useStore();
   const [startedAt] = useState(() => Date.now());
   const now = useNow(1000);
@@ -113,9 +114,11 @@ export default function Sos() {
               <Muted>— {v.ref} (KJV)</Muted>
             </View>
           ))}
+          <ListenButton text={verses.map(verseSpeech).join('\n\n')} language="en" />
           <View style={[styles.prayer, { borderColor: t.primary }]}>
             <Muted style={{ color: t.primary }}>{tr('sos.prayerTitle')}</Muted>
             <Body>{tr('sos.prayer')}</Body>
+            <ListenButton text={tr('sos.prayer')} language={i18n.language} />
           </View>
           <Button
             small

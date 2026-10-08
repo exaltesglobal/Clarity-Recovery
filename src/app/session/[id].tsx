@@ -1,14 +1,16 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, Stack, useLocalSearchParams } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { BreathingCircle } from '../../components/BreathingCircle';
-import { Body, Button, Card, H1, H2, Muted, ProgressBar, Screen, useFont } from '../../components/ui';
+import { Body, Button, Card, Chip, ChipRow, H1, H2, Muted, ProgressBar, Screen, useFont } from '../../components/ui';
 import { Session, SESSIONS, sessionDuration } from '../../content/wellness';
 import { formatClock } from '../../lib/date';
 import { success, tap } from '../../lib/haptics';
+import { useSoundEffects } from '../../lib/sounds';
+import { useNarrator } from '../../lib/speech';
 import { useStore } from '../../lib/store';
 import { useTheme } from '../../theme';
 
@@ -25,10 +27,14 @@ function locate(session: Session, elapsed: number) {
 export default function SessionScreen() {
   const t = useTheme();
   const font = useFont();
-  const { t: tr } = useTranslation();
+  const { t: tr, i18n } = useTranslation();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { actions } = useStore();
+  const { data, actions } = useStore();
+  const { sound } = data;
   const session = SESSIONS.find((s) => s.id === id);
+  const playEffect = useSoundEffects(sound.effects);
+  const narrator = useNarrator(i18n.language, sound);
+  const announced = useRef(-1);
 
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
@@ -51,7 +57,31 @@ export default function SessionScreen() {
     if (!finished || !session) return;
     actions.completeHabit(session.habit);
     success();
+    playEffect('bell');
+    if (sound.voice) narrator.say(tr('session.doneTitle'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished, session, actions]);
+
+  // Mark each new step with a bell or chime, then read it aloud once the tone has rung.
+  useEffect(() => {
+    if (!session || !running || finished || announced.current === stepIndex) return;
+    announced.current = stepIndex;
+    playEffect(stepIndex === 0 ? 'bell' : 'chime');
+    if (!sound.voice) return;
+    const steps = tr(`sessions.${session.id}.steps`, { returnObjects: true }) as { title: string; text: string }[];
+    const step = steps[stepIndex];
+    if (!step) return;
+    narrator.stop();
+    const timer = setTimeout(() => narrator.say(`${step.title}. ${step.text}`), stepIndex === 0 ? 1500 : 700);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [running, finished, stepIndex]);
+
+  useEffect(() => {
+    if (!running || !sound.voice) narrator.stop();
+    // Pausing cuts the narration off, so resuming announces the current step again.
+    if (!running) announced.current = -1;
+  }, [running, sound.voice, narrator]);
 
   if (!session) {
     return (
@@ -81,7 +111,13 @@ export default function SessionScreen() {
           <ProgressBar value={elapsed / total} />
 
           <Card style={{ alignItems: 'center', gap: 14, paddingVertical: 24 }}>
-            {session.breathing && <BreathingCircle size={170} paused={!running} />}
+            {session.breathing && (
+              <BreathingCircle
+                size={170}
+                paused={!running}
+                onPhase={(phase) => phase !== 'hold' && playEffect(phase === 'in' ? 'inhale' : 'exhale')}
+              />
+            )}
             <H2 center>{step.title}</H2>
             <Body center>{step.text}</Body>
             <Text style={[styles.clock, font('heavy'), { color: t.primary }]}>{formatClock(stepEnd - elapsed)}</Text>
@@ -98,6 +134,22 @@ export default function SessionScreen() {
           </View>
 
           {stepIndex + 1 < steps.length && <Muted>{tr('session.upNext', { title: steps[stepIndex + 1].title })}</Muted>}
+
+          <ChipRow>
+            <Chip
+              icon={sound.voice ? 'volume-high-outline' : 'volume-mute-outline'}
+              label={tr('sound.voiceGuide')}
+              selected={sound.voice}
+              onPress={() => actions.setSound({ voice: !sound.voice })}
+            />
+            <Chip
+              icon={sound.effects ? 'notifications-outline' : 'notifications-off-outline'}
+              label={tr('sound.bells')}
+              selected={sound.effects}
+              onPress={() => actions.setSound({ effects: !sound.effects })}
+            />
+            <Chip icon="options-outline" label={tr('sound.more')} onPress={() => router.push('/sound')} />
+          </ChipRow>
         </>
       )}
     </Screen>

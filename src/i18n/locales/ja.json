@@ -655,6 +655,39 @@
     "denied": "Clarity Recoveryの通知がオフになっています。スマホの設定で許可してください。",
     "webNote": "リマインダーはAndroidとiPhoneのアプリで利用できます。"
   },
+  "sound": {
+    "title": "サウンドと音声",
+    "off": "オフ",
+    "voiceGuide": "音声ガイド",
+    "voiceGuideBody": "セッション中に各ステップを読み上げます",
+    "bells": "鐘と呼吸の合図",
+    "bellsBody": "ステップの合間に鐘を鳴らし、吸う・吐くタイミングをやさしい音で知らせます",
+    "more": "サウンド設定",
+    "voice": "声",
+    "genders": {
+      "female": "女性",
+      "male": "男性"
+    },
+    "genderMissing": "この種類の声がスマートフォンで見つかりませんでした。下のリストから選んでください。",
+    "speed": "速さ",
+    "rates": {
+      "slow": "ゆっくり",
+      "calm": "穏やか",
+      "normal": "標準"
+    },
+    "preview": "声を試聴",
+    "stop": "停止",
+    "listen": "聴く",
+    "sample": "ゆっくり息を吸って……そして手放しましょう。よくできています。",
+    "deviceVoices": "このスマートフォンの声",
+    "noVoices": "この言語の声が見つかりません。スマートフォンのテキスト読み上げ設定で追加してください。",
+    "voiceNumber": "声 {{n}}",
+    "enhanced": "拡張",
+    "needsInternet": "インターネットが必要",
+    "moreVoicesIos": "より自然な声にするには、「設定 › アクセシビリティ › 読み上げコンテンツ › 声」で拡張またはプレミアムの声をダウンロードしてください。",
+    "moreVoicesAndroid": "より自然な声にするには、「設定 › ユーザー補助 › テキスト読み上げ」で音声データをインストールしてください。",
+    "silentSwitch": "サウンドと音声は iPhone の消音スイッチに従います。"
+  },
   "notifications": {
     "checkInTitle": "毎日のチェックインの時間です",
     "checkInBody": "2分だけ、今日1日を振り返ってみましょう。",

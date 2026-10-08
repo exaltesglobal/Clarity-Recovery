@@ -138,6 +138,12 @@ export default function Settings() {
           onPress={() => router.push('/setup')}
         />
         <ListRow icon="notifications-outline" title={t('reminders.title')} subtitle={nudgeText} onPress={() => router.push('/reminders')} />
+        <ListRow
+          icon="volume-high-outline"
+          title={t('sound.title')}
+          subtitle={data.sound.voice || data.sound.effects ? t(`sound.genders.${data.sound.voiceGender}`) : t('sound.off')}
+          onPress={() => router.push('/sound')}
+        />
         <ListRow icon="color-palette-outline" title={t('appearance.title')} subtitle={t(`appearance.themes.${data.appearance.themeId}`)} onPress={() => router.push('/appearance')} />
         <ListRow icon="shield-checkmark-outline" title={t('protection.title')} onPress={() => router.push('/protection')} />
         <ListRow icon="watch-outline" title={t('health.title')} subtitle={data.health.connected ? t('health.isConnected') : undefined} onPress={() => router.push('/health')} />

@@ -86,6 +86,14 @@
             "minSdkVersion": 26
           }
         }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": false
+        }
       ]
     ],
     "scheme": "clarity",
