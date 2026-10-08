@@ -1,17 +1,16 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
-import { Body, Button, Card, Chip, ChipRow, Field, H2, Muted, Screen } from '../components/ui';
-import { RELAPSE_MESSAGE } from '../content/affirmations';
-import { TRIGGERS } from '../content/triggers';
+import { Body, Button, Card, Chip, ChipRow, Field, H1, H2, Muted, Screen } from '../components/ui';
 import { GRACE_VERSES } from '../content/verses';
-import { formatDays } from '../lib/date';
+import { TRIGGER_IDS } from '../content/wellness';
+import { daysIn } from '../lib/date';
 import { currentStreakMs, useStore } from '../lib/store';
-import { useTheme } from '../theme';
 
 export default function RelapseScreen() {
-  const t = useTheme();
+  const { t } = useTranslation();
   const { data, actions } = useStore();
   const [triggers, setTriggers] = useState<string[]>([]);
   const [note, setNote] = useState('');
@@ -31,12 +30,10 @@ export default function RelapseScreen() {
     const verse = GRACE_VERSES[data.relapses.length % GRACE_VERSES.length];
     return (
       <Screen>
-        <H2>Thank you for being honest.</H2>
-        <Body>{RELAPSE_MESSAGE}</Body>
-        <Card style={{ backgroundColor: t.accent, borderColor: t.accent }}>
-          <Body>
-            You stayed strong for {formatDays(endedStreak)}. That counts. Your new streak starts now.
-          </Body>
+        <H1>{t('relapse.thanks')}</H1>
+        <Body>{t('relapse.message')}</Body>
+        <Card variant="soft">
+          <Body>{t('relapse.stayedStrong', { count: daysIn(endedStreak) })}</Body>
         </Card>
         {data.profile.faith && (
           <Card>
@@ -46,11 +43,11 @@ export default function RelapseScreen() {
         )}
         {plan.trim() !== '' && (
           <Card>
-            <Muted>Your plan for next time</Muted>
+            <Muted>{t('relapse.yourPlan')}</Muted>
             <Body>{plan.trim()}</Body>
           </Card>
         )}
-        <Button title="Begin again" icon="refresh" onPress={() => router.back()} />
+        <Button title={t('relapse.beginAgain')} icon="refresh" onPress={() => router.back()} />
       </Screen>
     );
   }
@@ -58,41 +55,26 @@ export default function RelapseScreen() {
   return (
     <Screen>
       <View style={{ gap: 6 }}>
-        <H2>It’s okay. Let’s learn from it.</H2>
-        <Muted>
-          Logging a slip resets your streak, but your history and best streak are kept. No judgement here —
-          honesty is how patterns get broken.
-        </Muted>
+        <H1>{t('relapse.heading')}</H1>
+        <Muted>{t('relapse.body')}</Muted>
       </View>
 
       <Card>
-        <H2>What triggered it?</H2>
+        <H2>{t('relapse.triggerQuestion')}</H2>
         <ChipRow>
-          {TRIGGERS.map((tr) => (
-            <Chip key={tr} label={tr} selected={triggers.includes(tr)} onPress={() => toggle(tr)} />
+          {TRIGGER_IDS.map((id) => (
+            <Chip key={id} label={t(`triggers.${id}`)} selected={triggers.includes(id)} onPress={() => toggle(id)} />
           ))}
         </ChipRow>
       </Card>
 
       <Card>
-        <Field
-          label="What happened? (time, place, how you felt)"
-          value={note}
-          onChangeText={setNote}
-          multiline
-          placeholder="e.g. Couldn't sleep, was scrolling in bed after midnight…"
-        />
-        <Field
-          label="What will you do differently next time?"
-          value={plan}
-          onChangeText={setPlan}
-          multiline
-          placeholder="e.g. Charge my phone outside the bedroom"
-        />
+        <Field label={t('relapse.whatHappened')} value={note} onChangeText={setNote} multiline placeholder={t('relapse.whatHappenedPlaceholder')} />
+        <Field label={t('relapse.nextTime')} value={plan} onChangeText={setPlan} multiline placeholder={t('relapse.nextTimePlaceholder')} />
       </Card>
 
-      <Button title="Log and start again" onPress={save} />
-      <Button title="Cancel" variant="ghost" onPress={() => router.back()} />
+      <Button title={t('relapse.save')} onPress={save} />
+      <Button title={t('common.cancel')} variant="ghost" onPress={() => router.back()} />
     </Screen>
   );
 }

@@ -1,10 +1,11 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router } from 'expo-router';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { Button, Card, Chip, ChipRow, Field, H2, Muted, Screen } from '../components/ui';
-import { MOODS, TRIGGERS } from '../content/triggers';
+import { Button, Card, Chip, ChipRow, Field, H2, Muted, Screen, useFont } from '../components/ui';
+import { MOODS, TRIGGER_IDS } from '../content/wellness';
 import { success, tap } from '../lib/haptics';
 import { useStore } from '../lib/store';
 import type { Mood } from '../lib/types';
@@ -12,6 +13,8 @@ import { useTheme } from '../theme';
 
 export default function CheckInScreen() {
   const t = useTheme();
+  const font = useFont();
+  const { t: tr } = useTranslation();
   const { actions } = useStore();
   const [mood, setMood] = useState<Mood | null>(null);
   const [urge, setUrge] = useState<number | null>(null);
@@ -32,7 +35,7 @@ export default function CheckInScreen() {
   return (
     <Screen>
       <Card>
-        <H2>How are you feeling?</H2>
+        <H2>{tr('checkin.moodQuestion')}</H2>
         <View style={styles.moods}>
           {MOODS.map((m) => {
             const selected = mood === m.value;
@@ -41,6 +44,7 @@ export default function CheckInScreen() {
                 key={m.value}
                 accessibilityRole="button"
                 accessibilityState={{ selected }}
+                accessibilityLabel={tr(`moods.${m.value}`)}
                 onPress={() => {
                   tap();
                   setMood(m.value);
@@ -51,7 +55,13 @@ export default function CheckInScreen() {
                 ]}
               >
                 <Ionicons name={m.icon} size={26} color={selected ? t.primary : t.muted} />
-                <Text style={{ color: selected ? t.primary : t.muted, fontSize: 12 }}>{m.label}</Text>
+                <Text
+                  numberOfLines={1}
+                  adjustsFontSizeToFit
+                  style={[{ color: selected ? t.primary : t.muted, fontSize: 12 }, font('semibold')]}
+                >
+                  {tr(`moods.${m.value}`)}
+                </Text>
               </Pressable>
             );
           })}
@@ -59,8 +69,8 @@ export default function CheckInScreen() {
       </Card>
 
       <Card>
-        <H2>How strong were urges today?</H2>
-        <Muted>0 = none, 10 = overwhelming</Muted>
+        <H2>{tr('checkin.urgeQuestion')}</H2>
+        <Muted>{tr('checkin.urgeScale')}</Muted>
         <ChipRow>
           {Array.from({ length: 11 }, (_, i) => (
             <Chip key={i} label={String(i)} selected={urge === i} onPress={() => setUrge(i)} />
@@ -69,36 +79,30 @@ export default function CheckInScreen() {
       </Card>
 
       <Card>
-        <H2>Any triggers?</H2>
+        <H2>{tr('checkin.triggersQuestion')}</H2>
         <ChipRow>
-          {TRIGGERS.map((tr) => (
-            <Chip key={tr} label={tr} selected={triggers.includes(tr)} onPress={() => toggle(tr)} />
+          {TRIGGER_IDS.map((id) => (
+            <Chip key={id} label={tr(`triggers.${id}`)} selected={triggers.includes(id)} onPress={() => toggle(id)} />
           ))}
         </ChipRow>
       </Card>
 
       <Card>
+        <Field label={tr('checkin.journal')} value={note} onChangeText={setNote} multiline placeholder={tr('checkin.journalPlaceholder')} />
         <Field
-          label="Journal"
-          value={note}
-          onChangeText={setNote}
-          multiline
-          placeholder="What happened today? What helped? What was hard?"
-        />
-        <Field
-          label="One thing I'm grateful for"
+          label={tr('checkin.gratitude')}
           value={gratitude}
           onChangeText={setGratitude}
-          placeholder="Optional"
+          placeholder={tr('common.optional')}
         />
       </Card>
 
-      <Button title="Save check-in" onPress={save} disabled={mood === null || urge === null} />
+      <Button title={tr('checkin.save')} onPress={save} disabled={mood === null || urge === null} />
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  moods: { flexDirection: 'row', gap: 8 },
-  mood: { flex: 1, alignItems: 'center', gap: 4, paddingVertical: 10, borderRadius: 12, borderWidth: 1 },
+  moods: { flexDirection: 'row', gap: 6 },
+  mood: { flex: 1, alignItems: 'center', gap: 4, paddingVertical: 10, paddingHorizontal: 2, borderRadius: 14, borderWidth: 1 },
 });

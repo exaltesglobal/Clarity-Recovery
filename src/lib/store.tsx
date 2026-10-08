@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getLocales } from 'expo-localization';
 import {
   createContext,
   ReactNode,
@@ -9,16 +10,55 @@ import {
   useState,
 } from 'react';
 
+import { DEFAULT_APPEARANCE, type Appearance } from '../theme';
 import { DAY, dayKey } from './date';
-import type { AppData, CheckIn, Partner, Profile, Reminder } from './types';
+import type {
+  AppData,
+  Assessment,
+  CheckIn,
+  Partner,
+  Profile,
+  Protection,
+  Reminders,
+} from './types';
 
 const STORAGE_KEY = 'clarity:data:v1';
 
-export function createDefaultData(): AppData {
+export const DEFAULT_PAUSE_APPS = [
+  'com.instagram.android',
+  'com.zhiliaoapp.musically',
+  'com.twitter.android',
+  'com.reddit.frontpage',
+  'com.snapchat.android',
+  'com.facebook.katana',
+  'org.telegram.messenger',
+];
+
+export function deviceLocale() {
+  const locale = getLocales()[0];
   return {
-    version: 1,
+    language: locale?.languageCode ?? 'en',
+    country: locale?.regionCode ?? 'US',
+  };
+}
+
+export function createDefaultData(): AppData {
+  const { language, country } = deviceLocale();
+  return {
+    version: 2,
     onboarded: false,
-    profile: { name: '', reasons: [], faith: false, goalDays: 90 },
+    profile: {
+      name: '',
+      gender: 'unspecified',
+      ageRange: null,
+      country,
+      language,
+      reasons: [],
+      faith: false,
+      goalDays: 90,
+    },
+    assessment: null,
+    appearance: DEFAULT_APPEARANCE,
     streakStart: new Date().toISOString(),
     bestStreakMs: 0,
     checkins: [],
@@ -26,8 +66,33 @@ export function createDefaultData(): AppData {
     urges: [],
     habits: {},
     partner: null,
-    reminder: { enabled: false, hour: 20, minute: 0 },
+    reminders: {
+      checkIn: { enabled: false, hour: 21, minute: 0 },
+      nudges: { enabled: false, everyHours: 3, startHour: 9, endHour: 21 },
+    },
+    protection: { dnsFilter: false, mindfulPause: false, pauseApps: DEFAULT_PAUSE_APPS },
+    health: { connected: false },
+    installedAt: new Date().toISOString(),
   };
+}
+
+/** Upgrades data saved by older app versions. */
+function migrate(saved: Record<string, unknown>): AppData {
+  const defaults = createDefaultData();
+  const merged = { ...defaults, ...saved } as AppData & { reminder?: { enabled: boolean; hour: number; minute: number } };
+  merged.profile = { ...defaults.profile, ...(saved.profile as Partial<Profile>) };
+  merged.appearance = { ...defaults.appearance, ...(saved.appearance as Partial<Appearance>) };
+  merged.reminders = { ...defaults.reminders, ...(saved.reminders as Partial<Reminders>) };
+  merged.protection = { ...defaults.protection, ...(saved.protection as Partial<Protection>) };
+  if (merged.reminder) {
+    merged.reminders.checkIn = merged.reminder;
+    delete merged.reminder;
+  }
+  if (merged.partner && merged.partner.alertOnPanic === undefined) {
+    merged.partner = { ...merged.partner, alertOnPanic: true };
+  }
+  merged.version = 2;
+  return merged;
 }
 
 function uid() {
@@ -46,16 +111,31 @@ type Updater = (fn: (data: AppData) => AppData) => void;
 
 function createActions(update: Updater) {
   return {
-    completeOnboarding(profile: Profile, daysClean: number) {
+    completeOnboarding(patch: {
+      profile: Profile;
+      assessment: Assessment | null;
+      reminders: Reminders;
+      protection: Partial<Protection>;
+      daysClean: number;
+    }) {
       update((d) => ({
         ...d,
         onboarded: true,
-        profile,
-        streakStart: new Date(Date.now() - Math.max(0, daysClean) * DAY).toISOString(),
+        profile: patch.profile,
+        assessment: patch.assessment,
+        reminders: patch.reminders,
+        protection: { ...d.protection, ...patch.protection },
+        streakStart: new Date(Date.now() - Math.max(0, patch.daysClean) * DAY).toISOString(),
       }));
     },
     updateProfile(patch: Partial<Profile>) {
       update((d) => ({ ...d, profile: { ...d.profile, ...patch } }));
+    },
+    setAssessment(assessment: Assessment) {
+      update((d) => ({ ...d, assessment }));
+    },
+    setAppearance(patch: Partial<Appearance>) {
+      update((d) => ({ ...d, appearance: { ...d.appearance, ...patch } }));
     },
     addCheckIn(entry: Omit<CheckIn, 'id' | 'date'>) {
       update((d) => ({
@@ -103,8 +183,14 @@ function createActions(update: Updater) {
     setPartner(partner: Partner | null) {
       update((d) => ({ ...d, partner }));
     },
-    setReminder(reminder: Reminder) {
-      update((d) => ({ ...d, reminder }));
+    setReminders(reminders: Reminders) {
+      update((d) => ({ ...d, reminders }));
+    },
+    setProtection(patch: Partial<Protection>) {
+      update((d) => ({ ...d, protection: { ...d.protection, ...patch } }));
+    },
+    setHealthConnected(connected: boolean) {
+      update((d) => ({ ...d, health: { connected } }));
     },
     deleteCheckIn(id: string) {
       update((d) => ({ ...d, checkins: d.checkins.filter((c) => c.id !== id) }));
@@ -132,10 +218,7 @@ export function StoreProvider({ children, fallback }: { children: ReactNode; fal
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY)
-      .then((raw) => {
-        const saved = raw ? (JSON.parse(raw) as Partial<AppData>) : {};
-        setData({ ...createDefaultData(), ...saved });
-      })
+      .then((raw) => setData(raw ? migrate(JSON.parse(raw)) : createDefaultData()))
       .catch(() => setData(createDefaultData()));
   }, []);
 

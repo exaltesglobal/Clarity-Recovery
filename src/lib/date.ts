@@ -26,14 +26,13 @@ export function splitDuration(ms: number) {
   };
 }
 
-export function formatDays(ms: number): string {
-  const days = Math.floor(Math.max(0, ms) / DAY);
-  return `${days} ${days === 1 ? 'day' : 'days'}`;
+export function daysIn(ms: number): number {
+  return Math.floor(Math.max(0, ms) / DAY);
 }
 
-export function formatDateTime(iso: string): string {
+export function formatDateTime(iso: string, locale?: string): string {
   const d = new Date(iso);
-  return d.toLocaleString(undefined, {
+  return d.toLocaleString(locale, {
     weekday: 'short',
     month: 'short',
     day: 'numeric',
@@ -47,8 +46,8 @@ export function formatClock(totalSeconds: number): string {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 }
 
-export function formatTimeOfDay(hour: number, minute: number): string {
-  return new Date(2000, 0, 1, hour, minute).toLocaleTimeString(undefined, {
+export function formatTimeOfDay(hour: number, minute: number, locale?: string): string {
+  return new Date(2000, 0, 1, hour, minute).toLocaleTimeString(locale, {
     hour: 'numeric',
     minute: '2-digit',
   });

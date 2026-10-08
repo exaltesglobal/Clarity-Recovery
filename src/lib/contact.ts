@@ -1,3 +1,4 @@
+import * as SMS from 'expo-sms';
 import { Linking, Platform } from 'react-native';
 
 export function smsUrl(phone: string, body: string) {
@@ -5,10 +6,25 @@ export function smsUrl(phone: string, body: string) {
   return `sms:${phone}${sep}body=${encodeURIComponent(body)}`;
 }
 
-export function textPartner(phone: string, body: string) {
-  return Linking.openURL(smsUrl(phone, body)).catch(() => {});
+/**
+ * Opens the phone's SMS composer with the recipient and message filled in, so
+ * sending takes one tap. Apps cannot send SMS silently on iOS, and Google Play
+ * restricts the SEND_SMS permission, so this is the reliable cross-platform path.
+ */
+export async function textPartner(phone: string, body: string) {
+  try {
+    if (Platform.OS !== 'web' && (await SMS.isAvailableAsync())) {
+      await SMS.sendSMSAsync([phone], body);
+      return;
+    }
+  } catch {}
+  await Linking.openURL(smsUrl(phone, body)).catch(() => {});
 }
 
 export function callNumber(phone: string) {
-  return Linking.openURL(`tel:${phone}`).catch(() => {});
+  return Linking.openURL(`tel:${phone.replace(/[^0-9+*#]/g, '')}`).catch(() => {});
+}
+
+export function openUrl(url: string) {
+  return Linking.openURL(url).catch(() => {});
 }

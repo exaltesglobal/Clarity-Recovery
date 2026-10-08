@@ -1,51 +1,25 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { Alert, Platform, Switch, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { Alert, Platform } from 'react-native';
 
 import { ReasonsEditor } from '../components/ReasonsEditor';
-import { Button, Card, Chip, ChipRow, Field, H2, Muted, Screen } from '../components/ui';
+import { Button, Card, Chip, ChipRow, Field, H2, ListRow, Muted, Screen, SectionTitle, SwitchRow } from '../components/ui';
+import { countryName, flag } from '../content/countries';
+import { languageInfo } from '../i18n';
+import { useBilling } from '../lib/billing';
 import { formatTimeOfDay } from '../lib/date';
-import { cancelReminders, scheduleDailyReminder } from '../lib/notifications';
+import { cancelReminders } from '../lib/notifications';
 import { useStore } from '../lib/store';
-import { useTheme } from '../theme';
 
 const GOALS = [30, 90, 180, 365];
-const REMINDER_TIMES = [
-  { hour: 8, minute: 0 },
-  { hour: 12, minute: 30 },
-  { hour: 18, minute: 0 },
-  { hour: 20, minute: 0 },
-  { hour: 21, minute: 30 },
-];
-
-function notify(message: string) {
-  if (Platform.OS === 'web') globalThis.alert?.(message);
-  else Alert.alert(message);
-}
 
 export default function Settings() {
-  const t = useTheme();
+  const { t, i18n } = useTranslation();
   const { data, actions } = useStore();
-  const { profile, reminder } = data;
+  const billing = useBilling();
+  const { profile, reminders, assessment } = data;
   const [name, setName] = useState(profile.name);
-
-  const updateReminder = async (enabled: boolean, hour = reminder.hour, minute = reminder.minute) => {
-    if (!enabled) {
-      await cancelReminders();
-      actions.setReminder({ enabled: false, hour, minute });
-      return;
-    }
-    const ok = await scheduleDailyReminder(hour, minute);
-    if (!ok) {
-      notify(
-        Platform.OS === 'web'
-          ? 'Reminders are available in the iOS and Android app.'
-          : 'Please allow notifications in your device settings to get reminders.',
-      );
-      return;
-    }
-    actions.setReminder({ enabled: true, hour, minute });
-  };
 
   const reset = () => {
     const doReset = async () => {
@@ -53,93 +27,118 @@ export default function Settings() {
       actions.resetAll();
       router.replace('/onboarding');
     };
-    const title = 'Erase all data? This deletes your streak, journal and settings from this device.';
     if (Platform.OS === 'web') {
-      if (globalThis.confirm?.(title)) doReset();
+      if (globalThis.confirm?.(`${t('settings.eraseTitle')}\n\n${t('settings.eraseBody')}`)) doReset();
       return;
     }
-    Alert.alert('Erase all data?', 'This deletes your streak, journal and settings from this device.', [
-      { text: 'Cancel', style: 'cancel' },
-      { text: 'Erase', style: 'destructive', onPress: doReset },
+    Alert.alert(t('settings.eraseTitle'), t('settings.eraseBody'), [
+      { text: t('common.cancel'), style: 'cancel' },
+      { text: t('settings.erase'), style: 'destructive', onPress: doReset },
     ]);
   };
 
+  const nudgeText = reminders.nudges.enabled
+    ? t('settings.nudgesOn', {
+        hours: reminders.nudges.everyHours,
+        start: formatTimeOfDay(reminders.nudges.startHour, 0, i18n.language),
+        end: formatTimeOfDay(reminders.nudges.endHour, 0, i18n.language),
+      })
+    : t('settings.nudgesOff');
+
   return (
     <Screen>
+      <SectionTitle>{t('settings.account')}</SectionTitle>
       <Card>
-        <H2>Your name</H2>
-        <Field
-          value={name}
-          onChangeText={setName}
-          onEndEditing={() => actions.updateProfile({ name: name.trim() })}
-          onBlur={() => actions.updateProfile({ name: name.trim() })}
-          placeholder="Optional"
+        <ListRow
+          icon="sparkles-outline"
+          title={t('settings.subscription')}
+          subtitle={
+            !billing.available
+              ? t('settings.subscriptionDev')
+              : billing.premium
+                ? billing.inTrial
+                  ? t('settings.subscriptionTrial')
+                  : t('settings.subscriptionActive')
+                : t('settings.subscriptionFree')
+          }
+          onPress={() => router.push('/paywall')}
         />
       </Card>
 
+      <SectionTitle>{t('settings.aboutYou')}</SectionTitle>
       <Card>
-        <H2>Your reasons</H2>
-        <ReasonsEditor reasons={profile.reasons} onChange={(reasons) => actions.updateProfile({ reasons })} />
+        <Field
+          label={t('onboarding.nameLabel')}
+          value={name}
+          onChangeText={setName}
+          onBlur={() => actions.updateProfile({ name: name.trim() })}
+          onSubmitEditing={() => actions.updateProfile({ name: name.trim() })}
+          placeholder={t('common.optional')}
+        />
+        <ListRow
+          icon="person-outline"
+          title={t('settings.profile')}
+          subtitle={[
+            t(`gender.${profile.gender}`),
+            profile.ageRange,
+            `${flag(profile.country)} ${countryName(profile.country, i18n.language)}`,
+          ]
+            .filter(Boolean)
+            .join(' · ')}
+          onPress={() => router.push('/profile')}
+        />
+        <ListRow
+          icon="language-outline"
+          title={t('settings.language')}
+          subtitle={languageInfo(i18n.language).native}
+          onPress={() => router.push('/profile?section=language')}
+        />
+        <ListRow
+          icon="pulse-outline"
+          title={t('settings.assessment')}
+          subtitle={assessment ? t(`assessment.severity.${assessment.severity}`) : t('settings.assessmentNone')}
+          onPress={() => router.push('/assessment')}
+        />
       </Card>
 
+      <SectionTitle>{t('settings.recovery')}</SectionTitle>
       <Card>
-        <H2>Goal</H2>
+        <H2>{t('settings.goal')}</H2>
         <ChipRow>
           {GOALS.map((g) => (
-            <Chip
-              key={g}
-              label={`${g} days`}
-              selected={profile.goalDays === g}
-              onPress={() => actions.updateProfile({ goalDays: g })}
-            />
+            <Chip key={g} label={t('common.days', { count: g })} selected={profile.goalDays === g} onPress={() => actions.updateProfile({ goalDays: g })} />
           ))}
         </ChipRow>
       </Card>
-
       <Card>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <View style={{ flex: 1, gap: 4 }}>
-            <H2>Bible verses & prayer</H2>
-            <Muted>Show optional Christian content and the prayer habit.</Muted>
-          </View>
-          <Switch
-            value={profile.faith}
-            onValueChange={(faith) => actions.updateProfile({ faith })}
-            trackColor={{ true: t.primary }}
-          />
-        </View>
+        <H2>{t('settings.reasons')}</H2>
+        <ReasonsEditor reasons={profile.reasons} onChange={(reasons) => actions.updateProfile({ reasons })} />
+      </Card>
+      <Card>
+        <SwitchRow
+          icon="book-outline"
+          title={t('settings.faith')}
+          subtitle={t('settings.faithBody')}
+          value={profile.faith}
+          onValueChange={(faith) => actions.updateProfile({ faith })}
+        />
       </Card>
 
+      <SectionTitle>{t('settings.appSection')}</SectionTitle>
       <Card>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <View style={{ flex: 1, gap: 4 }}>
-            <H2>Daily check-in reminder</H2>
-            <Muted>A discreet notification once a day.</Muted>
-          </View>
-          <Switch value={reminder.enabled} onValueChange={(v) => updateReminder(v)} trackColor={{ true: t.primary }} />
-        </View>
-        {reminder.enabled && (
-          <ChipRow>
-            {REMINDER_TIMES.map(({ hour, minute }) => (
-              <Chip
-                key={`${hour}:${minute}`}
-                label={formatTimeOfDay(hour, minute)}
-                selected={reminder.hour === hour && reminder.minute === minute}
-                onPress={() => updateReminder(true, hour, minute)}
-              />
-            ))}
-          </ChipRow>
-        )}
+        <ListRow icon="notifications-outline" title={t('reminders.title')} subtitle={nudgeText} onPress={() => router.push('/reminders')} />
+        <ListRow icon="color-palette-outline" title={t('appearance.title')} subtitle={t(`appearance.themes.${data.appearance.themeId}`)} onPress={() => router.push('/appearance')} />
+        <ListRow icon="shield-checkmark-outline" title={t('protection.title')} onPress={() => router.push('/protection')} />
+        <ListRow icon="watch-outline" title={t('health.title')} subtitle={data.health.connected ? t('health.isConnected') : undefined} onPress={() => router.push('/health')} />
+        <ListRow icon="call-outline" title={t('helplines.title')} onPress={() => router.push('/helplines')} />
       </Card>
 
+      <SectionTitle>{t('settings.privacy')}</SectionTitle>
       <Card>
-        <H2>Privacy</H2>
-        <Muted>
-          Clarity Recovery has no account and no servers. Everything is stored only on this device. Uninstalling the app
-          deletes your data.
-        </Muted>
-        <Button title="Erase all data" variant="danger" icon="trash-outline" onPress={reset} />
+        <Muted>{t('settings.privacyBody')}</Muted>
+        <Button title={t('settings.erase')} variant="danger" icon="trash-outline" onPress={reset} />
       </Card>
+      <Muted center>{t('settings.version', { version: '1.0.0' })}</Muted>
     </Screen>
   );
 }

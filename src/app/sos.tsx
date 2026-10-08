@@ -1,13 +1,15 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router } from 'expo-router';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { BreathingCircle } from '../components/BreathingCircle';
-import { Inspiration } from '../components/Inspiration';
-import { Body, Button, Card, H2, ListRow, Muted, ProgressBar, Screen } from '../components/ui';
+import { affirmationOfTheDay } from '../components/Inspiration';
+import { Body, Button, Card, H1, H2, ListRow, Muted, ProgressBar, Screen, useFont } from '../components/ui';
+import { regionFor } from '../content/regions';
 import { VERSES } from '../content/verses';
-import { textPartner } from '../lib/contact';
+import { callNumber, textPartner } from '../lib/contact';
 import { formatClock, useNow } from '../lib/date';
 import { success } from '../lib/haptics';
 import { useStore } from '../lib/store';
@@ -15,23 +17,40 @@ import { useTheme } from '../theme';
 
 const RIDE_OUT_SECONDS = 10 * 60;
 
-const QUICK_MOVES = [
-  'Leave the room you are in — go where other people are',
-  'Put your phone in another room or hand it to someone',
-  'Splash cold water on your face or take a cold shower',
-  'Do 20 push-ups or squats right now',
-  'Drink a full glass of water slowly',
-];
+/** Verses chosen for the moment of temptation (KJV, public domain). */
+const SOS_VERSE_REFS = ['1 Corinthians 10:13', 'James 4:7', 'Psalm 51:10', 'Galatians 5:16', 'Philippians 4:13'];
 
 export default function Sos() {
   const t = useTheme();
+  const font = useFont();
+  const { t: tr } = useTranslation();
   const { data, actions } = useStore();
   const [startedAt] = useState(() => Date.now());
-  const [verse] = useState(() => VERSES[Math.floor(Math.random() * VERSES.length)]);
   const now = useNow(1000);
+  const [partnerTexted, setPartnerTexted] = useState(false);
+  const autoTexted = useRef(false);
 
   const elapsed = Math.floor((now - startedAt) / 1000);
   const remaining = RIDE_OUT_SECONDS - elapsed;
+  const partner = data.partner;
+  const region = regionFor(data.profile.country);
+  const quickMoves = tr('sos.quickMoves', { returnObjects: true }) as string[];
+
+  const sendPartnerAlert = () => {
+    if (!partner) return;
+    setPartnerTexted(true);
+    textPartner(partner.phone, tr('panic.partnerMessage', { name: data.profile.name || tr('panic.someone') }));
+  };
+
+  // Open the pre-filled SMS to the accountability partner as soon as SOS opens.
+  useEffect(() => {
+    if (partner?.alertOnPanic && !autoTexted.current) {
+      autoTexted.current = true;
+      const timer = setTimeout(sendPartnerAlert, 600);
+      return () => clearTimeout(timer);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const urgePassed = () => {
     actions.logUrgeResisted();
@@ -39,31 +58,42 @@ export default function Sos() {
     router.back();
   };
 
+  const verses = VERSES.filter((v) => SOS_VERSE_REFS.includes(v.ref));
+
   return (
     <Screen>
       <View style={{ gap: 6 }}>
-        <H2>You can get through this.</H2>
-        <Body>
-          Urges peak and fade, usually within 10–20 minutes. You don’t have to fight it — just don’t feed it.
-          Breathe with the circle.
-        </Body>
+        <H1>{tr('sos.heading')}</H1>
+        <Body>{tr('sos.body')}</Body>
       </View>
 
       <Card style={{ alignItems: 'center', gap: 16 }}>
         <BreathingCircle size={190} />
         <View style={{ alignSelf: 'stretch', gap: 6 }}>
           <ProgressBar value={elapsed / RIDE_OUT_SECONDS} />
-          <Text style={[styles.timer, { color: t.text }]}>
-            {remaining > 0 ? `${formatClock(remaining)} to ride it out` : 'You made it through 10 minutes!'}
+          <Text style={[styles.timer, font('bold'), { color: t.text }]}>
+            {remaining > 0 ? tr('sos.rideOut', { time: formatClock(remaining) }) : tr('sos.madeIt')}
           </Text>
         </View>
       </Card>
 
+      {partner && (
+        <Card variant={partnerTexted ? 'soft' : 'plain'}>
+          <ListRow
+            icon={partnerTexted ? 'checkmark-done-outline' : 'chatbubble-ellipses-outline'}
+            title={partnerTexted ? tr('sos.partnerOpened', { name: partner.name }) : tr('sos.textPartner', { name: partner.name })}
+            subtitle={partnerTexted ? tr('sos.partnerOpenedBody') : tr('sos.textPartnerBody')}
+            onPress={sendPartnerAlert}
+          />
+          <ListRow icon="call-outline" title={tr('sos.callPartner', { name: partner.name })} onPress={() => callNumber(partner.phone)} />
+        </Card>
+      )}
+
       {data.profile.reasons.length > 0 && (
         <Card>
-          <H2>Remember why</H2>
+          <H2>{tr('sos.rememberWhy')}</H2>
           {data.profile.reasons.map((r) => (
-            <View key={r} style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start' }}>
+            <View key={r} style={styles.row}>
               <Ionicons name="heart" size={16} color={t.danger} style={{ marginTop: 3 }} />
               <Body style={{ flex: 1 }}>{r}</Body>
             </View>
@@ -71,49 +101,85 @@ export default function Sos() {
         </Card>
       )}
 
-      <Inspiration faith={data.profile.faith} verse={verse} />
+      {data.profile.faith ? (
+        <Card variant="soft">
+          <View style={styles.row}>
+            <Ionicons name="book-outline" size={18} color={t.primary} />
+            <H2 style={{ flex: 1 }}>{tr('sos.scriptureTitle')}</H2>
+          </View>
+          {verses.map((v) => (
+            <View key={v.ref} style={{ gap: 2 }}>
+              <Body style={{ fontStyle: 'italic' }}>“{v.text}”</Body>
+              <Muted>— {v.ref} (KJV)</Muted>
+            </View>
+          ))}
+          <View style={[styles.prayer, { borderColor: t.primary }]}>
+            <Muted style={{ color: t.primary }}>{tr('sos.prayerTitle')}</Muted>
+            <Body>{tr('sos.prayer')}</Body>
+          </View>
+          <Button
+            small
+            variant="secondary"
+            icon="leaf-outline"
+            title={tr('sos.breathPrayer')}
+            onPress={() => router.push('/session/breath-prayer')}
+          />
+        </Card>
+      ) : (
+        <Card variant="soft">
+          <View style={styles.row}>
+            <Ionicons name="sparkles-outline" size={18} color={t.primary} />
+            <Muted style={{ color: t.primary }}>{tr('inspiration.thought')}</Muted>
+          </View>
+          <Body style={{ fontStyle: 'italic' }}>
+            {affirmationOfTheDay(tr('affirmations', { returnObjects: true }) as string[])}
+          </Body>
+        </Card>
+      )}
 
       <Card>
-        <H2>Do one of these now</H2>
-        {data.partner && (
-          <ListRow
-            icon="chatbubble-ellipses-outline"
-            title={`Text ${data.partner.name}`}
-            subtitle="Send a pre-written message asking for support"
-            onPress={() =>
-              textPartner(
-                data.partner!.phone,
-                "Hey, I'm struggling with an urge right now. Can you check in on me?",
-              )
-            }
-          />
-        )}
+        <H2>{tr('sos.doNow')}</H2>
         <ListRow
           icon="flash-outline"
-          title="6-minute urge burner"
-          subtitle="Burn off the energy with a quick workout"
+          title={tr('sessions.urge-burner.title')}
+          subtitle={tr('sos.burnerBody')}
           onPress={() => router.push('/session/urge-burner')}
         />
         <ListRow
           icon="water-outline"
-          title="Urge surfing"
-          subtitle="Guided: observe the craving until it fades"
+          title={tr('sessions.urge-surfing.title')}
+          subtitle={tr('sos.surfingBody')}
           onPress={() => router.push('/session/urge-surfing')}
         />
-        {QUICK_MOVES.map((m) => (
-          <View key={m} style={{ flexDirection: 'row', gap: 10, alignItems: 'flex-start' }}>
+        {quickMoves.map((m) => (
+          <View key={m} style={styles.row}>
             <Ionicons name="checkmark" size={18} color={t.primary} style={{ marginTop: 2 }} />
             <Muted style={{ flex: 1 }}>{m}</Muted>
           </View>
         ))}
       </Card>
 
-      <Button title="The urge passed — I won" icon="trophy-outline" onPress={urgePassed} />
-      <Button title="I slipped" variant="ghost" onPress={() => router.replace('/relapse')} />
+      <Button title={tr('sos.urgePassed')} icon="trophy-outline" onPress={urgePassed} />
+      <Button title={tr('sos.slipped')} variant="ghost" onPress={() => router.replace('/relapse')} />
+
+      <Card variant="danger">
+        <Muted>{tr('sos.crisisNote')}</Muted>
+        {region.helplines[0]?.phone && (
+          <ListRow
+            icon="call-outline"
+            title={region.helplines[0].name}
+            subtitle={region.helplines[0].phone}
+            onPress={() => callNumber(region.helplines[0].phone!)}
+          />
+        )}
+        <ListRow icon="list-outline" title={tr('helplines.allHelplines')} onPress={() => router.push('/helplines')} />
+      </Card>
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  timer: { textAlign: 'center', fontSize: 16, fontWeight: '600', fontVariant: ['tabular-nums'] },
+  timer: { textAlign: 'center', fontSize: 16, fontVariant: ['tabular-nums'] },
+  row: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
+  prayer: { borderLeftWidth: 3, paddingLeft: 12, gap: 4 },
 });

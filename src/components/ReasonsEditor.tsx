@@ -1,8 +1,8 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Pressable, View } from 'react-native';
 
-import { REASON_SUGGESTIONS } from '../content/triggers';
 import { useTheme } from '../theme';
 import { Body, Button, Chip, ChipRow, Field, Muted } from './ui';
 
@@ -16,6 +16,7 @@ export function ReasonsEditor({
   onChange: (reasons: string[]) => void;
 }) {
   const t = useTheme();
+  const { t: tr } = useTranslation();
   const [draft, setDraft] = useState('');
 
   const add = (reason: string) => {
@@ -25,20 +26,22 @@ export function ReasonsEditor({
     setDraft('');
   };
 
-  const suggestions = REASON_SUGGESTIONS.filter((s) => !reasons.includes(s));
+  const all = tr('reasonSuggestions', { returnObjects: true }) as string[];
+  const suggestions = all.filter((s) => !reasons.includes(s));
 
   return (
     <View style={{ gap: 12 }}>
       {reasons.map((reason) => (
         <View key={reason} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-          <Ionicons name="heart" size={16} color={t.primary} />
+          <Ionicons name="heart" size={16} color={t.danger} />
           <Body style={{ flex: 1 }}>{reason}</Body>
           <Pressable
-            accessibilityLabel={`Remove ${reason}`}
+            accessibilityRole="button"
+            accessibilityLabel={tr('common.remove')}
             hitSlop={10}
             onPress={() => onChange(reasons.filter((r) => r !== reason))}
           >
-            <Ionicons name="close-circle" size={20} color={t.muted} />
+            <Ionicons name="close-circle" size={22} color={t.muted} />
           </Pressable>
         </View>
       ))}
@@ -49,16 +52,16 @@ export function ReasonsEditor({
               <Field
                 value={draft}
                 onChangeText={setDraft}
-                placeholder="In your own words…"
+                placeholder={tr('reasons.placeholder')}
                 onSubmitEditing={() => add(draft)}
                 returnKeyType="done"
               />
             </View>
-            <Button title="Add" variant="secondary" onPress={() => add(draft)} disabled={!draft.trim()} />
+            <Button title={tr('common.add')} variant="secondary" onPress={() => add(draft)} disabled={!draft.trim()} />
           </View>
           {suggestions.length > 0 && (
             <>
-              <Muted>Or tap a suggestion:</Muted>
+              <Muted>{tr('reasons.suggestions')}</Muted>
               <ChipRow>
                 {suggestions.map((s) => (
                   <Chip key={s} label={s} onPress={() => add(s)} />

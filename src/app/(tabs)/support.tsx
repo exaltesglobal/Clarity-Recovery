@@ -1,42 +1,41 @@
+import { router } from 'expo-router';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Share, View } from 'react-native';
 
-import { Body, Button, Card, Field, H2, ListRow, Muted, Screen } from '../../components/ui';
+import { CrisisHelplines } from '../../components/Helplines';
+import { Body, Button, Card, Field, H2, ListRow, Muted, Screen, SectionTitle, SwitchRow } from '../../components/ui';
 import { callNumber, textPartner } from '../../lib/contact';
-import { DAY, formatDays } from '../../lib/date';
+import { DAY, daysIn } from '../../lib/date';
 import { bestStreakMs, currentStreakMs, useStore } from '../../lib/store';
 import type { AppData } from '../../lib/types';
+import type { TFunction } from 'i18next';
 
-function weeklyReport(data: AppData) {
+function weeklyReport(data: AppData, t: TFunction) {
   const weekAgo = Date.now() - 7 * DAY;
   const inWeek = (iso: string) => new Date(iso).getTime() >= weekAgo;
   const checkins = data.checkins.filter((c) => inWeek(c.date));
-  const slips = data.relapses.filter((r) => inWeek(r.date)).length;
-  const urges = data.urges.filter((u) => inWeek(u.date)).length;
-  const avgUrge = checkins.length
-    ? (checkins.reduce((s, c) => s + c.urge, 0) / checkins.length).toFixed(1)
-    : 'n/a';
-
-  return [
-    'My weekly recovery update:',
-    `• Current streak: ${formatDays(currentStreakMs(data))}`,
-    `• Best streak: ${formatDays(bestStreakMs(data))}`,
-    `• Urges resisted this week: ${urges}`,
-    `• Slips this week: ${slips}`,
-    `• Check-ins this week: ${checkins.length} (avg urge ${avgUrge}/10)`,
-    '',
-    'Thanks for keeping me accountable.',
-  ].join('\n');
+  const avgUrge = checkins.length ? (checkins.reduce((s, c) => s + c.urge, 0) / checkins.length).toFixed(1) : '—';
+  return t('support.report', {
+    streak: t('common.days', { count: daysIn(currentStreakMs(data)) }),
+    best: t('common.days', { count: daysIn(bestStreakMs(data)) }),
+    urges: data.urges.filter((u) => inWeek(u.date)).length,
+    slips: data.relapses.filter((r) => inWeek(r.date)).length,
+    checkins: checkins.length,
+    avgUrge,
+  });
 }
 
 export default function Support() {
+  const { t } = useTranslation();
   const { data, actions } = useStore();
   const [editing, setEditing] = useState(!data.partner);
   const [name, setName] = useState(data.partner?.name ?? '');
   const [phone, setPhone] = useState(data.partner?.phone ?? '');
+  const partner = data.partner;
 
   const savePartner = () => {
-    actions.setPartner({ name: name.trim(), phone: phone.trim() });
+    actions.setPartner({ name: name.trim(), phone: phone.trim(), alertOnPanic: partner?.alertOnPanic ?? true });
     setEditing(false);
   };
 
@@ -48,83 +47,81 @@ export default function Support() {
   };
 
   return (
-    <Screen>
+    <Screen tabs>
+      <SectionTitle>{t('support.partnerSection')}</SectionTitle>
       <Card>
-        <H2>Accountability partner</H2>
-        <Muted>
-          Recovery is easier with someone in your corner — a trusted friend, mentor, pastor, or counsellor.
-          Nothing is shared unless you choose to send it.
-        </Muted>
+        <H2>{t('support.partnerTitle')}</H2>
+        <Muted>{t('support.partnerBody')}</Muted>
 
-        {editing ? (
+        {editing || !partner ? (
           <View style={{ gap: 12 }}>
-            <Field label="Name" value={name} onChangeText={setName} placeholder="e.g. Sam" />
+            <Field label={t('support.name')} value={name} onChangeText={setName} placeholder={t('support.namePlaceholder')} />
             <Field
-              label="Phone number"
+              label={t('support.phone')}
               value={phone}
               onChangeText={setPhone}
-              placeholder="+1 555 123 4567"
+              placeholder="+91 98765 43210"
               keyboardType="phone-pad"
             />
-            <Button title="Save partner" onPress={savePartner} disabled={!name.trim() || !phone.trim()} />
-            {data.partner && <Button title="Cancel" variant="ghost" onPress={() => setEditing(false)} />}
+            <Button title={t('support.savePartner')} onPress={savePartner} disabled={!name.trim() || !phone.trim()} />
+            {partner && <Button title={t('common.cancel')} variant="ghost" onPress={() => setEditing(false)} />}
           </View>
         ) : (
-          data.partner && (
-            <View style={{ gap: 4 }}>
-              <ListRow
-                icon="person-circle-outline"
-                title={data.partner.name}
-                subtitle={data.partner.phone}
-                right={<Button title="Edit" variant="ghost" onPress={() => setEditing(true)} />}
-              />
-              <ListRow
-                icon="chatbubble-ellipses-outline"
-                title="I'm struggling"
-                subtitle="Text a request for support"
-                onPress={() =>
-                  textPartner(data.partner!.phone, "Hey, I'm having a hard time right now. Could you check in on me?")
-                }
-              />
-              <ListRow
-                icon="call-outline"
-                title={`Call ${data.partner.name}`}
-                onPress={() => callNumber(data.partner!.phone)}
-              />
-              <ListRow
-                icon="stats-chart-outline"
-                title="Send weekly update"
-                subtitle="Text your progress for the last 7 days"
-                onPress={() => textPartner(data.partner!.phone, weeklyReport(data))}
-              />
-              <Button title="Remove partner" variant="ghost" onPress={removePartner} />
-            </View>
-          )
+          <View style={{ gap: 2 }}>
+            <ListRow
+              icon="person-circle-outline"
+              title={partner.name}
+              subtitle={partner.phone}
+              right={<Button small title={t('common.edit')} variant="ghost" onPress={() => setEditing(true)} />}
+            />
+            <SwitchRow
+              icon="shield-half-outline"
+              title={t('support.alertOnPanic')}
+              subtitle={t('support.alertOnPanicBody')}
+              value={partner.alertOnPanic}
+              onValueChange={(alertOnPanic) => actions.setPartner({ ...partner, alertOnPanic })}
+            />
+            <ListRow
+              icon="chatbubble-ellipses-outline"
+              title={t('support.struggling')}
+              subtitle={t('support.strugglingBody')}
+              onPress={() => textPartner(partner.phone, t('support.strugglingMessage'))}
+            />
+            <ListRow icon="call-outline" title={t('support.call', { name: partner.name })} onPress={() => callNumber(partner.phone)} />
+            <ListRow
+              icon="stats-chart-outline"
+              title={t('support.weekly')}
+              subtitle={t('support.weeklyBody')}
+              onPress={() => textPartner(partner.phone, weeklyReport(data, t))}
+            />
+            <Button title={t('support.removePartner')} variant="ghost" onPress={removePartner} />
+          </View>
         )}
       </Card>
 
       <Card>
-        <H2>Share your progress</H2>
-        <Muted>Send your weekly summary through any app — email, WhatsApp, Signal, etc.</Muted>
+        <H2>{t('support.shareTitle')}</H2>
+        <Muted>{t('support.shareBody')}</Muted>
         <Button
-          title="Share weekly update"
+          title={t('support.share')}
           icon="share-outline"
           variant="secondary"
-          onPress={() => Share.share({ message: weeklyReport(data) }).catch(() => {})}
+          onPress={() => Share.share({ message: weeklyReport(data, t) }).catch(() => {})}
         />
       </Card>
 
+      <SectionTitle>{t('support.toolsSection')}</SectionTitle>
       <Card>
-        <H2>More help</H2>
-        <Body>
-          Compulsive porn use is common and treatable. A therapist experienced in compulsive sexual behaviour,
-          a support group, or your faith community can make a real difference.
-        </Body>
-        <Muted>
-          If you’re in crisis or thinking about harming yourself, contact your local emergency number now. In
-          the US you can call or text 988 (Suicide & Crisis Lifeline), any time.
-        </Muted>
-        <Button title="Call 988 (US)" icon="call-outline" variant="ghost" onPress={() => callNumber('988')} />
+        <ListRow icon="shield-checkmark-outline" title={t('protection.title')} subtitle={t('support.protectionBody')} onPress={() => router.push('/protection')} />
+        <ListRow icon="ribbon-outline" title={t('stories.title')} subtitle={t('support.storiesBody')} onPress={() => router.push('/stories')} />
+        <ListRow icon="flask-outline" title={t('facts.title')} subtitle={t('support.factsBody')} onPress={() => router.push('/facts')} />
+      </Card>
+
+      <SectionTitle>{t('support.helpSection')}</SectionTitle>
+      <CrisisHelplines country={data.profile.country} compact />
+      <Card>
+        <Body>{t('support.professional')}</Body>
+        <ListRow icon="list-outline" title={t('helplines.allHelplines')} onPress={() => router.push('/helplines')} />
       </Card>
     </Screen>
   );

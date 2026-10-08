@@ -1,39 +1,130 @@
+import {
+  Nunito_400Regular,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_800ExtraBold,
+  useFonts,
+} from '@expo-google-fonts/nunito';
+import * as QuickActions from 'expo-quick-actions';
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
-import { ActivityIndicator, View } from 'react-native';
+import { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { ActivityIndicator, Platform, useColorScheme, View } from 'react-native';
 
-import { configureNotifications } from '../lib/notifications';
-import { StoreProvider } from '../lib/store';
-import { useTheme } from '../theme';
+import { Logo } from '../components/Logo';
+// Importing i18n also initializes translations before any screen renders.
+import { applyLanguage, languageInfo } from '../i18n';
+import { BillingProvider } from '../lib/billing';
+import { guard } from '../lib/guard';
+import { configureNotifications, syncReminders } from '../lib/notifications';
+import { StoreProvider, useStore } from '../lib/store';
+import { buildTheme, ThemeContext, useFallbackTheme } from '../theme';
 
 configureNotifications();
+SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function RootLayout() {
-  const t = useTheme();
+  const [fontsLoaded] = useFonts({ Nunito_400Regular, Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold });
+  const t = useFallbackTheme();
   return (
     <StoreProvider
       fallback={
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: t.bg }}>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', gap: 24, backgroundColor: t.bg }}>
+          <Logo size={96} />
           <ActivityIndicator color={t.primary} />
         </View>
       }
     >
-      <StatusBar style="auto" />
+      <BillingProvider>
+        <AppShell fontsLoaded={fontsLoaded} />
+      </BillingProvider>
+    </StoreProvider>
+  );
+}
+
+function AppShell({ fontsLoaded }: { fontsLoaded: boolean }) {
+  const { data } = useStore();
+  const { t, i18n } = useTranslation();
+  const systemDark = useColorScheme() === 'dark';
+  const language = data.profile.language;
+
+  // Apply the saved language before the first frame renders.
+  useState(() => applyLanguage(language));
+  useEffect(() => {
+    applyLanguage(language);
+  }, [language]);
+
+  const theme = useMemo(() => {
+    const fonts =
+      fontsLoaded && languageInfo(language).latin
+        ? { regular: 'Nunito_400Regular', semibold: 'Nunito_600SemiBold', bold: 'Nunito_700Bold', heavy: 'Nunito_800ExtraBold' }
+        : {};
+    return buildTheme(data.appearance, systemDark, fonts);
+  }, [data.appearance, systemDark, fontsLoaded, language]);
+
+  useEffect(() => {
+    SplashScreen.hideAsync().catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    if (data.onboarded) syncReminders(data.reminders, t).catch(() => {});
+  }, [data.onboarded, data.reminders, i18n.language, t]);
+
+  // Keep the native mindful-pause settings in step with the saved preferences.
+  useEffect(() => {
+    guard?.setPauseConfig(data.protection.mindfulPause, data.protection.pauseApps);
+  }, [data.protection.mindfulPause, data.protection.pauseApps]);
+
+  useEffect(() => {
+    if (Platform.OS === 'web') return;
+    QuickActions.setItems([
+      {
+        id: 'sos',
+        title: t('panic.shortcutTitle'),
+        subtitle: t('panic.shortcutSubtitle'),
+        icon: Platform.OS === 'ios' ? 'symbol:lifepreserver' : 'shortcut_sos',
+        params: { href: '/sos' },
+      },
+    ]).catch(() => {});
+  }, [i18n.language, t]);
+
+  const headerFont = theme.fonts.bold ? { fontFamily: theme.fonts.bold } : { fontWeight: '700' as const };
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      <StatusBar style={theme.dark ? 'light' : 'dark'} />
       <Stack
         screenOptions={{
-          headerStyle: { backgroundColor: t.card },
-          headerTintColor: t.text,
-          contentStyle: { backgroundColor: t.bg },
+          headerStyle: { backgroundColor: theme.bg },
+          headerShadowVisible: false,
+          headerTintColor: theme.text,
+          headerTitleStyle: headerFont,
+          headerBackButtonDisplayMode: 'minimal',
+          contentStyle: { backgroundColor: theme.bg },
         }}
       >
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding" options={{ headerShown: false, gestureEnabled: false }} />
-        <Stack.Screen name="sos" options={{ title: 'Urge SOS', presentation: 'modal' }} />
-        <Stack.Screen name="relapse" options={{ title: 'Log a slip', presentation: 'modal' }} />
-        <Stack.Screen name="checkin" options={{ title: 'Daily check-in', presentation: 'modal' }} />
-        <Stack.Screen name="settings" options={{ title: 'Settings' }} />
+        <Stack.Screen name="sos" options={{ title: t('sos.title'), presentation: 'fullScreenModal' }} />
+        <Stack.Screen name="relapse" options={{ title: t('relapse.title'), presentation: 'modal' }} />
+        <Stack.Screen name="checkin" options={{ title: t('checkin.title'), presentation: 'modal' }} />
+        <Stack.Screen name="paywall" options={{ headerShown: false, presentation: 'modal' }} />
+        <Stack.Screen name="pause" options={{ headerShown: false, presentation: 'fullScreenModal', gestureEnabled: false }} />
+        <Stack.Screen name="settings" options={{ title: t('settings.title') }} />
+        <Stack.Screen name="appearance" options={{ title: t('appearance.title') }} />
+        <Stack.Screen name="reminders" options={{ title: t('reminders.title') }} />
+        <Stack.Screen name="profile" options={{ title: t('profileEdit.title') }} />
+        <Stack.Screen name="assessment" options={{ title: t('assessment.title') }} />
+        <Stack.Screen name="protection" options={{ title: t('protection.title') }} />
+        <Stack.Screen name="instagram" options={{ title: t('instagram.title') }} />
+        <Stack.Screen name="stories" options={{ title: t('stories.title') }} />
+        <Stack.Screen name="facts" options={{ title: t('facts.title') }} />
+        <Stack.Screen name="helplines" options={{ title: t('helplines.title') }} />
+        <Stack.Screen name="health" options={{ title: t('health.title') }} />
         <Stack.Screen name="session/[id]" options={{ title: '' }} />
       </Stack>
-    </StoreProvider>
+    </ThemeContext.Provider>
   );
 }

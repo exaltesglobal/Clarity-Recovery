@@ -1,10 +1,11 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, Stack, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { BreathingCircle } from '../../components/BreathingCircle';
-import { Body, Button, Card, H1, H2, Muted, ProgressBar, Screen } from '../../components/ui';
+import { Body, Button, Card, H1, H2, Muted, ProgressBar, Screen, useFont } from '../../components/ui';
 import { Session, SESSIONS, sessionDuration } from '../../content/wellness';
 import { formatClock } from '../../lib/date';
 import { success, tap } from '../../lib/haptics';
@@ -15,7 +16,7 @@ import { useTheme } from '../../theme';
 function locate(session: Session, elapsed: number) {
   let end = 0;
   for (let i = 0; i < session.steps.length; i++) {
-    end += session.steps[i].seconds;
+    end += session.steps[i];
     if (elapsed < end) return { stepIndex: i, stepEnd: end };
   }
   return { stepIndex: session.steps.length - 1, stepEnd: end };
@@ -23,6 +24,8 @@ function locate(session: Session, elapsed: number) {
 
 export default function SessionScreen() {
   const t = useTheme();
+  const font = useFont();
+  const { t: tr } = useTranslation();
   const { id } = useLocalSearchParams<{ id: string }>();
   const { actions } = useStore();
   const session = SESSIONS.find((s) => s.id === id);
@@ -53,58 +56,48 @@ export default function SessionScreen() {
   if (!session) {
     return (
       <Screen>
-        <Body>Session not found.</Body>
+        <Body>{tr('session.notFound')}</Body>
       </Screen>
     );
   }
 
-  const step = session.steps[stepIndex];
+  const steps = tr(`sessions.${session.id}.steps`, { returnObjects: true }) as { title: string; text: string }[];
+  const step = steps[stepIndex] ?? { title: '', text: '' };
 
   return (
     <Screen>
-      <Stack.Screen options={{ title: session.title }} />
+      <Stack.Screen options={{ title: tr(`sessions.${session.id}.title`) }} />
 
       {finished ? (
         <Card style={{ alignItems: 'center', gap: 12, paddingVertical: 28 }}>
-          <Ionicons name="checkmark-circle" size={56} color={t.primary} />
-          <H1>Well done</H1>
-          <Body style={{ textAlign: 'center' }}>
-            You invested time in yourself today. That’s how new habits are built.
-          </Body>
-          <Button title="Done" onPress={() => router.back()} style={{ alignSelf: 'stretch' }} />
+          <Ionicons name="checkmark-circle" size={60} color={t.primary} />
+          <H1 center>{tr('session.doneTitle')}</H1>
+          <Body center>{tr('session.doneBody')}</Body>
+          <Button title={tr('common.done')} onPress={() => router.back()} style={{ alignSelf: 'stretch' }} />
         </Card>
       ) : (
         <>
-          <Muted>
-            Step {stepIndex + 1} of {session.steps.length}
-          </Muted>
+          <Muted>{tr('session.step', { current: stepIndex + 1, total: session.steps.length })}</Muted>
           <ProgressBar value={elapsed / total} />
 
           <Card style={{ alignItems: 'center', gap: 14, paddingVertical: 24 }}>
             {session.breathing && <BreathingCircle size={170} paused={!running} />}
-            <H2 style={{ textAlign: 'center' }}>{step.title}</H2>
-            <Body style={{ textAlign: 'center' }}>{step.instruction}</Body>
-            <Text style={[styles.clock, { color: t.primary }]}>{formatClock(stepEnd - elapsed)}</Text>
+            <H2 center>{step.title}</H2>
+            <Body center>{step.text}</Body>
+            <Text style={[styles.clock, font('heavy'), { color: t.primary }]}>{formatClock(stepEnd - elapsed)}</Text>
           </Card>
 
           <View style={{ flexDirection: 'row', gap: 12 }}>
             <Button
               style={{ flex: 1 }}
-              title={running ? 'Pause' : elapsed === 0 ? 'Start' : 'Resume'}
+              title={running ? tr('session.pause') : elapsed === 0 ? tr('session.start') : tr('session.resume')}
               icon={running ? 'pause' : 'play'}
               onPress={() => setRunning(!running)}
             />
-            <Button
-              title="Skip"
-              variant="secondary"
-              icon="play-skip-forward"
-              onPress={() => setElapsed(stepEnd)}
-            />
+            <Button title={tr('session.skip')} variant="secondary" icon="play-skip-forward" onPress={() => setElapsed(stepEnd)} />
           </View>
 
-          {stepIndex + 1 < session.steps.length && (
-            <Muted>Up next: {session.steps[stepIndex + 1].title}</Muted>
-          )}
+          {stepIndex + 1 < steps.length && <Muted>{tr('session.upNext', { title: steps[stepIndex + 1].title })}</Muted>}
         </>
       )}
     </Screen>
@@ -112,5 +105,5 @@ export default function SessionScreen() {
 }
 
 const styles = StyleSheet.create({
-  clock: { fontSize: 44, fontWeight: '700', fontVariant: ['tabular-nums'] },
+  clock: { fontSize: 46, fontVariant: ['tabular-nums'] },
 });

@@ -1,0 +1,1319 @@
+{
+  "appName": "Clarity Recovery",
+  "common": {
+    "add": "Add",
+    "back": "Back",
+    "cancel": "Cancel",
+    "close": "Close",
+    "continue": "Continue",
+    "days_one": "{{count}} day",
+    "days_other": "{{count}} days",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
+    "delete": "Delete",
+    "done": "Done",
+    "edit": "Edit",
+    "no": "No",
+    "yes": "Yes",
+    "optional": "Optional",
+    "remove": "Remove"
+  },
+  "tabs": {
+    "today": "Today",
+    "journal": "Journal",
+    "wellness": "Wellness",
+    "support": "Support"
+  },
+  "gender": {
+    "male": "Male",
+    "female": "Female",
+    "nonbinary": "Non-binary",
+    "unspecified": "Prefer not to say"
+  },
+  "moods": {
+    "1": "Awful",
+    "2": "Low",
+    "3": "Okay",
+    "4": "Good",
+    "5": "Great"
+  },
+  "triggers": {
+    "boredom": "Boredom",
+    "stress": "Stress",
+    "loneliness": "Loneliness",
+    "tired": "Tired",
+    "lateNightPhone": "Late-night phone",
+    "socialMedia": "Social media",
+    "anxiety": "Anxiety",
+    "anger": "Anger",
+    "sadness": "Sadness",
+    "rejection": "Rejection",
+    "aloneAtHome": "Alone at home",
+    "alcohol": "Alcohol",
+    "reward": "Reward / celebrating",
+    "other": "Other"
+  },
+  "reasons": {
+    "placeholder": "In your own words…",
+    "suggestions": "Or tap a suggestion:"
+  },
+  "inspiration": {
+    "verse": "Verse for today",
+    "thought": "Thought for today"
+  },
+  "onboarding": {
+    "tagline": "Your private companion for quitting porn and building a life you're proud of.",
+    "promise": {
+      "private": "Private by design. No account, and your answers stay on this phone.",
+      "personal": "A plan tailored to you, based on a short self-check.",
+      "support": "Help in the moment: a panic button, your partner, and local helplines."
+    },
+    "changeLanguage": "Change language",
+    "getStarted": "Get started",
+    "languageTitle": "Choose your language",
+    "rtlRestart": "The layout direction changes after the app restarts.",
+    "aboutTitle": "A little about you",
+    "aboutBody": "This helps us tailor advice and support. It never leaves your phone.",
+    "nameLabel": "What should we call you?",
+    "namePlaceholder": "First name or nickname (optional)",
+    "genderLabel": "Gender",
+    "ageLabel": "Age",
+    "teenNote": "You're not alone, and it's never too early to get help. Consider talking to a parent, school counsellor or another adult you trust.",
+    "countryTitle": "Where do you live?",
+    "countryBody": "We use this to show helplines, emergency numbers and support in your country.",
+    "countrySearch": "Search countries",
+    "languageSuggestion": "Would you like to use the app in {{language}}?",
+    "reasonsTitle": "Why do you want to quit?",
+    "reasonsBody": "We'll show you these when an urge hits. Add at least one.",
+    "faithTitle": "Daily scripture & faith verses",
+    "faithBody": "Optional Bible verses and prayer, including when you press the panic button.",
+    "usePlan": "Use this plan",
+    "startTitle": "Let's set your starting point",
+    "daysCleanLabel": "How many days clean are you already?",
+    "daysCleanHint": "Starting fresh today? Leave it at 0.",
+    "goalLabel": "Your first goal",
+    "partnerLater": "Tip: add an accountability partner later in the Support tab. They'll get a ready-to-send text whenever you press the panic button.",
+    "finish": "Start my journey"
+  },
+  "assessment": {
+    "title": "Self-check",
+    "intro": "Answer honestly. There are no right or wrong answers, and your answers stay on this phone.",
+    "progress": "Question {{current}} of {{total}}",
+    "questions": {
+      "moreThanIntended": "I watch porn more often, or for longer, than I meant to.",
+      "failedToStop": "I've tried to cut down or stop and haven't managed to.",
+      "preoccupied": "I think about porn or urges even when I'm busy with other things.",
+      "escalation": "I've needed more extreme or novel content to get the same effect.",
+      "harmedLife": "My porn use has hurt my relationships, work, studies or sleep.",
+      "coping": "I turn to porn to cope with stress, boredom, loneliness or sadness.",
+      "shame": "I feel guilt, shame or distress after watching.",
+      "despiteProblems": "I keep watching even though I know it's causing problems."
+    },
+    "answers": {
+      "never": "Never",
+      "sometimes": "Sometimes",
+      "often": "Often",
+      "almostAlways": "Almost always"
+    },
+    "frequencyQuestion": "How often do you currently watch porn?",
+    "frequency": {
+      "lessThanMonthly": "Less than once a month",
+      "monthly": "A few times a month",
+      "weekly": "About once a week",
+      "severalWeekly": "Several times a week",
+      "daily": "Daily",
+      "severalDaily": "Several times a day"
+    },
+    "safetyQuestion": "In the past two weeks, have you had thoughts that you'd be better off dead, or of hurting yourself?",
+    "safetyNote": "We ask everyone this. If the answer is yes, we'll show you people who can help right now.",
+    "crisisTitle": "Thank you for telling us",
+    "crisisBody": "You deserve support right now. Please reach out to one of these services. They're free, confidential and there to listen. You can keep using the app too.",
+    "resultTitle": "Your personal plan",
+    "resultLabel": "Your result",
+    "severity": {
+      "low": "Early stage",
+      "moderate": "Moderate",
+      "high": "Significant"
+    },
+    "severityText": {
+      "low": "Porn has some pull on you, but you're in a strong position to change. Building healthy routines now will make that easier.",
+      "moderate": "Porn is affecting your life and is hard to control. That's very common, and with the right tools and support it gets much easier.",
+      "high": "Porn has a strong hold on you right now. You're not broken. This is a pattern many people overcome, and you deserve extra support while you do."
+    },
+    "disclaimer": "This is a self-reflection tool, not a medical diagnosis. If you're worried, talk to a doctor or therapist.",
+    "planTitle": "We've set up the app for you",
+    "plan": {
+      "goal": "A first goal of {{days}} days",
+      "nudges": "Encouraging reminders every {{hours}} hours, {{start}}–{{end}}",
+      "checkIn": "A daily check-in reminder at {{time}}",
+      "dns": "Turn on the adult website blocker (in Protection)",
+      "pause": "A mindful pause when you open social media apps",
+      "partner": "Add an accountability partner",
+      "professional": "Consider a therapist or support group. See Support for helplines"
+    },
+    "planNote": "You can change any of this later in Settings.",
+    "takenOn": "Taken on {{date}}",
+    "applyPlan": "Apply this plan to my settings",
+    "retakeBody": "Your answers change as you recover. Retake the self-check every month or so to see your progress.",
+    "retake": "Retake the self-check"
+  },
+  "today": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening",
+      "morningName": "Good morning, {{name}}",
+      "afternoonName": "Good afternoon, {{name}}",
+      "eveningName": "Good evening, {{name}}"
+    },
+    "daysFree_one": "day free",
+    "daysFree_other": "days free",
+    "intoDay": "{{hours}}h {{minutes}}m into day {{day}}",
+    "toMilestone_one": "{{count}} day to your {{milestone}}-day milestone",
+    "toMilestone_other": "{{count}} days to your {{milestone}}-day milestone",
+    "best": "Best streak",
+    "urgesBeaten": "Urges beaten",
+    "goal": "Goal",
+    "goalReached": "Reached!",
+    "protectionOn": "Protection is on",
+    "protectionOnBody": "Adult sites are blocked on this phone.",
+    "protectionOff": "Turn on protection",
+    "protectionOffBody": "Block adult websites in one tap. Recommended.",
+    "checkInTitle": "Daily check-in",
+    "checkInDone": "Done for today. You're feeling {{mood}}, urge level {{urge}}/10. Nice work showing up.",
+    "checkInPrompt": "Two minutes to notice your mood, urges and triggers.",
+    "checkInButton": "Check in",
+    "factOfDay": "Fact of the day",
+    "moreFacts": "Tap to read more research",
+    "habitsTitle": "Healthy habits",
+    "slipped": "I slipped. Log a relapse"
+  },
+  "panic": {
+    "button": "I'm having an urge",
+    "subtitle": "Get help riding it out right now",
+    "shortcutTitle": "Panic button",
+    "shortcutSubtitle": "Get help with an urge",
+    "partnerMessage": "Hi, it's {{name}}. I'm struggling with an urge right now and pressed my panic button. Could you call or text me?",
+    "someone": "me"
+  },
+  "sos": {
+    "title": "Urge SOS",
+    "heading": "You can get through this.",
+    "body": "Urges peak and fade, usually within 10–20 minutes. You don't have to fight it. Just don't feed it. Breathe with the circle.",
+    "rideOut": "{{time}} to ride it out",
+    "madeIt": "You made it through 10 minutes!",
+    "textPartner": "Text {{name}}",
+    "textPartnerBody": "Open a ready-to-send message asking for support",
+    "partnerOpened": "Message to {{name}} is ready",
+    "partnerOpenedBody": "Tap Send in your messages app. Tap here to open it again.",
+    "callPartner": "Call {{name}}",
+    "rememberWhy": "Remember why",
+    "scriptureTitle": "Scripture for this moment",
+    "prayerTitle": "A short prayer",
+    "prayer": "Lord, You see this moment and You know my weakness. Give me strength to turn away, to choose what is good, and to rest in Your grace. Thank You that Your mercies are new every morning. Amen.",
+    "breathPrayer": "Guided breath prayer",
+    "doNow": "Do one of these now",
+    "burnerBody": "Burn off the energy with a quick workout",
+    "surfingBody": "Guided: observe the craving until it fades",
+    "quickMoves": [
+      "Leave the room you're in. Go where other people are.",
+      "Put your phone in another room or hand it to someone.",
+      "Splash cold water on your face or take a cold shower.",
+      "Do 20 push-ups or squats right now.",
+      "Drink a full glass of water slowly."
+    ],
+    "urgePassed": "The urge passed. I won",
+    "slipped": "I slipped",
+    "crisisNote": "If you're in crisis or thinking about harming yourself, please reach out now."
+  },
+  "relapse": {
+    "title": "Log a slip",
+    "heading": "It's okay. Let's learn from it.",
+    "body": "Logging a slip resets your streak, but your history and best streak are kept. No judgement here. Honesty is how patterns get broken.",
+    "triggerQuestion": "What triggered it?",
+    "whatHappened": "What happened? (time, place, how you felt)",
+    "whatHappenedPlaceholder": "e.g. Couldn't sleep, was scrolling in bed after midnight…",
+    "nextTime": "What will you do differently next time?",
+    "nextTimePlaceholder": "e.g. Charge my phone outside the bedroom",
+    "save": "Log and start again",
+    "thanks": "Thank you for being honest.",
+    "message": "A slip doesn't erase your progress. The days you stayed strong still rewired your brain. Be honest about what happened, learn from it, and begin again right now.",
+    "stayedStrong_one": "You stayed strong for {{count}} day. That counts. Your new streak starts now.",
+    "stayedStrong_other": "You stayed strong for {{count}} days. That counts. Your new streak starts now.",
+    "yourPlan": "Your plan for next time",
+    "beginAgain": "Begin again"
+  },
+  "checkin": {
+    "title": "Daily check-in",
+    "moodQuestion": "How are you feeling?",
+    "urgeQuestion": "How strong were urges today?",
+    "urgeScale": "0 = none, 10 = overwhelming",
+    "triggersQuestion": "Any triggers?",
+    "journal": "Journal",
+    "journalPlaceholder": "What happened today? What helped? What was hard?",
+    "gratitude": "One thing I'm grateful for",
+    "save": "Save check-in"
+  },
+  "journal": {
+    "newCheckIn": "New check-in",
+    "last7": "Last 7 days",
+    "avgMood": "Avg mood",
+    "avgUrge": "Avg urge",
+    "checkIns": "Check-ins",
+    "topTriggers": "Your most common triggers",
+    "planAhead": "Plan ahead for these moments. They're when you're most vulnerable.",
+    "empty": "Your check-ins and reflections will appear here.",
+    "longPressHint": "Long-press an entry to delete it.",
+    "deleteConfirm": "Delete this entry?",
+    "urge": "urge {{level}}/10",
+    "triggers": "Triggers: {{list}}",
+    "gratefulFor": "Grateful for: {{text}}",
+    "slipAfter_one": "Slip after {{count}} day",
+    "slipAfter_other": "Slip after {{count}} days",
+    "nextTime": "Next time: {{text}}"
+  },
+  "wellness": {
+    "tabs": {
+      "meditation": "Meditate",
+      "yoga": "Yoga",
+      "exercise": "Exercise",
+      "diet": "Diet",
+      "sleep": "Sleep",
+      "facts": "Facts"
+    },
+    "intro": {
+      "meditation": "Train your attention so urges lose their grip.",
+      "yoga": "Release tension and reconnect with your body.",
+      "exercise": "Burn off restless energy and boost your mood naturally.",
+      "diet": "Steady energy makes urges easier to handle.",
+      "sleep": "Tired brains have less self-control. Protect your sleep.",
+      "facts": "What research says about recovery, habits and the brain."
+    },
+    "faith": "Faith",
+    "allFacts": "See all facts and sources",
+    "disclaimer": "General wellness guidance, not medical advice. Check with a doctor before starting a new exercise or diet plan, and skip anything that causes pain."
+  },
+  "session": {
+    "notFound": "Session not found.",
+    "step": "Step {{current}} of {{total}}",
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "skip": "Skip",
+    "upNext": "Up next: {{title}}",
+    "doneTitle": "Well done",
+    "doneBody": "You invested time in yourself today. That's how new habits are built."
+  },
+  "facts": {
+    "title": "Research & facts",
+    "intro": "Real findings from published research. New facts appear here automatically.",
+    "source": "Source: {{source}}",
+    "categories": {
+      "science": "Science",
+      "habits": "Habits",
+      "body": "Body",
+      "mind": "Mind",
+      "connection": "Connection"
+    },
+    "items": {
+      "prevalence": {
+        "title": "You are far from alone",
+        "body": "In a nationally representative US survey, 10.3% of men and 7.0% of women reported clinically significant distress or problems from difficulty controlling sexual urges and behaviour."
+      },
+      "icd11": {
+        "title": "It's a recognised condition",
+        "body": "The World Health Organization's ICD-11 includes compulsive sexual behaviour disorder (6C72): a persistent failure to control intense sexual urges, leading to repetitive behaviour despite harm."
+      },
+      "cueReactivity": {
+        "title": "Cues light up the brain's reward system",
+        "body": "In an fMRI study, men seeking treatment for problematic porn use showed stronger reward-centre (ventral striatum) reactions to cues that predicted erotic images. Avoiding cues really does help."
+      },
+      "moralIncongruence": {
+        "title": "Shame makes it feel worse",
+        "body": "Research finds that feeling porn use conflicts with your values strongly predicts distress. Self-compassion, not self-hatred, is linked to lasting change."
+      },
+      "habits66": {
+        "title": "New habits take about two months",
+        "body": "In a study of people building daily habits, it took a median of 66 days for a behaviour to become automatic (range 18–254). Missing one day didn't derail progress."
+      },
+      "exerciseCravings": {
+        "title": "Moving reduces cravings",
+        "body": "A meta-analysis found that even short bouts of physical activity rapidly reduce cravings. Exercise is one of the fastest urge-breakers you have."
+      },
+      "urgeSurfing": {
+        "title": "Urges pass if you ride them",
+        "body": "In a trial, a brief mindfulness technique called urge surfing helped people reduce acting on cravings. Noticing an urge without obeying it weakens it over time."
+      },
+      "mbrp": {
+        "title": "Mindfulness prevents relapse",
+        "body": "Mindfulness-based relapse prevention led to fewer days of substance use and heavy drinking at 12-month follow-up compared with standard treatment."
+      },
+      "sleepEmotion": {
+        "title": "Sleep loss weakens self-control",
+        "body": "After a night without sleep, the brain's emotional centre (amygdala) reacted about 60% more strongly, with weaker control from the prefrontal cortex."
+      },
+      "slowBreathing": {
+        "title": "Slow breathing calms your body",
+        "body": "A systematic review found slow breathing (around 6 breaths per minute) increases heart-rate variability and calm, and reduces anxiety and arousal."
+      },
+      "ifThenPlans": {
+        "title": "If-then plans work",
+        "body": "Across 94 studies, making specific if-then plans (\"If I'm in bed with my phone, then I'll put it in the kitchen\") had a medium-to-large effect on reaching goals."
+      },
+      "lapseNotRelapse": {
+        "title": "A slip is not a relapse",
+        "body": "Seeing a single slip as total failure (the abstinence violation effect) makes a full relapse more likely. Treat a slip as information, not a verdict."
+      },
+      "socialConnection": {
+        "title": "Connection is protective",
+        "body": "A meta-analysis of 148 studies found people with stronger social relationships had a 50% greater likelihood of survival. Isolation is a risk; connection is medicine."
+      },
+      "peerSupport": {
+        "title": "Peer support groups help",
+        "body": "A Cochrane review found that 12-step mutual-help programmes were as effective as other treatments and often better at sustaining abstinence."
+      },
+      "gratitude": {
+        "title": "Gratitude lifts your mood",
+        "body": "People who wrote down things they were grateful for each week felt better about their lives and were more optimistic than those who listed hassles."
+      },
+      "act": {
+        "title": "Therapy for porn use works",
+        "body": "In a randomised trial, Acceptance and Commitment Therapy led to large reductions in porn viewing compared with a waitlist, and the gains largely held at follow-up."
+      }
+    }
+  },
+  "health": {
+    "title": "Fitness & smartwatch",
+    "heading": "Connect your fitness tracker",
+    "body": "Link {{provider}} to see your steps, sleep and heart rate alongside your recovery.",
+    "why": "Exercise and good sleep make urges easier to resist, so tracking them helps you spot patterns.",
+    "connect": "Connect {{provider}}",
+    "connected": "Connected to {{provider}}. Your watch or tracker data appears in Wellness.",
+    "isConnected": "Connected",
+    "disconnect": "Disconnect",
+    "failed": "Permission wasn't granted. You can try again, or allow access in your phone's health settings.",
+    "installHealthConnect": "Install or update Google's Health Connect app from the Play Store, then come back. Fitbit, Samsung Health, Garmin and Wear OS can all sync into it.",
+    "unavailableIos": "Apple Health isn't available on this device.",
+    "unavailableWeb": "Fitness tracking works in the Android and iPhone apps.",
+    "connectTitle": "Connect a fitness tracker",
+    "connectTeaser": "Optional: see steps, sleep and heart rate here",
+    "steps": "Steps today",
+    "sleep": "Sleep",
+    "heart": "Heart rate",
+    "privacy": "Health data is read on your phone only and never uploaded."
+  },
+  "protection": {
+    "title": "Protection",
+    "intro": "Make it harder to reach adult content in weak moments. Everything is set up with a tap and can be turned off any time.",
+    "dnsSection": "Adult website blocker",
+    "dnsTitle": "Block adult websites",
+    "dnsWhat": "Uses a family-safe DNS service",
+    "dnsOn": "Active on this phone",
+    "dnsOff": "Off",
+    "dnsExplain": "Tap the button and allow the connection request. That's it. Adult websites will stop loading in every browser and app on this phone.",
+    "dnsDisclosureTitle": "About the blocker",
+    "dnsDisclosure": "Android will ask to allow a VPN connection. Clarity Recovery uses it only to send website name lookups (DNS) to CleanBrowsing's Family Filter, which blocks adult sites. Your browsing traffic does not go through the VPN and nothing is logged by the app.",
+    "turnOnDns": "Turn on blocker",
+    "dnsOnBody": "Adult websites are now blocked. You'll see a small key icon in your status bar. That's the blocker running.",
+    "alwaysOn": "Keep it on after restarts",
+    "alwaysOnBody": "Open VPN settings, tap the gear next to Clarity Recovery and switch on \"Always-on VPN\".",
+    "turnOff": "Turn off",
+    "androidManualIntro": "This version can't turn the blocker on by itself, but Android has a built-in setting that does the same thing:",
+    "androidManualSteps": [
+      "Tap \"Copy address\" below.",
+      "Open Settings → Network & internet → Private DNS.",
+      "Choose \"Private DNS provider hostname\".",
+      "Paste {{host}} and tap Save."
+    ],
+    "copyHost": "Copy address",
+    "copied": "Copied!",
+    "openSettings": "Open settings",
+    "iosIntro": "On iPhone, the blocker is a free profile from CleanBrowsing:",
+    "iosSteps": [
+      "Tap \"Install blocker profile\" and allow the download.",
+      "Open the Settings app and tap \"Profile Downloaded\" near the top.",
+      "Tap Install and enter your passcode.",
+      "Done. Adult sites are now blocked in Safari and other apps."
+    ],
+    "iosInstall": "Install blocker profile",
+    "webNote": "The blocker works in the Android and iPhone apps.",
+    "dnsProvider": "Filtering by CleanBrowsing Family Filter (cleanbrowsing.org).",
+    "pauseSection": "Mindful pause",
+    "pauseTitle": "Pause before scrolling",
+    "pauseWhat": "When you open apps like Instagram or TikTok, you'll see a calm 10-second pause first.",
+    "pauseApps": "Pause these apps:",
+    "turnOnPause": "Turn on mindful pause",
+    "pauseDisclosureTitle": "Allow accessibility access",
+    "pauseDisclosure": "To notice when you open a chosen app, Clarity Recovery needs Android's accessibility permission. It only checks which app is on screen. It never reads your messages, what you type or screen content, and nothing leaves your phone.",
+    "pauseNeedsService": "One more step: switch on Clarity Recovery in accessibility settings.",
+    "pauseSteps": [
+      "Tap \"Open settings\".",
+      "Tap \"Installed apps\" (or \"Downloaded apps\").",
+      "Tap \"Clarity Recovery – Mindful pause\" and switch it on."
+    ],
+    "pauseNeedsBuild": "The mindful pause works in the Android app.",
+    "iosScreenTime": "iPhone doesn't let apps pause other apps, but Screen Time can add a limit:",
+    "iosScreenTimeSteps": [
+      "Open Settings → Screen Time → App Limits.",
+      "Tap Add Limit and choose Social.",
+      "Set a short daily limit, such as 15 minutes."
+    ],
+    "moreSection": "More tools",
+    "partnerTitle": "Accountability partner",
+    "partnerBody": "Someone who gets a text when you press the panic button",
+    "privacy": "Protection runs on your phone. Clarity Recovery doesn't see or store the websites you visit."
+  },
+  "pause": {
+    "title": "Pause for a moment",
+    "body": "You're opening {{app}}. Is this what you really want right now?",
+    "breathe": "Take three slow breaths with the circle.",
+    "leave": "Leave {{app}}",
+    "notNow": "I still want to open it",
+    "continue": "Open {{app}} for 10 minutes"
+  },
+  "instagram": {
+    "title": "Instagram follow check",
+    "teaser": "Find adult-content accounts you follow",
+    "heading": "Clean up who you follow",
+    "body": "Your feed is shaped by who you follow. This tool reads your own Instagram data export and highlights accounts that look like adult-content creators, so you can unfollow them.",
+    "howTitle": "How to get your Instagram data",
+    "steps": [
+      "In Instagram, open your profile → menu ☰ → Accounts Center.",
+      "Tap \"Your information and permissions\" → \"Download your information\".",
+      "Choose \"Some of your information\" and select \"Followers and following\".",
+      "Choose \"Download to device\", format JSON, and tap \"Create files\".",
+      "When Instagram emails you (usually within minutes), download the .zip file.",
+      "Come back here and tap \"Choose file\"."
+    ],
+    "openAccountsCenter": "Open Accounts Center",
+    "choose": "Choose file",
+    "chooseAnother": "Check another file",
+    "error": "We couldn't find your following list in that file. Make sure you chose the .zip from Instagram (or following.json inside it).",
+    "summary": "You follow {{total}} accounts. {{count}} may share adult content.",
+    "summaryAdvice": "Tap an account to open it in Instagram and unfollow. Fewer triggers in your feed means fewer urges.",
+    "summaryClean": "Nothing obvious stood out. Great job keeping your feed clean.",
+    "heuristicNote": "Matches are based on account names only, so check before unfollowing.",
+    "filter": {
+      "all": "All",
+      "likely": "Likely",
+      "possible": "Possible"
+    },
+    "confidence": {
+      "likely": "Likely adult content (\"{{keyword}}\")",
+      "possible": "Possibly suggestive (\"{{keyword}}\")"
+    },
+    "privacy": "Your file is analyzed on this phone and never uploaded."
+  },
+  "support": {
+    "partnerSection": "Accountability",
+    "partnerTitle": "Accountability partner",
+    "partnerBody": "Recovery is easier with someone in your corner, such as a trusted friend, mentor, pastor or counsellor. Nothing is shared unless you send it.",
+    "name": "Name",
+    "namePlaceholder": "e.g. Sam",
+    "phone": "Phone number",
+    "savePartner": "Save partner",
+    "alertOnPanic": "Text them when I press panic",
+    "alertOnPanicBody": "Opens a ready-to-send message. You just tap Send.",
+    "struggling": "I'm struggling",
+    "strugglingBody": "Text a request for support",
+    "strugglingMessage": "Hey, I'm having a hard time right now. Could you check in on me?",
+    "call": "Call {{name}}",
+    "weekly": "Send weekly update",
+    "weeklyBody": "Text your progress for the last 7 days",
+    "removePartner": "Remove partner",
+    "shareTitle": "Share your progress",
+    "shareBody": "Send your weekly summary through any app, such as email, WhatsApp or Signal.",
+    "share": "Share weekly update",
+    "report": "My weekly recovery update:\n• Current streak: {{streak}}\n• Best streak: {{best}}\n• Urges resisted this week: {{urges}}\n• Slips this week: {{slips}}\n• Check-ins this week: {{checkins}} (avg urge {{avgUrge}}/10)\n\nThanks for keeping me accountable.",
+    "toolsSection": "Tools",
+    "protectionBody": "Website blocker, mindful pause, Instagram check",
+    "storiesBody": "Real stories from people who got free",
+    "factsBody": "What research says about recovery",
+    "helpSection": "Get help",
+    "professional": "Compulsive porn use is common and treatable. A therapist experienced in compulsive sexual behaviour, a support group or your faith community can make a real difference."
+  },
+  "helplines": {
+    "title": "Helplines",
+    "intro": "Free, confidential services near you. You can change your country any time.",
+    "changeCountry": "Tap to change country",
+    "crisisTitle": "In crisis? Reach out now",
+    "crisisBody": "Free, confidential support in {{country}}:",
+    "emergency": "Emergency services: {{number}}",
+    "findAHelpline": "Find a helpline in any country",
+    "website": "Website",
+    "allHelplines": "All helplines & support groups",
+    "recoveryTitle": "Recovery groups",
+    "recoveryBody": "Free peer-support fellowships with meetings online and around the world.",
+    "verifyNote": "Numbers are checked regularly, but services can change. If a number doesn't work, use findahelpline.com."
+  },
+  "stories": {
+    "title": "Stories of freedom",
+    "heading": "People who got free",
+    "body": "Real stories, shared with permission, from people who have overcome porn addiction.",
+    "empty": "New stories are on their way. Check back soon.",
+    "shareTitle": "Share your story",
+    "shareBody": "Has Clarity Recovery helped you? Your story could give someone else hope. We only publish with your written permission, using your first name or initials.",
+    "share": "Share my story",
+    "emailSubject": "My recovery story",
+    "emailBody": "First name or initials to show:\nCountry:\nHow long you've been free:\n\nMy story:\n\n\nI give permission for Clarity Recovery to publish this story in the app (yes/no):",
+    "consentNote": "Every story is real and published with consent. We never invent testimonials."
+  },
+  "paywall": {
+    "title": "Start your free month",
+    "activeTitle": "You're a Clarity member",
+    "subtitle": "Try every feature free for 1 month. Cancel any time before it ends and you won't be charged.",
+    "features": {
+      "sessions": "All guided meditation, yoga and exercise sessions",
+      "protection": "Mindful pause for social media apps",
+      "instagram": "Instagram follow check",
+      "health": "Fitness tracker & smartwatch insights",
+      "themes": "Themes and colour customisation",
+      "insights": "New research and recovery stories as they're published"
+    },
+    "alwaysFree": "The panic button, helplines, streak tracker, check-ins and website blocker are always free.",
+    "plans": {
+      "monthly": "Monthly",
+      "sixMonth": "6 months",
+      "annual": "Yearly"
+    },
+    "periods": {
+      "monthly": "month",
+      "sixMonth": "6 months",
+      "annual": "year"
+    },
+    "trial": {
+      "day_one": "{{count}} day free",
+      "day_other": "{{count}} days free",
+      "week_one": "{{count}} week free",
+      "week_other": "{{count}} weeks free",
+      "month_one": "{{count}} month free",
+      "month_other": "{{count}} months free",
+      "year_one": "{{count}} year free",
+      "year_other": "{{count}} years free"
+    },
+    "perMonth": "{{price}}/month",
+    "bestValue": "Best value",
+    "startTrial": "Start free trial",
+    "subscribe": "Subscribe",
+    "trialTerms": "{{trial}}, then {{price}} per {{period}}. Renews automatically. Cancel any time in your store account.",
+    "terms": "{{price}} per {{period}}. Renews automatically. Cancel any time in your store account.",
+    "restore": "Restore purchases",
+    "manage": "Manage subscription",
+    "restored": "Your subscription has been restored.",
+    "nothingToRestore": "We couldn't find an active subscription for this account.",
+    "error": "The purchase didn't go through. Please try again.",
+    "subscribed": "Your subscription is active. Thank you for supporting Clarity Recovery.",
+    "inTrial": "Your free trial is active until {{date}}.",
+    "noPlans": "Subscriptions are unavailable right now. Please try again later.",
+    "notConfigured": "Subscriptions aren't set up in this build yet, so every feature is unlocked.",
+    "webNote": "Subscriptions are available in the Android and iPhone apps.",
+    "notNow": "Not now",
+    "localPricing": "Prices are shown in your local currency and set for your country by Google Play or the App Store.",
+    "bannerTitle": "Get 1 month free",
+    "bannerBody": "Unlock every tool for your recovery.",
+    "lockedTitle": "{{feature}} is a member feature",
+    "lockedBody": "Start your free month to unlock it. Your panic button and helplines are always free."
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Membership",
+    "subscription": "Subscription",
+    "subscriptionActive": "Active",
+    "subscriptionTrial": "Free trial",
+    "subscriptionFree": "Free plan. Tap to start your free month",
+    "subscriptionDev": "All features unlocked (billing not configured)",
+    "aboutYou": "About you",
+    "profile": "Gender, age & country",
+    "language": "Language",
+    "restart": "Restart now",
+    "assessment": "Self-check & personal plan",
+    "assessmentNone": "Not taken yet",
+    "recovery": "Recovery",
+    "goal": "Goal",
+    "reasons": "Your reasons",
+    "faith": "Daily scripture & faith verses",
+    "faithBody": "Bible verses and prayer, including on the panic screen.",
+    "appSection": "App",
+    "nudgesOn": "Every {{hours}}h, {{start}}–{{end}}",
+    "nudgesOff": "Off",
+    "privacy": "Privacy",
+    "privacyBody": "Clarity Recovery has no account and no servers for your data. Everything you enter is stored only on this phone. Uninstalling the app deletes it.",
+    "erase": "Erase all data",
+    "eraseTitle": "Erase all data?",
+    "eraseBody": "This deletes your streak, journal and settings from this phone.",
+    "version": "Version {{version}}"
+  },
+  "profileEdit": {
+    "title": "About you"
+  },
+  "appearance": {
+    "title": "Theme & colours",
+    "preview": "Preview",
+    "mode": "Light or dark",
+    "modes": {
+      "system": "Automatic",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "theme": "Theme",
+    "themes": {
+      "serene": "Serene",
+      "dawn": "Dawn",
+      "ocean": "Ocean",
+      "forest": "Forest",
+      "sand": "Sand"
+    },
+    "accent": "Accent colour",
+    "accentBody": "Pick your own highlight colour. Tap again to go back to the theme colour."
+  },
+  "reminders": {
+    "title": "Reminders",
+    "nudges": "Encouraging reminders",
+    "nudgesBody": "Short, discreet messages through the day",
+    "every": "How often",
+    "everyHours_one": "Every hour",
+    "everyHours_other": "Every {{count}} hours",
+    "from": "Starting at",
+    "until": "Last one at",
+    "schedule": "You'll get reminders at {{times}}.",
+    "checkIn": "Daily check-in reminder",
+    "checkInBody": "A nudge to reflect on your day",
+    "discreet": "Reminder text never mentions porn, so it's safe on your lock screen.",
+    "denied": "Notifications are turned off for Clarity Recovery. Please allow them in your phone's settings.",
+    "webNote": "Reminders work in the Android and iPhone apps."
+  },
+  "notifications": {
+    "checkInTitle": "Time for your daily check-in",
+    "checkInBody": "Take two minutes to reflect on your day.",
+    "nudges": [
+      "You're doing better than you think. Keep going.",
+      "Take three slow breaths. You've got this.",
+      "Remember why you started.",
+      "Every hour you choose differently, your brain rewires a little more.",
+      "Feeling restless? A quick walk works wonders.",
+      "Have you had some water today?",
+      "Reach out to someone you trust today.",
+      "Proud of you for showing up today."
+    ]
+  },
+  "affirmations": [
+    "An urge is a wave. It rises, peaks and passes, and you don't have to act on it.",
+    "Every day you choose differently, your brain rewires a little more.",
+    "You are not your urges. You are the one who notices them.",
+    "Progress, not perfection. One honest day at a time.",
+    "The discomfort you feel right now is your brain healing.",
+    "You are building a life you won't want to escape from.",
+    "Real connection beats a screen every single time.",
+    "Boredom, stress and loneliness are signals, not commands.",
+    "You have survived every hard moment so far. This one too.",
+    "Small choices, repeated daily, become who you are.",
+    "Rest, move, eat well, reach out. Take care of the body your mind lives in.",
+    "Shame keeps you stuck. Compassion helps you move forward."
+  ],
+  "reasonSuggestions": [
+    "Be fully present with the people I love",
+    "Build a real, healthy relationship",
+    "Get my focus and energy back",
+    "Feel proud of who I am",
+    "Live by my values and faith",
+    "Stop feeling shame and secrecy"
+  ],
+  "habits": {
+    "meditate": "Meditate or breathe",
+    "move": "Exercise",
+    "stretch": "Yoga / stretch",
+    "eat": "Eat balanced meals",
+    "water": "Drink enough water",
+    "pray": "Pray or read scripture",
+    "connect": "Talk with someone",
+    "sleep": "Phone out of the bedroom"
+  },
+  "sessions": {
+    "box-breathing": {
+      "title": "Calm breathing",
+      "summary": "Slow your heart rate and quiet the urge in 4 minutes.",
+      "steps": [
+        {
+          "title": "Settle in",
+          "text": "Sit comfortably. Drop your shoulders and unclench your jaw."
+        },
+        {
+          "title": "Breathe with the circle",
+          "text": "Breathe in as it grows, hold, and breathe out slowly as it shrinks."
+        },
+        {
+          "title": "Notice",
+          "text": "Let your breath return to normal. Notice how your body feels now compared to when you started."
+        }
+      ]
+    },
+    "urge-surfing": {
+      "title": "Urge surfing",
+      "summary": "Observe a craving without acting on it until it passes.",
+      "steps": [
+        {
+          "title": "Pause",
+          "text": "Sit down somewhere safe. Put your phone face down after starting this timer."
+        },
+        {
+          "title": "Locate the urge",
+          "text": "Where do you feel it in your body? Chest, stomach, face, hands? Just notice — no judgement."
+        },
+        {
+          "title": "Describe it",
+          "text": "Is it hot or cold, tight or buzzing? How strong is it from 1 to 10? Name it: \"This is an urge.\""
+        },
+        {
+          "title": "Ride the wave",
+          "text": "Breathe into the area. Imagine the urge as a wave rising — and you are surfing on top of it, not drowning in it."
+        },
+        {
+          "title": "Watch it change",
+          "text": "Notice the urge shifting or fading. Urges always peak and pass when you do not feed them."
+        },
+        {
+          "title": "Choose your next step",
+          "text": "Rate the urge again. Now choose something good to do next: walk, call someone, drink water."
+        }
+      ]
+    },
+    "body-scan": {
+      "title": "Body scan for sleep",
+      "summary": "Release tension before bed, when urges often hit hardest.",
+      "steps": [
+        {
+          "title": "Lie down",
+          "text": "Lie on your back, arms by your sides. Close your eyes."
+        },
+        {
+          "title": "Feet and legs",
+          "text": "Bring attention to your feet, calves and thighs. Let them grow heavy."
+        },
+        {
+          "title": "Hips and belly",
+          "text": "Notice your belly rising and falling. Soften your stomach."
+        },
+        {
+          "title": "Chest and back",
+          "text": "Feel your back sinking into the bed. Let your chest be open and easy."
+        },
+        {
+          "title": "Arms and hands",
+          "text": "Relax your shoulders, arms and fingers."
+        },
+        {
+          "title": "Face",
+          "text": "Soften your forehead, eyes, jaw and tongue."
+        },
+        {
+          "title": "Whole body",
+          "text": "Feel your whole body resting, safe and still. Drift off whenever you are ready."
+        }
+      ]
+    },
+    "self-compassion": {
+      "title": "Self-compassion",
+      "summary": "Replace shame with kindness — especially after a hard day.",
+      "steps": [
+        {
+          "title": "Acknowledge",
+          "text": "Place a hand on your chest. Say silently: \"This is a moment of struggle.\""
+        },
+        {
+          "title": "You are not alone",
+          "text": "Remind yourself: \"Many people fight this same battle. I am not alone.\""
+        },
+        {
+          "title": "Be kind",
+          "text": "Say: \"May I be patient with myself. May I give myself the kindness I need.\""
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe slowly and let the words sink in."
+        }
+      ]
+    },
+    "breath-prayer": {
+      "title": "Breath prayer",
+      "summary": "A simple Christian contemplative practice paired with your breath.",
+      "steps": [
+        {
+          "title": "Be still",
+          "text": "\"Be still, and know that I am God.\" (Psalm 46:10) Sit quietly and slow your breathing."
+        },
+        {
+          "title": "Pray with your breath",
+          "text": "Breathe in: \"Create in me a clean heart, O God.\" Breathe out: \"Renew a right spirit within me.\""
+        },
+        {
+          "title": "Listen",
+          "text": "Rest in silence. Hand your urges, worries and shame over to God."
+        },
+        {
+          "title": "Amen",
+          "text": "Close with thanks for today and ask for strength for the next hour."
+        }
+      ]
+    },
+    "morning-flow": {
+      "title": "Morning wake-up flow",
+      "summary": "8 minutes to start the day energised, not on your phone.",
+      "steps": [
+        {
+          "title": "Child's pose",
+          "text": "Knees wide, big toes together, arms long in front. Breathe into your back."
+        },
+        {
+          "title": "Cat-cow",
+          "text": "On hands and knees, arch your back as you inhale, round it as you exhale."
+        },
+        {
+          "title": "Downward dog",
+          "text": "Lift your hips up and back. Pedal your heels gently."
+        },
+        {
+          "title": "Low lunge (right)",
+          "text": "Step the right foot forward, lower the back knee, lift your arms."
+        },
+        {
+          "title": "Low lunge (left)",
+          "text": "Switch sides: left foot forward, arms up, chest open."
+        },
+        {
+          "title": "Standing forward fold",
+          "text": "Walk to the front, fold forward with soft knees. Let your head hang."
+        },
+        {
+          "title": "Mountain pose",
+          "text": "Roll up slowly. Stand tall, feet grounded, palms forward. Set an intention for the day."
+        },
+        {
+          "title": "Sun reach",
+          "text": "Inhale arms overhead, exhale hands to heart. Repeat slowly."
+        }
+      ]
+    },
+    "evening-wind-down": {
+      "title": "Evening wind-down",
+      "summary": "Gentle poses to calm the nervous system before bed.",
+      "steps": [
+        {
+          "title": "Seated forward fold",
+          "text": "Legs out straight, fold forward from the hips. Breathe slowly."
+        },
+        {
+          "title": "Supine twist (right)",
+          "text": "Lie down, drop both knees to the right, look left."
+        },
+        {
+          "title": "Supine twist (left)",
+          "text": "Drop both knees to the left, look right."
+        },
+        {
+          "title": "Happy baby",
+          "text": "Hold the outsides of your feet, knees wide, rock gently."
+        },
+        {
+          "title": "Legs up the wall",
+          "text": "Rest your legs up a wall or headboard. Let your arms fall open."
+        },
+        {
+          "title": "Corpse pose",
+          "text": "Lie flat and completely still. Let the day go."
+        }
+      ]
+    },
+    "urge-reset-yoga": {
+      "title": "5-minute urge reset",
+      "summary": "Move the restless energy out of your body.",
+      "steps": [
+        {
+          "title": "Shake it out",
+          "text": "Stand and shake your hands, arms and legs loosely."
+        },
+        {
+          "title": "Chair pose",
+          "text": "Sit back as if into a chair, arms up. Hold and breathe."
+        },
+        {
+          "title": "Warrior II (right)",
+          "text": "Wide stance, right knee bent, arms long, gaze over the right hand."
+        },
+        {
+          "title": "Warrior II (left)",
+          "text": "Switch sides. Strong legs, steady breath."
+        },
+        {
+          "title": "Tree pose",
+          "text": "Balance on one foot, the other on your calf or thigh. Switch halfway."
+        },
+        {
+          "title": "Child's pose",
+          "text": "Rest forehead to floor. Notice the urge has less power now."
+        }
+      ]
+    },
+    "urge-burner": {
+      "title": "6-minute urge burner",
+      "summary": "High-intensity bodyweight circuit. No equipment needed.",
+      "steps": [
+        {
+          "title": "Jumping jacks",
+          "text": "Fast and steady."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "Push-ups",
+          "text": "From toes or knees. Keep your body straight."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "Squats",
+          "text": "Hips back, chest up, drive through your heels."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "Plank",
+          "text": "Forearms down, squeeze your core and glutes."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "Lunges",
+          "text": "Alternate legs, knee just above the floor."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "Mountain climbers",
+          "text": "Drive knees to chest quickly."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "High knees",
+          "text": "Run on the spot, knees up."
+        },
+        {
+          "title": "Rest",
+          "text": "Breathe."
+        },
+        {
+          "title": "Burpees",
+          "text": "Squat, jump back, jump in, jump up. Go at your own pace."
+        },
+        {
+          "title": "Cool down",
+          "text": "Walk around slowly and shake out your arms and legs."
+        }
+      ]
+    },
+    "beginner-strength": {
+      "title": "Beginner strength",
+      "summary": "15 minutes, 3 rounds. Builds confidence and discipline.",
+      "steps": [
+        {
+          "title": "Round 1: Squats",
+          "text": "12–15 slow, controlled reps."
+        },
+        {
+          "title": "Round 1: Push-ups",
+          "text": "8–12 reps (knees are fine)."
+        },
+        {
+          "title": "Round 1: Glute bridges",
+          "text": "15 reps, squeeze at the top."
+        },
+        {
+          "title": "Round 1: Plank",
+          "text": "Hold strong."
+        },
+        {
+          "title": "Rest",
+          "text": "Drink some water."
+        },
+        {
+          "title": "Round 2: Squats",
+          "text": "12–15 slow, controlled reps."
+        },
+        {
+          "title": "Round 2: Push-ups",
+          "text": "8–12 reps (knees are fine)."
+        },
+        {
+          "title": "Round 2: Glute bridges",
+          "text": "15 reps, squeeze at the top."
+        },
+        {
+          "title": "Round 2: Plank",
+          "text": "Hold strong."
+        },
+        {
+          "title": "Rest",
+          "text": "Drink some water."
+        },
+        {
+          "title": "Round 3: Squats",
+          "text": "12–15 slow, controlled reps."
+        },
+        {
+          "title": "Round 3: Push-ups",
+          "text": "8–12 reps (knees are fine)."
+        },
+        {
+          "title": "Round 3: Glute bridges",
+          "text": "15 reps, squeeze at the top."
+        },
+        {
+          "title": "Round 3: Plank",
+          "text": "Hold strong."
+        },
+        {
+          "title": "Rest",
+          "text": "Drink some water."
+        },
+        {
+          "title": "Stretch",
+          "text": "Stretch your legs, chest and shoulders."
+        }
+      ]
+    },
+    "walk-it-off": {
+      "title": "Walk it off",
+      "summary": "A 20-minute brisk walk outside — the simplest urge breaker.",
+      "steps": [
+        {
+          "title": "Get outside",
+          "text": "Put on shoes and leave the room. Being in public is a powerful barrier."
+        },
+        {
+          "title": "Easy pace",
+          "text": "Walk at a comfortable pace and warm up."
+        },
+        {
+          "title": "Brisk pace",
+          "text": "Speed up until you breathe harder but can still talk."
+        },
+        {
+          "title": "Look around",
+          "text": "Name 5 things you can see, 4 you can hear, 3 you can feel."
+        },
+        {
+          "title": "Cool down",
+          "text": "Slow down and head home. Notice how much calmer you feel."
+        }
+      ]
+    },
+    "grounding": {
+      "title": "5-4-3-2-1 grounding",
+      "summary": "Pull your mind out of the urge and back into the room in 4 minutes.",
+      "steps": [
+        {
+          "title": "Pause",
+          "text": "Stop what you're doing. Plant both feet on the floor and take one slow breath."
+        },
+        {
+          "title": "5 things you see",
+          "text": "Look around and name five things you can see. Notice colours and shapes."
+        },
+        {
+          "title": "4 things you feel",
+          "text": "Notice four things you can feel: your clothes, the chair, the air, your feet."
+        },
+        {
+          "title": "3 things you hear",
+          "text": "Listen for three sounds, near and far."
+        },
+        {
+          "title": "2 things you smell",
+          "text": "Find two things you can smell, or remember two smells you like."
+        },
+        {
+          "title": "1 thing you taste",
+          "text": "Notice one thing you can taste, or take a sip of water."
+        },
+        {
+          "title": "Breathe",
+          "text": "Take three slow breaths. Notice how the urge has changed."
+        }
+      ]
+    },
+    "gratitude": {
+      "title": "Gratitude reflection",
+      "summary": "Shift your focus to what's good in your life.",
+      "steps": [
+        {
+          "title": "Settle",
+          "text": "Sit comfortably, close your eyes and breathe slowly."
+        },
+        {
+          "title": "Someone you're thankful for",
+          "text": "Bring to mind a person who has helped you. Picture their face and silently thank them."
+        },
+        {
+          "title": "Something in your body",
+          "text": "Think of something your body does for you every day, like breathing, walking or seeing."
+        },
+        {
+          "title": "A small good thing today",
+          "text": "Recall one small good moment from today, however tiny."
+        },
+        {
+          "title": "Carry it with you",
+          "text": "Notice the warmth of gratitude in your chest. Take it with you into the rest of your day."
+        }
+      ]
+    },
+    "desk-stretch": {
+      "title": "Desk & phone-neck stretch",
+      "summary": "Undo hours of screen posture in 4 minutes.",
+      "steps": [
+        {
+          "title": "Neck rolls",
+          "text": "Slowly roll your head in a half circle, side to side. Never force it."
+        },
+        {
+          "title": "Shoulder rolls",
+          "text": "Roll your shoulders up, back and down. Then reverse."
+        },
+        {
+          "title": "Seated twist (right)",
+          "text": "Sit tall and twist gently to the right, hand on the back of the chair."
+        },
+        {
+          "title": "Seated twist (left)",
+          "text": "Twist gently to the left. Keep breathing."
+        },
+        {
+          "title": "Chest opener",
+          "text": "Clasp your hands behind your back and lift your chest."
+        },
+        {
+          "title": "Forward fold",
+          "text": "Stand, soften your knees and fold forward. Let your head hang heavy."
+        }
+      ]
+    },
+    "cardio-10": {
+      "title": "10-minute cardio",
+      "summary": "No equipment, low impact. Boosts mood and energy.",
+      "steps": [
+        {
+          "title": "March on the spot",
+          "text": "Lift your knees and swing your arms to warm up."
+        },
+        {
+          "title": "Step jacks",
+          "text": "Step one foot out while raising your arms, then switch sides."
+        },
+        {
+          "title": "Squats",
+          "text": "Sit back into a squat and stand up tall."
+        },
+        {
+          "title": "Fast feet",
+          "text": "Run lightly on the spot, staying on the balls of your feet."
+        },
+        {
+          "title": "Reverse lunges",
+          "text": "Step back into a lunge, alternating legs."
+        },
+        {
+          "title": "Boxing punches",
+          "text": "Punch forward quickly, keeping your core tight."
+        },
+        {
+          "title": "Skater steps",
+          "text": "Step side to side like a speed skater."
+        },
+        {
+          "title": "Knee drives",
+          "text": "Drive one knee up to your hands, then switch."
+        },
+        {
+          "title": "Squat pulses",
+          "text": "Hold a low squat and pulse gently."
+        },
+        {
+          "title": "Cool down",
+          "text": "Walk slowly and stretch your legs and arms."
+        }
+      ]
+    }
+  },
+  "dietTips": [
+    {
+      "title": "Remember HALT",
+      "body": "Hungry, Angry, Lonely, Tired — urges are much stronger in these states. Regular meals are one of the easiest ways to lower your risk."
+    },
+    {
+      "title": "Protein-rich breakfast",
+      "body": "Eggs, Greek yoghurt, oats with nuts or beans keep blood sugar steady and reduce mid-morning cravings and irritability."
+    },
+    {
+      "title": "Go easy on sugar spikes",
+      "body": "Sugary snacks and energy drinks give a quick high followed by a crash — and crashes often bring urges. Pair carbs with protein or fibre."
+    },
+    {
+      "title": "Cut caffeine after 2 pm",
+      "body": "Poor sleep is a major trigger. Stopping caffeine early in the afternoon helps you fall asleep instead of scrolling."
+    },
+    {
+      "title": "Watch alcohol",
+      "body": "Alcohol lowers inhibition and is a common relapse trigger. If you drink, have a plan for getting home and putting your phone away."
+    },
+    {
+      "title": "Hydrate",
+      "body": "Mild dehydration causes fatigue and low mood. Aim for a glass of water with every meal and keep a bottle nearby."
+    },
+    {
+      "title": "Omega-3s and whole foods",
+      "body": "Oily fish, walnuts, chia and flaxseed, leafy greens and colourful vegetables support brain health and mood."
+    },
+    {
+      "title": "Simple meal ideas",
+      "body": "Breakfast: eggs + wholegrain toast + fruit. Lunch: rice, beans or chicken, and vegetables. Dinner: fish or lentils with roasted veg. Snack: nuts, fruit, yoghurt."
+    }
+  ],
+  "sleepTips": [
+    {
+      "title": "Phone out of the bedroom",
+      "body": "Late-night scrolling is one of the most common triggers. Charge your phone in another room and use a cheap alarm clock."
+    },
+    {
+      "title": "Same wake-up time every day",
+      "body": "A consistent wake time, even at weekends, sets your body clock and makes it easier to fall asleep at night."
+    },
+    {
+      "title": "Wind down for 30 minutes",
+      "body": "Dim the lights, read a paper book, stretch or pray. Give your brain a signal that the day is ending."
+    },
+    {
+      "title": "Can't sleep? Get up",
+      "body": "If you're awake for more than about 20 minutes, get up and do something calm in dim light until you feel sleepy. Don't lie in bed with your phone."
+    },
+    {
+      "title": "Cool, dark, quiet",
+      "body": "A slightly cool, dark and quiet room helps you fall and stay asleep."
+    },
+    {
+      "title": "Daylight in the morning",
+      "body": "Getting outside within an hour of waking helps set your body clock for better sleep that night."
+    }
+  ]
+}

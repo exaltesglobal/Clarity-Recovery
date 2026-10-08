@@ -12,13 +12,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#2E6E6A",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.exaltesglobal.clarityrecovery"
+      "package": "com.exaltesglobal.clarityrecovery",
+      "permissions": [
+        "android.permission.health.READ_STEPS",
+        "android.permission.health.READ_SLEEP",
+        "android.permission.health.READ_HEART_RATE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -28,13 +33,72 @@
       "expo-router",
       "expo-status-bar",
       "expo-notifications",
-      "expo-font"
+      "expo-font",
+      "expo-localization",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#F5F3EE",
+          "dark": {
+            "backgroundColor": "#0F1716",
+            "image": "./assets/splash-icon.png"
+          }
+        }
+      ],
+      [
+        "expo-quick-actions",
+        {
+          "androidIcons": {
+            "shortcut_sos": {
+              "foregroundImage": "./assets/brand/shortcut-sos.png",
+              "backgroundColor": "#C0564B"
+            }
+          },
+          "iosActions": [
+            {
+              "id": "sos",
+              "title": "Panic button",
+              "subtitle": "Get help with an urge",
+              "icon": "symbol:lifepreserver",
+              "params": {
+                "href": "/sos"
+              }
+            }
+          ]
+        }
+      ],
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "NSHealthShareUsageDescription": "Clarity Recovery reads your steps, sleep and heart rate to show how exercise and rest support your recovery.",
+          "NSHealthUpdateUsageDescription": false,
+          "background": false
+        }
+      ],
+      "react-native-health-connect",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ]
     ],
     "scheme": "clarity",
     "owner": "exaltes-global-private-limited",
     "extra": {
       "eas": {
         "projectId": "c880a66c-7c71-4d63-9802-616bd56a31d7"
+      },
+      "contentFeedUrl": "https://raw.githubusercontent.com/exaltesglobal/Test-Project/main/content/feed.json",
+      "storiesEmail": "",
+      "revenueCat": {
+        "android": "",
+        "ios": ""
       }
     }
   }
