@@ -1,1 +1,1308 @@
-{}
+{
+  "appName": "Clarity Recovery",
+  "common": {
+    "add": "Tambah",
+    "back": "Kembali",
+    "cancel": "Batal",
+    "close": "Tutup",
+    "continue": "Lanjut",
+    "days_other": "{{count}} hari",
+    "minutes_other": "{{count}} mnt",
+    "delete": "Hapus",
+    "done": "Selesai",
+    "edit": "Ubah",
+    "no": "Tidak",
+    "yes": "Ya",
+    "optional": "Opsional",
+    "remove": "Hapus"
+  },
+  "tabs": {
+    "today": "Hari ini",
+    "journal": "Jurnal",
+    "wellness": "Kesehatan",
+    "support": "Dukungan"
+  },
+  "gender": {
+    "male": "Laki-laki",
+    "female": "Perempuan",
+    "nonbinary": "Non-biner",
+    "unspecified": "Memilih tidak menjawab"
+  },
+  "moods": {
+    "1": "Sangat buruk",
+    "2": "Kurang baik",
+    "3": "Biasa saja",
+    "4": "Baik",
+    "5": "Sangat baik"
+  },
+  "triggers": {
+    "boredom": "Bosan",
+    "stress": "Stres",
+    "loneliness": "Kesepian",
+    "tired": "Lelah",
+    "lateNightPhone": "Main HP larut malam",
+    "socialMedia": "Media sosial",
+    "anxiety": "Cemas",
+    "anger": "Marah",
+    "sadness": "Sedih",
+    "rejection": "Penolakan",
+    "aloneAtHome": "Sendirian di rumah",
+    "alcohol": "Alkohol",
+    "reward": "Hadiah / merayakan",
+    "other": "Lainnya"
+  },
+  "reasons": {
+    "placeholder": "Dengan kata-katamu sendiri…",
+    "suggestions": "Atau ketuk salah satu saran:"
+  },
+  "inspiration": {
+    "verse": "Ayat hari ini",
+    "thought": "Renungan hari ini"
+  },
+  "onboarding": {
+    "tagline": "Teman pribadimu untuk berhenti dari pornografi dan membangun hidup yang bisa kamu banggakan.",
+    "promise": {
+      "private": "Privasi sejak awal. Tanpa akun, dan jawabanmu tetap tersimpan di HP ini.",
+      "personal": "Rencana yang disesuaikan untukmu, berdasarkan cek diri singkat.",
+      "support": "Bantuan saat dibutuhkan: tombol darurat, partnermu, dan layanan bantuan setempat."
+    },
+    "changeLanguage": "Ganti bahasa",
+    "getStarted": "Mulai",
+    "languageTitle": "Pilih bahasamu",
+    "rtlRestart": "Arah tata letak akan berubah setelah aplikasi dimulai ulang.",
+    "aboutTitle": "Sedikit tentang dirimu",
+    "aboutBody": "Ini membantu kami menyesuaikan saran dan dukungan. Data ini tidak pernah keluar dari HP-mu.",
+    "nameLabel": "Kami panggil kamu siapa?",
+    "namePlaceholder": "Nama depan atau panggilan (opsional)",
+    "genderLabel": "Jenis kelamin",
+    "ageLabel": "Usia",
+    "teenNote": "Kamu tidak sendirian, dan tidak ada kata terlalu dini untuk mencari bantuan. Coba bicara dengan orang tua, guru BK, atau orang dewasa lain yang kamu percaya.",
+    "countryTitle": "Kamu tinggal di mana?",
+    "countryBody": "Kami gunakan ini untuk menampilkan layanan bantuan, nomor darurat, dan dukungan di negaramu.",
+    "countrySearch": "Cari negara",
+    "languageSuggestion": "Mau pakai aplikasi ini dalam {{language}}?",
+    "reasonsTitle": "Kenapa kamu ingin berhenti?",
+    "reasonsBody": "Kami akan menampilkan ini saat dorongan muncul. Tambahkan setidaknya satu.",
+    "faithTitle": "Ayat Alkitab & renungan iman harian",
+    "faithBody": "Ayat Alkitab dan doa (opsional), termasuk saat kamu menekan tombol darurat.",
+    "usePlan": "Pakai rencana ini",
+    "startTitle": "Yuk, tentukan titik awalmu",
+    "daysCleanLabel": "Sudah berapa hari kamu bersih?",
+    "daysCleanHint": "Mulai dari nol hari ini? Biarkan di 0.",
+    "goalLabel": "Target pertamamu",
+    "partnerLater": "Tips: tambahkan partner akuntabilitas nanti di tab Dukungan. Mereka akan menerima pesan siap kirim setiap kali kamu menekan tombol darurat.",
+    "finish": "Mulai perjalananku"
+  },
+  "assessment": {
+    "title": "Cek diri",
+    "intro": "Jawablah dengan jujur. Tidak ada jawaban benar atau salah, dan jawabanmu tetap tersimpan di HP ini.",
+    "progress": "Pertanyaan {{current}} dari {{total}}",
+    "questions": {
+      "moreThanIntended": "Aku menonton pornografi lebih sering, atau lebih lama, dari yang aku niatkan.",
+      "failedToStop": "Aku sudah mencoba mengurangi atau berhenti, tapi belum berhasil.",
+      "preoccupied": "Aku memikirkan pornografi atau dorongannya bahkan saat sibuk dengan hal lain.",
+      "escalation": "Aku butuh konten yang lebih ekstrem atau baru untuk mendapat efek yang sama.",
+      "harmedLife": "Kebiasaan pornografiku sudah merusak hubungan, pekerjaan, studi, atau tidurku.",
+      "coping": "Aku lari ke pornografi untuk mengatasi stres, bosan, kesepian, atau sedih.",
+      "shame": "Aku merasa bersalah, malu, atau tertekan setelah menonton.",
+      "despiteProblems": "Aku terus menonton meski tahu itu menimbulkan masalah."
+    },
+    "answers": {
+      "never": "Tidak pernah",
+      "sometimes": "Kadang-kadang",
+      "often": "Sering",
+      "almostAlways": "Hampir selalu"
+    },
+    "frequencyQuestion": "Seberapa sering kamu menonton pornografi saat ini?",
+    "frequency": {
+      "lessThanMonthly": "Kurang dari sebulan sekali",
+      "monthly": "Beberapa kali sebulan",
+      "weekly": "Sekitar seminggu sekali",
+      "severalWeekly": "Beberapa kali seminggu",
+      "daily": "Setiap hari",
+      "severalDaily": "Beberapa kali sehari"
+    },
+    "safetyQuestion": "Dalam dua minggu terakhir, apakah kamu pernah berpikir lebih baik mati, atau ingin menyakiti diri sendiri?",
+    "safetyNote": "Kami menanyakan ini kepada semua orang. Kalau jawabannya ya, kami akan menunjukkan orang-orang yang bisa membantu sekarang juga.",
+    "crisisTitle": "Terima kasih sudah memberi tahu kami",
+    "crisisBody": "Kamu layak mendapat dukungan sekarang. Silakan hubungi salah satu layanan ini. Gratis, rahasia, dan siap mendengarkan. Kamu juga tetap bisa memakai aplikasi ini.",
+    "resultTitle": "Rencana pribadimu",
+    "resultLabel": "Hasilmu",
+    "severity": {
+      "low": "Tahap awal",
+      "moderate": "Sedang",
+      "high": "Signifikan"
+    },
+    "severityText": {
+      "low": "Pornografi punya sedikit tarikan atas dirimu, tapi posisimu kuat untuk berubah. Membangun rutinitas sehat sekarang akan membuatnya lebih mudah.",
+      "moderate": "Pornografi memengaruhi hidupmu dan sulit dikendalikan. Itu sangat umum, dan dengan alat serta dukungan yang tepat, semuanya jadi jauh lebih mudah.",
+      "high": "Pornografi sedang mencengkerammu dengan kuat. Kamu tidak rusak. Ini pola yang sudah diatasi banyak orang, dan kamu layak mendapat dukungan ekstra selama prosesnya."
+    },
+    "disclaimer": "Ini alat refleksi diri, bukan diagnosis medis. Kalau kamu khawatir, bicaralah dengan dokter atau terapis.",
+    "planTitle": "Kami sudah menyiapkan aplikasi untukmu",
+    "plan": {
+      "goal": "Target pertama {{days}} hari",
+      "nudges": "Pengingat penyemangat setiap {{hours}} jam, {{start}}–{{end}}",
+      "checkIn": "Pengingat check-in harian pukul {{time}}",
+      "dns": "Aktifkan pemblokir situs dewasa (di Perlindungan)",
+      "pause": "Jeda sadar saat kamu membuka aplikasi media sosial",
+      "partner": "Tambahkan partner akuntabilitas",
+      "professional": "Pertimbangkan terapis atau kelompok dukungan. Lihat Dukungan untuk layanan bantuan"
+    },
+    "planNote": "Kamu bisa mengubah semua ini nanti di Pengaturan.",
+    "takenOn": "Diisi pada {{date}}",
+    "applyPlan": "Terapkan rencana ini ke pengaturanku",
+    "retakeBody": "Jawabanmu akan berubah seiring pemulihan. Ulangi cek diri kira-kira sebulan sekali untuk melihat kemajuanmu.",
+    "retake": "Ulangi cek diri"
+  },
+  "today": {
+    "greeting": {
+      "morning": "Selamat pagi",
+      "afternoon": "Selamat siang",
+      "evening": "Selamat malam",
+      "morningName": "Selamat pagi, {{name}}",
+      "afternoonName": "Selamat siang, {{name}}",
+      "eveningName": "Selamat malam, {{name}}"
+    },
+    "daysFree_other": "hari bebas",
+    "intoDay": "{{hours}}j {{minutes}}m di hari ke-{{day}}",
+    "toMilestone_other": "{{count}} hari lagi menuju pencapaian {{milestone}} hari",
+    "best": "Rekor terbaik",
+    "urgesBeaten": "Dorongan dikalahkan",
+    "goal": "Target",
+    "goalReached": "Tercapai!",
+    "protectionOn": "Perlindungan aktif",
+    "protectionOnBody": "Situs dewasa diblokir di HP ini.",
+    "protectionOff": "Aktifkan perlindungan",
+    "protectionOffBody": "Blokir situs dewasa dengan sekali ketuk. Disarankan.",
+    "checkInTitle": "Check-in harian",
+    "checkInDone": "Selesai untuk hari ini. Kamu merasa {{mood}}, tingkat dorongan {{urge}}/10. Hebat, kamu sudah meluangkan waktu.",
+    "checkInPrompt": "Dua menit untuk memperhatikan suasana hati, dorongan, dan pemicumu.",
+    "checkInButton": "Check-in",
+    "factOfDay": "Fakta hari ini",
+    "moreFacts": "Ketuk untuk membaca riset lainnya",
+    "habitsTitle": "Kebiasaan sehat",
+    "slipped": "Aku tergelincir. Catat kekambuhan"
+  },
+  "panic": {
+    "button": "Aku sedang merasakan dorongan",
+    "subtitle": "Dapatkan bantuan untuk melewatinya sekarang",
+    "shortcutTitle": "Tombol darurat",
+    "shortcutSubtitle": "Dapatkan bantuan saat ada dorongan",
+    "partnerMessage": "Hai, ini {{name}}. Aku sedang berjuang melawan dorongan dan baru saja menekan tombol daruratku. Bisa telepon atau kirim pesan ke aku?",
+    "someone": "aku"
+  },
+  "sos": {
+    "title": "SOS Dorongan",
+    "heading": "Kamu bisa melewati ini.",
+    "body": "Dorongan memuncak lalu mereda, biasanya dalam 10–20 menit. Kamu tidak perlu melawannya. Cukup jangan menurutinya. Bernapaslah mengikuti lingkaran.",
+    "rideOut": "{{time}} untuk melewatinya",
+    "madeIt": "Kamu berhasil melewati 10 menit!",
+    "textPartner": "Kirim pesan ke {{name}}",
+    "textPartnerBody": "Buka pesan siap kirim untuk meminta dukungan",
+    "partnerOpened": "Pesan untuk {{name}} sudah siap",
+    "partnerOpenedBody": "Ketuk Kirim di aplikasi pesanmu. Ketuk di sini untuk membukanya lagi.",
+    "callPartner": "Telepon {{name}}",
+    "rememberWhy": "Ingat alasanmu",
+    "scriptureTitle": "Firman untuk saat ini",
+    "prayerTitle": "Doa singkat",
+    "prayer": "Tuhan, Engkau melihat saat ini dan Engkau tahu kelemahanku. Berilah aku kekuatan untuk berpaling, untuk memilih yang baik, dan untuk beristirahat dalam kasih karunia-Mu. Terima kasih karena rahmat-Mu selalu baru setiap pagi. Amin.",
+    "breathPrayer": "Doa napas terpandu",
+    "doNow": "Lakukan salah satu ini sekarang",
+    "burnerBody": "Salurkan energimu dengan latihan singkat",
+    "surfingBody": "Terpandu: amati keinginan itu sampai mereda",
+    "quickMoves": [
+      "Tinggalkan ruangan tempatmu berada. Pergilah ke tempat yang ada orang lain.",
+      "Taruh HP-mu di ruangan lain atau titipkan ke seseorang.",
+      "Basuh wajahmu dengan air dingin atau mandi air dingin.",
+      "Lakukan 20 push-up atau squat sekarang juga.",
+      "Minum segelas penuh air pelan-pelan."
+    ],
+    "urgePassed": "Dorongannya sudah lewat. Aku menang",
+    "slipped": "Aku tergelincir",
+    "crisisNote": "Kalau kamu sedang dalam krisis atau berpikir untuk menyakiti diri sendiri, tolong hubungi bantuan sekarang."
+  },
+  "relapse": {
+    "title": "Catat tergelincir",
+    "heading": "Tidak apa-apa. Mari belajar dari ini.",
+    "body": "Mencatat tergelincir akan mengatur ulang rekormu, tapi riwayat dan rekor terbaikmu tetap tersimpan. Tidak ada penghakiman di sini. Kejujuran adalah cara memutus pola.",
+    "triggerQuestion": "Apa pemicunya?",
+    "whatHappened": "Apa yang terjadi? (waktu, tempat, perasaanmu)",
+    "whatHappenedPlaceholder": "mis. Tidak bisa tidur, scrolling di kasur lewat tengah malam…",
+    "nextTime": "Apa yang akan kamu lakukan berbeda lain kali?",
+    "nextTimePlaceholder": "mis. Mengisi daya HP di luar kamar tidur",
+    "save": "Catat dan mulai lagi",
+    "thanks": "Terima kasih sudah jujur.",
+    "message": "Tergelincir tidak menghapus kemajuanmu. Hari-hari saat kamu bertahan tetap membentuk ulang otakmu. Jujurlah tentang apa yang terjadi, belajarlah darinya, dan mulai lagi sekarang juga.",
+    "stayedStrong_other": "Kamu bertahan selama {{count}} hari. Itu berarti. Rekor barumu dimulai sekarang.",
+    "yourPlan": "Rencanamu untuk lain kali",
+    "beginAgain": "Mulai lagi"
+  },
+  "checkin": {
+    "title": "Check-in harian",
+    "moodQuestion": "Bagaimana perasaanmu?",
+    "urgeQuestion": "Seberapa kuat dorongan hari ini?",
+    "urgeScale": "0 = tidak ada, 10 = sangat kuat",
+    "triggersQuestion": "Ada pemicu?",
+    "journal": "Jurnal",
+    "journalPlaceholder": "Apa yang terjadi hari ini? Apa yang membantu? Apa yang sulit?",
+    "gratitude": "Satu hal yang aku syukuri",
+    "save": "Simpan check-in"
+  },
+  "journal": {
+    "newCheckIn": "Check-in baru",
+    "last7": "7 hari terakhir",
+    "avgMood": "Rata-rata suasana hati",
+    "avgUrge": "Rata-rata dorongan",
+    "checkIns": "Check-in",
+    "topTriggers": "Pemicu yang paling sering",
+    "planAhead": "Rencanakan dari sekarang untuk momen-momen ini. Di saat itulah kamu paling rentan.",
+    "empty": "Check-in dan refleksimu akan muncul di sini.",
+    "longPressHint": "Tekan lama sebuah catatan untuk menghapusnya.",
+    "deleteConfirm": "Hapus catatan ini?",
+    "urge": "dorongan {{level}}/10",
+    "triggers": "Pemicu: {{list}}",
+    "gratefulFor": "Bersyukur atas: {{text}}",
+    "slipAfter_other": "Tergelincir setelah {{count}} hari",
+    "nextTime": "Lain kali: {{text}}"
+  },
+  "wellness": {
+    "tabs": {
+      "meditation": "Meditasi",
+      "yoga": "Yoga",
+      "exercise": "Olahraga",
+      "diet": "Pola makan",
+      "sleep": "Tidur",
+      "facts": "Fakta"
+    },
+    "intro": {
+      "meditation": "Latih perhatianmu agar dorongan kehilangan cengkeramannya.",
+      "yoga": "Lepaskan ketegangan dan terhubung kembali dengan tubuhmu.",
+      "exercise": "Salurkan energi gelisah dan tingkatkan suasana hatimu secara alami.",
+      "diet": "Energi yang stabil membuat dorongan lebih mudah dihadapi.",
+      "sleep": "Otak yang lelah punya kendali diri yang lebih lemah. Jaga tidurmu.",
+      "facts": "Apa kata riset tentang pemulihan, kebiasaan, dan otak."
+    },
+    "faith": "Iman",
+    "allFacts": "Lihat semua fakta dan sumber",
+    "disclaimer": "Panduan kesehatan umum, bukan nasihat medis. Konsultasikan dengan dokter sebelum memulai program olahraga atau pola makan baru, dan lewati apa pun yang menimbulkan rasa sakit."
+  },
+  "session": {
+    "notFound": "Sesi tidak ditemukan.",
+    "step": "Langkah {{current}} dari {{total}}",
+    "start": "Mulai",
+    "pause": "Jeda",
+    "resume": "Lanjutkan",
+    "skip": "Lewati",
+    "upNext": "Berikutnya: {{title}}",
+    "doneTitle": "Kerja bagus",
+    "doneBody": "Hari ini kamu meluangkan waktu untuk dirimu sendiri. Begitulah kebiasaan baru dibangun."
+  },
+  "facts": {
+    "title": "Riset & fakta",
+    "intro": "Temuan nyata dari riset yang telah diterbitkan. Fakta baru akan muncul di sini secara otomatis.",
+    "source": "Sumber: {{source}}",
+    "categories": {
+      "science": "Sains",
+      "habits": "Kebiasaan",
+      "body": "Tubuh",
+      "mind": "Pikiran",
+      "connection": "Hubungan"
+    },
+    "items": {
+      "prevalence": {
+        "title": "Kamu jauh dari sendirian",
+        "body": "Dalam survei representatif nasional di AS, 10,3% pria dan 7,0% wanita melaporkan tekanan atau masalah yang signifikan secara klinis akibat sulit mengendalikan dorongan dan perilaku seksual."
+      },
+      "icd11": {
+        "title": "Ini kondisi yang diakui",
+        "body": "ICD-11 dari Organisasi Kesehatan Dunia (WHO) mencantumkan gangguan perilaku seksual kompulsif (6C72): kegagalan terus-menerus mengendalikan dorongan seksual yang kuat, yang berujung pada perilaku berulang meski menimbulkan kerugian."
+      },
+      "cueReactivity": {
+        "title": "Isyarat menyalakan sistem penghargaan otak",
+        "body": "Dalam sebuah studi fMRI, pria yang mencari pengobatan untuk masalah penggunaan pornografi menunjukkan reaksi pusat penghargaan (striatum ventral) yang lebih kuat terhadap isyarat yang mendahului gambar erotis. Menghindari isyarat benar-benar membantu."
+      },
+      "moralIncongruence": {
+        "title": "Rasa malu membuatnya terasa lebih buruk",
+        "body": "Riset menemukan bahwa merasa penggunaan pornografi bertentangan dengan nilai-nilaimu sangat memprediksi tekanan batin. Belas kasih pada diri sendiri, bukan kebencian pada diri sendiri, berkaitan dengan perubahan yang bertahan lama."
+      },
+      "habits66": {
+        "title": "Kebiasaan baru butuh sekitar dua bulan",
+        "body": "Dalam studi tentang orang yang membangun kebiasaan harian, dibutuhkan median 66 hari agar suatu perilaku menjadi otomatis (rentang 18–254). Melewatkan satu hari tidak menggagalkan kemajuan."
+      },
+      "exerciseCravings": {
+        "title": "Bergerak mengurangi keinginan",
+        "body": "Sebuah meta-analisis menemukan bahwa aktivitas fisik singkat pun dengan cepat mengurangi keinginan. Olahraga adalah salah satu cara tercepat yang kamu punya untuk mematahkan dorongan."
+      },
+      "urgeSurfing": {
+        "title": "Dorongan akan berlalu jika kamu menungganginya",
+        "body": "Dalam sebuah uji coba, teknik mindfulness singkat bernama urge surfing membantu orang mengurangi tindakan menuruti keinginan. Menyadari dorongan tanpa menurutinya akan melemahkannya seiring waktu."
+      },
+      "mbrp": {
+        "title": "Mindfulness mencegah kekambuhan",
+        "body": "Pencegahan kekambuhan berbasis mindfulness menghasilkan lebih sedikit hari penggunaan zat dan minum berat pada tindak lanjut 12 bulan dibandingkan pengobatan standar."
+      },
+      "sleepEmotion": {
+        "title": "Kurang tidur melemahkan kendali diri",
+        "body": "Setelah semalam tanpa tidur, pusat emosi otak (amigdala) bereaksi sekitar 60% lebih kuat, dengan kendali yang lebih lemah dari korteks prefrontal."
+      },
+      "slowBreathing": {
+        "title": "Napas pelan menenangkan tubuhmu",
+        "body": "Sebuah tinjauan sistematis menemukan bahwa napas pelan (sekitar 6 napas per menit) meningkatkan variabilitas detak jantung dan ketenangan, serta mengurangi kecemasan dan gairah."
+      },
+      "ifThenPlans": {
+        "title": "Rencana jika-maka itu berhasil",
+        "body": "Dari 94 studi, membuat rencana jika-maka yang spesifik (\"Jika aku di kasur dengan HP, maka aku akan menaruhnya di dapur\") memberi efek sedang hingga besar dalam mencapai tujuan."
+      },
+      "lapseNotRelapse": {
+        "title": "Tergelincir bukan berarti kambuh",
+        "body": "Menganggap satu kali tergelincir sebagai kegagalan total (efek pelanggaran pantangan) justru membuat kekambuhan penuh lebih mungkin terjadi. Anggap tergelincir sebagai informasi, bukan vonis."
+      },
+      "socialConnection": {
+        "title": "Hubungan sosial itu melindungi",
+        "body": "Meta-analisis dari 148 studi menemukan bahwa orang dengan hubungan sosial yang lebih kuat punya kemungkinan bertahan hidup 50% lebih besar. Isolasi adalah risiko; hubungan adalah obat."
+      },
+      "peerSupport": {
+        "title": "Kelompok dukungan sebaya membantu",
+        "body": "Tinjauan Cochrane menemukan bahwa program saling bantu 12 langkah sama efektifnya dengan pengobatan lain dan sering lebih baik dalam mempertahankan pantangan."
+      },
+      "gratitude": {
+        "title": "Rasa syukur mengangkat suasana hati",
+        "body": "Orang yang menuliskan hal-hal yang mereka syukuri setiap minggu merasa lebih baik tentang hidup mereka dan lebih optimis dibanding mereka yang mencatat hal-hal menyebalkan."
+      },
+      "act": {
+        "title": "Terapi untuk penggunaan pornografi itu berhasil",
+        "body": "Dalam uji coba acak, Acceptance and Commitment Therapy menghasilkan penurunan besar dalam menonton pornografi dibanding daftar tunggu, dan hasilnya sebagian besar bertahan saat tindak lanjut."
+      }
+    }
+  },
+  "health": {
+    "title": "Kebugaran & jam tangan pintar",
+    "heading": "Hubungkan pelacak kebugaranmu",
+    "body": "Hubungkan {{provider}} untuk melihat langkah, tidur, dan detak jantungmu bersama dengan pemulihanmu.",
+    "why": "Olahraga dan tidur yang baik membuat dorongan lebih mudah dilawan, jadi melacaknya membantumu melihat polanya.",
+    "connect": "Hubungkan {{provider}}",
+    "connected": "Terhubung ke {{provider}}. Data jam tangan atau pelacakmu muncul di Kesehatan.",
+    "isConnected": "Terhubung",
+    "disconnect": "Putuskan",
+    "failed": "Izin tidak diberikan. Kamu bisa mencoba lagi, atau izinkan akses di pengaturan kesehatan HP-mu.",
+    "installHealthConnect": "Instal atau perbarui aplikasi Health Connect dari Google di Play Store, lalu kembali ke sini. Fitbit, Samsung Health, Garmin, dan Wear OS semuanya bisa disinkronkan ke sana.",
+    "unavailableIos": "Apple Health tidak tersedia di perangkat ini.",
+    "unavailableWeb": "Pelacakan kebugaran berfungsi di aplikasi Android dan iPhone.",
+    "connectTitle": "Hubungkan pelacak kebugaran",
+    "connectTeaser": "Opsional: lihat langkah, tidur, dan detak jantung di sini",
+    "steps": "Langkah hari ini",
+    "sleep": "Tidur",
+    "heart": "Detak jantung",
+    "privacy": "Data kesehatan hanya dibaca di HP-mu dan tidak pernah diunggah."
+  },
+  "protection": {
+    "title": "Perlindungan",
+    "intro": "Persulit akses ke konten dewasa saat kamu sedang lemah. Semuanya bisa diatur dengan sekali ketuk dan dimatikan kapan saja.",
+    "dnsSection": "Pemblokir situs dewasa",
+    "dnsTitle": "Blokir situs dewasa",
+    "dnsWhat": "Menggunakan layanan DNS yang aman untuk keluarga",
+    "dnsOn": "Aktif di HP ini",
+    "dnsOff": "Mati",
+    "dnsExplain": "Ketuk tombolnya dan izinkan permintaan koneksi. Itu saja. Situs dewasa akan berhenti dimuat di semua browser dan aplikasi di HP ini.",
+    "dnsDisclosureTitle": "Tentang pemblokir",
+    "dnsDisclosure": "Android akan meminta izin untuk koneksi VPN. Clarity Recovery hanya menggunakannya untuk mengirim pencarian nama situs (DNS) ke CleanBrowsing Family Filter, yang memblokir situs dewasa. Lalu lintas browsingmu tidak melewati VPN dan aplikasi tidak mencatat apa pun.",
+    "turnOnDns": "Aktifkan pemblokir",
+    "dnsOnBody": "Situs dewasa sekarang diblokir. Kamu akan melihat ikon kunci kecil di bilah status. Itu tandanya pemblokir sedang berjalan.",
+    "alwaysOn": "Tetap aktif setelah HP dimulai ulang",
+    "alwaysOnBody": "Buka pengaturan VPN, ketuk ikon roda gigi di sebelah Clarity Recovery, lalu aktifkan \"VPN selalu aktif\".",
+    "turnOff": "Matikan",
+    "androidManualIntro": "Versi ini tidak bisa mengaktifkan pemblokir sendiri, tapi Android punya pengaturan bawaan yang melakukan hal yang sama:",
+    "androidManualSteps": [
+      "Ketuk \"Salin alamat\" di bawah.",
+      "Buka Setelan → Jaringan & internet → DNS Pribadi.",
+      "Pilih \"Nama host penyedia DNS pribadi\".",
+      "Tempel {{host}} lalu ketuk Simpan."
+    ],
+    "copyHost": "Salin alamat",
+    "copied": "Tersalin!",
+    "openSettings": "Buka pengaturan",
+    "iosIntro": "Di iPhone, pemblokirnya berupa profil gratis dari CleanBrowsing:",
+    "iosSteps": [
+      "Ketuk \"Instal profil pemblokir\" dan izinkan unduhan.",
+      "Buka aplikasi Pengaturan dan ketuk \"Profil Diunduh\" di bagian atas.",
+      "Ketuk Instal dan masukkan kode sandimu.",
+      "Selesai. Situs dewasa sekarang diblokir di Safari dan aplikasi lain."
+    ],
+    "iosInstall": "Instal profil pemblokir",
+    "webNote": "Pemblokir berfungsi di aplikasi Android dan iPhone.",
+    "dnsProvider": "Penyaringan oleh CleanBrowsing Family Filter (cleanbrowsing.org).",
+    "pauseSection": "Jeda sadar",
+    "pauseTitle": "Jeda sebelum scrolling",
+    "pauseWhat": "Saat kamu membuka aplikasi seperti Instagram atau TikTok, kamu akan melihat jeda tenang 10 detik terlebih dulu.",
+    "pauseApps": "Jeda aplikasi ini:",
+    "turnOnPause": "Aktifkan jeda sadar",
+    "pauseDisclosureTitle": "Izinkan akses aksesibilitas",
+    "pauseDisclosure": "Untuk mengetahui saat kamu membuka aplikasi yang dipilih, Clarity Recovery memerlukan izin aksesibilitas Android. Aplikasi hanya memeriksa aplikasi mana yang sedang tampil di layar. Aplikasi tidak pernah membaca pesanmu, apa yang kamu ketik, atau isi layar, dan tidak ada yang keluar dari HP-mu.",
+    "pauseNeedsService": "Satu langkah lagi: aktifkan Clarity Recovery di pengaturan aksesibilitas.",
+    "pauseSteps": [
+      "Ketuk \"Buka pengaturan\".",
+      "Ketuk \"Aplikasi terinstal\" (atau \"Aplikasi yang didownload\").",
+      "Ketuk \"Clarity Recovery – Mindful pause\" dan aktifkan."
+    ],
+    "pauseNeedsBuild": "Jeda sadar berfungsi di aplikasi Android.",
+    "iosScreenTime": "iPhone tidak mengizinkan aplikasi menjeda aplikasi lain, tapi Durasi Layar bisa menambahkan batas:",
+    "iosScreenTimeSteps": [
+      "Buka Pengaturan → Durasi Layar → Batas App.",
+      "Ketuk Tambah Batas dan pilih Sosial.",
+      "Atur batas harian yang singkat, misalnya 15 menit."
+    ],
+    "moreSection": "Alat lainnya",
+    "partnerTitle": "Partner akuntabilitas",
+    "partnerBody": "Seseorang yang menerima pesan saat kamu menekan tombol darurat",
+    "privacy": "Perlindungan berjalan di HP-mu. Clarity Recovery tidak melihat atau menyimpan situs yang kamu kunjungi."
+  },
+  "pause": {
+    "title": "Berhenti sejenak",
+    "body": "Kamu akan membuka {{app}}. Apakah ini yang benar-benar kamu inginkan sekarang?",
+    "breathe": "Tarik tiga napas pelan mengikuti lingkaran.",
+    "leave": "Tinggalkan {{app}}",
+    "notNow": "Aku tetap ingin membukanya",
+    "continue": "Buka {{app}} selama 10 menit"
+  },
+  "instagram": {
+    "title": "Cek akun Instagram yang diikuti",
+    "teaser": "Temukan akun konten dewasa yang kamu ikuti",
+    "heading": "Rapikan akun yang kamu ikuti",
+    "body": "Feed-mu dibentuk oleh akun yang kamu ikuti. Alat ini membaca ekspor data Instagram milikmu sendiri dan menandai akun yang tampak seperti kreator konten dewasa, supaya kamu bisa berhenti mengikutinya.",
+    "howTitle": "Cara mendapatkan data Instagram-mu",
+    "steps": [
+      "Di Instagram, buka profilmu → menu ☰ → Pusat Akun.",
+      "Ketuk \"Informasi dan izin Anda\" → \"Unduh informasi Anda\".",
+      "Pilih \"Sebagian informasi Anda\" lalu pilih \"Pengikut dan yang diikuti\".",
+      "Pilih \"Unduh ke perangkat\", format JSON, lalu ketuk \"Buat file\".",
+      "Saat Instagram mengirim email (biasanya dalam beberapa menit), unduh file .zip-nya.",
+      "Kembali ke sini dan ketuk \"Pilih file\"."
+    ],
+    "openAccountsCenter": "Buka Pusat Akun",
+    "choose": "Pilih file",
+    "chooseAnother": "Cek file lain",
+    "error": "Kami tidak menemukan daftar akun yang kamu ikuti di file itu. Pastikan kamu memilih file .zip dari Instagram (atau following.json di dalamnya).",
+    "summary": "Kamu mengikuti {{total}} akun. {{count}} di antaranya mungkin membagikan konten dewasa.",
+    "summaryAdvice": "Ketuk sebuah akun untuk membukanya di Instagram dan berhenti mengikuti. Makin sedikit pemicu di feed, makin sedikit dorongan.",
+    "summaryClean": "Tidak ada yang mencolok. Hebat, kamu sudah menjaga feed-mu tetap bersih.",
+    "heuristicNote": "Kecocokan hanya berdasarkan nama akun, jadi periksa dulu sebelum berhenti mengikuti.",
+    "filter": {
+      "all": "Semua",
+      "likely": "Kemungkinan besar",
+      "possible": "Mungkin"
+    },
+    "confidence": {
+      "likely": "Kemungkinan besar konten dewasa (\"{{keyword}}\")",
+      "possible": "Mungkin bernuansa vulgar (\"{{keyword}}\")"
+    },
+    "privacy": "File-mu dianalisis di HP ini dan tidak pernah diunggah."
+  },
+  "support": {
+    "partnerSection": "Akuntabilitas",
+    "partnerTitle": "Partner akuntabilitas",
+    "partnerBody": "Pemulihan lebih mudah kalau ada orang yang mendukungmu, seperti teman tepercaya, mentor, pendeta, atau konselor. Tidak ada yang dibagikan kecuali kamu sendiri yang mengirimnya.",
+    "name": "Nama",
+    "namePlaceholder": "mis. Sam",
+    "phone": "Nomor telepon",
+    "savePartner": "Simpan partner",
+    "alertOnPanic": "Kirim pesan ke mereka saat aku menekan tombol darurat",
+    "alertOnPanicBody": "Membuka pesan siap kirim. Kamu tinggal ketuk Kirim.",
+    "struggling": "Aku sedang berjuang",
+    "strugglingBody": "Kirim pesan untuk meminta dukungan",
+    "strugglingMessage": "Hai, aku sedang mengalami masa sulit sekarang. Bisa tolong tanyakan kabarku?",
+    "call": "Telepon {{name}}",
+    "weekly": "Kirim kabar mingguan",
+    "weeklyBody": "Kirim kemajuanmu selama 7 hari terakhir",
+    "removePartner": "Hapus partner",
+    "shareTitle": "Bagikan kemajuanmu",
+    "shareBody": "Kirim ringkasan mingguanmu lewat aplikasi apa saja, seperti email, WhatsApp, atau Signal.",
+    "share": "Bagikan kabar mingguan",
+    "report": "Kabar pemulihan mingguanku:\n• Rekor saat ini: {{streak}}\n• Rekor terbaik: {{best}}\n• Dorongan yang dilawan minggu ini: {{urges}}\n• Tergelincir minggu ini: {{slips}}\n• Check-in minggu ini: {{checkins}} (rata-rata dorongan {{avgUrge}}/10)\n\nTerima kasih sudah membantuku tetap bertanggung jawab.",
+    "toolsSection": "Alat",
+    "protectionBody": "Pemblokir situs, jeda sadar, cek Instagram",
+    "storiesBody": "Kisah nyata dari orang-orang yang berhasil bebas",
+    "factsBody": "Apa kata riset tentang pemulihan",
+    "helpSection": "Cari bantuan",
+    "professional": "Penggunaan pornografi kompulsif itu umum dan bisa ditangani. Terapis yang berpengalaman menangani perilaku seksual kompulsif, kelompok dukungan, atau komunitas imanmu bisa membuat perbedaan nyata."
+  },
+  "helplines": {
+    "title": "Layanan bantuan",
+    "intro": "Layanan gratis dan rahasia di dekatmu. Kamu bisa mengganti negaramu kapan saja.",
+    "changeCountry": "Ketuk untuk mengganti negara",
+    "crisisTitle": "Sedang dalam krisis? Hubungi sekarang",
+    "crisisBody": "Dukungan gratis dan rahasia di {{country}}:",
+    "emergency": "Layanan darurat: {{number}}",
+    "findAHelpline": "Cari layanan bantuan di negara mana pun",
+    "website": "Situs web",
+    "allHelplines": "Semua layanan bantuan & kelompok dukungan",
+    "recoveryTitle": "Kelompok pemulihan",
+    "recoveryBody": "Persekutuan dukungan sebaya gratis dengan pertemuan online dan di seluruh dunia.",
+    "verifyNote": "Nomor-nomor ini diperiksa secara rutin, tapi layanan bisa berubah. Kalau sebuah nomor tidak berfungsi, gunakan findahelpline.com."
+  },
+  "stories": {
+    "title": "Kisah kebebasan",
+    "heading": "Orang-orang yang berhasil bebas",
+    "body": "Kisah nyata, dibagikan dengan izin, dari orang-orang yang telah mengatasi kecanduan pornografi.",
+    "empty": "Kisah-kisah baru sedang dalam perjalanan. Cek lagi nanti.",
+    "shareTitle": "Bagikan kisahmu",
+    "shareBody": "Apakah Clarity Recovery membantumu? Kisahmu bisa memberi harapan bagi orang lain. Kami hanya menerbitkannya dengan izin tertulismu, menggunakan nama depan atau inisialmu.",
+    "share": "Bagikan kisahku",
+    "emailSubject": "Kisah pemulihanku",
+    "emailBody": "Nama depan atau inisial yang ditampilkan:\nNegara:\nSudah berapa lama kamu bebas:\n\nKisahku:\n\n\nAku mengizinkan Clarity Recovery menerbitkan kisah ini di aplikasi (ya/tidak):",
+    "consentNote": "Setiap kisah itu nyata dan diterbitkan dengan persetujuan. Kami tidak pernah mengarang testimoni."
+  },
+  "paywall": {
+    "title": "Mulai bulan gratismu",
+    "activeTitle": "Kamu anggota Clarity",
+    "subtitle": "Coba semua fitur gratis selama 1 bulan. Batalkan kapan saja sebelum masa coba berakhir dan kamu tidak akan dikenai biaya.",
+    "features": {
+      "sessions": "Semua sesi meditasi, yoga, dan olahraga terpandu",
+      "protection": "Jeda sadar untuk aplikasi media sosial",
+      "instagram": "Cek akun Instagram yang diikuti",
+      "health": "Wawasan dari pelacak kebugaran & jam tangan pintar",
+      "themes": "Tema dan kustomisasi warna",
+      "insights": "Riset baru dan kisah pemulihan begitu diterbitkan"
+    },
+    "alwaysFree": "Tombol darurat, layanan bantuan, pelacak rekor, check-in, dan pemblokir situs selalu gratis.",
+    "plans": {
+      "monthly": "Bulanan",
+      "sixMonth": "6 bulan",
+      "annual": "Tahunan"
+    },
+    "periods": {
+      "monthly": "bulan",
+      "sixMonth": "6 bulan",
+      "annual": "tahun"
+    },
+    "trial": {
+      "day_other": "Gratis {{count}} hari",
+      "week_other": "Gratis {{count}} minggu",
+      "month_other": "Gratis {{count}} bulan",
+      "year_other": "Gratis {{count}} tahun"
+    },
+    "perMonth": "{{price}}/bulan",
+    "bestValue": "Paling hemat",
+    "startTrial": "Mulai uji coba gratis",
+    "subscribe": "Berlangganan",
+    "trialTerms": "{{trial}}, lalu {{price}} per {{period}}. Diperpanjang otomatis. Batalkan kapan saja di akun toko aplikasimu.",
+    "terms": "{{price}} per {{period}}. Diperpanjang otomatis. Batalkan kapan saja di akun toko aplikasimu.",
+    "restore": "Pulihkan pembelian",
+    "manage": "Kelola langganan",
+    "restored": "Langgananmu sudah dipulihkan.",
+    "nothingToRestore": "Kami tidak menemukan langganan aktif untuk akun ini.",
+    "error": "Pembelian tidak berhasil. Silakan coba lagi.",
+    "subscribed": "Langgananmu aktif. Terima kasih sudah mendukung Clarity Recovery.",
+    "inTrial": "Uji coba gratismu aktif hingga {{date}}.",
+    "noPlans": "Langganan tidak tersedia saat ini. Silakan coba lagi nanti.",
+    "notConfigured": "Langganan belum diatur di build ini, jadi semua fitur terbuka.",
+    "webNote": "Langganan tersedia di aplikasi Android dan iPhone.",
+    "notNow": "Nanti saja",
+    "localPricing": "Harga ditampilkan dalam mata uang lokalmu dan ditetapkan untuk negaramu oleh Google Play atau App Store.",
+    "bannerTitle": "Dapatkan 1 bulan gratis",
+    "bannerBody": "Buka semua alat untuk pemulihanmu.",
+    "lockedTitle": "{{feature}} adalah fitur anggota",
+    "lockedBody": "Mulai bulan gratismu untuk membukanya. Tombol darurat dan layanan bantuan selalu gratis."
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "account": "Keanggotaan",
+    "subscription": "Langganan",
+    "subscriptionActive": "Aktif",
+    "subscriptionTrial": "Uji coba gratis",
+    "subscriptionFree": "Paket gratis. Ketuk untuk memulai bulan gratismu",
+    "subscriptionDev": "Semua fitur terbuka (penagihan belum diatur)",
+    "aboutYou": "Tentang kamu",
+    "profile": "Jenis kelamin, usia & negara",
+    "language": "Bahasa",
+    "restart": "Mulai ulang sekarang",
+    "assessment": "Cek diri & rencana pribadi",
+    "assessmentNone": "Belum diisi",
+    "recovery": "Pemulihan",
+    "goal": "Target",
+    "reasons": "Alasanmu",
+    "faith": "Ayat Alkitab & renungan iman harian",
+    "faithBody": "Ayat Alkitab dan doa, termasuk di layar darurat.",
+    "appSection": "Aplikasi",
+    "nudgesOn": "Setiap {{hours}} jam, {{start}}–{{end}}",
+    "nudgesOff": "Mati",
+    "privacy": "Privasi",
+    "privacyBody": "Clarity Recovery tidak punya akun dan tidak punya server untuk datamu. Semua yang kamu masukkan hanya disimpan di HP ini. Menghapus instalan aplikasi akan menghapusnya.",
+    "erase": "Hapus semua data",
+    "eraseTitle": "Hapus semua data?",
+    "eraseBody": "Ini akan menghapus rekor, jurnal, dan pengaturanmu dari HP ini.",
+    "version": "Versi {{version}}"
+  },
+  "profileEdit": {
+    "title": "Tentang kamu"
+  },
+  "appearance": {
+    "title": "Tema & warna",
+    "preview": "Pratinjau",
+    "mode": "Terang atau gelap",
+    "modes": {
+      "system": "Otomatis",
+      "light": "Terang",
+      "dark": "Gelap"
+    },
+    "theme": "Tema",
+    "themes": {
+      "serene": "Tenang",
+      "dawn": "Fajar",
+      "ocean": "Samudra",
+      "forest": "Hutan",
+      "sand": "Pasir"
+    },
+    "accent": "Warna aksen",
+    "accentBody": "Pilih warna sorotanmu sendiri. Ketuk lagi untuk kembali ke warna tema."
+  },
+  "reminders": {
+    "title": "Pengingat",
+    "nudges": "Pengingat penyemangat",
+    "nudgesBody": "Pesan singkat dan tersamar sepanjang hari",
+    "every": "Seberapa sering",
+    "everyHours_other": "Setiap {{count}} jam",
+    "from": "Mulai pukul",
+    "until": "Terakhir pukul",
+    "schedule": "Kamu akan mendapat pengingat pada pukul {{times}}.",
+    "checkIn": "Pengingat check-in harian",
+    "checkInBody": "Ajakan untuk merenungkan harimu",
+    "discreet": "Teks pengingat tidak pernah menyebut pornografi, jadi aman tampil di layar kunci.",
+    "denied": "Notifikasi untuk Clarity Recovery dimatikan. Silakan izinkan di pengaturan HP-mu.",
+    "webNote": "Pengingat berfungsi di aplikasi Android dan iPhone."
+  },
+  "notifications": {
+    "checkInTitle": "Saatnya check-in harian",
+    "checkInBody": "Luangkan dua menit untuk merenungkan harimu.",
+    "nudges": [
+      "Kamu lebih hebat dari yang kamu kira. Terus jalan.",
+      "Tarik tiga napas pelan. Kamu pasti bisa.",
+      "Ingat kenapa kamu memulai.",
+      "Setiap jam kamu memilih dengan berbeda, otakmu terbentuk ulang sedikit demi sedikit.",
+      "Merasa gelisah? Jalan kaki sebentar sangat membantu.",
+      "Sudah minum air hari ini?",
+      "Hubungi seseorang yang kamu percaya hari ini.",
+      "Bangga padamu karena tetap hadir hari ini."
+    ]
+  },
+  "affirmations": [
+    "Dorongan itu seperti ombak. Ia naik, memuncak, lalu berlalu, dan kamu tidak harus menurutinya.",
+    "Setiap hari kamu memilih dengan berbeda, otakmu terbentuk ulang sedikit demi sedikit.",
+    "Kamu bukan doronganmu. Kamu adalah orang yang menyadarinya.",
+    "Kemajuan, bukan kesempurnaan. Satu hari yang jujur dalam satu waktu.",
+    "Rasa tidak nyaman yang kamu rasakan sekarang adalah otakmu yang sedang pulih.",
+    "Kamu sedang membangun hidup yang tidak ingin kamu tinggalkan.",
+    "Hubungan yang nyata selalu lebih baik daripada layar.",
+    "Bosan, stres, dan kesepian adalah sinyal, bukan perintah.",
+    "Kamu sudah melewati setiap masa sulit sejauh ini. Yang ini juga.",
+    "Pilihan kecil yang diulang setiap hari akan membentuk siapa dirimu.",
+    "Istirahat, bergerak, makan dengan baik, dan jalin hubungan. Rawat tubuh tempat pikiranmu tinggal.",
+    "Rasa malu membuatmu terjebak. Belas kasih membantumu melangkah maju."
+  ],
+  "reasonSuggestions": [
+    "Hadir sepenuhnya bersama orang-orang yang aku cintai",
+    "Membangun hubungan yang nyata dan sehat",
+    "Mendapatkan kembali fokus dan energiku",
+    "Bangga dengan diriku sendiri",
+    "Hidup sesuai nilai dan imanku",
+    "Berhenti hidup dalam rasa malu dan kerahasiaan"
+  ],
+  "habits": {
+    "meditate": "Meditasi atau latihan napas",
+    "move": "Olahraga",
+    "stretch": "Yoga / peregangan",
+    "eat": "Makan dengan gizi seimbang",
+    "water": "Minum air yang cukup",
+    "pray": "Berdoa atau membaca Alkitab",
+    "connect": "Mengobrol dengan seseorang",
+    "sleep": "HP di luar kamar tidur"
+  },
+  "sessions": {
+    "box-breathing": {
+      "title": "Napas tenang",
+      "summary": "Pelankan detak jantungmu dan redakan dorongan dalam 4 menit.",
+      "steps": [
+        {
+          "title": "Duduk dengan nyaman",
+          "text": "Duduklah dengan nyaman. Turunkan bahumu dan lemaskan rahangmu."
+        },
+        {
+          "title": "Bernapas mengikuti lingkaran",
+          "text": "Tarik napas saat lingkaran membesar, tahan, lalu embuskan pelan-pelan saat lingkaran mengecil."
+        },
+        {
+          "title": "Perhatikan",
+          "text": "Biarkan napasmu kembali normal. Perhatikan bagaimana rasanya tubuhmu sekarang dibanding saat kamu mulai."
+        }
+      ]
+    },
+    "urge-surfing": {
+      "title": "Urge surfing",
+      "summary": "Amati keinginan tanpa menurutinya sampai ia berlalu.",
+      "steps": [
+        {
+          "title": "Berhenti sejenak",
+          "text": "Duduklah di tempat yang aman. Telungkupkan HP-mu setelah memulai timer ini."
+        },
+        {
+          "title": "Temukan dorongannya",
+          "text": "Di bagian tubuh mana kamu merasakannya? Dada, perut, wajah, tangan? Cukup perhatikan — tanpa menghakimi."
+        },
+        {
+          "title": "Gambarkan",
+          "text": "Apakah terasa panas atau dingin, tegang atau bergetar? Seberapa kuat dari 1 sampai 10? Namai: \"Ini adalah dorongan.\""
+        },
+        {
+          "title": "Tunggangi ombaknya",
+          "text": "Bernapaslah ke bagian itu. Bayangkan dorongan itu sebagai ombak yang naik — dan kamu berselancar di atasnya, bukan tenggelam di dalamnya."
+        },
+        {
+          "title": "Lihat perubahannya",
+          "text": "Perhatikan dorongan itu bergeser atau memudar. Dorongan selalu memuncak lalu berlalu kalau kamu tidak menurutinya."
+        },
+        {
+          "title": "Pilih langkah berikutnya",
+          "text": "Nilai lagi dorongannya. Sekarang pilih sesuatu yang baik untuk dilakukan: jalan kaki, menelepon seseorang, minum air."
+        }
+      ]
+    },
+    "body-scan": {
+      "title": "Body scan sebelum tidur",
+      "summary": "Lepaskan ketegangan sebelum tidur, saat dorongan sering datang paling kuat.",
+      "steps": [
+        {
+          "title": "Berbaring",
+          "text": "Berbaringlah telentang, lengan di samping tubuh. Pejamkan matamu."
+        },
+        {
+          "title": "Kaki dan tungkai",
+          "text": "Arahkan perhatian ke kaki, betis, dan pahamu. Biarkan terasa berat."
+        },
+        {
+          "title": "Pinggul dan perut",
+          "text": "Perhatikan perutmu naik dan turun. Lemaskan perutmu."
+        },
+        {
+          "title": "Dada dan punggung",
+          "text": "Rasakan punggungmu tenggelam ke kasur. Biarkan dadamu terbuka dan lega."
+        },
+        {
+          "title": "Lengan dan tangan",
+          "text": "Lemaskan bahu, lengan, dan jari-jarimu."
+        },
+        {
+          "title": "Wajah",
+          "text": "Lemaskan dahi, mata, rahang, dan lidahmu."
+        },
+        {
+          "title": "Seluruh tubuh",
+          "text": "Rasakan seluruh tubuhmu beristirahat, aman, dan tenang. Tertidurlah kapan pun kamu siap."
+        }
+      ]
+    },
+    "self-compassion": {
+      "title": "Belas kasih pada diri sendiri",
+      "summary": "Ganti rasa malu dengan kebaikan — terutama setelah hari yang berat.",
+      "steps": [
+        {
+          "title": "Akui",
+          "text": "Letakkan tangan di dadamu. Katakan dalam hati: \"Ini adalah saat yang sulit.\""
+        },
+        {
+          "title": "Kamu tidak sendirian",
+          "text": "Ingatkan dirimu: \"Banyak orang berjuang dalam pertempuran yang sama. Aku tidak sendirian.\""
+        },
+        {
+          "title": "Bersikap baik",
+          "text": "Katakan: \"Semoga aku sabar dengan diriku sendiri. Semoga aku memberi diriku kebaikan yang aku butuhkan.\""
+        },
+        {
+          "title": "Beristirahat",
+          "text": "Bernapaslah pelan-pelan dan biarkan kata-kata itu meresap."
+        }
+      ]
+    },
+    "breath-prayer": {
+      "title": "Doa napas",
+      "summary": "Praktik kontemplatif Kristen sederhana yang dipadukan dengan napasmu.",
+      "steps": [
+        {
+          "title": "Diamlah",
+          "text": "\"Diamlah dan ketahuilah, bahwa Akulah Allah!\" (Mazmur 46:10) Duduklah dengan tenang dan pelankan napasmu."
+        },
+        {
+          "title": "Berdoa dengan napasmu",
+          "text": "Tarik napas: \"Ciptakanlah hati yang tahir dalam diriku, ya Allah.\" Embuskan: \"Perbaruilah batinku dengan roh yang teguh.\""
+        },
+        {
+          "title": "Dengarkan",
+          "text": "Beristirahatlah dalam keheningan. Serahkan dorongan, kekhawatiran, dan rasa malumu kepada Tuhan."
+        },
+        {
+          "title": "Amin",
+          "text": "Tutup dengan ucapan syukur untuk hari ini dan mintalah kekuatan untuk satu jam ke depan."
+        }
+      ]
+    },
+    "morning-flow": {
+      "title": "Rangkaian bangun pagi",
+      "summary": "8 menit untuk memulai hari dengan semangat, bukan dengan HP.",
+      "steps": [
+        {
+          "title": "Child's pose",
+          "text": "Lutut terbuka lebar, ibu jari kaki bersentuhan, lengan memanjang ke depan. Bernapaslah ke punggungmu."
+        },
+        {
+          "title": "Cat-cow",
+          "text": "Bertumpu pada tangan dan lutut, lengkungkan punggung saat menarik napas, bulatkan saat mengembuskan napas."
+        },
+        {
+          "title": "Downward dog",
+          "text": "Angkat pinggulmu ke atas dan ke belakang. Gerakkan tumit bergantian dengan lembut."
+        },
+        {
+          "title": "Low lunge (kanan)",
+          "text": "Langkahkan kaki kanan ke depan, turunkan lutut belakang, angkat lenganmu."
+        },
+        {
+          "title": "Low lunge (kiri)",
+          "text": "Ganti sisi: kaki kiri ke depan, lengan ke atas, dada terbuka."
+        },
+        {
+          "title": "Membungkuk ke depan sambil berdiri",
+          "text": "Berjalanlah ke depan matras, bungkukkan badan dengan lutut sedikit ditekuk. Biarkan kepalamu menggantung."
+        },
+        {
+          "title": "Mountain pose",
+          "text": "Gulung tubuhmu ke atas perlahan. Berdiri tegak, kaki menapak kuat, telapak tangan menghadap depan. Tetapkan niat untuk hari ini."
+        },
+        {
+          "title": "Meraih matahari",
+          "text": "Tarik napas sambil mengangkat lengan ke atas kepala, embuskan sambil membawa tangan ke dada. Ulangi perlahan."
+        }
+      ]
+    },
+    "evening-wind-down": {
+      "title": "Rileks di malam hari",
+      "summary": "Pose-pose lembut untuk menenangkan sistem saraf sebelum tidur.",
+      "steps": [
+        {
+          "title": "Membungkuk ke depan sambil duduk",
+          "text": "Luruskan kaki, bungkukkan badan dari pinggul. Bernapaslah pelan-pelan."
+        },
+        {
+          "title": "Puntiran berbaring (kanan)",
+          "text": "Berbaringlah, jatuhkan kedua lutut ke kanan, pandang ke kiri."
+        },
+        {
+          "title": "Puntiran berbaring (kiri)",
+          "text": "Jatuhkan kedua lutut ke kiri, pandang ke kanan."
+        },
+        {
+          "title": "Happy baby",
+          "text": "Pegang sisi luar kakimu, lutut terbuka lebar, goyangkan badan dengan lembut."
+        },
+        {
+          "title": "Kaki ke dinding",
+          "text": "Sandarkan kakimu ke dinding atau kepala ranjang. Biarkan lenganmu terbuka."
+        },
+        {
+          "title": "Corpse pose",
+          "text": "Berbaringlah telentang dan diam sepenuhnya. Lepaskan hari ini."
+        }
+      ]
+    },
+    "urge-reset-yoga": {
+      "title": "Reset dorongan 5 menit",
+      "summary": "Keluarkan energi gelisah dari tubuhmu.",
+      "steps": [
+        {
+          "title": "Goyangkan tubuh",
+          "text": "Berdirilah dan goyangkan tangan, lengan, dan kakimu dengan santai."
+        },
+        {
+          "title": "Chair pose",
+          "text": "Duduk ke belakang seolah ke kursi, lengan ke atas. Tahan dan bernapaslah."
+        },
+        {
+          "title": "Warrior II (kanan)",
+          "text": "Kaki terbuka lebar, lutut kanan ditekuk, lengan memanjang, pandangan ke atas tangan kanan."
+        },
+        {
+          "title": "Warrior II (kiri)",
+          "text": "Ganti sisi. Kaki kuat, napas stabil."
+        },
+        {
+          "title": "Tree pose",
+          "text": "Berdiri dengan satu kaki, kaki lainnya di betis atau paha. Ganti di tengah waktu."
+        },
+        {
+          "title": "Child's pose",
+          "text": "Letakkan dahi di lantai. Perhatikan bahwa dorongan itu kini kurang kuat."
+        }
+      ]
+    },
+    "urge-burner": {
+      "title": "Pembakar dorongan 6 menit",
+      "summary": "Sirkuit intensitas tinggi dengan berat badan. Tanpa alat.",
+      "steps": [
+        {
+          "title": "Jumping jack",
+          "text": "Cepat dan stabil."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "Push-up",
+          "text": "Bertumpu pada jari kaki atau lutut. Jaga tubuhmu tetap lurus."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "Squat",
+          "text": "Pinggul ke belakang, dada tegak, dorong dengan tumit."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "Plank",
+          "text": "Lengan bawah di lantai, kencangkan otot inti dan bokong."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "Lunge",
+          "text": "Bergantian kaki, lutut tepat di atas lantai."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "Mountain climber",
+          "text": "Tarik lutut ke dada dengan cepat."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "High knees",
+          "text": "Lari di tempat, lutut diangkat tinggi."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Bernapaslah."
+        },
+        {
+          "title": "Burpee",
+          "text": "Squat, lompat ke belakang, lompat ke depan, lompat ke atas. Ikuti tempomu sendiri."
+        },
+        {
+          "title": "Pendinginan",
+          "text": "Berjalanlah pelan-pelan dan goyangkan lengan serta kakimu."
+        }
+      ]
+    },
+    "beginner-strength": {
+      "title": "Kekuatan untuk pemula",
+      "summary": "15 menit, 3 ronde. Membangun rasa percaya diri dan disiplin.",
+      "steps": [
+        {
+          "title": "Ronde 1: Squat",
+          "text": "12–15 repetisi pelan dan terkontrol."
+        },
+        {
+          "title": "Ronde 1: Push-up",
+          "text": "8–12 repetisi (bertumpu pada lutut juga boleh)."
+        },
+        {
+          "title": "Ronde 1: Glute bridge",
+          "text": "15 repetisi, kencangkan di posisi atas."
+        },
+        {
+          "title": "Ronde 1: Plank",
+          "text": "Tahan dengan kuat."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Minum sedikit air."
+        },
+        {
+          "title": "Ronde 2: Squat",
+          "text": "12–15 repetisi pelan dan terkontrol."
+        },
+        {
+          "title": "Ronde 2: Push-up",
+          "text": "8–12 repetisi (bertumpu pada lutut juga boleh)."
+        },
+        {
+          "title": "Ronde 2: Glute bridge",
+          "text": "15 repetisi, kencangkan di posisi atas."
+        },
+        {
+          "title": "Ronde 2: Plank",
+          "text": "Tahan dengan kuat."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Minum sedikit air."
+        },
+        {
+          "title": "Ronde 3: Squat",
+          "text": "12–15 repetisi pelan dan terkontrol."
+        },
+        {
+          "title": "Ronde 3: Push-up",
+          "text": "8–12 repetisi (bertumpu pada lutut juga boleh)."
+        },
+        {
+          "title": "Ronde 3: Glute bridge",
+          "text": "15 repetisi, kencangkan di posisi atas."
+        },
+        {
+          "title": "Ronde 3: Plank",
+          "text": "Tahan dengan kuat."
+        },
+        {
+          "title": "Istirahat",
+          "text": "Minum sedikit air."
+        },
+        {
+          "title": "Peregangan",
+          "text": "Regangkan kaki, dada, dan bahumu."
+        }
+      ]
+    },
+    "walk-it-off": {
+      "title": "Jalan kaki",
+      "summary": "Jalan cepat 20 menit di luar — cara paling sederhana mematahkan dorongan.",
+      "steps": [
+        {
+          "title": "Keluar rumah",
+          "text": "Pakai sepatu dan tinggalkan ruangan. Berada di tempat umum adalah penghalang yang kuat."
+        },
+        {
+          "title": "Tempo santai",
+          "text": "Berjalanlah dengan tempo nyaman untuk pemanasan."
+        },
+        {
+          "title": "Tempo cepat",
+          "text": "Percepat langkahmu sampai napasmu lebih berat tapi masih bisa bicara."
+        },
+        {
+          "title": "Lihat sekeliling",
+          "text": "Sebutkan 5 hal yang bisa kamu lihat, 4 yang bisa kamu dengar, 3 yang bisa kamu rasakan."
+        },
+        {
+          "title": "Pendinginan",
+          "text": "Pelankan langkah dan pulanglah. Perhatikan betapa jauh lebih tenangnya dirimu."
+        }
+      ]
+    },
+    "grounding": {
+      "title": "Grounding 5-4-3-2-1",
+      "summary": "Tarik pikiranmu keluar dari dorongan dan kembali ke ruangan dalam 4 menit.",
+      "steps": [
+        {
+          "title": "Berhenti sejenak",
+          "text": "Hentikan apa yang sedang kamu lakukan. Tapakkan kedua kaki di lantai dan tarik satu napas pelan."
+        },
+        {
+          "title": "5 hal yang kamu lihat",
+          "text": "Lihat sekeliling dan sebutkan lima hal yang bisa kamu lihat. Perhatikan warna dan bentuknya."
+        },
+        {
+          "title": "4 hal yang kamu rasakan",
+          "text": "Perhatikan empat hal yang bisa kamu rasakan: pakaianmu, kursi, udara, kakimu."
+        },
+        {
+          "title": "3 hal yang kamu dengar",
+          "text": "Dengarkan tiga suara, yang dekat maupun jauh."
+        },
+        {
+          "title": "2 hal yang kamu cium",
+          "text": "Temukan dua hal yang bisa kamu cium, atau ingat dua aroma yang kamu sukai."
+        },
+        {
+          "title": "1 hal yang kamu kecap",
+          "text": "Perhatikan satu rasa di mulutmu, atau minum seteguk air."
+        },
+        {
+          "title": "Bernapas",
+          "text": "Tarik tiga napas pelan. Perhatikan bagaimana dorongan itu telah berubah."
+        }
+      ]
+    },
+    "gratitude": {
+      "title": "Refleksi syukur",
+      "summary": "Alihkan fokusmu pada hal-hal baik dalam hidupmu.",
+      "steps": [
+        {
+          "title": "Tenangkan diri",
+          "text": "Duduklah dengan nyaman, pejamkan mata, dan bernapaslah pelan-pelan."
+        },
+        {
+          "title": "Seseorang yang kamu syukuri",
+          "text": "Ingatlah seseorang yang pernah membantumu. Bayangkan wajahnya dan ucapkan terima kasih dalam hati."
+        },
+        {
+          "title": "Sesuatu dalam tubuhmu",
+          "text": "Pikirkan sesuatu yang dilakukan tubuhmu untukmu setiap hari, seperti bernapas, berjalan, atau melihat."
+        },
+        {
+          "title": "Satu hal baik kecil hari ini",
+          "text": "Ingat satu momen baik kecil dari hari ini, sekecil apa pun."
+        },
+        {
+          "title": "Bawa bersamamu",
+          "text": "Rasakan kehangatan rasa syukur di dadamu. Bawalah bersamamu sepanjang sisa harimu."
+        }
+      ]
+    },
+    "desk-stretch": {
+      "title": "Peregangan meja & leher HP",
+      "summary": "Pulihkan postur akibat berjam-jam di depan layar dalam 4 menit.",
+      "steps": [
+        {
+          "title": "Putar leher",
+          "text": "Putar kepalamu perlahan setengah lingkaran, dari sisi ke sisi. Jangan dipaksa."
+        },
+        {
+          "title": "Putar bahu",
+          "text": "Putar bahumu ke atas, ke belakang, dan ke bawah. Lalu balik arahnya."
+        },
+        {
+          "title": "Puntiran duduk (kanan)",
+          "text": "Duduk tegak dan puntir badan perlahan ke kanan, tangan di sandaran kursi."
+        },
+        {
+          "title": "Puntiran duduk (kiri)",
+          "text": "Puntir badan perlahan ke kiri. Tetap bernapas."
+        },
+        {
+          "title": "Membuka dada",
+          "text": "Kaitkan kedua tangan di belakang punggung dan angkat dadamu."
+        },
+        {
+          "title": "Membungkuk ke depan",
+          "text": "Berdiri, tekuk lutut sedikit, dan bungkukkan badan ke depan. Biarkan kepalamu menggantung rileks."
+        }
+      ]
+    },
+    "cardio-10": {
+      "title": "Kardio 10 menit",
+      "summary": "Tanpa alat, berdampak rendah. Meningkatkan suasana hati dan energi.",
+      "steps": [
+        {
+          "title": "Jalan di tempat",
+          "text": "Angkat lututmu dan ayunkan lenganmu untuk pemanasan."
+        },
+        {
+          "title": "Step jack",
+          "text": "Langkahkan satu kaki ke samping sambil mengangkat lengan, lalu ganti sisi."
+        },
+        {
+          "title": "Squat",
+          "text": "Duduk ke belakang dalam posisi squat lalu berdiri tegak."
+        },
+        {
+          "title": "Kaki cepat",
+          "text": "Lari ringan di tempat dengan bertumpu pada ujung telapak kaki."
+        },
+        {
+          "title": "Reverse lunge",
+          "text": "Langkah ke belakang ke posisi lunge, bergantian kaki."
+        },
+        {
+          "title": "Pukulan tinju",
+          "text": "Pukul ke depan dengan cepat sambil menjaga otot inti tetap kencang."
+        },
+        {
+          "title": "Langkah skater",
+          "text": "Melangkah dari sisi ke sisi seperti pemain seluncur cepat."
+        },
+        {
+          "title": "Dorongan lutut",
+          "text": "Angkat satu lutut ke arah tangan, lalu ganti."
+        },
+        {
+          "title": "Squat pulse",
+          "text": "Tahan posisi squat rendah dan gerakkan naik-turun sedikit."
+        },
+        {
+          "title": "Pendinginan",
+          "text": "Berjalanlah pelan-pelan dan regangkan kaki serta lenganmu."
+        }
+      ]
+    }
+  },
+  "dietTips": [
+    {
+      "title": "Ingat HALT",
+      "body": "Lapar, Marah, Kesepian, Lelah (Hungry, Angry, Lonely, Tired) — dorongan jauh lebih kuat dalam kondisi ini. Makan teratur adalah salah satu cara termudah untuk menurunkan risikomu."
+    },
+    {
+      "title": "Sarapan kaya protein",
+      "body": "Telur, yoghurt Yunani, oat dengan kacang, atau kacang-kacangan menjaga gula darah tetap stabil dan mengurangi rasa lapar serta mudah tersinggung di pertengahan pagi."
+    },
+    {
+      "title": "Hindari lonjakan gula",
+      "body": "Camilan manis dan minuman berenergi memberi semangat sesaat lalu diikuti penurunan drastis — dan penurunan itu sering membawa dorongan. Padukan karbohidrat dengan protein atau serat."
+    },
+    {
+      "title": "Stop kafein setelah jam 2 siang",
+      "body": "Kurang tidur adalah pemicu utama. Berhenti minum kafein sejak awal sore membantumu tertidur, bukannya scrolling."
+    },
+    {
+      "title": "Waspadai alkohol",
+      "body": "Alkohol menurunkan kendali diri dan merupakan pemicu kekambuhan yang umum. Kalau kamu minum, siapkan rencana untuk pulang dan menyimpan HP-mu."
+    },
+    {
+      "title": "Cukupi cairan",
+      "body": "Dehidrasi ringan menyebabkan lelah dan suasana hati buruk. Usahakan segelas air setiap kali makan dan simpan botol minum di dekatmu."
+    },
+    {
+      "title": "Omega-3 dan makanan utuh",
+      "body": "Ikan berlemak, kenari, chia dan biji rami, sayuran hijau, serta sayuran berwarna-warni mendukung kesehatan otak dan suasana hati."
+    },
+    {
+      "title": "Ide menu sederhana",
+      "body": "Sarapan: telur + roti gandum + buah. Makan siang: nasi, kacang-kacangan atau ayam, dan sayur. Makan malam: ikan atau lentil dengan sayur panggang. Camilan: kacang, buah, yoghurt."
+    }
+  ],
+  "sleepTips": [
+    {
+      "title": "HP di luar kamar tidur",
+      "body": "Scrolling larut malam adalah salah satu pemicu paling umum. Isi daya HP-mu di ruangan lain dan gunakan jam weker murah."
+    },
+    {
+      "title": "Bangun di jam yang sama setiap hari",
+      "body": "Jam bangun yang konsisten, bahkan di akhir pekan, mengatur jam biologismu dan membuatmu lebih mudah tertidur di malam hari."
+    },
+    {
+      "title": "Rileks selama 30 menit",
+      "body": "Redupkan lampu, baca buku cetak, lakukan peregangan, atau berdoa. Beri otakmu sinyal bahwa hari sudah berakhir."
+    },
+    {
+      "title": "Tidak bisa tidur? Bangunlah",
+      "body": "Kalau kamu terjaga lebih dari sekitar 20 menit, bangunlah dan lakukan sesuatu yang menenangkan di cahaya redup sampai kamu mengantuk. Jangan berbaring di kasur dengan HP-mu."
+    },
+    {
+      "title": "Sejuk, gelap, tenang",
+      "body": "Kamar yang agak sejuk, gelap, dan tenang membantumu tertidur dan tetap tidur nyenyak."
+    },
+    {
+      "title": "Cahaya matahari di pagi hari",
+      "body": "Keluar rumah dalam satu jam setelah bangun membantu mengatur jam biologismu agar tidur lebih nyenyak malam itu."
+    }
+  ]
+}
