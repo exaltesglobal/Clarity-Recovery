@@ -149,6 +149,7 @@ function AppShell({ fontsLoaded }: { fontsLoaded: boolean }) {
         <Stack.Screen name="profile" options={{ title: t('profileEdit.title') }} />
         <Stack.Screen name="assessment" options={{ title: t('assessment.title') }} />
         <Stack.Screen name="protection" options={{ title: t('protection.title') }} />
+        <Stack.Screen name="setup" options={{ title: t('setup.title') }} />
         <Stack.Screen name="instagram" options={{ title: t('instagram.title') }} />
         <Stack.Screen name="stories" options={{ title: t('stories.title') }} />
         <Stack.Screen name="facts" options={{ title: t('facts.title') }} />

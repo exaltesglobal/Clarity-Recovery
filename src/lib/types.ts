@@ -83,6 +83,13 @@ export interface Health {
   connected: boolean;
 }
 
+export interface Setup {
+  /** Checklist steps the user marked as done by hand (ones the app can't detect itself) */
+  done: string[];
+  /** User dismissed the "Finish setup" card on Today */
+  hidden: boolean;
+}
+
 export interface AppData {
   version: 2;
   onboarded: boolean;
@@ -100,6 +107,7 @@ export interface AppData {
   reminders: Reminders;
   protection: Protection;
   health: Health;
+  setup: Setup;
   /** First launch, used for trial messaging */
   installedAt: string;
 }

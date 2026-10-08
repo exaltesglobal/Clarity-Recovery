@@ -21,6 +21,7 @@ import { useFeed } from '../../content/feed';
 import { habitsFor, MOODS } from '../../content/wellness';
 import { useBilling } from '../../lib/billing';
 import { dayKey, dayOfYear, daysIn, nextMilestone, splitDuration, useNow } from '../../lib/date';
+import { useSetupSteps } from '../../lib/setup';
 import { bestStreakMs, currentStreakMs, useStore } from '../../lib/store';
 import { useTheme } from '../../theme';
 
@@ -31,6 +32,7 @@ export default function Today() {
   const now = useNow();
   const { data, actions } = useStore();
   const billing = useBilling();
+  const setup = useSetupSteps();
   const { facts } = useFeed();
 
   const streak = currentStreakMs(data, now);
@@ -108,6 +110,21 @@ export default function Today() {
             </View>
           </Card>
         </Pressable>
+      )}
+
+      {!data.setup.hidden && setup.completed < setup.total && (
+        <Card>
+          <Pressable onPress={() => router.push('/setup')} accessibilityRole="button" style={styles.setupRow}>
+            <IconBadge icon="list-outline" />
+            <View style={{ flex: 1, gap: 6 }}>
+              <H2>{tr('setup.todayTitle')}</H2>
+              <ProgressBar value={setup.completed / setup.total} />
+              <Muted>{tr('setup.progress', { done: setup.completed, total: setup.total })}</Muted>
+            </View>
+            <Ionicons name="chevron-forward" size={18} color={t.muted} />
+          </Pressable>
+          <Button small variant="ghost" title={tr('setup.hide')} onPress={actions.hideSetupCard} />
+        </Card>
       )}
 
       <Pressable onPress={() => router.push('/protection')} accessibilityRole="button">
@@ -210,6 +227,7 @@ function Stat({ label, value }: { label: string; value: string }) {
 }
 
 const styles = StyleSheet.create({
+  setupRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   bigNumber: { fontSize: 76, lineHeight: 86, color: '#FFFFFF' },
   onGradient: { color: '#FFFFFF', fontSize: 14 },
   stats: {

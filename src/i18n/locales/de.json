@@ -1297,5 +1297,96 @@
       "title": "Tageslicht am Morgen",
       "body": "Wenn du innerhalb einer Stunde nach dem Aufwachen nach draußen gehst, stellst du deine innere Uhr für besseren Schlaf in der nächsten Nacht."
     }
-  ]
+  ],
+  "setup": {
+    "title": "Einrichtungs-Checkliste",
+    "open": "Checkliste öffnen",
+    "intro": "Ein paar einmalige Schritte helfen Clarity, dich zuverlässig zu schützen. Geh von oben nach unten vor – das dauert etwa 5 Minuten. Häkchen erscheinen von selbst, wenn Clarity einen Schritt prüfen kann.",
+    "progress": "{{done}} von {{total}} Schritten erledigt",
+    "allDone": "Alles bereit. Clarity kann dich jetzt schützen.",
+    "todayTitle": "Clarity fertig einrichten",
+    "hide": "Ausblenden",
+    "optional": "Optional",
+    "markDone": "Hab ich gemacht",
+    "undo": "Noch nicht erledigt",
+    "done": "Erledigt",
+    "fullGuide": "Ganze Anleitung lesen",
+    "groups": {
+      "essentials": "Das Wichtigste",
+      "protection": "Schutz",
+      "running": "Clarity aktiv halten",
+      "extras": "Optionale Extras"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Mitteilungen erlauben",
+        "body": "Nötig für deine Check-in-Erinnerungen, Ermutigungen und den Hinweis, bevor dein Gratis-Testzeitraum endet.",
+        "button": "Mitteilungen erlauben"
+      },
+      "partner": {
+        "title": "Accountability-Partner hinzufügen",
+        "body": "Jemand, dem du vertraust. Wenn du auf SOS tippst, öffnet sich mit einem Tipp eine fertige Nachricht an ihn.",
+        "button": "Partner hinzufügen"
+      },
+      "sosShortcut": {
+        "title": "SOS immer griffbereit",
+        "body": "Halte das Clarity-Symbol gedrückt und tippe auf „Notfallknopf“, um SOS sofort zu öffnen, oder füge ein SOS-Symbol zu deinem Startbildschirm hinzu.",
+        "button": "SOS auf Startbildschirm"
+      },
+      "dns": {
+        "title": "Website-Blocker einschalten",
+        "body": "Blockiert Erwachsenenseiten in jedem Browser und jeder App auf diesem Handy.",
+        "button": "Blocker einrichten"
+      },
+      "alwaysOnVpn": {
+        "title": "Blocker nach Neustart aktiv halten",
+        "body": "Tippe in den VPN-Einstellungen auf das Zahnrad neben Clarity Recovery und schalte „Durchgehend aktives VPN“ ein.",
+        "button": "VPN-Einstellungen"
+      },
+      "pause": {
+        "title": "Achtsame Pause einschalten",
+        "body": "Zeigt eine ruhige Pause, wenn du Apps wie Instagram oder TikTok öffnest, damit du bewusst entscheiden kannst.",
+        "button": "Pause einrichten"
+      },
+      "iosDns": {
+        "title": "Website-Blocker installieren",
+        "body": "Folge den Schritten auf dem Bildschirm „Schutz“, um Erwachsenenseiten auf deinem iPhone zu blockieren.",
+        "button": "Schutz öffnen"
+      },
+      "iosScreenTime": {
+        "title": "Bildschirmzeit-Limits setzen",
+        "body": "Nutze Bildschirmzeit, um Erwachsenenseiten einzuschränken und App-Limits zu setzen.",
+        "button": "Schutz öffnen"
+      },
+      "battery": {
+        "title": "Energiesparmodus soll Clarity nicht beenden",
+        "body": "Stell Clarity Recovery auf „Nicht optimieren“ oder „Nicht eingeschränkt“, damit Blocker und Pause weiterlaufen.",
+        "button": "Akku-Einstellungen"
+      },
+      "autostart": {
+        "title": "Autostart erlauben",
+        "body": "Auf {{maker}}-Handys muss Autostart für Clarity Recovery an sein, sonst stoppt der Schutz nach einer Weile.",
+        "button": "Autostart öffnen"
+      },
+      "popups": {
+        "title": "Pop-ups im Hintergrund erlauben",
+        "body": "Erlaube unter „Weitere Berechtigungen“ für Clarity Recovery: „Pop-up-Fenster anzeigen, während im Hintergrund ausgeführt“.",
+        "button": "Berechtigungen"
+      },
+      "lockRecents": {
+        "title": "Clarity in den letzten Apps sperren",
+        "body": "Öffne die letzten Apps, zieh die Karte von Clarity nach unten (oder halte sie gedrückt) und tippe auf das Schloss, damit {{maker}} sie nicht schließt."
+      },
+      "health": {
+        "title": "Fitnesstracker verbinden",
+        "body": "Sieh Schritte, Schlaf und Herzfrequenz neben deinem Fortschritt.",
+        "button": "Verbinden"
+      },
+      "reminders": {
+        "title": "Erinnerungen einrichten",
+        "body": "Wähle, wann du deinen täglichen Check-in und Ermutigungen bekommst.",
+        "button": "Einrichten"
+      }
+    }
+  }
 }

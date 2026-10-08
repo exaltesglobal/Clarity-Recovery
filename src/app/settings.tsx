@@ -10,6 +10,7 @@ import { languageInfo } from '../i18n';
 import { useBilling } from '../lib/billing';
 import { formatDate, formatTimeOfDay } from '../lib/date';
 import { cancelReminders } from '../lib/notifications';
+import { useSetupSteps } from '../lib/setup';
 import { useStore } from '../lib/store';
 
 const GOALS = [30, 90, 180, 365];
@@ -18,6 +19,7 @@ export default function Settings() {
   const { t, i18n } = useTranslation();
   const { data, actions } = useStore();
   const billing = useBilling();
+  const setup = useSetupSteps();
   const { profile, reminders, assessment } = data;
   const [name, setName] = useState(profile.name);
 
@@ -129,6 +131,12 @@ export default function Settings() {
 
       <SectionTitle>{t('settings.appSection')}</SectionTitle>
       <Card>
+        <ListRow
+          icon="list-outline"
+          title={t('setup.title')}
+          subtitle={setup.completed === setup.total ? t('setup.allDone') : t('setup.progress', { done: setup.completed, total: setup.total })}
+          onPress={() => router.push('/setup')}
+        />
         <ListRow icon="notifications-outline" title={t('reminders.title')} subtitle={nudgeText} onPress={() => router.push('/reminders')} />
         <ListRow icon="color-palette-outline" title={t('appearance.title')} subtitle={t(`appearance.themes.${data.appearance.themeId}`)} onPress={() => router.push('/appearance')} />
         <ListRow icon="shield-checkmark-outline" title={t('protection.title')} onPress={() => router.push('/protection')} />

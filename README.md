@@ -54,6 +54,8 @@ offering, Paywall, Customer Center) is in [docs/revenuecat.md](docs/revenuecat.m
 
 In `app.json` → `expo.extra`:
 
+- `guideUrl`: link to the user guide on the website. When set, the in-app Setup checklist shows "Read the full guide". The guide text is in [docs/user-guide.md](docs/user-guide.md).
+
 - `contentFeedUrl`: a JSON feed of facts and testimonials (see `content/README.md`).
 - `storiesEmail`: the address where users can submit their own stories.
 

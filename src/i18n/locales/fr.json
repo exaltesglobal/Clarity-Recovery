@@ -360,10 +360,10 @@
     "pauseDisclosureTitle": "Autoriser l'accès accessibilité",
     "pauseDisclosure": "Pour savoir quand vous ouvrez une app choisie, Clarity Recovery a besoin de l'autorisation d'accessibilité d'Android. Elle vérifie seulement quelle app est à l'écran. Elle ne lit jamais vos messages, ce que vous tapez ni le contenu de l'écran, et rien ne quitte votre téléphone.",
     "pauseNeedsService": "Encore une étape : activez Clarity Recovery dans les réglages d'accessibilité.",
-    "pauseRestricted": "L'interrupteur est grisé ou affiche « Paramètre restreint » ? Android le bloque pour les applis installées hors du Play Store. Ouvre Infos sur l'appli, touche ⋮ (en haut à droite) → Autoriser les paramètres restreints, puis réactive-le.",
+    "pauseRestricted": "L'interrupteur est grisé ou affiche « Paramètre restreint » ? Android le bloque pour les applis installées hors du Play Store. Ouvrez Infos sur l'appli, touchez ⋮ (en haut à droite) → Autoriser les paramètres restreints, puis réactivez-le.",
     "openAppInfo": "Ouvrir les infos de l'appli",
     "oemBody": "Les téléphones {{maker}} ferment les applis en arrière-plan pour économiser la batterie, ce qui peut bloquer la pause consciente. Pour qu'elle fonctionne :",
-    "oemSteps": ["Active le Démarrage automatique de Clarity Recovery.","Dans Autres autorisations, autorise « Afficher des fenêtres pop-up en arrière-plan ».","Dans Infos sur l'appli → Économiseur de batterie, choisis « Aucune restriction ».","Dans les applis récentes, verrouille Clarity Recovery (tire sa carte vers le bas ou appui long)."],
+    "oemSteps": ["Activez le Démarrage automatique de Clarity Recovery.","Dans Autres autorisations, autorisez « Afficher des fenêtres pop-up en arrière-plan ».","Dans Infos sur l'appli → Économiseur de batterie, choisissez « Aucune restriction ».","Dans les applis récentes, verrouillez Clarity Recovery (tirez sa carte vers le bas ou appui long)."],
     "oemAutostart": "Ouvrir le démarrage auto",
     "oemPopups": "Ouvrir les autres autorisations",
     "pauseSteps": [
@@ -490,7 +490,7 @@
     "startTrial": "Commencer l'essai gratuit",
     "manage": "Gérer l'abonnement",
     "nothingToRestore": "Aucun abonnement actif trouvé pour ce compte.",
-    "pending": "Ton paiement est en cours de traitement. Premium se débloquera automatiquement dès sa confirmation.",
+    "pending": "Votre paiement est en cours de traitement. Premium se débloquera automatiquement dès sa confirmation.",
     "subscribed": "Votre abonnement est actif. Merci de soutenir Clarity Recovery.",
     "inTrial": "Votre essai gratuit est actif jusqu'au {{date}}.",
     "noPlans": "Les abonnements ne sont pas disponibles pour le moment. Réessayez plus tard.",
@@ -564,8 +564,8 @@
   "notifications": {
     "checkInTitle": "C'est l'heure de votre bilan",
     "checkInBody": "Prenez deux minutes pour faire le point sur votre journée.",
-    "trialEndingTitle": "Ton mois gratuit se termine dans 2 jours",
-    "trialEndingBody": "Ton abonnement commence le {{date}}. Pour le modifier ou l'annuler, ouvre Réglages → Abonnement.",
+    "trialEndingTitle": "Votre mois gratuit se termine dans 2 jours",
+    "trialEndingBody": "Votre abonnement commence le {{date}}. Pour le modifier ou l'annuler, ouvrez Réglages → Abonnement.",
     "nudges": [
       "Vous vous en sortez mieux que vous ne le pensez. Continuez.",
       "Prenez trois respirations lentes. Vous pouvez le faire.",
@@ -827,5 +827,96 @@
     { "title": "Pas sommeil ? Levez-vous", "body": "Si vous êtes éveillé depuis plus de 20 minutes environ, levez-vous et faites quelque chose de calme sous une lumière tamisée jusqu'à avoir sommeil. Ne restez pas au lit avec votre téléphone." },
     { "title": "Frais, sombre et calme", "body": "Une chambre un peu fraîche, sombre et silencieuse aide à s'endormir et à rester endormi." },
     { "title": "Lumière du jour le matin", "body": "Sortir dans l'heure qui suit le réveil aide à régler votre horloge interne pour mieux dormir le soir." }
-  ]
+  ],
+  "setup": {
+    "title": "Liste de configuration",
+    "open": "Ouvrir la liste de configuration",
+    "intro": "Quelques étapes à faire une seule fois aident Clarity à vous protéger de façon fiable. Suivez-les de haut en bas : cela prend environ 5 minutes. Les coches se mettent à jour seules quand Clarity peut vérifier une étape.",
+    "progress": "{{done}} étapes sur {{total}} terminées",
+    "allDone": "Tout est prêt. Clarity est prêt à vous protéger.",
+    "todayTitle": "Terminez la configuration de Clarity",
+    "hide": "Masquer",
+    "optional": "Facultatif",
+    "markDone": "C'est fait",
+    "undo": "Pas encore fait",
+    "done": "Terminé",
+    "fullGuide": "Lire le guide complet",
+    "groups": {
+      "essentials": "L'essentiel",
+      "protection": "Protection",
+      "running": "Garder Clarity actif",
+      "extras": "Extras facultatifs"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Autorisez les notifications",
+        "body": "Nécessaires pour vos rappels de bilan, vos encouragements et le rappel avant la fin de votre essai gratuit.",
+        "button": "Autoriser les notifications"
+      },
+      "partner": {
+        "title": "Ajoutez un partenaire de responsabilité",
+        "body": "Une personne de confiance. Quand vous touchez SOS, un message prêt à lui envoyer s'ouvre en une seule touche.",
+        "button": "Ajouter un partenaire"
+      },
+      "sosShortcut": {
+        "title": "Gardez SOS à portée de main",
+        "body": "Appuyez longuement sur l'icône Clarity et touchez « Bouton d'urgence » pour ouvrir SOS tout de suite, ou ajoutez une icône SOS à votre écran d'accueil.",
+        "button": "Ajouter SOS à l'écran d'accueil"
+      },
+      "dns": {
+        "title": "Activez le bloqueur de sites",
+        "body": "Bloque les sites pour adultes dans tous les navigateurs et applis de ce téléphone.",
+        "button": "Configurer le bloqueur"
+      },
+      "alwaysOnVpn": {
+        "title": "Gardez le bloqueur après un redémarrage",
+        "body": "Dans les réglages VPN, touchez l'engrenage à côté de Clarity Recovery et activez « VPN permanent ».",
+        "button": "Ouvrir les réglages VPN"
+      },
+      "pause": {
+        "title": "Activez la pause consciente",
+        "body": "Affiche une pause apaisante quand vous ouvrez des applis comme Instagram ou TikTok, pour que vous choisissiez en conscience.",
+        "button": "Configurer la pause"
+      },
+      "iosDns": {
+        "title": "Installez le bloqueur de sites",
+        "body": "Suivez les étapes de l'écran Protection pour bloquer les sites pour adultes sur votre iPhone.",
+        "button": "Ouvrir Protection"
+      },
+      "iosScreenTime": {
+        "title": "Ajoutez des limites Temps d'écran",
+        "body": "Utilisez Temps d'écran pour limiter les sites pour adultes et fixer des limites d'app.",
+        "button": "Ouvrir Protection"
+      },
+      "battery": {
+        "title": "Empêchez l'économiseur de batterie de fermer Clarity",
+        "body": "Réglez Clarity Recovery sur « Ne pas optimiser » ou « Aucune restriction » pour que le bloqueur et la pause continuent de fonctionner.",
+        "button": "Ouvrir les réglages batterie"
+      },
+      "autostart": {
+        "title": "Autorisez le Démarrage automatique",
+        "body": "Sur les téléphones {{maker}}, le Démarrage automatique doit être activé pour Clarity Recovery, sinon la protection s'arrête au bout d'un moment.",
+        "button": "Ouvrir Démarrage automatique"
+      },
+      "popups": {
+        "title": "Autorisez les pop-up en arrière-plan",
+        "body": "Dans Autres autorisations, autorisez « Afficher des fenêtres pop-up en arrière-plan » pour Clarity Recovery.",
+        "button": "Ouvrir les autorisations"
+      },
+      "lockRecents": {
+        "title": "Verrouillez Clarity dans les applis récentes",
+        "body": "Ouvrez les applis récentes, tirez la carte de Clarity vers le bas (ou appuyez longuement dessus) et touchez le cadenas, pour que {{maker}} ne la ferme pas."
+      },
+      "health": {
+        "title": "Connectez votre bracelet d'activité",
+        "body": "Affiche vos pas, votre sommeil et votre fréquence cardiaque à côté de vos progrès.",
+        "button": "Connecter"
+      },
+      "reminders": {
+        "title": "Configurez vos rappels",
+        "body": "Choisissez quand recevoir votre bilan du jour et vos encouragements.",
+        "button": "Configurer les rappels"
+      }
+    }
+  }
 }

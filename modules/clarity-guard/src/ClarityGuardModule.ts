@@ -26,6 +26,10 @@ declare class ClarityGuardModule extends NativeModule<Record<string, never>> {
   setPauseConfig(enabled: boolean, packages: string[], ui: PauseUi): void;
   /** Opens this app's system App info page (for Android 13+ "Allow restricted settings"). */
   openAppSettings(): void;
+  isIgnoringBatteryOptimizations(): boolean;
+  openBatteryOptimizationSettings(): void;
+  /** Asks the launcher to pin an SOS shortcut; false when the launcher doesn't support it. */
+  requestSosShortcut(label: string): boolean;
   /** Lower-case device maker, e.g. "xiaomi". */
   deviceMaker(): string;
   /** Opens the maker's Autostart or background pop-up permission screen, falling back to App info. */

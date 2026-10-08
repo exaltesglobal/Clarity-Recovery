@@ -827,5 +827,96 @@
     { "title": "¿No puedes dormir? Levántate", "body": "Si llevas despierto más de unos 20 minutos, levántate y haz algo tranquilo con poca luz hasta que tengas sueño. No te quedes en la cama con el móvil." },
     { "title": "Fresco, oscuro y silencioso", "body": "Una habitación algo fresca, oscura y silenciosa te ayuda a dormirte y a seguir dormido." },
     { "title": "Luz natural por la mañana", "body": "Salir al exterior en la primera hora tras despertar ayuda a ajustar tu reloj interno para dormir mejor esa noche." }
-  ]
+  ],
+  "setup": {
+    "title": "Lista de configuración",
+    "open": "Abrir lista de configuración",
+    "intro": "Unos pasos únicos ayudan a Clarity a protegerte de forma fiable. Ve de arriba abajo; tarda unos 5 minutos. Las marcas se actualizan solas cuando Clarity puede comprobar un paso.",
+    "progress": "{{done}} de {{total}} pasos hechos",
+    "allDone": "Todo listo. Clarity ya puede protegerte.",
+    "todayTitle": "Termina de configurar Clarity",
+    "hide": "Ocultar",
+    "optional": "Opcional",
+    "markDone": "Ya lo he hecho",
+    "undo": "Aún no lo he hecho",
+    "done": "Hecho",
+    "fullGuide": "Leer la guía completa",
+    "groups": {
+      "essentials": "Lo esencial",
+      "protection": "Protección",
+      "running": "Mantén Clarity activo",
+      "extras": "Extras opcionales"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Permite las notificaciones",
+        "body": "Necesarias para tus recordatorios de registro diario, los mensajes de ánimo y el aviso antes de que termine tu prueba gratuita.",
+        "button": "Permitir notificaciones"
+      },
+      "partner": {
+        "title": "Añade un compañero de responsabilidad",
+        "body": "Alguien de confianza. Cuando toques SOS, se abrirá con un toque un mensaje listo para enviarle.",
+        "button": "Añadir compañero"
+      },
+      "sosShortcut": {
+        "title": "Ten el SOS a un toque",
+        "body": "Mantén pulsado el icono de Clarity y toca «Botón de pánico» para abrir el SOS al instante, o añade un icono de SOS a tu pantalla de inicio.",
+        "button": "Añadir SOS a la pantalla de inicio"
+      },
+      "dns": {
+        "title": "Activa el bloqueador de webs",
+        "body": "Bloquea las webs para adultos en todos los navegadores y apps de este teléfono.",
+        "button": "Configurar bloqueador"
+      },
+      "alwaysOnVpn": {
+        "title": "Mantén el bloqueador tras reiniciar",
+        "body": "En los ajustes de VPN, toca el engranaje junto a Clarity Recovery y activa «VPN siempre activa».",
+        "button": "Abrir ajustes de VPN"
+      },
+      "pause": {
+        "title": "Activa la pausa consciente",
+        "body": "Muestra una pausa tranquila al abrir apps como Instagram o TikTok, para que elijas con intención.",
+        "button": "Configurar pausa"
+      },
+      "iosDns": {
+        "title": "Instala el bloqueador de webs",
+        "body": "Sigue los pasos de la pantalla Protección para bloquear las webs para adultos en tu iPhone.",
+        "button": "Abrir Protección"
+      },
+      "iosScreenTime": {
+        "title": "Añade límites de Tiempo de uso",
+        "body": "Usa Tiempo de uso para limitar las webs para adultos y poner límites a las apps.",
+        "button": "Abrir Protección"
+      },
+      "battery": {
+        "title": "Evita que el ahorro de batería cierre Clarity",
+        "body": "Pon Clarity Recovery en «No optimizar» o «Sin restricciones» para que el bloqueador y la pausa sigan funcionando.",
+        "button": "Abrir ajustes de batería"
+      },
+      "autostart": {
+        "title": "Permite el Inicio automático",
+        "body": "Los teléfonos {{maker}} necesitan el Inicio automático activado para Clarity Recovery; si no, la protección se detiene al cabo de un rato.",
+        "button": "Abrir Inicio automático"
+      },
+      "popups": {
+        "title": "Permite ventanas emergentes en segundo plano",
+        "body": "En Otros permisos, permite «Mostrar ventanas emergentes mientras se ejecuta en segundo plano» para Clarity Recovery.",
+        "button": "Abrir permisos"
+      },
+      "lockRecents": {
+        "title": "Bloquea Clarity en apps recientes",
+        "body": "Abre las apps recientes, desliza la tarjeta de Clarity hacia abajo (o mantenla pulsada) y toca el candado para que {{maker}} no la cierre."
+      },
+      "health": {
+        "title": "Conecta tu pulsera de actividad",
+        "body": "Ve tus pasos, sueño y frecuencia cardíaca junto a tu progreso.",
+        "button": "Conectar"
+      },
+      "reminders": {
+        "title": "Configura los recordatorios",
+        "body": "Elige cuándo recibir tu registro diario y los mensajes de ánimo.",
+        "button": "Configurar recordatorios"
+      }
+    }
+  }
 }

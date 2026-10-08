@@ -813,5 +813,96 @@
     { "title": "睡不着？起来", "body": "如果醒着超过约 20 分钟，就起床在昏暗的光线下做些安静的事，直到有睡意。不要躺在床上玩手机。" },
     { "title": "凉爽、黑暗、安静", "body": "略微凉爽、黑暗、安静的房间，有助于入睡和保持睡眠。" },
     { "title": "早晨晒太阳", "body": "起床后一小时内到户外，有助于调整生物钟，让当晚睡得更好。" }
-  ]
+  ],
+  "setup": {
+    "title": "设置清单",
+    "open": "打开设置清单",
+    "intro": "完成几个一次性步骤，Clarity 就能可靠地保护你。从上到下依次完成，大约需要 5 分钟。Clarity 能检查的步骤会自动打勾。",
+    "progress": "已完成 {{done}}/{{total}} 步",
+    "allDone": "全部就绪。Clarity 已准备好保护你。",
+    "todayTitle": "完成 Clarity 设置",
+    "hide": "隐藏",
+    "optional": "可选",
+    "markDone": "我已完成",
+    "undo": "还没完成",
+    "done": "已完成",
+    "fullGuide": "查看完整指南",
+    "groups": {
+      "essentials": "基础设置",
+      "protection": "保护",
+      "running": "让 Clarity 保持运行",
+      "extras": "可选功能"
+    },
+    "steps": {
+      "notifications": {
+        "title": "允许通知",
+        "body": "用于打卡提醒、鼓励消息，以及免费试用结束前的提醒。",
+        "button": "允许通知"
+      },
+      "partner": {
+        "title": "添加监督伙伴",
+        "body": "选一个你信任的人。当你点按 SOS 时，一点就能打开一条给他的待发送短信。",
+        "button": "添加伙伴"
+      },
+      "sosShortcut": {
+        "title": "让 SOS 一点即达",
+        "body": "长按 Clarity 图标可直接打开 SOS，也可以把“紧急按钮”图标添加到主屏幕。",
+        "button": "将 SOS 添加到主屏幕"
+      },
+      "dns": {
+        "title": "开启成人网站拦截",
+        "body": "在这部手机的所有浏览器和应用中拦截成人网站。",
+        "button": "设置拦截"
+      },
+      "alwaysOnVpn": {
+        "title": "重启后保持拦截开启",
+        "body": "在 VPN 设置中，点按 Clarity Recovery 旁的齿轮，开启“始终开启的 VPN”。",
+        "button": "打开 VPN 设置"
+      },
+      "pause": {
+        "title": "开启正念暂停",
+        "body": "打开 Instagram 或 TikTok 等应用时，会先出现平静的暂停，让你有意识地做选择。",
+        "button": "设置正念暂停"
+      },
+      "iosDns": {
+        "title": "安装成人网站拦截",
+        "body": "按照“保护”页面上的步骤，在 iPhone 上拦截成人网站。",
+        "button": "打开“保护”"
+      },
+      "iosScreenTime": {
+        "title": "添加“屏幕使用时间”限额",
+        "body": "用“屏幕使用时间”限制成人网站，并设置 App 限额。",
+        "button": "打开“保护”"
+      },
+      "battery": {
+        "title": "别让省电功能关闭 Clarity",
+        "body": "将 Clarity Recovery 设为“无限制”（或“不优化”），让拦截和正念暂停持续工作。",
+        "button": "打开电池设置"
+      },
+      "autostart": {
+        "title": "允许自启动",
+        "body": "{{maker}} 手机需要为 Clarity Recovery 开启“自启动”，否则保护功能过一段时间就会停止。",
+        "button": "打开自启动"
+      },
+      "popups": {
+        "title": "允许后台弹出界面",
+        "body": "在“其他权限”中，为 Clarity Recovery 允许“后台弹出界面”。",
+        "button": "打开其他权限"
+      },
+      "lockRecents": {
+        "title": "在最近任务中锁定 Clarity",
+        "body": "打开最近任务，下拉 Clarity 的卡片（或长按），然后点按锁形图标，这样 {{maker}} 就不会关闭它。"
+      },
+      "health": {
+        "title": "连接你的健身追踪器",
+        "body": "在你的进度旁显示步数、睡眠和心率。",
+        "button": "连接"
+      },
+      "reminders": {
+        "title": "设置提醒",
+        "body": "选择何时收到每日打卡提醒和鼓励提醒。",
+        "button": "设置提醒"
+      }
+    }
+  }
 }

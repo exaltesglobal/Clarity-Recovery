@@ -129,6 +129,7 @@ export default function Protection() {
     <Screen>
       <Card variant="soft">
         <Body>{tr('protection.intro')}</Body>
+        <Button small variant="secondary" icon="list-outline" title={tr('setup.open')} onPress={() => router.push('/setup')} />
       </Card>
 
       <SectionTitle>{tr('protection.dnsSection')}</SectionTitle>

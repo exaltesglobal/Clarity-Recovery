@@ -1297,5 +1297,96 @@
       "title": "Daylight in the morning",
       "body": "Getting outside within an hour of waking helps set your body clock for better sleep that night."
     }
-  ]
+  ],
+  "setup": {
+    "title": "Setup checklist",
+    "open": "Open setup checklist",
+    "intro": "A few one-time steps help Clarity protect you reliably. Go from top to bottom; it takes about 5 minutes. Ticks update by themselves when Clarity can check a step.",
+    "progress": "{{done}} of {{total}} steps done",
+    "allDone": "All set. Clarity is ready to protect you.",
+    "todayTitle": "Finish setting up Clarity",
+    "hide": "Hide",
+    "optional": "Optional",
+    "markDone": "I've done this",
+    "undo": "Not done yet",
+    "done": "Done",
+    "fullGuide": "Read the full guide",
+    "groups": {
+      "essentials": "Essentials",
+      "protection": "Protection",
+      "running": "Keep Clarity running",
+      "extras": "Optional extras"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Allow notifications",
+        "body": "Needed for your check-in reminders, encouragement and the reminder before your free trial ends.",
+        "button": "Allow notifications"
+      },
+      "partner": {
+        "title": "Add an accountability partner",
+        "body": "Someone you trust. When you tap SOS, a ready-to-send text to them opens in one tap.",
+        "button": "Add partner"
+      },
+      "sosShortcut": {
+        "title": "Keep SOS one tap away",
+        "body": "Long-press the Clarity icon to open SOS straight away, or add an SOS icon to your home screen.",
+        "button": "Add SOS to home screen"
+      },
+      "dns": {
+        "title": "Turn on the website blocker",
+        "body": "Blocks adult websites in every browser and app on this phone.",
+        "button": "Set up blocker"
+      },
+      "alwaysOnVpn": {
+        "title": "Keep the blocker on after a restart",
+        "body": "In VPN settings, tap the gear next to Clarity Recovery and turn on \"Always-on VPN\".",
+        "button": "Open VPN settings"
+      },
+      "pause": {
+        "title": "Turn on the mindful pause",
+        "body": "Shows a calm pause when you open apps like Instagram or TikTok, so you can choose on purpose.",
+        "button": "Set up pause"
+      },
+      "iosDns": {
+        "title": "Install the website blocker",
+        "body": "Follow the steps on the Protection screen to block adult websites on your iPhone.",
+        "button": "Open Protection"
+      },
+      "iosScreenTime": {
+        "title": "Add Screen Time limits",
+        "body": "Use Screen Time to limit adult websites and set app limits.",
+        "button": "Open Protection"
+      },
+      "battery": {
+        "title": "Stop battery saving from closing Clarity",
+        "body": "Set Clarity Recovery to \"Don't optimize\" or \"Unrestricted\" so the blocker and pause keep working.",
+        "button": "Open battery settings"
+      },
+      "autostart": {
+        "title": "Allow Autostart",
+        "body": "{{maker}} phones need Autostart turned on for Clarity Recovery, or protection stops after a while.",
+        "button": "Open Autostart"
+      },
+      "popups": {
+        "title": "Allow background pop-ups",
+        "body": "In Other permissions, allow \"Display pop-up windows while running in background\" for Clarity Recovery.",
+        "button": "Open permissions"
+      },
+      "lockRecents": {
+        "title": "Lock Clarity in recent apps",
+        "body": "Open recent apps, then pull Clarity's card down (or long-press it) and tap the lock, so {{maker}} doesn't close it."
+      },
+      "health": {
+        "title": "Connect your fitness tracker",
+        "body": "Show steps, sleep and heart rate next to your progress.",
+        "button": "Connect"
+      },
+      "reminders": {
+        "title": "Set up reminders",
+        "body": "Choose when you get your daily check-in and encouragement.",
+        "button": "Set up reminders"
+      }
+    }
+  }
 }

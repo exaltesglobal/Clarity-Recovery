@@ -19,6 +19,7 @@ import type {
   Partner,
   Profile,
   Protection,
+  Setup,
   Reminders,
 } from './types';
 
@@ -72,6 +73,7 @@ export function createDefaultData(): AppData {
     },
     protection: { dnsFilter: false, mindfulPause: false, pauseApps: DEFAULT_PAUSE_APPS },
     health: { connected: false },
+    setup: { done: [], hidden: false },
     installedAt: new Date().toISOString(),
   };
 }
@@ -84,6 +86,7 @@ function migrate(saved: Record<string, unknown>): AppData {
   merged.appearance = { ...defaults.appearance, ...(saved.appearance as Partial<Appearance>) };
   merged.reminders = { ...defaults.reminders, ...(saved.reminders as Partial<Reminders>) };
   merged.protection = { ...defaults.protection, ...(saved.protection as Partial<Protection>) };
+  merged.setup = { ...defaults.setup, ...(saved.setup as Partial<Setup>) };
   if (merged.reminder) {
     merged.reminders.checkIn = merged.reminder;
     delete merged.reminder;
@@ -188,6 +191,15 @@ function createActions(update: Updater) {
     },
     setProtection(patch: Partial<Protection>) {
       update((d) => ({ ...d, protection: { ...d.protection, ...patch } }));
+    },
+    toggleSetupStep(id: string) {
+      update((d) => ({
+        ...d,
+        setup: { ...d.setup, done: d.setup.done.includes(id) ? d.setup.done.filter((s) => s !== id) : [...d.setup.done, id] },
+      }));
+    },
+    hideSetupCard() {
+      update((d) => ({ ...d, setup: { ...d.setup, hidden: true } }));
     },
     setHealthConnected(connected: boolean) {
       update((d) => ({ ...d, health: { connected } }));

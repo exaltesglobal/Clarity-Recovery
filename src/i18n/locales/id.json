@@ -1290,5 +1290,96 @@
       "title": "Cahaya matahari di pagi hari",
       "body": "Keluar rumah dalam satu jam setelah bangun membantu mengatur jam biologismu agar tidur lebih nyenyak malam itu."
     }
-  ]
+  ],
+  "setup": {
+    "title": "Daftar periksa penyiapan",
+    "open": "Buka daftar periksa penyiapan",
+    "intro": "Beberapa langkah sekali saja membantu Clarity melindungimu dengan andal. Ikuti dari atas ke bawah; hanya sekitar 5 menit. Tanda centang diperbarui sendiri saat Clarity bisa memeriksa suatu langkah.",
+    "progress": "{{done}} dari {{total}} langkah selesai",
+    "allDone": "Semua siap. Clarity siap melindungimu.",
+    "todayTitle": "Selesaikan penyiapan Clarity",
+    "hide": "Sembunyikan",
+    "optional": "Opsional",
+    "markDone": "Sudah kulakukan",
+    "undo": "Belum selesai",
+    "done": "Selesai",
+    "fullGuide": "Baca panduan lengkap",
+    "groups": {
+      "essentials": "Hal penting",
+      "protection": "Perlindungan",
+      "running": "Jaga Clarity tetap berjalan",
+      "extras": "Tambahan opsional"
+    },
+    "steps": {
+      "notifications": {
+        "title": "Izinkan notifikasi",
+        "body": "Diperlukan untuk pengingat check-in, pesan penyemangat, dan pengingat sebelum uji coba gratismu berakhir.",
+        "button": "Izinkan notifikasi"
+      },
+      "partner": {
+        "title": "Tambahkan partner akuntabilitas",
+        "body": "Seseorang yang kamu percaya. Saat kamu mengetuk SOS, pesan siap kirim untuknya terbuka dengan sekali ketuk.",
+        "button": "Tambah partner"
+      },
+      "sosShortcut": {
+        "title": "SOS cukup sekali ketuk",
+        "body": "Tekan lama ikon Clarity lalu ketuk \"Tombol darurat\" untuk langsung membuka SOS, atau tambahkan ikon SOS ke layar utama.",
+        "button": "Tambah SOS ke layar utama"
+      },
+      "dns": {
+        "title": "Aktifkan pemblokir situs",
+        "body": "Memblokir situs dewasa di semua browser dan aplikasi di ponsel ini.",
+        "button": "Siapkan pemblokir"
+      },
+      "alwaysOnVpn": {
+        "title": "Pemblokir tetap aktif setelah restart",
+        "body": "Di pengaturan VPN, ketuk ikon roda gigi di sebelah Clarity Recovery, lalu aktifkan \"VPN selalu aktif\".",
+        "button": "Buka pengaturan VPN"
+      },
+      "pause": {
+        "title": "Aktifkan jeda sadar",
+        "body": "Menampilkan jeda yang tenang saat kamu membuka aplikasi seperti Instagram atau TikTok, agar kamu bisa memilih dengan sadar.",
+        "button": "Siapkan jeda"
+      },
+      "iosDns": {
+        "title": "Instal pemblokir situs",
+        "body": "Ikuti langkah di layar Perlindungan untuk memblokir situs dewasa di iPhone-mu.",
+        "button": "Buka Perlindungan"
+      },
+      "iosScreenTime": {
+        "title": "Tambahkan batas Durasi Layar",
+        "body": "Gunakan Durasi Layar untuk membatasi situs dewasa dan mengatur batas app.",
+        "button": "Buka Perlindungan"
+      },
+      "battery": {
+        "title": "Cegah penghemat baterai menutup Clarity",
+        "body": "Atur Clarity Recovery ke \"Jangan optimalkan\" atau \"Tidak dibatasi\" agar pemblokir dan jeda tetap berfungsi.",
+        "button": "Buka pengaturan baterai"
+      },
+      "autostart": {
+        "title": "Izinkan Mulai otomatis",
+        "body": "Ponsel {{maker}} perlu Mulai otomatis diaktifkan untuk Clarity Recovery. Jika tidak, perlindungan akan berhenti setelah beberapa saat.",
+        "button": "Buka Mulai otomatis"
+      },
+      "popups": {
+        "title": "Izinkan pop-up di latar belakang",
+        "body": "Di Izin lainnya, izinkan \"Tampilkan jendela pop-up saat berjalan di latar belakang\" untuk Clarity Recovery.",
+        "button": "Buka izin"
+      },
+      "lockRecents": {
+        "title": "Kunci Clarity di aplikasi terbaru",
+        "body": "Buka aplikasi terbaru, tarik kartu Clarity ke bawah (atau tekan lama), lalu ketuk ikon kunci agar {{maker}} tidak menutupnya."
+      },
+      "health": {
+        "title": "Hubungkan pelacak kebugaranmu",
+        "body": "Lihat langkah, tidur, dan detak jantung di samping kemajuanmu.",
+        "button": "Hubungkan"
+      },
+      "reminders": {
+        "title": "Atur pengingat",
+        "body": "Pilih kapan kamu menerima check-in harian dan pesan penyemangat.",
+        "button": "Atur pengingat"
+      }
+    }
+  }
 }
