@@ -362,6 +362,10 @@
     "pauseNeedsService": "Un paso más: activa Clarity Recovery en los ajustes de accesibilidad.",
     "pauseRestricted": "¿El interruptor está gris o dice \"Ajuste restringido\"? Android lo bloquea en apps instaladas fuera de Play Store. Abre Información de la app, toca ⋮ (arriba a la derecha) → Permitir ajustes restringidos y vuelve a activarlo.",
     "openAppInfo": "Abrir información de la app",
+    "oemBody": "Los teléfonos {{maker}} cierran apps en segundo plano para ahorrar batería, y eso puede detener la pausa consciente. Para que siga funcionando:",
+    "oemSteps": ["Activa el Inicio automático de Clarity Recovery.","En Otros permisos, permite \"Mostrar ventanas emergentes mientras se ejecuta en segundo plano\".","En Información de la app → Ahorro de batería, elige \"Sin restricciones\".","En apps recientes, bloquea Clarity Recovery (desliza su tarjeta hacia abajo o mantenla pulsada)."],
+    "oemAutostart": "Abrir inicio automático",
+    "oemPopups": "Abrir otros permisos",
     "pauseSteps": [
       "Toca «Abrir ajustes».",
       "Toca «Aplicaciones instaladas» (o «Aplicaciones descargadas»).",

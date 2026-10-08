@@ -448,6 +448,10 @@
     "pauseNeedsService": "Noch ein Schritt: Schalte Clarity Recovery in den Einstellungen für Bedienungshilfen ein.",
     "pauseRestricted": "Schalter ausgegraut oder „Eingeschränkte Einstellung“? Android sperrt ihn für Apps, die nicht aus dem Play Store installiert wurden. Öffne App-Info, tippe auf ⋮ (oben rechts) → Eingeschränkte Einstellungen zulassen und schalte ihn dann erneut ein.",
     "openAppInfo": "App-Info öffnen",
+    "oemBody": "{{maker}}-Handys schließen Apps im Hintergrund, um Akku zu sparen. Dadurch kann die achtsame Pause ausfallen. So bleibt sie aktiv:",
+    "oemSteps": ["Aktiviere „Autostart“ für Clarity Recovery.","Erlaube unter „Weitere Berechtigungen“: „Pop-up-Fenster anzeigen, während im Hintergrund ausgeführt“.","Wähle unter App-Info → Energiesparmodus „Keine Einschränkungen“.","Sperre Clarity Recovery in den letzten Apps (Karte nach unten ziehen oder lange drücken)."],
+    "oemAutostart": "Autostart öffnen",
+    "oemPopups": "Weitere Berechtigungen öffnen",
     "pauseSteps": [
       "Tippe auf „Einstellungen öffnen“.",
       "Tippe auf „Installierte Apps“ (oder „Heruntergeladene Apps“).",

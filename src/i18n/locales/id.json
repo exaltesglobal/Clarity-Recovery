@@ -442,6 +442,10 @@
     "pauseNeedsService": "Satu langkah lagi: aktifkan Clarity Recovery di pengaturan aksesibilitas.",
     "pauseRestricted": "Tombol berwarna abu-abu atau bertuliskan \"Setelan terbatas\"? Android memblokirnya untuk aplikasi yang dipasang di luar Play Store. Buka Info aplikasi, ketuk ⋮ (kanan atas) → Izinkan setelan terbatas, lalu aktifkan lagi.",
     "openAppInfo": "Buka Info aplikasi",
+    "oemBody": "Ponsel {{maker}} menutup aplikasi di latar belakang untuk menghemat baterai, sehingga jeda sadar bisa berhenti. Agar tetap berfungsi:",
+    "oemSteps": ["Aktifkan Mulai otomatis untuk Clarity Recovery.","Di Izin lainnya, izinkan \"Tampilkan jendela pop-up saat berjalan di latar belakang\".","Di Info aplikasi → Penghemat baterai, pilih \"Tanpa batasan\".","Di aplikasi terbaru, kunci Clarity Recovery (tarik kartunya ke bawah atau tekan lama)."],
+    "oemAutostart": "Buka Mulai otomatis",
+    "oemPopups": "Buka izin lainnya",
     "pauseSteps": [
       "Ketuk \"Buka pengaturan\".",
       "Ketuk \"Aplikasi terinstal\" (atau \"Aplikasi yang didownload\").",

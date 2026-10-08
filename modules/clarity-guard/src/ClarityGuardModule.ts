@@ -26,6 +26,10 @@ declare class ClarityGuardModule extends NativeModule<Record<string, never>> {
   setPauseConfig(enabled: boolean, packages: string[], ui: PauseUi): void;
   /** Opens this app's system App info page (for Android 13+ "Allow restricted settings"). */
   openAppSettings(): void;
+  /** Lower-case device maker, e.g. "xiaomi". */
+  deviceMaker(): string;
+  /** Opens the maker's Autostart or background pop-up permission screen, falling back to App info. */
+  openOemSetting(which: 'autostart' | 'popups'): boolean;
   allowApp(packageName: string, minutes: number): void;
   openApp(packageName: string): boolean;
   installedApps(packages: string[]): string[];

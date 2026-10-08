@@ -362,6 +362,10 @@
     "pauseNeedsService": "Mais um passo: ative o Clarity Recovery nos ajustes de acessibilidade.",
     "pauseRestricted": "O botão está cinza ou mostra \"Configuração restrita\"? O Android bloqueia isso em apps instalados fora da Play Store. Abra Informações do app, toque em ⋮ (canto superior direito) → Permitir configurações restritas e ative de novo.",
     "openAppInfo": "Abrir informações do app",
+    "oemBody": "Celulares {{maker}} fecham apps em segundo plano para economizar bateria, o que pode interromper a pausa consciente. Para mantê-la funcionando:",
+    "oemSteps": ["Ative a Inicialização automática do Clarity Recovery.","Em Outras permissões, permita \"Exibir janelas pop-up enquanto executa em segundo plano\".","Em Informações do app → Economia de bateria, escolha \"Sem restrições\".","Nos apps recentes, bloqueie o Clarity Recovery (puxe o cartão para baixo ou toque e segure)."],
+    "oemAutostart": "Abrir inicialização automática",
+    "oemPopups": "Abrir outras permissões",
     "pauseSteps": [
       "Toque em «Abrir ajustes».",
       "Toque em «Apps instalados» (ou «Apps baixados»).",

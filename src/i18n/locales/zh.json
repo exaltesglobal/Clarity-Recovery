@@ -350,6 +350,10 @@
     "pauseNeedsService": "还差一步：在无障碍设置中开启 Clarity Recovery。",
     "pauseRestricted": "开关是灰色的或显示“受限设置”？对于不是从 Play 商店安装的应用，Android 会阻止此设置。打开应用信息，点按右上角 ⋮ → 允许受限设置，然后再次开启。",
     "openAppInfo": "打开应用信息",
+    "oemBody": "{{maker}} 手机会为了省电在后台关闭应用，这可能导致正念暂停失效。为保持其正常工作：",
+    "oemSteps": ["为 Clarity Recovery 开启“自启动”。","在“其他权限”中允许“后台弹出界面”。","在应用信息 → 省电策略中选择“无限制”。","在最近任务中锁定 Clarity Recovery（下拉其卡片或长按）。"],
+    "oemAutostart": "打开自启动",
+    "oemPopups": "打开其他权限",
     "pauseSteps": [
       "点按“打开设置”。",
       "点按“已安装的应用”（或“已下载的应用”）。",

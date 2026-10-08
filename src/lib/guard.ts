@@ -12,6 +12,29 @@ export const guard = ClarityGuard;
 /** True when the native module is present (an Android build of this app, not Expo Go). */
 export const guardAvailable = Platform.OS === 'android' && !!ClarityGuard;
 
+/**
+ * Android skins that kill background apps or block background pop-ups by default, which can
+ * stop the mindful pause. Maps Build.MANUFACTURER (lower-case) to a display name.
+ */
+const BACKGROUND_KILLERS: Record<string, string> = {
+  xiaomi: 'Xiaomi',
+  redmi: 'Redmi',
+  poco: 'POCO',
+  oppo: 'OPPO',
+  realme: 'realme',
+  vivo: 'vivo',
+  iqoo: 'iQOO',
+  oneplus: 'OnePlus',
+  huawei: 'Huawei',
+  honor: 'HONOR',
+};
+
+/** Display name of the phone maker when it needs extra steps for the pause, otherwise null. */
+export function backgroundKillerMaker(): string | null {
+  if (!guardAvailable || !guard) return null;
+  return BACKGROUND_KILLERS[guard.deviceMaker()] ?? null;
+}
+
 /** Stands in for the other app's name in the pause overlay's texts; the service fills it in. */
 export const PAUSE_APP_TOKEN = '%APP%';
 

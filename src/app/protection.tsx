@@ -9,7 +9,15 @@ import { Alert, AppState, Platform, View } from 'react-native';
 import { PremiumGate } from '../components/Premium';
 import { Body, Button, Card, Chip, ChipRow, H2, IconBadge, ListRow, Muted, Screen, SectionTitle } from '../components/ui';
 import { openUrl } from '../lib/contact';
-import { appName, guard, guardAvailable, IOS_DNS_PROFILE_URL, PRIVATE_DNS_HOST, SOCIAL_APPS } from '../lib/guard';
+import {
+  appName,
+  backgroundKillerMaker,
+  guard,
+  guardAvailable,
+  IOS_DNS_PROFILE_URL,
+  PRIVATE_DNS_HOST,
+  SOCIAL_APPS,
+} from '../lib/guard';
 import { useStore } from '../lib/store';
 import { useTheme } from '../theme';
 
@@ -47,6 +55,7 @@ export default function Protection() {
   const [pauseServiceOn, setPauseServiceOn] = useState(false);
   const [installed, setInstalled] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
+  const [maker] = useState(backgroundKillerMaker);
 
   const refresh = useCallback(() => {
     if (!guardAvailable || !guard) return;
@@ -209,6 +218,15 @@ export default function Protection() {
                 <Button title={tr('protection.turnOff')} variant="ghost" onPress={() => setPause(false)} />
               ) : (
                 <Button title={tr('protection.turnOnPause')} icon="pause-circle-outline" onPress={enablePause} />
+              )}
+              {data.protection.mindfulPause && maker && (
+                <Card variant="soft">
+                  <Body>{tr('protection.oemBody', { maker })}</Body>
+                  <Steps steps={tr('protection.oemSteps', { returnObjects: true }) as string[]} />
+                  <Button small title={tr('protection.oemAutostart')} onPress={() => guard?.openOemSetting('autostart')} />
+                  <Button small variant="secondary" title={tr('protection.oemPopups')} onPress={() => guard?.openOemSetting('popups')} />
+                  <Button small variant="secondary" title={tr('protection.openAppInfo')} onPress={() => guard?.openAppSettings()} />
+                </Card>
               )}
             </>
           ) : Platform.OS === 'ios' ? (

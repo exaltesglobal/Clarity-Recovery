@@ -448,6 +448,10 @@
     "pauseNeedsService": "One more step: switch on Clarity Recovery in accessibility settings.",
     "pauseRestricted": "Switch greyed out or showing \"Restricted setting\"? Android blocks it for apps installed outside the Play Store. Open App info, tap ⋮ (top right) → Allow restricted settings, then switch it on again.",
     "openAppInfo": "Open App info",
+    "oemBody": "{{maker}} phones close apps in the background to save battery, which can stop the mindful pause. To keep it working:",
+    "oemSteps": ["Turn on Autostart for Clarity Recovery.","In Other permissions, allow \"Display pop-up windows while running in background\".","In App info → Battery saver, choose \"No restrictions\".","In recent apps, lock Clarity Recovery (pull its card down or long-press it)."],
+    "oemAutostart": "Open Autostart",
+    "oemPopups": "Open other permissions",
     "pauseSteps": [
       "Tap \"Open settings\".",
       "Tap \"Installed apps\" (or \"Downloaded apps\").",

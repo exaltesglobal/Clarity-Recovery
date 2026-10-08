@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.net.VpnService
+import android.os.Build
 import android.provider.Settings
 import expo.modules.kotlin.Promise
 import expo.modules.kotlin.exception.Exceptions
@@ -94,6 +95,46 @@ class ClarityGuardModule : Module() {
     Function("openAppSettings") {
       val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", context.packageName, null))
       appContext.throwingActivity.startActivity(intent)
+    }
+
+    /** Lower-case device maker, e.g. "xiaomi", "oppo", "samsung". */
+    Function("deviceMaker") {
+      Build.MANUFACTURER.lowercase()
+    }
+
+    /**
+     * Opens a phone maker's own setting that can stop the mindful pause: "autostart" or
+     * "popups" (MIUI's "Display pop-up windows while running in background", under Other permissions).
+     * These screens are undocumented and vary by version, so it falls back to App info.
+     */
+    Function("openOemSetting") { which: String ->
+      val pkg = context.packageName
+      val candidates = when (which) {
+        "autostart" -> listOf(
+          Intent().setClassName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"),
+          Intent().setClassName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity"),
+          Intent().setClassName("com.oplus.safecenter", "com.oplus.safecenter.permission.startup.StartupAppListActivity"),
+          Intent().setClassName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity"),
+        )
+        "popups" -> listOf(
+          Intent("miui.intent.action.APP_PERM_EDITOR")
+            .setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.PermissionsEditorActivity")
+            .putExtra("extra_pkgname", pkg),
+          Intent("miui.intent.action.APP_PERM_EDITOR")
+            .setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity")
+            .putExtra("extra_pkgname", pkg),
+        )
+        else -> emptyList()
+      } + Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", pkg, null))
+      val activity = appContext.throwingActivity
+      candidates.any { intent ->
+        try {
+          activity.startActivity(intent)
+          true
+        } catch (_: Exception) {
+          false
+        }
+      }
     }
 
     /** Lets the user into an app for a while after they chose to continue from the pause screen. */
