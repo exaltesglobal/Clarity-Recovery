@@ -2,58 +2,70 @@
 
 A private, judgement-free companion app for people quitting porn. Built with React Native and [Expo](https://expo.dev) (SDK 57, Expo Router).
 
-Everything is stored **only on the device**. There are no accounts, servers or analytics.
+Recovery data (streaks, journal, check-ins) is stored **only on the device**. There are no accounts and no analytics.
 
 ## Features
 
 | Area | What it does |
 | --- | --- |
-| **Streak tracker** | Days/hours free, progress to the next milestone (1, 3, 7, 14, 30, 60, 90, 180, 365…), best streak, goal. |
-| **Urge SOS** | One tap from the home screen: paced breathing circle, a 10-minute "ride it out" timer, your personal reasons, a verse or affirmation, a quick workout, and a button to text your partner. Logs every urge you beat. |
-| **Relapse log** | Compassionate flow that records triggers, what happened and a plan for next time. It resets the streak but keeps your history and best streak. |
-| **Daily check-in & journal** | Mood, urge level (0–10), triggers, journal note and gratitude. The Journal tab shows 7-day averages and your most common triggers. |
-| **Wellness** | Guided, timed sessions: meditation (calm breathing, urge surfing, body scan, self-compassion), yoga flows, bodyweight workouts, a brisk-walk plan, and diet tips. Finishing a session checks off that day's habit. |
-| **Healthy habits** | Daily checklist covering meditation, exercise, yoga, eating, water, connection and phone-free bedroom. |
-| **Bible verses & prayer (optional)** | Turned off by default. When on, it shows a daily KJV verse, grace verses after a slip, a breath-prayer session and a prayer habit. |
-| **Accountability partner** | Save a trusted contact, text them "I'm struggling", call them, or send a weekly progress summary by SMS or any share target. |
-| **Reminders** | Discreet daily check-in notification at a time you choose (iOS/Android). |
+| **Onboarding** | Language, gender, age range, country, an 8-question self-check that sets a starting plan (reminders, protection, goal), reasons and faith preference. Everything can be changed later in Settings. |
+| **Streak tracker** | Days/hours free, progress to the next milestone, best streak, goal. |
+| **Panic / SOS** | Raised SOS button in the tab bar, a long-press app-icon shortcut, paced breathing, a 10-minute timer, your reasons, and a one-tap pre-filled SMS to your accountability partner. Shows scripture and a prayer when faith content is on. |
+| **Relapse log, check-in & journal** | Mood, urge level, triggers, notes, gratitude, 7-day insights. |
+| **Wellness** | 15 timed sessions (meditation, yoga, exercise, grounding), diet tips, a habit checklist, and research facts that update from a remote feed. |
+| **Stories** | Real recovery stories, loaded from the remote feed only with the author's consent. Nothing is invented. |
+| **Protection (Android)** | One-tap adult-site blocking through a local DNS-only VPN to CleanBrowsing Family, plus a "mindful pause" screen when you open selected social apps (accessibility service). On iOS, the app guides you to install a DNS profile. |
+| **Instagram check** | Reads your own Instagram data export on the device and flags accounts you follow that look like adult content. |
+| **Reminders** | Hourly (or every N hours) nudges within waking hours, plus a daily check-in. Uses expo-notifications, which runs on AlarmManager/NotificationManager on Android. |
+| **Health (optional)** | Steps, sleep and heart rate from Health Connect (Android) or HealthKit (iOS). |
+| **Region & language** | Crisis helplines and resources for the user's country. 14 languages: English, Hindi, Marathi, Spanish, Arabic, Portuguese, Chinese, French, Bengali, Russian, Urdu, Indonesian, German and Japanese. Arabic and Urdu use a right-to-left layout. |
+| **Branding & themes** | Logo, five calm theme presets, light/dark/system mode and a custom accent colour. |
+| **Subscriptions** | A one-month free trial, then Monthly, 6-month or Yearly plans through RevenueCat, with prices set per country in the store. SOS, helplines, streaks, check-ins and site blocking are always free. |
 
 ## Getting started
 
 ```bash
 npm install
-npx expo start        # scan the QR code with Expo Go, or press i / a / w
+npx expo start
 ```
 
-Useful scripts:
+The app uses native modules (DNS filter, health, purchases), so it needs a development build rather than Expo Go:
 
 ```bash
-npm run typecheck     # tsc --noEmit
-npm run lint          # expo lint
-npx expo-doctor       # dependency / config health check
+npx eas-cli@latest build --profile development --platform android   # dev client
+npx eas-cli@latest build --profile preview --platform android       # installable APK
 ```
 
-To build for the stores use [EAS Build](https://docs.expo.dev/build/introduction/): `npx eas-cli@latest build`.
+Checks:
+
+```bash
+npm run typecheck              # tsc --noEmit
+npm run lint                   # expo lint
+node scripts/check-i18n.mjs    # translation keys / placeholders
+npx expo-doctor
+```
+
+## Configuration (`app.json` → `expo.extra`)
+
+- `revenueCat.android` / `revenueCat.ios`: RevenueCat public SDK keys. If these are empty, every feature is unlocked.
+- `contentFeedUrl`: a JSON feed of facts and testimonials (see `content/README.md`).
+- `storiesEmail`: the address where users can submit their own stories.
 
 ## Project structure
 
 ```
 src/
-  app/                 # Expo Router screens (file-based routes)
-    (tabs)/            # Today, Journal, Wellness, Support
-    sos.tsx            # Urge SOS modal
-    relapse.tsx        # Log a slip
-    checkin.tsx        # Daily check-in
-    session/[id].tsx   # Guided meditation / yoga / workout player
-    settings.tsx
-    onboarding.tsx
-  components/          # UI kit, breathing circle, reasons editor
-  content/             # Verses, affirmations, triggers, wellness sessions, diet tips
-  lib/                 # Local store (AsyncStorage), dates, notifications, haptics
-  theme.ts             # Light/dark palette
+  app/            # Expo Router screens; (tabs)/ = Today, Journal, Wellness, Support
+  components/     # UI kit, logo, tab bar, pickers, assessment, premium gate
+  content/        # helplines by region, countries, wellness sessions, facts feed, verses
+  i18n/           # i18next setup + locales/*.json
+  lib/            # store, billing, notifications, health, guard, instagram, contact
+  theme.ts        # theme presets and customisation
+modules/clarity-guard/   # local Expo module (Kotlin): DNS-filter VPN + mindful-pause service
+content/feed.json        # remote-updatable facts and testimonials
 ```
 
 ## Notes
 
 - Wellness content is general guidance, not medical advice.
-- The Support tab points to professional help and, in the US, the 988 crisis line.
+- Helplines were checked against public directories. Check them again before release, and the Support tab always links to findahelpline.com.
