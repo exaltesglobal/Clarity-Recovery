@@ -149,7 +149,8 @@ async function loadFeed(): Promise<Feed> {
   } catch {}
   if (!FEED_URL) return (memory = cached);
   try {
-    const res = await fetch(FEED_URL, { headers: { 'Cache-Control': 'no-cache' } });
+    // No custom headers: on web they trigger a CORS preflight that GitHub's raw file server rejects.
+    const res = await fetch(FEED_URL);
     if (!res.ok) throw new Error(String(res.status));
     const json = (await res.json()) as Partial<Feed>;
     const fresh: Feed = {
