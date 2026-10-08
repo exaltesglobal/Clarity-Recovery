@@ -440,6 +440,8 @@
     "pauseDisclosureTitle": "Izinkan akses aksesibilitas",
     "pauseDisclosure": "Untuk mengetahui saat kamu membuka aplikasi yang dipilih, Clarity Recovery memerlukan izin aksesibilitas Android. Aplikasi hanya memeriksa aplikasi mana yang sedang tampil di layar. Aplikasi tidak pernah membaca pesanmu, apa yang kamu ketik, atau isi layar, dan tidak ada yang keluar dari HP-mu.",
     "pauseNeedsService": "Satu langkah lagi: aktifkan Clarity Recovery di pengaturan aksesibilitas.",
+    "pauseRestricted": "Tombol berwarna abu-abu atau bertuliskan \"Setelan terbatas\"? Android memblokirnya untuk aplikasi yang dipasang di luar Play Store. Buka Info aplikasi, ketuk ⋮ (kanan atas) → Izinkan setelan terbatas, lalu aktifkan lagi.",
+    "openAppInfo": "Buka Info aplikasi",
     "pauseSteps": [
       "Ketuk \"Buka pengaturan\".",
       "Ketuk \"Aplikasi terinstal\" (atau \"Aplikasi yang didownload\").",

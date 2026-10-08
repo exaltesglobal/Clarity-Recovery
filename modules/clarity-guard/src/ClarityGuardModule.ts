@@ -1,5 +1,19 @@
 import { NativeModule, requireOptionalNativeModule } from 'expo';
 
+export interface PauseUi {
+  title: string;
+  body: string;
+  breathe: string;
+  leave: string;
+  support: string;
+  notNow: string;
+  continue: string;
+  reasonsTitle: string;
+  reasons: string[];
+  rtl: boolean;
+  colors: Record<'bg' | 'card' | 'text' | 'muted' | 'primary' | 'onPrimary' | 'accent' | 'danger' | 'onDanger', string>;
+}
+
 declare class ClarityGuardModule extends NativeModule<Record<string, never>> {
   isDnsFilterActive(): boolean;
   /** Shows the system VPN consent dialog when needed; resolves true once the filter is running. */
@@ -8,7 +22,10 @@ declare class ClarityGuardModule extends NativeModule<Record<string, never>> {
   openVpnSettings(): void;
   isPauseServiceEnabled(): boolean;
   openAccessibilitySettings(): void;
-  setPauseConfig(enabled: boolean, packages: string[]): void;
+  /** ui: translated texts (use %APP% for the app name), theme colours, reasons and rtl for the overlay. */
+  setPauseConfig(enabled: boolean, packages: string[], ui: PauseUi): void;
+  /** Opens this app's system App info page (for Android 13+ "Allow restricted settings"). */
+  openAppSettings(): void;
   allowApp(packageName: string, minutes: number): void;
   openApp(packageName: string): boolean;
   installedApps(packages: string[]): string[];

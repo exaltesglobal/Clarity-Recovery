@@ -360,6 +360,8 @@
     "pauseDisclosureTitle": "Autoriser l'accès accessibilité",
     "pauseDisclosure": "Pour savoir quand vous ouvrez une app choisie, Clarity Recovery a besoin de l'autorisation d'accessibilité d'Android. Elle vérifie seulement quelle app est à l'écran. Elle ne lit jamais vos messages, ce que vous tapez ni le contenu de l'écran, et rien ne quitte votre téléphone.",
     "pauseNeedsService": "Encore une étape : activez Clarity Recovery dans les réglages d'accessibilité.",
+    "pauseRestricted": "L'interrupteur est grisé ou affiche « Paramètre restreint » ? Android le bloque pour les applis installées hors du Play Store. Ouvre Infos sur l'appli, touche ⋮ (en haut à droite) → Autoriser les paramètres restreints, puis réactive-le.",
+    "openAppInfo": "Ouvrir les infos de l'appli",
     "pauseSteps": [
       "Touchez « Ouvrir les réglages ».",
       "Touchez « Applications installées » (ou « Applications téléchargées »).",

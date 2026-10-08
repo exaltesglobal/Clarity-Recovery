@@ -5,12 +5,14 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.net.VpnService
 import android.provider.Settings
 import expo.modules.kotlin.Promise
 import expo.modules.kotlin.exception.Exceptions
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
+import org.json.JSONObject
 
 class ClarityGuardModule : Module() {
   private var pendingVpnPromise: Promise? = null
@@ -76,11 +78,22 @@ class ClarityGuardModule : Module() {
       appContext.throwingActivity.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
     }
 
-    Function("setPauseConfig") { enabled: Boolean, packages: List<String> ->
+    /** ui: translated texts, theme colours and the user's reasons for the pause overlay. */
+    Function("setPauseConfig") { enabled: Boolean, packages: List<String>, ui: Map<String, Any?> ->
       MindfulPauseService.prefs(context).edit()
         .putBoolean(MindfulPauseService.KEY_ENABLED, enabled)
         .putStringSet(MindfulPauseService.KEY_APPS, packages.toSet())
+        .putString(MindfulPauseService.KEY_UI, JSONObject(ui).toString())
         .apply()
+    }
+
+    /**
+     * Opens this app's system "App info" page. On Android 13+ a sideloaded APK must use
+     * its menu (⋮ → Allow restricted settings) before the accessibility service can be turned on.
+     */
+    Function("openAppSettings") {
+      val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", context.packageName, null))
+      appContext.throwingActivity.startActivity(intent)
     }
 
     /** Lets the user into an app for a while after they chose to continue from the pause screen. */

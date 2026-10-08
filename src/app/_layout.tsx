@@ -17,7 +17,7 @@ import { Logo } from '../components/Logo';
 // Importing i18n also initializes translations before any screen renders.
 import { applyLanguage, languageInfo } from '../i18n';
 import { BillingProvider, useBilling } from '../lib/billing';
-import { guard } from '../lib/guard';
+import { guard, PAUSE_APP_TOKEN } from '../lib/guard';
 import { configureNotifications, syncReminders, syncTrialReminder } from '../lib/notifications';
 import { StoreProvider, useStore } from '../lib/store';
 import { buildTheme, ThemeContext, useFallbackTheme } from '../theme';
@@ -79,10 +79,34 @@ function AppShell({ fontsLoaded }: { fontsLoaded: boolean }) {
     if (billing.ready) syncTrialReminder(trialEndsAt, t, i18n.language).catch(() => {});
   }, [billing.ready, trialEndsAt, i18n.language, t]);
 
-  // Keep the native mindful-pause settings in step with the saved preferences.
+  // Keep the native mindful-pause settings, texts and colours in step with the app.
+  const reasons = data.profile.reasons;
   useEffect(() => {
-    guard?.setPauseConfig(data.protection.mindfulPause, data.protection.pauseApps);
-  }, [data.protection.mindfulPause, data.protection.pauseApps]);
+    const app = PAUSE_APP_TOKEN;
+    guard?.setPauseConfig(data.protection.mindfulPause, data.protection.pauseApps, {
+      title: t('pause.title'),
+      body: t('pause.body', { app }),
+      breathe: t('pause.breathe'),
+      leave: t('pause.leave', { app }),
+      support: t('panic.button'),
+      notNow: t('pause.notNow'),
+      continue: t('pause.continue', { app }),
+      reasonsTitle: t('sos.rememberWhy'),
+      reasons,
+      rtl: !!languageInfo(i18n.language).rtl,
+      colors: {
+        bg: theme.bg,
+        card: theme.card,
+        text: theme.text,
+        muted: theme.muted,
+        primary: theme.primary,
+        onPrimary: theme.onPrimary,
+        accent: theme.accent,
+        danger: theme.danger,
+        onDanger: theme.onDanger,
+      },
+    });
+  }, [data.protection.mindfulPause, data.protection.pauseApps, reasons, theme, i18n.language, t]);
 
   useEffect(() => {
     if (Platform.OS === 'web') return;

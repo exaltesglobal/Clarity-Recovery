@@ -348,6 +348,8 @@
     "pauseDisclosureTitle": "允许无障碍权限",
     "pauseDisclosure": "为了在你打开所选应用时察觉到，Clarity Recovery 需要 Android 的无障碍权限。它只检查屏幕上是哪个应用，绝不读取你的消息、输入内容或屏幕内容，任何数据都不会离开你的手机。",
     "pauseNeedsService": "还差一步：在无障碍设置中开启 Clarity Recovery。",
+    "pauseRestricted": "开关是灰色的或显示“受限设置”？对于不是从 Play 商店安装的应用，Android 会阻止此设置。打开应用信息，点按右上角 ⋮ → 允许受限设置，然后再次开启。",
+    "openAppInfo": "打开应用信息",
     "pauseSteps": [
       "点按“打开设置”。",
       "点按“已安装的应用”（或“已下载的应用”）。",

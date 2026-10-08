@@ -80,9 +80,9 @@ export default function Protection() {
     setTimeout(refresh, 500);
   };
 
+  // The root layout passes these settings (with texts and colours) to the native service.
   const setPause = (enabled: boolean, apps = data.protection.pauseApps) => {
     actions.setProtection({ mindfulPause: enabled, pauseApps: apps });
-    guard?.setPauseConfig(enabled, apps);
   };
 
   const enablePause = async () => {
@@ -189,6 +189,8 @@ export default function Protection() {
                   <Body>{tr('protection.pauseNeedsService')}</Body>
                   <Steps steps={tr('protection.pauseSteps', { returnObjects: true }) as string[]} />
                   <Button small title={tr('protection.openSettings')} onPress={() => guard?.openAccessibilitySettings()} />
+                  <Muted>{tr('protection.pauseRestricted')}</Muted>
+                  <Button small variant="secondary" title={tr('protection.openAppInfo')} onPress={() => guard?.openAppSettings()} />
                 </Card>
               )}
               <Muted>{tr('protection.pauseApps')}</Muted>

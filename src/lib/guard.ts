@@ -12,6 +12,9 @@ export const guard = ClarityGuard;
 /** True when the native module is present (an Android build of this app, not Expo Go). */
 export const guardAvailable = Platform.OS === 'android' && !!ClarityGuard;
 
+/** Stands in for the other app's name in the pause overlay's texts; the service fills it in. */
+export const PAUSE_APP_TOKEN = '%APP%';
+
 /** Hostname for Android's built-in Private DNS setting, as a manual alternative. */
 export const PRIVATE_DNS_HOST = 'family-filter-dns.cleanbrowsing.org';
 

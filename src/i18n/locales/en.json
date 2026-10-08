@@ -446,6 +446,8 @@
     "pauseDisclosureTitle": "Allow accessibility access",
     "pauseDisclosure": "To notice when you open a chosen app, Clarity Recovery needs Android's accessibility permission. It only checks which app is on screen. It never reads your messages, what you type or screen content, and nothing leaves your phone.",
     "pauseNeedsService": "One more step: switch on Clarity Recovery in accessibility settings.",
+    "pauseRestricted": "Switch greyed out or showing \"Restricted setting\"? Android blocks it for apps installed outside the Play Store. Open App info, tap ⋮ (top right) → Allow restricted settings, then switch it on again.",
+    "openAppInfo": "Open App info",
     "pauseSteps": [
       "Tap \"Open settings\".",
       "Tap \"Installed apps\" (or \"Downloaded apps\").",

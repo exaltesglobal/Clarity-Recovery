@@ -446,6 +446,8 @@
     "pauseDisclosureTitle": "Bedienungshilfen-Zugriff erlauben",
     "pauseDisclosure": "Um zu erkennen, wann du eine ausgewählte App öffnest, braucht Clarity Recovery die Android-Berechtigung für Bedienungshilfen. Die App prüft nur, welche App gerade auf dem Bildschirm ist. Sie liest nie deine Nachrichten, deine Eingaben oder Bildschirminhalte, und nichts verlässt dein Handy.",
     "pauseNeedsService": "Noch ein Schritt: Schalte Clarity Recovery in den Einstellungen für Bedienungshilfen ein.",
+    "pauseRestricted": "Schalter ausgegraut oder „Eingeschränkte Einstellung“? Android sperrt ihn für Apps, die nicht aus dem Play Store installiert wurden. Öffne App-Info, tippe auf ⋮ (oben rechts) → Eingeschränkte Einstellungen zulassen und schalte ihn dann erneut ein.",
+    "openAppInfo": "App-Info öffnen",
     "pauseSteps": [
       "Tippe auf „Einstellungen öffnen“.",
       "Tippe auf „Installierte Apps“ (oder „Heruntergeladene Apps“).",
