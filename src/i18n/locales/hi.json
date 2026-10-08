@@ -598,6 +598,7 @@
     "previewMusic": "संगीत सुनें",
     "removeDownloads": "डाउनलोड किया संगीत हटाएँ ({{size}} MB)",
     "musicChip": "संगीत",
+    "minutes": "{{minutes}} मिनट",
     "volumes": {
       "soft": "धीमी",
       "medium": "मध्यम",

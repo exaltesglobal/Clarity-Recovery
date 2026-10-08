@@ -706,6 +706,7 @@
     "previewMusic": "সংগীত শুনুন",
     "removeDownloads": "ডাউনলোড করা সংগীত মুছুন ({{size}} MB)",
     "musicChip": "সংগীত",
+    "minutes": "{{minutes}} মিনিট",
     "volumes": {
       "soft": "মৃদু",
       "medium": "মাঝারি",

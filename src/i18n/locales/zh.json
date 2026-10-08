@@ -591,6 +591,7 @@
     "previewMusic": "试听音乐",
     "removeDownloads": "删除已下载的音乐（{{size}} MB）",
     "musicChip": "音乐",
+    "minutes": "{{minutes}} 分钟",
     "volumes": {
       "soft": "轻",
       "medium": "中",

@@ -720,6 +720,7 @@
     "previewMusic": "Прослушать музыку",
     "removeDownloads": "Удалить скачанную музыку ({{size}} МБ)",
     "musicChip": "Музыка",
+    "minutes": "{{minutes}} мин",
     "volumes": {
       "soft": "Тихо",
       "medium": "Средне",

@@ -605,6 +605,7 @@
     "previewMusic": "Escuchar música",
     "removeDownloads": "Eliminar música descargada ({{size}} MB)",
     "musicChip": "Música",
+    "minutes": "{{minutes}} min",
     "volumes": {
       "soft": "Bajo",
       "medium": "Medio",

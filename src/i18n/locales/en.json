@@ -706,6 +706,7 @@
     "previewMusic": "Preview music",
     "removeDownloads": "Remove downloaded music ({{size}} MB)",
     "musicChip": "Music",
+    "minutes": "{{minutes}} min",
     "volumes": {
       "soft": "Soft",
       "medium": "Medium",

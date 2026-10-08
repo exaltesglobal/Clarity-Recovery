@@ -216,7 +216,7 @@ def write_wav(stereo, path):
 
 def loudness(path):
     """Integrated loudness in LUFS, measured by ffmpeg's EBU R128 filter."""
-    out = subprocess.run(['ffmpeg', '-hide_banner', '-i', path, '-af', 'ebur128', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    out = subprocess.run(['ffmpeg', '-nostdin', '-hide_banner', '-i', path, '-af', 'ebur128', '-f', 'null', '-'], capture_output=True, text=True).stderr
     return float(out.rsplit('I:', 1)[1].split('LUFS')[0])
 
 
@@ -238,32 +238,39 @@ def encode(stereo, path):
     with tempfile.NamedTemporaryFile(suffix='.wav') as tmp:
         write_wav(stereo, tmp.name)
         subprocess.run(
-            ['ffmpeg', '-y', '-loglevel', 'error', '-i', tmp.name, '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', path],
+            ['ffmpeg', '-nostdin', '-y', '-loglevel', 'error', '-i', tmp.name, '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', path],
             check=True,
         )
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    catalogue = []
+    catalogue_path = os.path.join(ROOT, 'music.json')
+    try:
+        with open(catalogue_path) as f:
+            tracks = json.load(f)['tracks']
+    except FileNotFoundError:
+        tracks = []
+    # Only this script's tracks are rewritten; anything added with import-music.py stays as it is.
     for track_id, compose, title, names in TRACKS:
         path = os.path.join(OUT, f'{track_id}.m4a')
         encode(master(*compose()), path)
-        catalogue.append({
-            'id': track_id,
+        entry = next((t for t in tracks if t['id'] == track_id), None)
+        if entry is None:
+            entry = {'id': track_id, 'version': 1}
+            tracks.append(entry)
+        entry.update({
             'title': title,
             'i18n': names,
             'file': f'music/{track_id}.m4a',
             'bytes': os.path.getsize(path),
             'seconds': round(SECONDS),
-            'version': 1,
             'license': 'Original composition for Clarity Recovery',
         })
         print(f'{track_id}: {os.path.getsize(path) / 1e6:.1f} MB')
-    with open(os.path.join(ROOT, 'music.json'), 'w') as f:
-        json.dump({'tracks': catalogue}, f, indent=2, ensure_ascii=False)
+    with open(catalogue_path, 'w') as f:
+        json.dump({'tracks': tracks}, f, indent=2, ensure_ascii=False)
         f.write('\n')
-
 
 if __name__ == '__main__':
     main()

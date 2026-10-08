@@ -699,6 +699,7 @@
     "previewMusic": "Dengarkan musik",
     "removeDownloads": "Hapus musik yang diunduh ({{size}} MB)",
     "musicChip": "Musik",
+    "minutes": "{{minutes}} mnt",
     "volumes": {
       "soft": "Pelan",
       "medium": "Sedang",

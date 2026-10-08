@@ -706,6 +706,7 @@
     "previewMusic": "موسیقی سنیں",
     "removeDownloads": "ڈاؤن لوڈ شدہ موسیقی ہٹائیں ({{size}} MB)",
     "musicChip": "موسیقی",
+    "minutes": "{{minutes}} منٹ",
     "volumes": {
       "soft": "دھیمی",
       "medium": "درمیانی",

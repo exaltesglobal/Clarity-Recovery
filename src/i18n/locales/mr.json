@@ -598,6 +598,7 @@
     "previewMusic": "संगीत ऐका",
     "removeDownloads": "डाउनलोड केलेले संगीत काढा ({{size}} MB)",
     "musicChip": "संगीत",
+    "minutes": "{{minutes}} मिनिटे",
     "volumes": {
       "soft": "हळू",
       "medium": "मध्यम",

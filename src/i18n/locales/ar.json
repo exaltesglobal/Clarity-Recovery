@@ -626,6 +626,7 @@
     "previewMusic": "معاينة الموسيقى",
     "removeDownloads": "حذف الموسيقى المنزّلة ({{size}} م.ب)",
     "musicChip": "موسيقى",
+    "minutes": "{{minutes}} د",
     "volumes": {
       "soft": "منخفض",
       "medium": "متوسط",

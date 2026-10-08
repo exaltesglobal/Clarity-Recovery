@@ -57,4 +57,28 @@ Only publish real stories from real people who gave **written permission**. Neve
 - `title` is the English name; `i18n` gives names in other app languages (`hi`, `mr`, `es`, `ar`, `pt`, `zh`, `fr`, `bn`, `ru`, `ur`, `id`, `de`, `ja`).
 - Only add music you have the right to use in a commercial app. For AI-generated music, check that the generator's plan grants commercial rights, and record that in `license`.
 
-The four tracks here are original compositions made by `scripts/make-music.py`.
+To add a track, put the source file anywhere (MP3, WAV, FLAC…) and run:
+
+```sh
+python3 scripts/import-music.py "path/to/song.mp3" morning-light "Morning Light" --license "Where it's from and its licence"
+```
+
+It trims silence, fades the ends so the loop restarts softly, levels the loudness to match the other tracks, converts to `.m4a`, and adds the entry to `music.json`. Then add the translated names under `i18n` and commit both files. Running it again for the same id replaces the file and bumps `version`.
+
+The eleven music tracks were made with Suno and imported this way; their original exports were renamed from what each track sounds like:
+
+| Track | Original export |
+| --- | --- |
+| Still Waters | Stillness in the Light (1) |
+| Slow Sunrise | Stillness in the Light |
+| Gentle Melody | Quiet Mercy Room (identical to Quiet Mercy Room (2)) |
+| Soft Landing | Quiet Mercy Room (1) (identical to Quiet Mercy Room (3)) |
+| Evening Reflection | A Quiet Place for the Spirit (1) |
+| Rising Hope | Stillness in the Light (4) |
+| Deep Rest | Stillness in the Light (2) |
+| Letting Go | The Quiet Presence |
+| Steady Ground | The Quiet Presence (1) |
+| Warm Horizon | A Quiet Place for the Spirit |
+| Night Sky | Stillness in the Light (3) |
+
+The four soundscapes (soft rain, ocean waves, deep calm, wind chimes) are original compositions made by `scripts/make-music.py`, which updates only its own entries.

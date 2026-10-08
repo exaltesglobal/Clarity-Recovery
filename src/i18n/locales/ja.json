@@ -699,6 +699,7 @@
     "previewMusic": "音楽を試聴",
     "removeDownloads": "ダウンロードした音楽を削除（{{size}} MB）",
     "musicChip": "音楽",
+    "minutes": "{{minutes}}分",
     "volumes": {
       "soft": "小",
       "medium": "中",

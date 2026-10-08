@@ -40,8 +40,9 @@ export function MusicPicker() {
     const d = library.downloads[track.id];
     if (d?.status === 'downloading') return tr('sound.downloading', { percent: Math.round(d.progress * 100) });
     if (d?.status === 'failed') return tr('sound.downloadFailed');
-    if (library.streamOnly) return undefined;
-    return isDownloaded(track) ? tr('sound.downloaded') : tr('sound.size', { size: megabytes(track.bytes) });
+    const length = tr('sound.minutes', { minutes: Math.max(1, Math.round(track.seconds / 60)) });
+    if (library.streamOnly) return length;
+    return [length, isDownloaded(track) ? tr('sound.downloaded') : tr('sound.size', { size: megabytes(track.bytes) })].join(' · ');
   };
 
   const icon = (track: Track) => {
