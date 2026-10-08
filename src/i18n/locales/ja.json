@@ -686,7 +686,24 @@
     "needsInternet": "インターネットが必要",
     "moreVoicesIos": "より自然な声にするには、「設定 › アクセシビリティ › 読み上げコンテンツ › 声」で拡張またはプレミアムの声をダウンロードしてください。",
     "moreVoicesAndroid": "より自然な声にするには、「設定 › ユーザー補助 › テキスト読み上げ」で音声データをインストールしてください。",
-    "silentSwitch": "サウンドと音声は iPhone の消音スイッチに従います。"
+    "silentSwitch": "サウンドと音声は iPhone の消音スイッチに従います。",
+    "music": "BGM",
+    "musicBody": "セッション中に小さな音で流れ、音声ガイドが話す間はさらに小さくなります。各曲は選んだときに一度だけダウンロードされ、その後はオフラインで再生できます。",
+    "musicBodyWeb": "セッション中に小さな音で流れ、音声ガイドが話す間はさらに小さくなります。",
+    "none": "なし",
+    "downloaded": "ダウンロード済み",
+    "downloading": "ダウンロード中… {{percent}}%",
+    "downloadFailed": "ダウンロードに失敗しました。タップして再試行してください。",
+    "size": "{{size}} MB",
+    "volume": "音楽の音量",
+    "previewMusic": "音楽を試聴",
+    "removeDownloads": "ダウンロードした音楽を削除（{{size}} MB）",
+    "musicChip": "音楽",
+    "volumes": {
+      "soft": "小",
+      "medium": "中",
+      "loud": "大"
+    }
   },
   "notifications": {
     "checkInTitle": "毎日のチェックインの時間です",

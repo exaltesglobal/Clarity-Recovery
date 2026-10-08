@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Platform } from 'react-native';
 
+import { MusicPicker } from '../components/MusicPicker';
 import { Button, Card, Chip, ChipRow, H2, ListRow, Muted, Screen, SwitchRow } from '../components/ui';
 import { useSoundEffects } from '../lib/sounds';
 import { chooseVoice, isNetworkVoice, speechLanguage, useNarrator, voiceGender, voicesFor } from '../lib/speech';
@@ -108,6 +109,8 @@ export default function SoundScreen() {
           onPress={() => (narrator.speaking ? narrator.stop() : narrator.say(tr('sound.sample')))}
         />
       </Card>
+
+      <MusicPicker />
 
       <Card>
         <H2>{tr('sound.deviceVoices')}</H2>

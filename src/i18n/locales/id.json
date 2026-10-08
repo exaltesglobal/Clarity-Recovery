@@ -686,7 +686,24 @@
     "needsInternet": "Perlu internet",
     "moreVoicesIos": "Untuk suara yang lebih alami, unduh suara Ditingkatkan atau Premium di Pengaturan › Aksesibilitas › Konten Lisan › Suara.",
     "moreVoicesAndroid": "Untuk suara yang lebih alami, pasang data suara di Setelan › Aksesibilitas › Text-to-speech.",
-    "silentSwitch": "Suara dan narasi mengikuti sakelar senyap iPhone Anda."
+    "silentSwitch": "Suara dan narasi mengikuti sakelar senyap iPhone Anda.",
+    "music": "Musik latar",
+    "musicBody": "Diputar pelan selama sesi dan mengecil saat suara berbicara. Setiap lagu diunduh sekali saat Anda memilihnya, lalu bisa diputar offline.",
+    "musicBodyWeb": "Diputar pelan selama sesi dan mengecil saat suara berbicara.",
+    "none": "Tidak ada",
+    "downloaded": "Sudah diunduh",
+    "downloading": "Mengunduh… {{percent}}%",
+    "downloadFailed": "Unduhan gagal. Ketuk untuk mencoba lagi.",
+    "size": "{{size}} MB",
+    "volume": "Volume musik",
+    "previewMusic": "Dengarkan musik",
+    "removeDownloads": "Hapus musik yang diunduh ({{size}} MB)",
+    "musicChip": "Musik",
+    "volumes": {
+      "soft": "Pelan",
+      "medium": "Sedang",
+      "loud": "Keras"
+    }
   },
   "notifications": {
     "checkInTitle": "Saatnya check-in harian",

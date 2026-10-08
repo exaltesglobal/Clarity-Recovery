@@ -693,7 +693,24 @@
     "needsInternet": "Needs internet",
     "moreVoicesIos": "For a more natural voice, download an Enhanced or Premium voice in Settings › Accessibility › Spoken Content › Voices.",
     "moreVoicesAndroid": "For a more natural voice, install voice data in Settings › Accessibility › Text-to-speech.",
-    "silentSwitch": "Sounds and the voice follow your iPhone's silent switch."
+    "silentSwitch": "Sounds and the voice follow your iPhone's silent switch.",
+    "music": "Background music",
+    "musicBody": "Plays quietly during sessions and dips while the voice speaks. Each track downloads once when you choose it, then works offline.",
+    "musicBodyWeb": "Plays quietly during sessions and dips while the voice speaks.",
+    "none": "None",
+    "downloaded": "Downloaded",
+    "downloading": "Downloading… {{percent}}%",
+    "downloadFailed": "Download failed. Tap to try again.",
+    "size": "{{size}} MB",
+    "volume": "Music volume",
+    "previewMusic": "Preview music",
+    "removeDownloads": "Remove downloaded music ({{size}} MB)",
+    "musicChip": "Music",
+    "volumes": {
+      "soft": "Soft",
+      "medium": "Medium",
+      "loud": "Loud"
+    }
   },
   "notifications": {
     "checkInTitle": "Time for your daily check-in",

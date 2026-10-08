@@ -1,0 +1,100 @@
+{
+  "tracks": [
+    {
+      "id": "rain",
+      "title": "Soft rain",
+      "i18n": {
+        "hi": "हल्की बारिश",
+        "mr": "हलका पाऊस",
+        "es": "Lluvia suave",
+        "ar": "مطر خفيف",
+        "pt": "Chuva suave",
+        "zh": "细雨",
+        "fr": "Pluie douce",
+        "bn": "মৃদু বৃষ্টি",
+        "ru": "Тихий дождь",
+        "ur": "ہلکی بارش",
+        "id": "Hujan lembut",
+        "de": "Sanfter Regen",
+        "ja": "やさしい雨"
+      },
+      "file": "music/rain.m4a",
+      "bytes": 2225645,
+      "seconds": 180,
+      "version": 1,
+      "license": "Original composition for Clarity Recovery"
+    },
+    {
+      "id": "ocean",
+      "title": "Ocean waves",
+      "i18n": {
+        "hi": "समुद्र की लहरें",
+        "mr": "समुद्राच्या लाटा",
+        "es": "Olas del mar",
+        "ar": "أمواج البحر",
+        "pt": "Ondas do mar",
+        "zh": "海浪",
+        "fr": "Vagues de l'océan",
+        "bn": "সমুদ্রের ঢেউ",
+        "ru": "Морские волны",
+        "ur": "سمندر کی لہریں",
+        "id": "Ombak laut",
+        "de": "Meereswellen",
+        "ja": "波の音"
+      },
+      "file": "music/ocean.m4a",
+      "bytes": 2207474,
+      "seconds": 180,
+      "version": 1,
+      "license": "Original composition for Clarity Recovery"
+    },
+    {
+      "id": "drone",
+      "title": "Deep calm",
+      "i18n": {
+        "hi": "गहरी शांति",
+        "mr": "खोल शांतता",
+        "es": "Calma profunda",
+        "ar": "هدوء عميق",
+        "pt": "Calma profunda",
+        "zh": "深度宁静",
+        "fr": "Calme profond",
+        "bn": "গভীর প্রশান্তি",
+        "ru": "Глубокий покой",
+        "ur": "گہرا سکون",
+        "id": "Ketenangan dalam",
+        "de": "Tiefe Ruhe",
+        "ja": "深い静けさ"
+      },
+      "file": "music/drone.m4a",
+      "bytes": 2226218,
+      "seconds": 180,
+      "version": 1,
+      "license": "Original composition for Clarity Recovery"
+    },
+    {
+      "id": "chimes",
+      "title": "Wind chimes",
+      "i18n": {
+        "hi": "पवन घंटियाँ",
+        "mr": "वाऱ्याच्या घंटा",
+        "es": "Campanas de viento",
+        "ar": "أجراس الرياح",
+        "pt": "Sinos de vento",
+        "zh": "风铃",
+        "fr": "Carillons à vent",
+        "bn": "উইন্ড চাইম",
+        "ru": "Музыка ветра",
+        "ur": "ہوا کی گھنٹیاں",
+        "id": "Lonceng angin",
+        "de": "Windspiel",
+        "ja": "ウィンドチャイム"
+      },
+      "file": "music/chimes.m4a",
+      "bytes": 2205782,
+      "seconds": 180,
+      "version": 1,
+      "license": "Original composition for Clarity Recovery"
+    }
+  ]
+}

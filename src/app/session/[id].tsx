@@ -9,7 +9,8 @@ import { Body, Button, Card, Chip, ChipRow, H1, H2, Muted, ProgressBar, Screen, 
 import { Session, SESSIONS, sessionDuration } from '../../content/wellness';
 import { formatClock } from '../../lib/date';
 import { success, tap } from '../../lib/haptics';
-import { useSoundEffects } from '../../lib/sounds';
+import { isDownloaded, trackSource, useMusicLibrary } from '../../lib/music';
+import { useBackgroundMusic, useSoundEffects } from '../../lib/sounds';
 import { useNarrator } from '../../lib/speech';
 import { useStore } from '../../lib/store';
 import { useTheme } from '../../theme';
@@ -35,6 +36,9 @@ export default function SessionScreen() {
   const playEffect = useSoundEffects(sound.effects);
   const narrator = useNarrator(i18n.language, sound);
   const announced = useRef(-1);
+  const music = useMusicLibrary();
+  const track = music.tracks.find((m) => m.id === sound.music);
+  const musicReady = track !== undefined && isDownloaded(track);
 
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
@@ -42,6 +46,13 @@ export default function SessionScreen() {
   const total = session ? sessionDuration(session) : 0;
   const finished = session !== undefined && elapsed >= total;
   const { stepIndex, stepEnd } = session ? locate(session, elapsed) : { stepIndex: 0, stepEnd: 0 };
+
+  // Music fades out at the end of the session and dips while the voice is speaking.
+  useBackgroundMusic(
+    sound.musicOn ? trackSource(track) : null,
+    running && !finished,
+    narrator.speaking ? sound.musicVolume * 0.35 : sound.musicVolume,
+  );
 
   useEffect(() => {
     if (!running || finished) return;
@@ -147,6 +158,12 @@ export default function SessionScreen() {
               label={tr('sound.bells')}
               selected={sound.effects}
               onPress={() => actions.setSound({ effects: !sound.effects })}
+            />
+            <Chip
+              icon="musical-notes-outline"
+              label={tr('sound.musicChip')}
+              selected={musicReady && sound.musicOn}
+              onPress={() => (musicReady ? actions.setSound({ musicOn: !sound.musicOn }) : router.push('/sound'))}
             />
             <Chip icon="options-outline" label={tr('sound.more')} onPress={() => router.push('/sound')} />
           </ChipRow>

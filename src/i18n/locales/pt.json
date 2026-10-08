@@ -592,7 +592,24 @@
     "needsInternet": "Precisa de internet",
     "moreVoicesIos": "Para uma voz mais natural, baixe uma voz Aprimorada ou Premium em Ajustes › Acessibilidade › Conteúdo Falado › Vozes.",
     "moreVoicesAndroid": "Para uma voz mais natural, instale dados de voz em Configurações › Acessibilidade › Conversão de texto em voz.",
-    "silentSwitch": "Os sons e a voz seguem a chave de silêncio do seu iPhone."
+    "silentSwitch": "Os sons e a voz seguem a chave de silêncio do seu iPhone.",
+    "music": "Música de fundo",
+    "musicBody": "Toca baixinho durante as sessões e abaixa quando a voz fala. Cada faixa é baixada uma vez quando você a escolhe e depois funciona offline.",
+    "musicBodyWeb": "Toca baixinho durante as sessões e abaixa quando a voz fala.",
+    "none": "Nenhuma",
+    "downloaded": "Baixada",
+    "downloading": "Baixando… {{percent}}%",
+    "downloadFailed": "Falha no download. Toque para tentar novamente.",
+    "size": "{{size}} MB",
+    "volume": "Volume da música",
+    "previewMusic": "Ouvir música",
+    "removeDownloads": "Remover músicas baixadas ({{size}} MB)",
+    "musicChip": "Música",
+    "volumes": {
+      "soft": "Baixo",
+      "medium": "Médio",
+      "loud": "Alto"
+    }
   },
   "notifications": {
     "checkInTitle": "Hora do seu check-in diário",

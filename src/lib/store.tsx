@@ -75,7 +75,7 @@ export function createDefaultData(): AppData {
     protection: { dnsFilter: false, mindfulPause: false, pauseApps: DEFAULT_PAUSE_APPS },
     health: { connected: false },
     setup: { done: [], hidden: false },
-    sound: { effects: true, voice: true, voiceGender: 'female', voiceId: null, rate: 0.9 },
+    sound: { effects: true, voice: true, voiceGender: 'female', voiceId: null, rate: 0.9, music: null, musicOn: true, musicVolume: 0.5 },
     installedAt: new Date().toISOString(),
   };
 }

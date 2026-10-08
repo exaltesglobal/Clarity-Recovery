@@ -693,7 +693,24 @@
     "needsInternet": "انٹرنیٹ درکار",
     "moreVoicesIos": "زیادہ قدرتی آواز کے لیے، Settings › Accessibility › Spoken Content › Voices میں Enhanced یا Premium آواز ڈاؤن لوڈ کریں۔",
     "moreVoicesAndroid": "زیادہ قدرتی آواز کے لیے، Settings › Accessibility › Text-to-speech میں وائس ڈیٹا انسٹال کریں۔",
-    "silentSwitch": "آوازیں اور صوتی رہنمائی آپ کے iPhone کے سائلنٹ سوئچ کی پابندی کرتی ہیں۔"
+    "silentSwitch": "آوازیں اور صوتی رہنمائی آپ کے iPhone کے سائلنٹ سوئچ کی پابندی کرتی ہیں۔",
+    "music": "پس منظر کی موسیقی",
+    "musicBody": "سیشن کے دوران دھیمی بجتی ہے اور آواز بولنے پر مزید دھیمی ہو جاتی ہے۔ ہر ٹریک منتخب کرنے پر ایک بار ڈاؤن لوڈ ہوتا ہے، پھر آف لائن چلتا ہے۔",
+    "musicBodyWeb": "سیشن کے دوران دھیمی بجتی ہے اور آواز بولنے پر مزید دھیمی ہو جاتی ہے۔",
+    "none": "کوئی نہیں",
+    "downloaded": "ڈاؤن لوڈ ہو گیا",
+    "downloading": "ڈاؤن لوڈ ہو رہا ہے… {{percent}}%",
+    "downloadFailed": "ڈاؤن لوڈ ناکام ہو گیا۔ دوبارہ کوشش کے لیے ٹیپ کریں۔",
+    "size": "{{size}} MB",
+    "volume": "موسیقی کی آواز",
+    "previewMusic": "موسیقی سنیں",
+    "removeDownloads": "ڈاؤن لوڈ شدہ موسیقی ہٹائیں ({{size}} MB)",
+    "musicChip": "موسیقی",
+    "volumes": {
+      "soft": "دھیمی",
+      "medium": "درمیانی",
+      "loud": "اونچی"
+    }
   },
   "notifications": {
     "checkInTitle": "روزانہ چیک اِن کا وقت",

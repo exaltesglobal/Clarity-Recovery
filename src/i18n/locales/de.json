@@ -693,7 +693,24 @@
     "needsInternet": "Braucht Internet",
     "moreVoicesIos": "Für eine natürlichere Stimme lade unter Einstellungen › Bedienungshilfen › Gesprochene Inhalte › Stimmen eine erweiterte oder Premium-Stimme.",
     "moreVoicesAndroid": "Für eine natürlichere Stimme installiere Sprachdaten unter Einstellungen › Bedienungshilfen › Sprachausgabe.",
-    "silentSwitch": "Töne und Stimme folgen dem Stummschalter deines iPhones."
+    "silentSwitch": "Töne und Stimme folgen dem Stummschalter deines iPhones.",
+    "music": "Hintergrundmusik",
+    "musicBody": "Spielt leise während der Übungen und wird leiser, wenn die Stimme spricht. Jeder Titel wird einmal geladen, wenn du ihn auswählst, und funktioniert dann offline.",
+    "musicBodyWeb": "Spielt leise während der Übungen und wird leiser, wenn die Stimme spricht.",
+    "none": "Keine",
+    "downloaded": "Geladen",
+    "downloading": "Wird geladen … {{percent}} %",
+    "downloadFailed": "Download fehlgeschlagen. Tippe, um es erneut zu versuchen.",
+    "size": "{{size}} MB",
+    "volume": "Musiklautstärke",
+    "previewMusic": "Musik anhören",
+    "removeDownloads": "Geladene Musik entfernen ({{size}} MB)",
+    "musicChip": "Musik",
+    "volumes": {
+      "soft": "Leise",
+      "medium": "Mittel",
+      "loud": "Laut"
+    }
   },
   "notifications": {
     "checkInTitle": "Zeit für deinen täglichen Check-in",

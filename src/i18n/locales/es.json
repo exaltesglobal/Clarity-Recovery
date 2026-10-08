@@ -592,7 +592,24 @@
     "needsInternet": "Requiere internet",
     "moreVoicesIos": "Para una voz más natural, descarga una voz Mejorada o Premium en Ajustes › Accesibilidad › Contenido leído › Voces.",
     "moreVoicesAndroid": "Para una voz más natural, instala datos de voz en Ajustes › Accesibilidad › Texto a voz.",
-    "silentSwitch": "Los sonidos y la voz respetan el interruptor de silencio de tu iPhone."
+    "silentSwitch": "Los sonidos y la voz respetan el interruptor de silencio de tu iPhone.",
+    "music": "Música de fondo",
+    "musicBody": "Suena bajito durante las sesiones y baja aún más cuando habla la voz. Cada pista se descarga una vez al elegirla y luego funciona sin conexión.",
+    "musicBodyWeb": "Suena bajito durante las sesiones y baja aún más cuando habla la voz.",
+    "none": "Ninguna",
+    "downloaded": "Descargada",
+    "downloading": "Descargando… {{percent}} %",
+    "downloadFailed": "La descarga falló. Toca para intentarlo de nuevo.",
+    "size": "{{size}} MB",
+    "volume": "Volumen de la música",
+    "previewMusic": "Escuchar música",
+    "removeDownloads": "Eliminar música descargada ({{size}} MB)",
+    "musicChip": "Música",
+    "volumes": {
+      "soft": "Bajo",
+      "medium": "Medio",
+      "loud": "Alto"
+    }
   },
   "notifications": {
     "checkInTitle": "Hora de tu registro diario",

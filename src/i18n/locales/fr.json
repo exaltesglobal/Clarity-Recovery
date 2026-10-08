@@ -592,7 +592,24 @@
     "needsInternet": "Internet requis",
     "moreVoicesIos": "Pour une voix plus naturelle, téléchargez une voix Améliorée ou Premium dans Réglages › Accessibilité › Contenu énoncé › Voix.",
     "moreVoicesAndroid": "Pour une voix plus naturelle, installez des données vocales dans Paramètres › Accessibilité › Synthèse vocale.",
-    "silentSwitch": "Les sons et la voix suivent le bouton silencieux de votre iPhone."
+    "silentSwitch": "Les sons et la voix suivent le bouton silencieux de votre iPhone.",
+    "music": "Musique de fond",
+    "musicBody": "Joue doucement pendant les séances et baisse quand la voix parle. Chaque morceau se télécharge une fois quand vous le choisissez, puis fonctionne hors ligne.",
+    "musicBodyWeb": "Joue doucement pendant les séances et baisse quand la voix parle.",
+    "none": "Aucune",
+    "downloaded": "Téléchargée",
+    "downloading": "Téléchargement… {{percent}} %",
+    "downloadFailed": "Échec du téléchargement. Touchez pour réessayer.",
+    "size": "{{size}} Mo",
+    "volume": "Volume de la musique",
+    "previewMusic": "Écouter la musique",
+    "removeDownloads": "Supprimer la musique téléchargée ({{size}} Mo)",
+    "musicChip": "Musique",
+    "volumes": {
+      "soft": "Doux",
+      "medium": "Moyen",
+      "loud": "Fort"
+    }
   },
   "notifications": {
     "checkInTitle": "C'est l'heure de votre bilan",

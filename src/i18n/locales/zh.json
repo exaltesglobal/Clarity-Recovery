@@ -578,7 +578,24 @@
     "needsInternet": "需要联网",
     "moreVoicesIos": "如需更自然的声音，请在“设置 › 辅助功能 › 朗读内容 › 声音”中下载增强或高级语音。",
     "moreVoicesAndroid": "如需更自然的声音，请在“设置 › 无障碍 › 文字转语音”中安装语音数据。",
-    "silentSwitch": "声音和语音会遵循 iPhone 的静音开关。"
+    "silentSwitch": "声音和语音会遵循 iPhone 的静音开关。",
+    "music": "背景音乐",
+    "musicBody": "练习时轻声播放，语音朗读时会自动调低。每首曲目在你选择时下载一次，之后可离线使用。",
+    "musicBodyWeb": "练习时轻声播放，语音朗读时会自动调低。",
+    "none": "无",
+    "downloaded": "已下载",
+    "downloading": "正在下载… {{percent}}%",
+    "downloadFailed": "下载失败，轻点重试。",
+    "size": "{{size}} MB",
+    "volume": "音乐音量",
+    "previewMusic": "试听音乐",
+    "removeDownloads": "删除已下载的音乐（{{size}} MB）",
+    "musicChip": "音乐",
+    "volumes": {
+      "soft": "轻",
+      "medium": "中",
+      "loud": "响"
+    }
   },
   "notifications": {
     "checkInTitle": "该做每日打卡了",

@@ -102,6 +102,12 @@ export interface Sound {
   voiceId: string | null;
   /** Speaking rate, 1 is the device's normal speed */
   rate: number;
+  /** Background music track id from the music catalogue; null for none */
+  music: string | null;
+  /** Play the chosen track during sessions (the session screen's quick toggle) */
+  musicOn: boolean;
+  /** 0 to 1 */
+  musicVolume: number;
 }
 
 export interface AppData {
