@@ -39,10 +39,10 @@ The SDK **deliberately crashes release builds** that use a Test Store key. That 
 | `monthly` | 1 month | $9.99 | `$rc_monthly` |
 | `six_month_v2` | 6 months | $39.99 | `$rc_six_month` |
 | `yearly_v2` | 1 year | $59.99 | `$rc_annual` |
-| `six_month` | 6 months | $49.99 | no (old price; still on the entitlement) |
-| `yearly` | 1 year | $79.99 | no (old price; still on the entitlement) |
+| `six_month` | 6 months | $49.99 | no: wrong price, detached and archived |
+| `yearly` | 1 year | $79.99 | no: wrong price, detached and archived |
 
-`six_month` and `yearly` were first created at the wrong prices, so the `_v2` products replace them in the offering. The store products keep the plain IDs `monthly`, `six_month`, `yearly`. Package IDs can differ per store, and the app only checks the entitlement.
+`six_month` and `yearly` were first created at the wrong prices, so the `_v2` products replace them in the offering and on the entitlement. Archived products keep their display names, so the replacements are named "Six Month (v2)" and "Yearly (v2)". The store products keep the plain IDs `monthly`, `six_month`, `yearly`. Package IDs can differ per store, and the app only checks the entitlement.
 
 Don't model the free trial as a product. A one-time `1_month_free_trial` product was attached to the entitlement once, which would have unlocked Pro forever for $0.99. It is now detached and inactive. Trials belong on the store subscriptions (section 2a).
 
