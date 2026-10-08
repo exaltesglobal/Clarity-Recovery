@@ -712,6 +712,12 @@
       "loud": "Laut"
     }
   },
+  "breathing": {
+    "in": "Einatmen",
+    "hold": "Halten",
+    "out": "Ausatmen",
+    "paused": "Pausiert"
+  },
   "notifications": {
     "checkInTitle": "Zeit für deinen täglichen Check-in",
     "checkInBody": "Nimm dir zwei Minuten, um über deinen Tag nachzudenken.",

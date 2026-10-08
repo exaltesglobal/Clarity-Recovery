@@ -597,6 +597,12 @@
       "loud": "响"
     }
   },
+  "breathing": {
+    "in": "吸气",
+    "hold": "屏息",
+    "out": "呼气",
+    "paused": "已暂停"
+  },
   "notifications": {
     "checkInTitle": "该做每日打卡了",
     "checkInBody": "花两分钟回顾你的一天。",

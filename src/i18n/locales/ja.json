@@ -705,6 +705,12 @@
       "loud": "大"
     }
   },
+  "breathing": {
+    "in": "吸って",
+    "hold": "止めて",
+    "out": "吐いて",
+    "paused": "一時停止中"
+  },
   "notifications": {
     "checkInTitle": "毎日のチェックインの時間です",
     "checkInBody": "2分だけ、今日1日を振り返ってみましょう。",

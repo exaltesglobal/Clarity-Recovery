@@ -611,6 +611,12 @@
       "loud": "Alto"
     }
   },
+  "breathing": {
+    "in": "Inhala",
+    "hold": "Mantén",
+    "out": "Exhala",
+    "paused": "En pausa"
+  },
   "notifications": {
     "checkInTitle": "Hora de tu registro diario",
     "checkInBody": "Tómate dos minutos para reflexionar sobre tu día.",

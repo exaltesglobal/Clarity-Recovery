@@ -705,6 +705,12 @@
       "loud": "Keras"
     }
   },
+  "breathing": {
+    "in": "Tarik napas",
+    "hold": "Tahan",
+    "out": "Embuskan napas",
+    "paused": "Dijeda"
+  },
   "notifications": {
     "checkInTitle": "Saatnya check-in harian",
     "checkInBody": "Luangkan dua menit untuk merenungkan harimu.",

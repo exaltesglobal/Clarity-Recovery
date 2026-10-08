@@ -712,6 +712,12 @@
       "loud": "Loud"
     }
   },
+  "breathing": {
+    "in": "Breathe in",
+    "hold": "Hold",
+    "out": "Breathe out",
+    "paused": "Paused"
+  },
   "notifications": {
     "checkInTitle": "Time for your daily check-in",
     "checkInBody": "Take two minutes to reflect on your day.",

@@ -611,6 +611,12 @@
       "loud": "Fort"
     }
   },
+  "breathing": {
+    "in": "Inspirez",
+    "hold": "Retenez",
+    "out": "Expirez",
+    "paused": "En pause"
+  },
   "notifications": {
     "checkInTitle": "C'est l'heure de votre bilan",
     "checkInBody": "Prenez deux minutes pour faire le point sur votre journée.",

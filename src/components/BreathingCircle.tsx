@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Animated, Easing, Platform, StyleSheet, Text, View } from 'react-native';
 
 import { useTheme } from '../theme';
@@ -6,9 +7,9 @@ import { useTheme } from '../theme';
 export type BreathPhase = 'in' | 'hold' | 'out';
 
 const PHASES = [
-  { id: 'in', label: 'Breathe in', seconds: 4, to: 1 },
-  { id: 'hold', label: 'Hold', seconds: 4, to: 1 },
-  { id: 'out', label: 'Breathe out', seconds: 6, to: 0.55 },
+  { id: 'in', labelKey: 'breathing.in', seconds: 4, to: 1 },
+  { id: 'hold', labelKey: 'breathing.hold', seconds: 4, to: 1 },
+  { id: 'out', labelKey: 'breathing.out', seconds: 6, to: 0.55 },
 ] as const;
 
 /** Paced breathing guide: 4s in, 4s hold, 6s out. A longer exhale calms the body. */
@@ -23,6 +24,7 @@ export function BreathingCircle({
   onPhase?: (phase: BreathPhase) => void;
 }) {
   const t = useTheme();
+  const { t: tr } = useTranslation();
   const [scale] = useState(() => new Animated.Value(0.55));
   const [phase, setPhase] = useState(0);
   const onPhaseRef = useRef(onPhase);
@@ -63,7 +65,7 @@ export function BreathingCircle({
           },
         ]}
       />
-      <Text style={[styles.label, { color: t.primary }]}>{paused ? 'Paused' : PHASES[phase].label}</Text>
+      <Text style={[styles.label, { color: t.primary }]}>{paused ? tr('breathing.paused') : tr(PHASES[phase].labelKey)}</Text>
     </View>
   );
 }

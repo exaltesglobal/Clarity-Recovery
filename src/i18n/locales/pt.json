@@ -611,6 +611,12 @@
       "loud": "Alto"
     }
   },
+  "breathing": {
+    "in": "Inspire",
+    "hold": "Segure",
+    "out": "Expire",
+    "paused": "Pausado"
+  },
   "notifications": {
     "checkInTitle": "Hora do seu check-in diário",
     "checkInBody": "Tire dois minutos para refletir sobre o seu dia.",
