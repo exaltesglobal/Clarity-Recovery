@@ -68,6 +68,8 @@ for (const m of wellness.matchAll(/id: '([^']+)',\s*category:[\s\S]*?steps: \[([
 
 // 3. Other locales
 const placeholders = (s) => [...String(s).matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]).sort().join(',');
+// Plural forms may spell out the number ("one day"), so {{count}} is optional.
+const withoutCount = (s) => placeholders(s).split(',').filter((p) => p && p !== 'count').join(',');
 for (const file of fs.readdirSync(localesDir).filter((f) => f.endsWith('.json') && f !== 'en.json')) {
   const lang = file.replace('.json', '');
   const flat = flatten(JSON.parse(fs.readFileSync(path.join(localesDir, file), 'utf8')));
@@ -87,7 +89,7 @@ for (const file of fs.readdirSync(localesDir).filter((f) => f.endsWith('.json') 
           if (item && typeof item === 'object')
             for (const f of Object.keys(enValue[i])) if (!(f in item)) fail(`${file}: "${k}[${i}].${f}" missing`);
         });
-    } else if (typeof v === 'string' && placeholders(v).replace('count', '') !== placeholders(enValue).replace('count', '')) {
+    } else if (typeof v === 'string' && withoutCount(v) !== withoutCount(enValue)) {
       fail(`${file}: placeholders differ in "${k}" (${placeholders(v)} vs ${placeholders(enValue)})`);
     }
   }
