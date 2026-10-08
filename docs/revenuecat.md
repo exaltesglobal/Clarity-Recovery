@@ -17,9 +17,9 @@ The app uses RevenueCat's React Native SDK:
 | Build | Where the key comes from | Key |
 | --- | --- | --- |
 | Development build (`eas build --profile development`, then `npx expo start`) | `.env` | Test Store key (`test_…`) |
-| Preview APK / production | `eas.json` → `build.<profile>.env` | Google Play key (`goog_…`) and App Store key (`appl_…`) from **Project settings → API keys** |
+| Preview APK / production | Environment variables on expo.dev (Project → Environment variables), in the **preview** and **production** environments. `eas.json` picks the environment per build profile. | Google Play key (`goog_…`) and App Store key (`appl_…`) from **Project settings → API keys** |
 
-The SDK **deliberately crashes release builds** that use a Test Store key. That includes the preview APK, Google Play testing tracks and TestFlight. To avoid this crash, the app ignores a `test_` key outside development builds. Without a valid key, billing is off and all features are unlocked.
+The SDK **deliberately crashes release builds** that use a Test Store key. That includes the preview APK, Google Play testing tracks and TestFlight. To avoid this crash, the app ignores a `test_` key outside development builds. Without a valid key, billing is off and all features are unlocked. That's harmless in a preview APK for testers, but a production build must never ship that way, so `scripts/check-build-env.mjs` (run by EAS before every build) fails a production build whose store key is missing or isn't a `goog_`/`appl_` key.
 
 ## 2. Products (Test Store first)
 

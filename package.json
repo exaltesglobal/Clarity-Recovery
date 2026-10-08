@@ -59,7 +59,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "eas-build-pre-install": "node scripts/check-build-env.mjs"
   },
   "private": true
 }

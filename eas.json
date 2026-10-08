@@ -5,22 +5,23 @@
   },
   "build": {
     "development": {
+      "environment": "development",
       "developmentClient": true,
       "distribution": "internal",
       "android": { "image": "latest" },
       "ios": { "image": "latest" }
     },
     "preview": {
+      "environment": "preview",
       "distribution": "internal",
       "android": { "buildType": "apk", "image": "latest" },
-      "ios": { "image": "latest" },
-      "env": { "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "", "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "" }
+      "ios": { "image": "latest" }
     },
     "production": {
+      "environment": "production",
       "autoIncrement": true,
       "android": { "image": "latest" },
-      "ios": { "image": "latest" },
-      "env": { "EXPO_PUBLIC_REVENUECAT_ANDROID_KEY": "", "EXPO_PUBLIC_REVENUECAT_IOS_KEY": "" }
+      "ios": { "image": "latest" }
     }
   },
   "submit": {

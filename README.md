@@ -47,8 +47,11 @@ npx expo-doctor
 
 ## Configuration
 
-RevenueCat keys come from `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY` / `EXPO_PUBLIC_REVENUECAT_IOS_KEY`:
-`.env` (Test Store key, development builds) and `eas.json` → `build.<profile>.env` (store keys).
+RevenueCat keys come from `EXPO_PUBLIC_REVENUECAT_ANDROID_KEY` / `EXPO_PUBLIC_REVENUECAT_IOS_KEY`.
+Development builds use the Test Store key in `.env`. Preview and production builds take the store keys
+(`goog_…`, `appl_…`) from the matching environment variables on expo.dev (Project → Environment variables,
+or `npx eas-cli env:create --environment production …`). Release builds ignore a Test Store key, which leaves
+billing off; `scripts/check-build-env.mjs` stops a production build that would ship that way.
 Without a key, every feature is unlocked. Dashboard setup (entitlement `clarity_recovery_pro`, products,
 offering, Paywall, Customer Center) is in [docs/revenuecat.md](docs/revenuecat.md).
 
