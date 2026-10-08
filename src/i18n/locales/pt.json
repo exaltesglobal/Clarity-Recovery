@@ -503,6 +503,7 @@
     "subscription": "Plano",
     "subscriptionActive": "Ativo",
     "subscriptionTrial": "Teste grátis",
+    "subscriptionTrialEnds": "Teste grátis, termina em {{date}}",
     "subscriptionFree": "Plano gratuito. Toque para começar seu mês grátis",
     "subscriptionDev": "Tudo liberado (pagamentos não configurados)",
     "aboutYou": "Sobre você",
@@ -557,6 +558,8 @@
   "notifications": {
     "checkInTitle": "Hora do seu check-in diário",
     "checkInBody": "Tire dois minutos para refletir sobre o seu dia.",
+    "trialEndingTitle": "Seu mês grátis termina em 2 dias",
+    "trialEndingBody": "Seu plano começa em {{date}}. Para mudar ou cancelar, abra Ajustes → Plano.",
     "nudges": [
       "Você está indo melhor do que pensa. Continue.",
       "Respire devagar três vezes. Você consegue.",

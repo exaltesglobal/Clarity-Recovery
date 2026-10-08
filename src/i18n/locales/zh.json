@@ -491,6 +491,7 @@
     "subscription": "订阅",
     "subscriptionActive": "有效",
     "subscriptionTrial": "免费试用中",
+    "subscriptionTrialEnds": "免费试用，{{date}}结束",
     "subscriptionFree": "免费版。点按开启免费月",
     "subscriptionDev": "所有功能已解锁（未配置付费）",
     "aboutYou": "关于你",
@@ -543,6 +544,8 @@
   "notifications": {
     "checkInTitle": "该做每日打卡了",
     "checkInBody": "花两分钟回顾你的一天。",
+    "trialEndingTitle": "你的免费月将在 2 天后结束",
+    "trialEndingBody": "你的方案将于{{date}}开始。如需更改或取消，请打开 设置 → 订阅。",
     "nudges": [
       "你做得比你想的更好，继续加油。",
       "慢慢呼吸三次，你可以的。",

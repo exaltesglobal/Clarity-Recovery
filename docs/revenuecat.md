@@ -35,9 +35,45 @@ The SDK **deliberately crashes release builds** that use a Test Store key. That 
 For the real stores:
 
 - Create the same three product IDs in **Play Console → Monetize → Subscriptions** and in **App Store Connect**.
-- On each one, add a **1-month free trial** offer for new subscribers.
+- Add the 1-month free trial to each one (see the next section).
 - Set prices by country.
 - In RevenueCat, connect the Play and App Store apps (service credentials) and import the products.
+
+## 2a. The 1-month free trial
+
+The free trial is part of each **store product**, not something the app code sets. Once it's on the product, the SDK applies it automatically:
+
+- **Google Play:** RevenueCat picks the longest free trial the user is eligible for when they buy a package.
+- **App Store:** Apple applies the introductory offer at checkout.
+
+**Google Play.** In Play Console → **Subscriptions**, for each of `monthly`, `six_month`, `yearly`:
+
+1. Open the base plan and choose **Add offer**.
+2. Set **Eligibility** to *New customer acquisition* (people who never had this subscription).
+3. Add a **Free trial** phase of **1 month**, then activate the offer.
+4. Don't add other developer-determined offers to the same base plan. RevenueCat would also consider them when choosing an offer.
+
+**App Store.** In App Store Connect, open each subscription and set up an **Introductory Offer**:
+
+- Create a **Free** offer lasting **1 month** for all territories.
+- New offers can take a few hours to appear.
+
+**Test Store can't simulate trials yet.** RevenueCat staff confirmed this in December 2025. Test Store purchases start straight away as paid, so test the trial with:
+
+- Google Play license testers on an internal testing track (trials and renewals are shortened in test purchases), or
+- App Store sandbox / TestFlight.
+
+**In the Paywall editor**, show the trial only to people who can get it:
+
+- Put a component behind an **Introductory offer** rule, using text like `Start your {{ product.offer_period }} free`.
+- RevenueCat requires offer variables to be inside such a rule. Everyone else sees the plain price text.
+
+**What the app does for trial users:**
+
+- **Settings → Subscription** shows "Free trial, ends {date}".
+- A notification goes out **2 days before the trial ends**, saying when the paid plan starts and how to cancel.
+- The notification is cancelled automatically if the user turns off auto-renew or the trial ends.
+- To check a trial was applied, look at the customer's history in RevenueCat: the purchase should show `period_type` **TRIAL**.
 
 ## 3. Entitlement
 
@@ -73,7 +109,7 @@ npx eas-cli@latest build --profile development --platform android   # install th
 npx expo start                                                     # loads .env, including the test key
 ```
 
-Then check:
+Then check (with the Test Store; trials need a store sandbox, see 2a):
 
 - **Paywall:** open a premium feature, or **Settings → Subscription**, and the RevenueCat Paywall appears. In the Test Store purchase dialog, choose **success**; the app unlocks and returns.
 - **Cancel / failure:** choose **cancel** or **failure** in the dialog; the paywall stays open and nothing unlocks.

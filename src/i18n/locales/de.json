@@ -593,6 +593,7 @@
     "subscription": "Abo",
     "subscriptionActive": "Aktiv",
     "subscriptionTrial": "Gratis-Testphase",
+    "subscriptionTrialEnds": "Gratis-Testphase, endet am {{date}}",
     "subscriptionFree": "Kostenloser Plan. Tippe, um deinen Gratismonat zu starten",
     "subscriptionDev": "Alle Funktionen freigeschaltet (Abrechnung nicht eingerichtet)",
     "aboutYou": "Über dich",
@@ -658,6 +659,8 @@
   "notifications": {
     "checkInTitle": "Zeit für deinen täglichen Check-in",
     "checkInBody": "Nimm dir zwei Minuten, um über deinen Tag nachzudenken.",
+    "trialEndingTitle": "Dein Gratismonat endet in 2 Tagen",
+    "trialEndingBody": "Dein Abo beginnt am {{date}}. Zum Ändern oder Kündigen öffne Einstellungen → Abo.",
     "nudges": [
       "Du machst das besser, als du denkst. Bleib dran.",
       "Atme dreimal langsam durch. Du schaffst das.",

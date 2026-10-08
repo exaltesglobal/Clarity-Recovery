@@ -593,6 +593,7 @@
     "subscription": "Subscription",
     "subscriptionActive": "Active",
     "subscriptionTrial": "Free trial",
+    "subscriptionTrialEnds": "Free trial, ends {{date}}",
     "subscriptionFree": "Free plan. Tap to start your free month",
     "subscriptionDev": "All features unlocked (billing not configured)",
     "aboutYou": "About you",
@@ -658,6 +659,8 @@
   "notifications": {
     "checkInTitle": "Time for your daily check-in",
     "checkInBody": "Take two minutes to reflect on your day.",
+    "trialEndingTitle": "Your free month ends in 2 days",
+    "trialEndingBody": "Your plan starts on {{date}}. To change or cancel, open Settings → Subscription.",
     "nudges": [
       "You're doing better than you think. Keep going.",
       "Take three slow breaths. You've got this.",

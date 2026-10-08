@@ -521,6 +521,7 @@
     "subscription": "الاشتراك",
     "subscriptionActive": "نشط",
     "subscriptionTrial": "تجربة مجانية",
+    "subscriptionTrialEnds": "تجربة مجانية، تنتهي في {{date}}",
     "subscriptionFree": "خطة مجانية. اضغط لبدء شهرك المجاني",
     "subscriptionDev": "كل الميزات مفتوحة (الدفع غير مُعد)",
     "aboutYou": "عنك",
@@ -578,6 +579,8 @@
   "notifications": {
     "checkInTitle": "حان وقت التسجيل اليومي",
     "checkInBody": "خذ دقيقتين للتأمل في يومك.",
+    "trialEndingTitle": "ينتهي شهرك المجاني بعد يومين",
+    "trialEndingBody": "تبدأ خطتك في {{date}}. للتغيير أو الإلغاء، افتح الإعدادات ← الاشتراك.",
     "nudges": [
       "أنت تبلي أفضل مما تظن. استمر.",
       "خذ ثلاثة أنفاس بطيئة. أنت قادر.",

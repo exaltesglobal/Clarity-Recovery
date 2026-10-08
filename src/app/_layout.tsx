@@ -16,9 +16,9 @@ import { ActivityIndicator, Platform, useColorScheme, View } from 'react-native'
 import { Logo } from '../components/Logo';
 // Importing i18n also initializes translations before any screen renders.
 import { applyLanguage, languageInfo } from '../i18n';
-import { BillingProvider } from '../lib/billing';
+import { BillingProvider, useBilling } from '../lib/billing';
 import { guard } from '../lib/guard';
-import { configureNotifications, syncReminders } from '../lib/notifications';
+import { configureNotifications, syncReminders, syncTrialReminder } from '../lib/notifications';
 import { StoreProvider, useStore } from '../lib/store';
 import { buildTheme, ThemeContext, useFallbackTheme } from '../theme';
 
@@ -71,6 +71,13 @@ function AppShell({ fontsLoaded }: { fontsLoaded: boolean }) {
   useEffect(() => {
     if (data.onboarded) syncReminders(data.reminders, t).catch(() => {});
   }, [data.onboarded, data.reminders, i18n.language, t]);
+
+  // Remind trial users before the free month turns into a paid plan.
+  const billing = useBilling();
+  const trialEndsAt = billing.inTrial && billing.willRenew ? billing.expiresAt : null;
+  useEffect(() => {
+    if (billing.ready) syncTrialReminder(trialEndsAt, t, i18n.language).catch(() => {});
+  }, [billing.ready, trialEndsAt, i18n.language, t]);
 
   // Keep the native mindful-pause settings in step with the saved preferences.
   useEffect(() => {

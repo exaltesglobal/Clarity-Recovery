@@ -587,6 +587,7 @@
     "subscription": "Langganan",
     "subscriptionActive": "Aktif",
     "subscriptionTrial": "Uji coba gratis",
+    "subscriptionTrialEnds": "Uji coba gratis, berakhir {{date}}",
     "subscriptionFree": "Paket gratis. Ketuk untuk memulai bulan gratismu",
     "subscriptionDev": "Semua fitur terbuka (penagihan belum diatur)",
     "aboutYou": "Tentang kamu",
@@ -651,6 +652,8 @@
   "notifications": {
     "checkInTitle": "Saatnya check-in harian",
     "checkInBody": "Luangkan dua menit untuk merenungkan harimu.",
+    "trialEndingTitle": "Bulan gratismu berakhir dalam 2 hari",
+    "trialEndingBody": "Paketmu mulai pada {{date}}. Untuk mengubah atau membatalkan, buka Pengaturan → Langganan.",
     "nudges": [
       "Kamu lebih hebat dari yang kamu kira. Terus jalan.",
       "Tarik tiga napas pelan. Kamu pasti bisa.",

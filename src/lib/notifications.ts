@@ -2,6 +2,7 @@ import * as Notifications from 'expo-notifications';
 import type { TFunction } from 'i18next';
 import { Platform } from 'react-native';
 
+import { formatDate } from './date';
 import type { Reminders } from './types';
 
 /**
@@ -11,6 +12,18 @@ import type { Reminders } from './types';
  */
 
 const CHANNEL_ID = 'reminders';
+const TRIAL_REMINDER_ID = 'trial-ending';
+const TRIAL_REMINDER_DAYS = 2;
+
+/** Cancels the recurring reminders but keeps the one-off trial reminder. */
+async function cancelRecurring() {
+  const scheduled = await Notifications.getAllScheduledNotificationsAsync();
+  await Promise.all(
+    scheduled
+      .filter((n) => n.identifier !== TRIAL_REMINDER_ID)
+      .map((n) => Notifications.cancelScheduledNotificationAsync(n.identifier)),
+  );
+}
 
 export function configureNotifications() {
   if (Platform.OS === 'web') return;
@@ -53,7 +66,7 @@ export function nudgeHours(nudges: Reminders['nudges']): number[] {
  */
 export async function syncReminders(reminders: Reminders, t: TFunction): Promise<boolean> {
   if (Platform.OS === 'web') return false;
-  await Notifications.cancelAllScheduledNotificationsAsync();
+  await cancelRecurring();
   const wanted = reminders.checkIn.enabled || reminders.nudges.enabled;
   if (!wanted) return true;
   if (!(await ensurePermission())) return false;
@@ -87,6 +100,30 @@ export async function syncReminders(reminders: Reminders, t: TFunction): Promise
   return true;
 }
 
+/**
+ * Reminds trial users two days before their free trial converts to a paid plan,
+ * so nobody is charged by surprise. Pass endsAt = null to cancel it
+ * (not in a trial, or the user already turned off auto-renew).
+ */
+export async function syncTrialReminder(endsAt: string | null, t: TFunction, locale: string) {
+  if (Platform.OS === 'web') return;
+  await Notifications.cancelScheduledNotificationAsync(TRIAL_REMINDER_ID);
+  if (!endsAt) return;
+  const fireAt = new Date(new Date(endsAt).getTime() - TRIAL_REMINDER_DAYS * 86_400_000);
+  if (fireAt.getTime() < Date.now() + 60_000) return;
+  if (!(await ensurePermission())) return;
+  await Notifications.scheduleNotificationAsync({
+    identifier: TRIAL_REMINDER_ID,
+    content: {
+      title: t('notifications.trialEndingTitle'),
+      body: t('notifications.trialEndingBody', { date: formatDate(endsAt, locale) }),
+      data: { href: '/settings' },
+    },
+    trigger: { type: Notifications.SchedulableTriggerInputTypes.DATE, date: fireAt, channelId: CHANNEL_ID },
+  });
+}
+
+/** Cancels every scheduled notification, including the trial reminder. */
 export async function cancelReminders() {
   if (Platform.OS === 'web') return;
   await Notifications.cancelAllScheduledNotificationsAsync();

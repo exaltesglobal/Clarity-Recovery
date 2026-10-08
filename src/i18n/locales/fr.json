@@ -503,6 +503,7 @@
     "subscription": "Abonnement",
     "subscriptionActive": "Actif",
     "subscriptionTrial": "Essai gratuit",
+    "subscriptionTrialEnds": "Essai gratuit, se termine le {{date}}",
     "subscriptionFree": "Offre gratuite. Touchez pour commencer votre mois gratuit",
     "subscriptionDev": "Tout est débloqué (paiement non configuré)",
     "aboutYou": "Vous",
@@ -557,6 +558,8 @@
   "notifications": {
     "checkInTitle": "C'est l'heure de votre bilan",
     "checkInBody": "Prenez deux minutes pour faire le point sur votre journée.",
+    "trialEndingTitle": "Ton mois gratuit se termine dans 2 jours",
+    "trialEndingBody": "Ton abonnement commence le {{date}}. Pour le modifier ou l'annuler, ouvre Réglages → Abonnement.",
     "nudges": [
       "Vous vous en sortez mieux que vous ne le pensez. Continuez.",
       "Prenez trois respirations lentes. Vous pouvez le faire.",

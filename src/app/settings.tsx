@@ -8,7 +8,7 @@ import { Button, Card, Chip, ChipRow, Field, H2, ListRow, Muted, Screen, Section
 import { countryName, flag } from '../content/countries';
 import { languageInfo } from '../i18n';
 import { useBilling } from '../lib/billing';
-import { formatTimeOfDay } from '../lib/date';
+import { formatDate, formatTimeOfDay } from '../lib/date';
 import { cancelReminders } from '../lib/notifications';
 import { useStore } from '../lib/store';
 
@@ -57,7 +57,9 @@ export default function Settings() {
               ? t('settings.subscriptionDev')
               : billing.premium
                 ? billing.inTrial
-                  ? t('settings.subscriptionTrial')
+                  ? billing.expiresAt
+                    ? t('settings.subscriptionTrialEnds', { date: formatDate(billing.expiresAt, i18n.language) })
+                    : t('settings.subscriptionTrial')
                   : t('settings.subscriptionActive')
                 : t('settings.subscriptionFree')
           }

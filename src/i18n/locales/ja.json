@@ -587,6 +587,7 @@
     "subscription": "サブスクリプション",
     "subscriptionActive": "有効",
     "subscriptionTrial": "無料トライアル",
+    "subscriptionTrialEnds": "無料体験中（{{date}}まで）",
     "subscriptionFree": "無料プラン。タップして無料の1か月を始めましょう",
     "subscriptionDev": "すべての機能が利用可能(課金未設定)",
     "aboutYou": "あなたについて",
@@ -651,6 +652,8 @@
   "notifications": {
     "checkInTitle": "毎日のチェックインの時間です",
     "checkInBody": "2分だけ、今日1日を振り返ってみましょう。",
+    "trialEndingTitle": "無料期間はあと2日で終了します",
+    "trialEndingBody": "{{date}}から有料プランが始まります。変更・解約は「設定 → サブスクリプション」から行えます。",
     "nudges": [
       "あなたは自分で思っているよりうまくやれています。その調子で。",
       "ゆっくり3回呼吸しましょう。あなたなら大丈夫。",
