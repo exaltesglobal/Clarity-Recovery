@@ -9,8 +9,8 @@ The app uses RevenueCat's React Native SDK:
 | Thing | Value |
 | --- | --- |
 | Entitlement | `clarity_recovery_pro` |
-| Products | `monthly`, `six_month`, `yearly` |
-| Offering | the **current** offering, with packages `$rc_monthly`, `$rc_six_month`, `$rc_annual` |
+| Products | `monthly`, `six_month`, `yearly` in Play / App Store; in the Test Store `monthly`, `six_month_v2`, `yearly_v2` (see section 2) |
+| Offering | `default`, the **current** offering, with packages `$rc_monthly`, `$rc_six_month`, `$rc_annual` |
 
 ## 1. API keys
 
@@ -31,6 +31,22 @@ The SDK **deliberately crashes release builds** that use a Test Store key. That 
 
    Set the price when you create each one. You can't edit Test Store products later; to change one, create a replacement and swap it into the offering.
 3. Test subscriptions renew quickly: a 1-month product renews every 5 minutes, up to 5 times.
+
+**Current Test Store products** (project `Clarity Recovery`):
+
+| Product | Duration | Price | In the offering |
+| --- | --- | --- | --- |
+| `monthly` | 1 month | $9.99 | `$rc_monthly` |
+| `six_month_v2` | 6 months | $39.99 | `$rc_six_month` |
+| `yearly_v2` | 1 year | $59.99 | `$rc_annual` |
+| `six_month` | 6 months | $49.99 | no (old price; still on the entitlement) |
+| `yearly` | 1 year | $79.99 | no (old price; still on the entitlement) |
+
+`six_month` and `yearly` were first created at the wrong prices, so the `_v2` products replace them in the offering. The store products keep the plain IDs `monthly`, `six_month`, `yearly`. Package IDs can differ per store, and the app only checks the entitlement.
+
+Don't model the free trial as a product. A one-time `1_month_free_trial` product was attached to the entitlement once, which would have unlocked Pro forever for $0.99. It is now detached and inactive. Trials belong on the store subscriptions (section 2a).
+
+**Through the API.** The REST API v2 (`POST /v2/projects/{project_id}/products`) creates a Test Store product with `subscription.duration` and a required `title`, but no price. The `display_name` must be unique per app. The price is set afterwards with `POST /v2/projects/{project_id}/products/{product_id}/test_store_prices` and the body `{"prices":[{"amount_micros":39990000,"currency":"USD"}]}`. That endpoint isn't in the public v2 reference; it worked in October 2026.
 
 For the real stores:
 
@@ -77,15 +93,15 @@ The free trial is part of each **store product**, not something the app code set
 
 ## 3. Entitlement
 
-Go to **Product catalog → Entitlements** and create one with the identifier `clarity_recovery_pro`. Attach all three products to it, for every store. The app only checks this entitlement, never product IDs, so plans can change without an app update.
+Go to **Product catalog → Entitlements** and create one with the identifier `clarity_recovery_pro`. Attach all three products to it, for every store. When you connect Play and the App Store, attach their `monthly`, `six_month` and `yearly` products here and add them to the matching packages of the `default` offering. The app only checks this entitlement, never product IDs, so plans can change without an app update.
 
 ## 4. Offering
 
 1. Go to **Product catalog → Offerings** and create an offering (for example `default`). Mark it **current**.
 2. Add the packages:
    - **Monthly** (`$rc_monthly`) → `monthly`
-   - **Six Month** (`$rc_six_month`) → `six_month`
-   - **Annual** (`$rc_annual`) → `yearly`
+   - **Six Month** (`$rc_six_month`) → `six_month` (Test Store: `six_month_v2`)
+   - **Annual** (`$rc_annual`) → `yearly` (Test Store: `yearly_v2`)
 
 ## 5. Paywall
 

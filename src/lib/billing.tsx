@@ -9,7 +9,8 @@ import RevenueCatUI from 'react-native-purchases-ui';
  * so no Gradle changes are needed; react-native-purchases-ui adds Paywalls and Customer Center.
  *
  * RevenueCat setup (see docs/revenuecat.md):
- * - Products: monthly, six_month, yearly, each with a 1-month free trial.
+ * - Products: monthly, six_month, yearly, each with a 1-month free trial
+ *   (Test Store: monthly, six_month_v2, yearly_v2; see docs/revenuecat.md).
  * - Entitlement "clarity_recovery_pro" attached to all three products.
  * - A current offering with the packages $rc_monthly, $rc_six_month and $rc_annual,
  *   plus a Paywall designed in the dashboard.
